@@ -1,0 +1,648 @@
+{
+    "e-assist": {
+        "substances": [
+            "Tobacco products",
+            "Alcoholic beverages",
+            "Cannabis",
+            "Cocaine",
+            "Amphetamine-type stimulants",
+            "Inhalants",
+            "Sedatives or sleeping pills",
+            "Hallucinogens",
+            "Opioids",
+            "Other"
+        ],
+        "substanceExamples": {
+            "Tobacco products": "cigarettes, chewing tobacco, cigars",
+            "Alcoholic beverages": "beer, wine, spirits",
+            "Cannabis": "marijuana, pot, grass, hash",
+            "Cocaine": "coke, crack",
+            "Amphetamine-type stimulants": "speed, meth, ecstasy",
+            "Inhalants": "nitrous, glue, petrol, paint thinner",
+            "Sedatives or sleeping pills": "diazepam, alprazolam, flunitrazepam, midazolam",
+            "Hallucinogens": "LSD, acid, mushrooms, trips, ketamine",
+            "Opioids": "heroin, morphine, methadone, buprenorphine, codeine",
+            "Other": ""
+        },
+        "questions": [
+            {
+                "id": 0,
+                "text": "In your life, which of the following substances have you ever used (non-medical use only)?",
+                "options": [
+                    "No",
+                    "Yes"
+                ]
+            },
+            {
+                "id": 1,
+                "text": "In the past three months, how often have you used the substances you mentioned (first drug, second drug, etc)?",
+                "options": [
+                    "Never",
+                    "Once or twice",
+                    "Monthly",
+                    "Weekly",
+                    "Daily or almost daily"
+                ],
+                "substanceScores": {
+                    "Tobacco products": {
+                        "Never": 0,
+                        "Once or twice": 2,
+                        "Monthly": 3,
+                        "Weekly": 4,
+                        "Daily or almost daily": 6
+                    },
+                    "Alcoholic beverages": {
+                        "Never": 0,
+                        "Once or twice": 2,
+                        "Monthly": 3,
+                        "Weekly": 4,
+                        "Daily or almost daily": 6
+                    },
+                    "Cannabis": {
+                        "Never": 0,
+                        "Once or twice": 2,
+                        "Monthly": 3,
+                        "Weekly": 4,
+                        "Daily or almost daily": 6
+                    },
+                    "Cocaine": {
+                        "Never": 0,
+                        "Once or twice": 2,
+                        "Monthly": 3,
+                        "Weekly": 4,
+                        "Daily or almost daily": 6
+                    },
+                    "Amphetamine-type stimulants": {
+                        "Never": 0,
+                        "Once or twice": 2,
+                        "Monthly": 3,
+                        "Weekly": 4,
+                        "Daily or almost daily": 6
+                    },
+                    "Inhalants": {
+                        "Never": 0,
+                        "Once or twice": 2,
+                        "Monthly": 3,
+                        "Weekly": 4,
+                        "Daily or almost daily": 6
+                    },
+                    "Sedatives or sleeping pills": {
+                        "Never": 0,
+                        "Once or twice": 2,
+                        "Monthly": 3,
+                        "Weekly": 4,
+                        "Daily or almost daily": 6
+                    },
+                    "Hallucinogens": {
+                        "Never": 0,
+                        "Once or twice": 2,
+                        "Monthly": 3,
+                        "Weekly": 4,
+                        "Daily or almost daily": 6
+                    },
+                    "Opioids": {
+                        "Never": 0,
+                        "Once or twice": 2,
+                        "Monthly": 3,
+                        "Weekly": 4,
+                        "Daily or almost daily": 6
+                    },
+                    "Other": {
+                        "Never": 0,
+                        "Once or twice": 2,
+                        "Monthly": 3,
+                        "Weekly": 4,
+                        "Daily or almost daily": 6
+                    }
+                }
+            },
+            {
+                "id": 2,
+                "text": "During the past three months, how often have you had a strong desire or urge to use (first drug, second drug, etc)?",
+                "options": [
+                    "Never",
+                    "Once or twice",
+                    "Monthly",
+                    "Weekly",
+                    "Daily or almost daily"
+                ],
+                "substanceScores": {
+                    "Tobacco products": {
+                        "Never": 0,
+                        "Once or twice": 3,
+                        "Monthly": 4,
+                        "Weekly": 5,
+                        "Daily or almost daily": 6
+                    },
+                    "Alcoholic beverages": {
+                        "Never": 0,
+                        "Once or twice": 3,
+                        "Monthly": 4,
+                        "Weekly": 5,
+                        "Daily or almost daily": 6
+                    },
+                    "Cannabis": {
+                        "Never": 0,
+                        "Once or twice": 3,
+                        "Monthly": 4,
+                        "Weekly": 5,
+                        "Daily or almost daily": 6
+                    },
+                    "Cocaine": {
+                        "Never": 0,
+                        "Once or twice": 3,
+                        "Monthly": 4,
+                        "Weekly": 5,
+                        "Daily or almost daily": 6
+                    },
+                    "Amphetamine-type stimulants": {
+                        "Never": 0,
+                        "Once or twice": 3,
+                        "Monthly": 4,
+                        "Weekly": 5,
+                        "Daily or almost daily": 6
+                    },
+                    "Inhalants": {
+                        "Never": 0,
+                        "Once or twice": 3,
+                        "Monthly": 4,
+                        "Weekly": 5,
+                        "Daily or almost daily": 6
+                    },
+                    "Sedatives or sleeping pills": {
+                        "Never": 0,
+                        "Once or twice": 3,
+                        "Monthly": 4,
+                        "Weekly": 5,
+                        "Daily or almost daily": 6
+                    },
+                    "Hallucinogens": {
+                        "Never": 0,
+                        "Once or twice": 3,
+                        "Monthly": 4,
+                        "Weekly": 5,
+                        "Daily or almost daily": 6
+                    },
+                    "Opioids": {
+                        "Never": 0,
+                        "Once or twice": 3,
+                        "Monthly": 4,
+                        "Weekly": 5,
+                        "Daily or almost daily": 6
+                    },
+                    "Other": {
+                        "Never": 0,
+                        "Once or twice": 3,
+                        "Monthly": 4,
+                        "Weekly": 5,
+                        "Daily or almost daily": 6
+                    }
+                }
+            },
+            {
+                "id": 3,
+                "text": "During the past three months, how often has your use of (first drug, second drug, etc) led to health, social, legal or financial problems?",
+                "options": [
+                    "Never",
+                    "Once or twice",
+                    "Monthly",
+                    "Weekly",
+                    "Daily or almost daily"
+                ],
+                "substanceScores": {
+                    "Tobacco products": {
+                        "Never": 0,
+                        "Once or twice": 4,
+                        "Monthly": 5,
+                        "Weekly": 6,
+                        "Daily or almost daily": 7
+                    },
+                    "Alcoholic beverages": {
+                        "Never": 0,
+                        "Once or twice": 4,
+                        "Monthly": 5,
+                        "Weekly": 6,
+                        "Daily or almost daily": 7
+                    },
+                    "Cannabis": {
+                        "Never": 0,
+                        "Once or twice": 4,
+                        "Monthly": 5,
+                        "Weekly": 6,
+                        "Daily or almost daily": 7
+                    },
+                    "Cocaine": {
+                        "Never": 0,
+                        "Once or twice": 4,
+                        "Monthly": 5,
+                        "Weekly": 6,
+                        "Daily or almost daily": 7
+                    },
+                    "Amphetamine-type stimulants": {
+                        "Never": 0,
+                        "Once or twice": 4,
+                        "Monthly": 5,
+                        "Weekly": 6,
+                        "Daily or almost daily": 7
+                    },
+                    "Inhalants": {
+                        "Never": 0,
+                        "Once or twice": 4,
+                        "Monthly": 5,
+                        "Weekly": 6,
+                        "Daily or almost daily": 7
+                    },
+                    "Sedatives or sleeping pills": {
+                        "Never": 0,
+                        "Once or twice": 4,
+                        "Monthly": 5,
+                        "Weekly": 6,
+                        "Daily or almost daily": 7
+                    },
+                    "Hallucinogens": {
+                        "Never": 0,
+                        "Once or twice": 4,
+                        "Monthly": 5,
+                        "Weekly": 6,
+                        "Daily or almost daily": 7
+                    },
+                    "Opioids": {
+                        "Never": 0,
+                        "Once or twice": 4,
+                        "Monthly": 5,
+                        "Weekly": 6,
+                        "Daily or almost daily": 7
+                    },
+                    "Other": {
+                        "Never": 0,
+                        "Once or twice": 4,
+                        "Monthly": 5,
+                        "Weekly": 6,
+                        "Daily or almost daily": 7
+                    }
+                }
+            },
+            {
+                "id": 4,
+                "text": "During the past three months, how often have you failed to do what was normally expected of you because of your use of (first drug, second drug, etc)?",
+                "options": [
+                    "Never",
+                    "Once or twice",
+                    "Monthly",
+                    "Weekly",
+                    "Daily or almost daily"
+                ],
+                "substanceScores": {
+                    "Tobacco products": {
+                        "Never": 0,
+                        "Once or twice": 5,
+                        "Monthly": 6,
+                        "Weekly": 7,
+                        "Daily or almost daily": 8
+                    },
+                    "Alcoholic beverages": {
+                        "Never": 0,
+                        "Once or twice": 5,
+                        "Monthly": 6,
+                        "Weekly": 7,
+                        "Daily or almost daily": 8
+                    },
+                    "Cannabis": {
+                        "Never": 0,
+                        "Once or twice": 5,
+                        "Monthly": 6,
+                        "Weekly": 7,
+                        "Daily or almost daily": 8
+                    },
+                    "Cocaine": {
+                        "Never": 0,
+                        "Once or twice": 5,
+                        "Monthly": 6,
+                        "Weekly": 7,
+                        "Daily or almost daily": 8
+                    },
+                    "Amphetamine-type stimulants": {
+                        "Never": 0,
+                        "Once or twice": 5,
+                        "Monthly": 6,
+                        "Weekly": 7,
+                        "Daily or almost daily": 8
+                    },
+                    "Inhalants": {
+                        "Never": 0,
+                        "Once or twice": 5,
+                        "Monthly": 6,
+                        "Weekly": 7,
+                        "Daily or almost daily": 8
+                    },
+                    "Sedatives or sleeping pills": {
+                        "Never": 0,
+                        "Once or twice": 5,
+                        "Monthly": 6,
+                        "Weekly": 7,
+                        "Daily or almost daily": 8
+                    },
+                    "Hallucinogens": {
+                        "Never": 0,
+                        "Once or twice": 5,
+                        "Monthly": 6,
+                        "Weekly": 7,
+                        "Daily or almost daily": 8
+                    },
+                    "Opioids": {
+                        "Never": 0,
+                        "Once or twice": 5,
+                        "Monthly": 6,
+                        "Weekly": 7,
+                        "Daily or almost daily": 8
+                    },
+                    "Other": {
+                        "Never": 0,
+                        "Once or twice": 4,
+                        "Monthly": 5,
+                        "Weekly": 6,
+                        "Daily or almost daily": 7
+                    }
+                }
+            },
+            {
+                "id": 5,
+                "text": "Has a friend or relative or anyone else ever expressed concern about your use of (first drug, second drug, etc)?",
+                "options": [
+                    "No, Never",
+                    "Yes, in the past 3 months",
+                    "Yes, but not in the past 3 months"
+                ],
+                "substanceScores": {
+                    "Tobacco products": {
+                        "No, Never": 0,
+                        "Yes, in the past 3 months": 6,
+                        "Yes, but not in the past 3 months": 3
+                    },
+                    "Alcoholic beverages": {
+                        "No, Never": 0,
+                        "Yes, in the past 3 months": 6,
+                        "Yes, but not in the past 3 months": 3
+                    },
+                    "Cannabis": {
+                        "No, Never": 0,
+                        "Yes, in the past 3 months": 6,
+                        "Yes, but not in the past 3 months": 3
+                    },
+                    "Cocaine": {
+                        "No, Never": 0,
+                        "Yes, in the past 3 months": 6,
+                        "Yes, but not in the past 3 months": 3
+                    },
+                    "Amphetamine-type stimulants": {
+                        "No, Never": 0,
+                        "Yes, in the past 3 months": 6,
+                        "Yes, but not in the past 3 months": 3
+                    },
+                    "Inhalants": {
+                        "No, Never": 0,
+                        "Yes, in the past 3 months": 6,
+                        "Yes, but not in the past 3 months": 3
+                    },
+                    "Sedatives or sleeping pills": {
+                        "No, Never": 0,
+                        "Yes, in the past 3 months": 6,
+                        "Yes, but not in the past 3 months": 3
+                    },
+                    "Hallucinogens": {
+                        "No, Never": 0,
+                        "Yes, in the past 3 months": 6,
+                        "Yes, but not in the past 3 months": 3
+                    },
+                    "Opioids": {
+                        "No, Never": 0,
+                        "Yes, in the past 3 months": 6,
+                        "Yes, but not in the past 3 months": 3
+                    },
+                    "Other": {
+                        "No, Never": 0,
+                        "Yes, in the past 3 months": 6,
+                        "Yes, but not in the past 3 months": 3
+                    }
+                }
+            },
+            {
+                "id": 6,
+                "text": "Have you ever tried to cut down on using (first drug, second drug, etc) but failed?",
+                "options": [
+                    "No, Never",
+                    "Yes, in the past 3 months",
+                    "Yes, but not in the past 3 months"
+                ],
+                "substanceScores": {
+                    "Tobacco products": {
+                        "No, Never": 0,
+                        "Yes, in the past 3 months": 6,
+                        "Yes, but not in the past 3 months": 3
+                    },
+                    "Alcoholic beverages": {
+                        "No, Never": 0,
+                        "Yes, in the past 3 months": 6,
+                        "Yes, but not in the past 3 months": 3
+                    },
+                    "Cannabis": {
+                        "No, Never": 0,
+                        "Yes, in the past 3 months": 6,
+                        "Yes, but not in the past 3 months": 3
+                    },
+                    "Cocaine": {
+                        "No, Never": 0,
+                        "Yes, in the past 3 months": 6,
+                        "Yes, but not in the past 3 months": 3
+                    },
+                    "Amphetamine-type stimulants": {
+                        "No, Never": 0,
+                        "Yes, in the past 3 months": 6,
+                        "Yes, but not in the past 3 months": 3
+                    },
+                    "Inhalants": {
+                        "No, Never": 0,
+                        "Yes, in the past 3 months": 6,
+                        "Yes, but not in the past 3 months": 3
+                    },
+                    "Sedatives or sleeping pills": {
+                        "No, Never": 0,
+                        "Yes, in the past 3 months": 6,
+                        "Yes, but not in the past 3 months": 3
+                    },
+                    "Hallucinogens": {
+                        "No, Never": 0,
+                        "Yes, in the past 3 months": 6,
+                        "Yes, but not in the past 3 months": 3
+                    },
+                    "Opioids": {
+                        "No, Never": 0,
+                        "Yes, in the past 3 months": 6,
+                        "Yes, but not in the past 3 months": 3
+                    },
+                    "Other": {
+                        "No, Never": 0,
+                        "Yes, in the past 3 months": 6,
+                        "Yes, but not in the past 3 months": 3
+                    }
+                }
+            },
+            {
+                "id": 7,
+                "text": "Have you ever used any drug by injection (non-medical use only)?",
+                "options": [
+                    "No, Never",
+                    "Yes, in the past 3 months",
+                    "Yes, but not in the past 3 months"
+                ]
+            }
+        ],
+        "substanceRiskLevels": {
+            "Tobacco products": {
+                "Lower": {
+                    "min": 0,
+                    "max": 3
+                },
+                "Moderate": {
+                    "min": 4,
+                    "max": 26
+                },
+                "High": {
+                    "min": 27,
+                    "max": null
+                }
+            },
+            "Alcoholic beverages": {
+                "Lower": {
+                    "min": 0,
+                    "max": 10
+                },
+                "Moderate": {
+                    "min": 11,
+                    "max": 26
+                },
+                "High": {
+                    "min": 27,
+                    "max": null
+                }
+            },
+            "Cannabis": {
+                "Lower": {
+                    "min": 0,
+                    "max": 3
+                },
+                "Moderate": {
+                    "min": 4,
+                    "max": 26
+                },
+                "High": {
+                    "min": 27,
+                    "max": null
+                }
+            },
+            "Cocaine": {
+                "Lower": {
+                    "min": 0,
+                    "max": 3
+                },
+                "Moderate": {
+                    "min": 4,
+                    "max": 26
+                },
+                "High": {
+                    "min": 27,
+                    "max": null
+                }
+            },
+            "Amphetamine-type stimulants": {
+                "Lower": {
+                    "min": 0,
+                    "max": 3
+                },
+                "Moderate": {
+                    "min": 4,
+                    "max": 26
+                },
+                "High": {
+                    "min": 27,
+                    "max": null
+                }
+            },
+            "Inhalants": {
+                "Lower": {
+                    "min": 0,
+                    "max": 3
+                },
+                "Moderate": {
+                    "min": 4,
+                    "max": 26
+                },
+                "High": {
+                    "min": 27,
+                    "max": null
+                }
+            },
+            "Sedatives or sleeping pills": {
+                "Lower": {
+                    "min": 0,
+                    "max": 3
+                },
+                "Moderate": {
+                    "min": 4,
+                    "max": 26
+                },
+                "High": {
+                    "min": 27,
+                    "max": null
+                }
+            },
+            "Hallucinogens": {
+                "Lower": {
+                    "min": 0,
+                    "max": 3
+                },
+                "Moderate": {
+                    "min": 4,
+                    "max": 26
+                },
+                "High": {
+                    "min": 27,
+                    "max": null
+                }
+            },
+            "Opioids": {
+                "Lower": {
+                    "min": 0,
+                    "max": 3
+                },
+                "Moderate": {
+                    "min": 4,
+                    "max": 26
+                },
+                "High": {
+                    "min": 27,
+                    "max": null
+                }
+            },
+            "Other": {
+                "Lower": {
+                    "min": 0,
+                    "max": 3
+                },
+                "Moderate": {
+                    "min": 4,
+                    "max": 26
+                },
+                "High": {
+                    "min": 27,
+                    "max": null
+                }
+            }
+        },
+        "scoreMeaning": {
+            "Lower": "You are at lower risk of health and other problems from your current pattern of use.",
+            "Moderate": "You are at moderate risk of health and other problems from your current pattern of substance use.",
+            "High": "You are at high risk of experiencing severe problems (health, social, financial, legal, relationship) as a result of your current pattern of use and are likely to be dependent."
+        }
+    }
+}
