@@ -1,7 +1,7 @@
-function QuestionBlock({questionText}) {	
+function QuestionBlock({question}) {	
     return (
 		<div className="question-block">
-			<p className="question-text">{questionText}</p>			           
+			<p className="question-text">{question.text}</p>			           
 		</div>
 	);
 }

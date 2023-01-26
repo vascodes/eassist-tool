@@ -3,6 +3,7 @@ import QuestionBlock from "./components/QuestionBlock";
 
 function App() {
 	const [content, setContent] = useState(null);
+	const [currentQuestion, setCurrentQuestion] = useState("question1");
 
 	async function fetchData() {
 		try {
@@ -18,7 +19,7 @@ function App() {
 
 	return (
 		<div className="app-container">
-			<div className="questions-container">{content && <QuestionBlock questionText="Sample Question" />}</div>
+			<div className="questions-container">{content && <QuestionBlock question={content?.questions[currentQuestion]} />}</div>
 		</div>
 	);
 }
