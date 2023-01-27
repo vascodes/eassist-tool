@@ -3,7 +3,11 @@ import QuestionBlock from "./components/QuestionBlock";
 
 function App() {
 	const [content, setContent] = useState(null);
-	const [currentQuestion, setCurrentQuestion] = useState("question1");
+	const [questions, setQuestions] = useState({});
+	const [currentQuestionNumber, setCurrentQuestionNumber] = useState(1);
+
+	const substances = content?.substances;
+	const currentQuestion = questions ? questions["question" + currentQuestionNumber] : "question1";
 
 	async function fetchData() {
 		try {
@@ -15,19 +19,40 @@ function App() {
 		}
 	}
 
+	function handleNextButtonClick() {
+		setCurrentQuestionNumber((prevId) => {
+			let numQuestions = Object.keys(questions).length;
+			if (prevId === numQuestions) {
+				alert("End of questions");
+				return prevId;
+			}
+
+			return prevId + 1;
+		});
+	}
+
+	function handlePrevButtonClick(){
+		
+	}
+
 	useEffect(() => fetchData, []);
+	useEffect(() => setQuestions(content?.questions), [content]);
 
 	return (
 		<div className="app-container">
-			<div className="questions-container">
-				{content && (
+			{!content ? (
+				"Loading.."
+			) : (
+				<div className="questions-container">
+					<button onClick={() => handleNextButtonClick()}>Next</button>
+					<button onClick={() => handlePrevButtonClick()}>Previous</button>
 					<QuestionBlock
-						question={content.questions[currentQuestion]}
-						substances={content.substances}
-						allSubstanceScores={content.questions[currentQuestion].substanceScores}
+						question={currentQuestion}
+						substances={substances}
+						allSubstanceScores={currentQuestion.substanceScores}
 					/>
-				)}
-			</div>
+				</div>
+			)}
 		</div>
 	);
 }
