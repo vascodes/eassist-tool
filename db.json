@@ -48,7 +48,8 @@
 			},
 			{
 				"id": "other",
-				"name": "Other"				
+				"name": "Other",
+				"examples": ""
 			}
 		],
 		"questions": {
