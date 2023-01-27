@@ -3,57 +3,54 @@
 		"substances": [
 			{
 				"id": "tobacco",
-				"name": "Tobacco products"
+				"name": "Tobacco products",
+				"examples": "cigarettes, chewing tobacco, cigars"
 			},
 			{
 				"id": "alcohol",
-				"name": "Alcoholic beverages"
+				"name": "Alcoholic beverages",
+				"examples": "beer, wine, spirits"
 			},
 			{
 				"id": "cannabis",
-				"name": "Cannabis"
+				"name": "Cannabis",
+				"examples": "marijuana, pot, grass, hash"
 			},
 			{
 				"id": "cocaine",
-				"name": "Cocaine"
+				"name": "Cocaine",
+				"examples": "coke, crack"
 			},
 			{
 				"id": "amphetamine",
-				"name": "Amphetamine-type stimulants"
+				"name": "Amphetamine-type stimulants",
+				"examples":  "speed, meth, ecstasy"
 			},
 			{
 				"id": "inhalants",
-				"name": "Inhalants"
+				"name": "Inhalants",
+				"examples": "nitrous, glue, petrol, paint thinner"
 			},
 			{
 				"id": "sedatives",
-				"name": "Sedatives or sleeping pills"
+				"name": "Sedatives or sleeping pills",
+				"examples": "diazepam, alprazolam, flunitrazepam, midazolam"
 			},
 			{
 				"id": "hallucinogens",
-				"name": "Hallucinogens"
+				"name": "Hallucinogens",
+				"examples": "LSD, acid, mushrooms, trips, ketamine"
 			},
 			{
 				"id": "opioids",
-				"name": "Opioids"
+				"name": "Opioids",
+				"examples": "heroin, morphine, methadone, buprenorphine, codeine"
 			},
 			{
 				"id": "other",
-				"name": "Other"
+				"name": "Other"				
 			}
 		],
-		"substanceExamples": {
-			"Tobacco products": "cigarettes, chewing tobacco, cigars",
-			"Alcoholic beverages": "beer, wine, spirits",
-			"Cannabis": "marijuana, pot, grass, hash",
-			"Cocaine": "coke, crack",
-			"Amphetamine-type stimulants": "speed, meth, ecstasy",
-			"Inhalants": "nitrous, glue, petrol, paint thinner",
-			"Sedatives or sleeping pills": "diazepam, alprazolam, flunitrazepam, midazolam",
-			"Hallucinogens": "LSD, acid, mushrooms, trips, ketamine",
-			"Opioids": "heroin, morphine, methadone, buprenorphine, codeine",
-			"Other": ""
-		},
 		"questions": {
 			"question1": {
 				"id": 1,
