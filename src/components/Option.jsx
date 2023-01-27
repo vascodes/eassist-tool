@@ -1,5 +1,5 @@
 function Option({ option, substanceName, score = 0 }) {
-	const shortSubstanceName = substanceName.replace(" ", "").toLowerCase();
+	const shortSubstanceName = substanceName.replace(" ", "-").toLowerCase();
 	const optionName = `radio-${shortSubstanceName}`;
 	const optionId = `radio-${shortSubstanceName}-${option.toLowerCase()}`;
 

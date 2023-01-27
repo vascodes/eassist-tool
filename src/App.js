@@ -8,7 +8,8 @@ function App() {
 	const [showPrevButton, SetShowPrevButton] = useState(false);
 
 	const substances = content?.substances;
-	const currentQuestion = questions ? questions["question" + currentQuestionNumber] : "question1";
+	const questionId = "question" + currentQuestionNumber; //ex: question5
+	const currentQuestion = questions ? questions[questionId] : "question1";
 
 	async function fetchData() {
 		try {
@@ -32,9 +33,7 @@ function App() {
 
 	function handlePrevButtonClick() {
 		setCurrentQuestionNumber((prevQuestionNum) => {
-			if (prevQuestionNum === 1) {
-				return prevQuestionNum;
-			}
+			if (prevQuestionNum === 1) return prevQuestionNum;
 
 			return prevQuestionNum - 1;
 		});
@@ -46,6 +45,8 @@ function App() {
 
 	useEffect(() => fetchData, []);
 	useEffect(() => setQuestions(content?.questions), [content]);
+
+	// Hide Previous button for first question.
 	useEffect(() => togglePrevButton(currentQuestionNumber), [currentQuestionNumber]);
 
 	return (
