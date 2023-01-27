@@ -1,6 +1,47 @@
 {
 	"e-assist": {
-		"substances": ["Tobacco products", "Alcoholic beverages", "Cannabis", "Cocaine", "Amphetamine-type stimulants", "Inhalants", "Sedatives or sleeping pills", "Hallucinogens", "Opioids", "Other"],
+		"substances": [
+			{
+				"id": "tobacco",
+				"name": "Tobacco products"
+			},
+			{
+				"id": "alcohol",
+				"name": "Alcoholic beverages"
+			},
+			{
+				"id": "cannabis",
+				"name": "Cannabis"
+			},
+			{
+				"id": "cocaine",
+				"name": "Cocaine"
+			},
+			{
+				"id": "amphetamine",
+				"name": "Amphetamine-type stimulants"
+			},
+			{
+				"id": "inhalants",
+				"name": "Inhalants"
+			},
+			{
+				"id": "sedatives",
+				"name": "Sedatives or sleeping pills"
+			},
+			{
+				"id": "hallucinogens",
+				"name": "Hallucinogens"
+			},
+			{
+				"id": "opioids",
+				"name": "Opioids"
+			},
+			{
+				"id": "other",
+				"name": "Other"
+			}
+		],
 		"substanceExamples": {
 			"Tobacco products": "cigarettes, chewing tobacco, cigars",
 			"Alcoholic beverages": "beer, wine, spirits",
@@ -17,54 +58,21 @@
 			"question1": {
 				"id": 1,
 				"text": "In your life, which of the following substances have you ever used (non-medical use only)?",
-				"options": ["No", "Yes"],
-				"substanceScores": {
-					"Tobacco products": {
-						"No": 0,
-						"Yes": 0
-					},
-					"Alcoholic beverages": {
-						"No": 0,
-						"Yes": 0
-					},
-					"Cannabis": {
-						"No": 0,
-						"Yes": 0
-					},
-					"Cocaine": {
-						"No": 0,
-						"Yes": 0
-					},
-					"Amphetamine-type stimulants": {
-						"No": 0,
-						"Yes": 0
-					},
-					"Inhalants": {
-						"No": 0,
-						"Yes": 0
-					},
-					"Sedatives or sleeping pills": {
-						"No": 0,
-						"Yes": 0
-					},
-					"Hallucinogens": {
-						"No": 0,
-						"Yes": 0
-					},
-					"Opioids": {
-						"No": 0,
-						"Yes": 0
-					},
-					"Other": {
-						"No": 0,
-						"Yes": 0
-					}
-				}
+				"options": [
+					"No",
+					"Yes"
+				]
 			},
-			"question2":{
+			"question2": {
 				"id": 2,
 				"text": "In the past three months, how often have you used the substances you mentioned (first drug, second drug, etc)?",
-				"options": ["Never", "Once or twice", "Monthly", "Weekly", "Daily or almost daily"],
+				"options": [
+					"Never",
+					"Once or twice",
+					"Monthly",
+					"Weekly",
+					"Daily or almost daily"
+				],
 				"substanceScores": {
 					"Tobacco products": {
 						"Never": 0,
@@ -138,10 +146,16 @@
 					}
 				}
 			},
-			"question3":{
+			"question3": {
 				"id": 3,
 				"text": "During the past three months, how often have you had a strong desire or urge to use (first drug, second drug, etc)?",
-				"options": ["Never", "Once or twice", "Monthly", "Weekly", "Daily or almost daily"],
+				"options": [
+					"Never",
+					"Once or twice",
+					"Monthly",
+					"Weekly",
+					"Daily or almost daily"
+				],
 				"substanceScores": {
 					"Tobacco products": {
 						"Never": 0,
@@ -215,10 +229,16 @@
 					}
 				}
 			},
-			"question4":{
+			"question4": {
 				"id": 4,
 				"text": "During the past three months, how often has your use of (first drug, second drug, etc) led to health, social, legal or financial problems?",
-				"options": ["Never", "Once or twice", "Monthly", "Weekly", "Daily or almost daily"],
+				"options": [
+					"Never",
+					"Once or twice",
+					"Monthly",
+					"Weekly",
+					"Daily or almost daily"
+				],
 				"substanceScores": {
 					"Tobacco products": {
 						"Never": 0,
@@ -292,10 +312,16 @@
 					}
 				}
 			},
-			"question5":{
+			"question5": {
 				"id": 5,
 				"text": "During the past three months, how often have you failed to do what was normally expected of you because of your use of (first drug, second drug, etc)?",
-				"options": ["Never", "Once or twice", "Monthly", "Weekly", "Daily or almost daily"],
+				"options": [
+					"Never",
+					"Once or twice",
+					"Monthly",
+					"Weekly",
+					"Daily or almost daily"
+				],
 				"substanceScores": {
 					"Tobacco products": {
 						"Never": 0,
@@ -369,10 +395,14 @@
 					}
 				}
 			},
-			"question6":{
+			"question6": {
 				"id": 6,
 				"text": "Has a friend or relative or anyone else ever expressed concern about your use of (first drug, second drug, etc)?",
-				"options": ["No, Never", "Yes, in the past 3 months", "Yes, but not in the past 3 months"],
+				"options": [
+					"No, Never",
+					"Yes, in the past 3 months",
+					"Yes, but not in the past 3 months"
+				],
 				"substanceScores": {
 					"Tobacco products": {
 						"No, Never": 0,
@@ -426,10 +456,14 @@
 					}
 				}
 			},
-			"question7":{
+			"question7": {
 				"id": 7,
 				"text": "Have you ever tried to cut down on using (first drug, second drug, etc) but failed?",
-				"options": ["No, Never", "Yes, in the past 3 months", "Yes, but not in the past 3 months"],
+				"options": [
+					"No, Never",
+					"Yes, in the past 3 months",
+					"Yes, but not in the past 3 months"
+				],
 				"substanceScores": {
 					"Tobacco products": {
 						"No, Never": 0,
@@ -483,10 +517,14 @@
 					}
 				}
 			},
-			"question8":{
+			"question8": {
 				"id": 8,
 				"text": "Have you ever used any drug by injection (non-medical use only)?",
-				"options": ["No, Never", "Yes, in the past 3 months", "Yes, but not in the past 3 months"]
+				"options": [
+					"No, Never",
+					"Yes, in the past 3 months",
+					"Yes, but not in the past 3 months"
+				]
 			}
 		},
 		"substanceRiskLevels": {
