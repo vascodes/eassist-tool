@@ -3,7 +3,7 @@ import QuestionBlock from "./components/QuestionBlock";
 
 function App() {
 	const [content, setContent] = useState(null);
-	const [currentQuestion, setCurrentQuestion] = useState("question1");
+	const [currentQuestion, setCurrentQuestion] = useState("question3");
 
 	async function fetchData() {
 		try {
