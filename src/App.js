@@ -19,7 +19,14 @@ function App() {
 
 	return (
 		<div className="app-container">
-			<div className="questions-container">{content && <QuestionBlock question={content?.questions[currentQuestion]} />}</div>
+			<div className="questions-container">
+				{content && (
+					<QuestionBlock
+						substances = {content.substances}
+						question={content.questions[currentQuestion]}
+					/>
+				)}
+			</div>
 		</div>
 	);
 }
