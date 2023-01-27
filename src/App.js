@@ -5,6 +5,7 @@ function App() {
 	const [content, setContent] = useState(null);
 	const [questions, setQuestions] = useState({});
 	const [currentQuestionNumber, setCurrentQuestionNumber] = useState(1);
+	const [showPrevButton, SetShowPrevButton] = useState(false);
 
 	const substances = content?.substances;
 	const currentQuestion = questions ? questions["question" + currentQuestionNumber] : "question1";
@@ -20,23 +21,32 @@ function App() {
 	}
 
 	function handleNextButtonClick() {
-		setCurrentQuestionNumber((prevId) => {
+		setCurrentQuestionNumber((prevQuestionNum) => {
 			let numQuestions = Object.keys(questions).length;
-			if (prevId === numQuestions) {
-				alert("End of questions");
-				return prevId;
-			}
+			// End of questions.
+			if (prevQuestionNum === numQuestions) return prevQuestionNum;
 
-			return prevId + 1;
+			return prevQuestionNum + 1;
 		});
 	}
 
-	function handlePrevButtonClick(){
-		
+	function handlePrevButtonClick() {
+		setCurrentQuestionNumber((prevQuestionNum) => {
+			if (prevQuestionNum === 1) {
+				return prevQuestionNum;
+			}
+
+			return prevQuestionNum - 1;
+		});
+	}
+
+	function togglePrevButton(currentQuestionNumber) {
+		currentQuestionNumber === 1 ? SetShowPrevButton(false) : SetShowPrevButton(true);
 	}
 
 	useEffect(() => fetchData, []);
 	useEffect(() => setQuestions(content?.questions), [content]);
+	useEffect(() => togglePrevButton(currentQuestionNumber), [currentQuestionNumber]);
 
 	return (
 		<div className="app-container">
@@ -44,8 +54,8 @@ function App() {
 				"Loading.."
 			) : (
 				<div className="questions-container">
+					{showPrevButton && <button onClick={() => handlePrevButtonClick()}>Previous</button>}
 					<button onClick={() => handleNextButtonClick()}>Next</button>
-					<button onClick={() => handlePrevButtonClick()}>Previous</button>
 					<QuestionBlock
 						question={currentQuestion}
 						substances={substances}
