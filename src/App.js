@@ -3,10 +3,10 @@ import QuestionBlock from "./components/QuestionBlock";
 
 function App() {
 	const [content, setContent] = useState(null);
-	const [questions, setQuestions] = useState({});
 	const [currentQuestionNumber, setCurrentQuestionNumber] = useState(1);
 	const [showPrevButton, SetShowPrevButton] = useState(false);
 
+	const questions = content?.questions;
 	const substances = content?.substances;
 	const questionId = "question" + currentQuestionNumber; //ex: question5
 	const currentQuestion = questions ? questions[questionId] : "question1";
@@ -43,8 +43,8 @@ function App() {
 		currentQuestionNumber === 1 ? SetShowPrevButton(false) : SetShowPrevButton(true);
 	}
 
+	// Fetch data on app load.
 	useEffect(() => fetchData, []);
-	useEffect(() => setQuestions(content?.questions), [content]);
 
 	// Hide Previous button for first question.
 	useEffect(() => togglePrevButton(currentQuestionNumber), [currentQuestionNumber]);
