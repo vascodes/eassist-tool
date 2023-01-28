@@ -1,6 +1,6 @@
 import OptionBlock from "./OptionBlock";
 
-function QuestionBlock({ question, substances, allSubstanceScores }) {
+function Question({ question, substances, allSubstanceScores }) {
 	return (
 		question && (
 			<div className="question-block">
@@ -19,4 +19,4 @@ function QuestionBlock({ question, substances, allSubstanceScores }) {
 	);
 }
 
-export default QuestionBlock;
+export default Question;
