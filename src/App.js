@@ -9,14 +9,18 @@ function App() {
 	const questionId = "question" + currentQuestionNumber; //ex: question5
 	const currentQuestion = questions ? questions[questionId] : {};
 	const substances = currentQuestion?.substances;
-	
+
 	// Fetch data on app load.
 	useEffect(() => setContent(data), []);
 
+	function replaceSpecialCharsInString(str, replaceStr = "") {
+		return str.replace(/[\s\W]/gi, replaceStr);
+	}
+
 	function Option({ substanceName, optionText, score }) {
-		// convert to lowercase and remove spaces, special characters.
-		let shortSubstanceName = substanceName.toLowerCase().replace(/[\s\W]/gi, "-");
-		let shortOptionText = optionText.toLowerCase().replace(/[\s\W]/gi, "-");
+		// convert to lowercase and remove spaces, special characters.		
+		let shortSubstanceName = replaceSpecialCharsInString(substanceName.toLowerCase(), "-");
+		let shortOptionText = replaceSpecialCharsInString(optionText.toLowerCase(), "-");
 
 		let radioButtonId = `radio-${shortSubstanceName}-${shortOptionText}`; // ex: radio-cannabis-no
 		radioButtonId = radioButtonId.replace(/[-]+/gi, "-"); // replace multiple hyphens with single hyphen (-).
@@ -61,7 +65,7 @@ function App() {
 		);
 	}
 
-	function Question({ question, substances }) {		
+	function Question({ question, substances }) {
 		return (
 			<div className="question-block">
 				<p className="question-text">{`${currentQuestionNumber}. ${question.text}`}</p>
