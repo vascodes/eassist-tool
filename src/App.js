@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { data } from "./data";
 
 function App() {
 	const [content, setContent] = useState(null);
@@ -8,19 +9,9 @@ function App() {
 	const questionId = "question" + currentQuestionNumber; //ex: question5
 	const currentQuestion = questions ? questions[questionId] : {};
 	const substances = currentQuestion?.substances;
-
-	async function fetchData() {
-		try {
-			const response = await fetch("http://localhost:8000/e-assist");
-			const responseJSON = await response.json();
-			setContent(responseJSON);
-		} catch (error) {
-			console.log("Error! Could not fetch data." + error);
-		}
-	}
-
+	
 	// Fetch data on app load.
-	useEffect(() => fetchData, []);
+	useEffect(() => setContent(data), []);
 
 	function Option({ substanceName, optionText, score }) {
 		// convert to lowercase and remove spaces, special characters.
