@@ -18,12 +18,12 @@ function App() {
 	}
 
 	function Option({ categoryName, optionText, score }) {
-		// convert to lowercase and remove spaces, special characters.		
+		// convert to lowercase and remove spaces, special characters.
 		let categoryNameWithHyphens = replaceSpecialCharsInString(categoryName.toLowerCase(), "-");
 		let optionTextWithHyphens = replaceSpecialCharsInString(optionText.toLowerCase(), "-");
 
 		let radioButtonId = `radio-${categoryNameWithHyphens}-${optionTextWithHyphens}`; // ex: radio-cannabis-no
-		radioButtonId = radioButtonId.replace(/[-]+/gi, "-"); // replace multiple hyphens with single hyphen (-).
+		radioButtonId = replaceSpecialCharsInString(radioButtonId, "-");
 
 		return (
 			<div className="option-group">
