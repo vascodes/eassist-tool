@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
 import { data } from "./data";
 
-import Option from "./components/Option";
-import CategoryBlock from "./components/CategoryBlock";
 import Question from "./components/Question";
 
 function App() {
