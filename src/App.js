@@ -17,19 +17,19 @@ function App() {
 		return str.replace(/[\s\W]/gi, replaceStr);
 	}
 
-	function Option({ substanceName, optionText, score }) {
+	function Option({ categoryName, optionText, score }) {
 		// convert to lowercase and remove spaces, special characters.		
-		let shortSubstanceName = replaceSpecialCharsInString(substanceName.toLowerCase(), "-");
-		let shortOptionText = replaceSpecialCharsInString(optionText.toLowerCase(), "-");
+		let categoryNameWithHyphens = replaceSpecialCharsInString(categoryName.toLowerCase(), "-");
+		let optionTextWithHyphens = replaceSpecialCharsInString(optionText.toLowerCase(), "-");
 
-		let radioButtonId = `radio-${shortSubstanceName}-${shortOptionText}`; // ex: radio-cannabis-no
+		let radioButtonId = `radio-${categoryNameWithHyphens}-${optionTextWithHyphens}`; // ex: radio-cannabis-no
 		radioButtonId = radioButtonId.replace(/[-]+/gi, "-"); // replace multiple hyphens with single hyphen (-).
 
 		return (
 			<div className="option-group">
 				<input
 					type="radio"
-					name={shortSubstanceName}
+					name={categoryNameWithHyphens}
 					id={radioButtonId}
 					value={score}
 					required
@@ -39,23 +39,23 @@ function App() {
 		);
 	}
 
-	function OptionBlock({ substance }) {
-		let substanceName = substance?.name,
-			substanceExamples = substance?.examples !== "" ? `(${substance.examples}, etc.)` : "";
+	function CategoryBlock({ category }) {
+		let categoryName = category?.name,
+			categoryExamples = category?.examples !== "" ? `(${category.examples}, etc.)` : "";
 
 		return (
-			<div className="option-block">
-				{substanceName !== "" ? (
-					<div className="option-text">
-						{substanceName} {substanceExamples}
+			<div className="category-block">
+				{categoryName !== "" ? (
+					<div className="category-text">
+						{categoryName} {categoryExamples}
 					</div>
 				) : null}
 
 				<div className="options">
-					{substance?.options?.map((option) => (
+					{category?.options?.map((option) => (
 						<Option
 							key={option.id}
-							substanceName={substanceName}
+							categoryName={categoryName}
 							optionText={option.text}
 							score={option.score}
 						/>
@@ -65,14 +65,14 @@ function App() {
 		);
 	}
 
-	function Question({ question, substances }) {
+	function Question({ question, categories }) {
 		return (
 			<div className="question-block">
 				<p className="question-text">{`${currentQuestionNumber}. ${question.text}`}</p>
-				{substances?.map((substance) => (
-					<OptionBlock
-						key={substance.id}
-						substance={substance}
+				{categories?.map((category) => (
+					<CategoryBlock
+						key={category.id}
+						category={category}
 					/>
 				))}
 			</div>
@@ -85,7 +85,7 @@ function App() {
 				{content && (
 					<Question
 						question={currentQuestion}
-						substances={substances}
+						categories={substances}
 					/>
 				)}
 			</div>
