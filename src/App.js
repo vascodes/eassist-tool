@@ -15,14 +15,24 @@ function App() {
 	const substances = currentQuestion?.substances;
 
 	// Fetch data on app load.
-	useEffect(() => setContent(data), []);	
+	useEffect(() => setContent(data), []);
+
+	function handleNextButtonClick() {
+		setCurrentQuestionNumber((prevNo) => {
+			let totalQuestions = Object.keys(questions).length;
+			if (prevNo === totalQuestions) return prevNo;
+
+			return prevNo + 1;
+		});
+	}
 
 	return (
 		<div className="app-container">
+			<button onClick={() => handleNextButtonClick()}>Next</button>
 			<div className="questions-container">
 				{content && (
 					<Question
-						questionNumber = {currentQuestionNumber}
+						questionNumber={currentQuestionNumber}
 						question={currentQuestion}
 						categories={substances}
 					/>
