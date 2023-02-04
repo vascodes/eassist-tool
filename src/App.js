@@ -31,7 +31,7 @@ function App() {
 	}
 
 	function togglePrevButton(currentQuestionNumber) {
-		currentQuestionNumber === 1 ? SetShowPrevButton(false) : SetShowPrevButton(true);
+		SetShowPrevButton(currentQuestionNumber !== 1);		
 	}
 
 	useEffect(() => setContent(data), []); // Fetch data on app load.
