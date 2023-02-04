@@ -24,14 +24,12 @@ function App() {
 
 	function handlePrevButtonClick() {
 		setCurrentQuestionNumber((prevNum) => {
-			if (prevNum === 1) return prevNum;
-
-			return prevNum - 1;
+			return prevNum === 1 ? prevNum : prevNum - 1;
 		});
 	}
 
 	function togglePrevButton(currentQuestionNumber) {
-		SetShowPrevButton(currentQuestionNumber !== 1);		
+		SetShowPrevButton(currentQuestionNumber !== 1);
 	}
 
 	useEffect(() => setContent(data), []); // Fetch data on app load.
