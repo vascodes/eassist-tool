@@ -16,9 +16,8 @@ function App() {
 	function handleNextButtonClick() {
 		setCurrentQuestionNumber((prevNo) => {
 			let totalQuestions = Object.keys(questions).length;
-			if (prevNo === totalQuestions) return prevNo;
-
-			return prevNo + 1;
+			
+			return prevNo === totalQuestions ? prevNo : prevNo + 1;			
 		});
 	}
 
