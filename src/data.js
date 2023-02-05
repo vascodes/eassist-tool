@@ -440,6 +440,33 @@ export const data = {
 					id: "opioids",
 					name: "Opioids",
 					examples: "heroin, morphine, methadone, buprenorphine, codeine",
+					options: [
+						{
+							id: 1,
+							text: "Never",
+							score: 0,
+						},
+						{
+							id: 2,
+							text: "Once or twice",
+							score: 2,
+						},
+						{
+							id: 3,
+							text: "Monthly",
+							score: 3,
+						},
+						{
+							id: 4,
+							text: "Weekly",
+							score: 4,
+						},
+						{
+							id: 5,
+							text: "Daily or almost daily",
+							score: 6,
+						},
+					],
 				},
 				{
 					id: "other",

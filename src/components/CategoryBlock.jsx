@@ -1,6 +1,6 @@
 import Option from "./Option";
 
-function CategoryBlock({ category, selectedCategories, handleRadioBtnChange }) {
+function CategoryBlock({ questionNumber, category, selectedOptions, handleChange }) {
 	let categoryName = category?.name,
 		categoryExamples = category?.examples !== "" ? `(${category.examples}, etc.)` : "";
 
@@ -17,11 +17,12 @@ function CategoryBlock({ category, selectedCategories, handleRadioBtnChange }) {
 					return (
 						<Option
 							key={option.id}
+							questionNumber = {questionNumber}
 							categoryId={category.id}							
 							optionText={option.text}							
 							score={option.score}
-							selectedCategories={selectedCategories}
-							handleRadioBtnChange={handleRadioBtnChange}
+							selectedOptions={selectedOptions}
+							handleChange={handleChange}
 						/>
 					);
 				})}

@@ -1,20 +1,24 @@
+import { useEffect, useState } from "react";
+
 function replaceSpecialCharsInString(str, replaceStr = "") {
 	return str.replace(/[\s\W]/gi, replaceStr);
 }
 
-function Option({ categoryId, selectedCategories, optionText, score, handleRadioBtnChange }) {
+function Option({ questionNumber, categoryId, selectedOptions, optionText, score, handleChange }) {
 	// convert to lowercase and remove spaces, special characters.
 	let optionTextWithHyphens = replaceSpecialCharsInString(optionText.toLowerCase(), "-");
 
 	let radioButtonId = `radio-${categoryId}-${optionTextWithHyphens}`; // ex: radio-cannabis-no
 	radioButtonId = replaceSpecialCharsInString(radioButtonId, "-"); // Remove multiple hyphens.
 
-	let isChecked = false;
-	if (selectedCategories?.hasOwnProperty(categoryId)) {
-		if(selectedCategories[categoryId]?.toLowerCase() === optionText?.toLowerCase()){
-			isChecked = true
+	const [isChecked, setIsChecked] = useState(false);
+	useEffect(() => {
+		setIsChecked(false);
+		let key = "question" + questionNumber;
+		if (selectedOptions[key]?.substances[categoryId] === optionText) {			
+			setIsChecked(true);
 		}
-	};
+	}, [selectedOptions, categoryId, questionNumber, optionText]);
 
 	return (
 		<div className="option-group">
@@ -23,8 +27,8 @@ function Option({ categoryId, selectedCategories, optionText, score, handleRadio
 				name={categoryId}
 				id={radioButtonId}
 				value={score}
-				checked={isChecked}				
-				onChange={handleRadioBtnChange}
+				checked={isChecked}
+				onChange={handleChange}
 				data-option-text={optionText}
 				required
 			/>
