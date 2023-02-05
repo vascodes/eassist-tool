@@ -1,6 +1,6 @@
 import Option from "./Option";
 
-function CategoryBlock({ category, handleRadioBtnChange }) {
+function CategoryBlock({ category, selectedCategories, handleRadioBtnChange }) {
 	let categoryName = category?.name,
 		categoryExamples = category?.examples !== "" ? `(${category.examples}, etc.)` : "";
 
@@ -13,15 +13,18 @@ function CategoryBlock({ category, handleRadioBtnChange }) {
 			) : null}
 
 			<div className="options">
-				{category?.options?.map((option) => (
-					<Option
-						key={option.id}
-						categoryName={categoryName}
-						optionText={option.text}
-						score={option.score}
-						handleRadioBtnChange = {handleRadioBtnChange}
-					/>
-				))}
+				{category?.options?.map((option) => {					
+					return (
+						<Option
+							key={option.id}
+							categoryId={category.id}							
+							optionText={option.text}							
+							score={option.score}
+							selectedCategories={selectedCategories}
+							handleRadioBtnChange={handleRadioBtnChange}
+						/>
+					);
+				})}
 			</div>
 		</div>
 	);
