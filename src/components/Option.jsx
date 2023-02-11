@@ -15,8 +15,11 @@ function Option({ questionNumber, categoryId, selectedOptions, optionText, score
 	useEffect(() => {
 		setIsChecked(false);
 		let key = "question" + questionNumber;
-		if (selectedOptions[key]?.substances[categoryId] === optionText) {			
-			setIsChecked(true);
+
+		if (selectedOptions[key]) {
+			if (selectedOptions[key][categoryId]?.text === optionText) {
+				setIsChecked(true);
+			}
 		}
 	}, [selectedOptions, categoryId, questionNumber, optionText]);
 

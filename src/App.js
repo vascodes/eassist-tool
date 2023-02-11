@@ -4,19 +4,7 @@ import { data } from "./data";
 import Question from "./components/Question";
 
 function App() {
-	const [content, setContent] = useState(null);
-	const [showQuestions, setShowQuestions] = useState(true);
-	const [currentQuestionNumber, setCurrentQuestionNumber] = useState(1);
-	const [showPrevButton, SetShowPrevButton] = useState(false);
-	const [selectedOptions, setSelectedOptions] = useState({});
-	const [selectedSubstances, setSelectedSubstances] = useState([]);
-
-	const questions = content?.questions;
-	const questionId = "question" + currentQuestionNumber; //ex: question5
-	const currentQuestion = questions ? questions[questionId] : {};
-	const substances = currentQuestion?.substances;
-
-	const CategoryScores = {
+	const categoryScores = {
 		tobacco: 0,
 		alcohol: 0,
 		cannabis: 0,
@@ -29,9 +17,45 @@ function App() {
 		other: 0,
 	};
 
+	const [content, setContent] = useState(null);
+	const [showQuestions, setShowQuestions] = useState(true);
+	const [currentQuestionNumber, setCurrentQuestionNumber] = useState(1);
+	const [showPrevButton, SetShowPrevButton] = useState(false);
+	const [selectedOptions, setSelectedOptions] = useState({});
+
+	const questions = content?.questions;
+	const questionId = "question" + currentQuestionNumber; //ex: question5
+	const currentQuestion = questions ? questions[questionId] : {};
+	const substances = currentQuestion?.substances;
+
+	function calculateCategoryScores() {
+		// Find total score of each category from questions in selectedOptions.
+		for (let questionId in selectedOptions) {
+			const categories = selectedOptions[questionId];
+
+			for (let categoryName in categories) {
+				let category = categories[categoryName];
+
+				// If category doesn't exist in categoryScores,
+				// add category to categoryScores and initialize it to 0.
+				if (!categoryScores[categoryName]) categoryScores[categoryName] = 0;
+
+				// Update score of current category in categoryScores.
+				categoryScores[categoryName] += Number(category.score);
+			}
+		}
+	}
+
 	function handleNextButtonClick() {
 		setCurrentQuestionNumber((prevNo) => {
 			let totalQuestions = Object.keys(questions).length;
+
+			// Last question.
+			if (prevNo === totalQuestions) {
+				calculateCategoryScores();
+				console.log(selectedOptions);
+				console.log(categoryScores);
+			}
 
 			return prevNo === totalQuestions ? prevNo : prevNo + 1;
 		});
@@ -53,27 +77,17 @@ function App() {
 
 	function handleChange({ target }) {
 		let substanceId = target.name,
+			optionScore = target.value,
 			optionText = target.dataset.optionText;
 
 		setSelectedOptions((prev) => {
 			const newSelectedOptions = { ...prev };
+						
+			newSelectedOptions[questionId] = {};			
+			newSelectedOptions[questionId][substanceId] = { text: "", score: 0 };
+			newSelectedOptions[questionId][substanceId].text = optionText;
+			newSelectedOptions[questionId][substanceId].score = optionScore;
 
-			newSelectedOptions[questionId] ??= {
-				substances: {
-					tobacco: "",
-					alcohol: "",
-					cannabis: "",
-					cocaine: "",
-					amphetamine: "",
-					inhalants: "",
-					sedatives: "",
-					hallucinogens: "",
-					opioids: "",
-					other: "",
-				},
-			};
-
-			newSelectedOptions[questionId].substances[substanceId] = optionText;
 			return newSelectedOptions;
 		});
 	}
