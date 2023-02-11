@@ -22,11 +22,12 @@ function App() {
 	const [currentQuestionNumber, setCurrentQuestionNumber] = useState(1);
 	const [showPrevButton, SetShowPrevButton] = useState(false);
 	const [selectedOptions, setSelectedOptions] = useState({});
+	const [selectedCategories, setSelectedCategories] = useState([]);
+	const [categories, setCategories] = useState([]);
 
 	const questions = content?.questions;
 	const questionId = "question" + currentQuestionNumber; //ex: question5
 	const currentQuestion = questions ? questions[questionId] : {};
-	const substances = currentQuestion?.substances;
 
 	function calculateCategoryScores() {
 		// Find total score of each category from questions in selectedOptions.
@@ -47,17 +48,17 @@ function App() {
 	}
 
 	function handleNextButtonClick() {
-		setCurrentQuestionNumber((prevNo) => {
+		setCurrentQuestionNumber((prevQuestionNum) => {
 			let totalQuestions = Object.keys(questions).length;
 
 			// Last question.
-			if (prevNo === totalQuestions) {
+			if (prevQuestionNum === totalQuestions) {
 				calculateCategoryScores();
 				console.log(selectedOptions);
 				console.log(categoryScores);
 			}
 
-			return prevNo === totalQuestions ? prevNo : prevNo + 1;
+			return prevQuestionNum === totalQuestions ? prevQuestionNum : prevQuestionNum + 1;
 		});
 	}
 
@@ -82,18 +83,36 @@ function App() {
 
 		setSelectedOptions((prev) => {
 			const newSelectedOptions = { ...prev };
-						
-			newSelectedOptions[questionId] ??= {};			
+
+			newSelectedOptions[questionId] ??= {};
 			newSelectedOptions[questionId][substanceId] ??= { text: "", score: 0 };
 			newSelectedOptions[questionId][substanceId].text = optionText;
 			newSelectedOptions[questionId][substanceId].score = optionScore;
+
+			if (currentQuestionNumber === 1) {
+				if (optionText.toLowerCase() === "yes") {
+					setSelectedCategories((prevSelectedCategories) => [...prevSelectedCategories, substanceId]);
+				} else {
+					setSelectedCategories((prevSelectedCategories) => prevSelectedCategories.filter((substance) => substance !== substanceId));
+				}
+			}
 
 			return newSelectedOptions;
 		});
 	}
 
+	function selectCategories() {
+		if (currentQuestionNumber === 1 || currentQuestionNumber === 8) {
+			setCategories(currentQuestion?.substances);
+		} else {
+			const selectedCategoriesSet = new Set(selectedCategories);
+			setCategories(currentQuestion?.substances?.filter((substanceData) => selectedCategoriesSet.has(substanceData.id)));
+		}
+	}
+
 	useEffect(() => setContent(data), []); // Fetch data on app load.
 	useEffect(() => togglePrevButton(currentQuestionNumber), [currentQuestionNumber]);
+	useEffect(selectCategories, [currentQuestionNumber, currentQuestion, selectedCategories]);
 
 	return (
 		<div className="app-container">
@@ -107,7 +126,7 @@ function App() {
 					<Question
 						questionNumber={currentQuestionNumber}
 						question={currentQuestion}
-						categories={substances}
+						categories={categories}
 						selectedOptions={selectedOptions}
 						handleChange={handleChange}
 					/>
