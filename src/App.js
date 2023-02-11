@@ -83,8 +83,8 @@ function App() {
 		setSelectedOptions((prev) => {
 			const newSelectedOptions = { ...prev };
 						
-			newSelectedOptions[questionId] = {};			
-			newSelectedOptions[questionId][substanceId] = { text: "", score: 0 };
+			newSelectedOptions[questionId] ??= {};			
+			newSelectedOptions[questionId][substanceId] ??= { text: "", score: 0 };
 			newSelectedOptions[questionId][substanceId].text = optionText;
 			newSelectedOptions[questionId][substanceId].score = optionScore;
 
