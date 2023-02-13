@@ -19,6 +19,7 @@ function App() {
 
 	const [content, setContent] = useState(null);
 	const [showQuestions, setShowQuestions] = useState(true);
+	const [showThankYou, setShowThankYou] = useState(false);
 	const [currentQuestionNumber, setCurrentQuestionNumber] = useState(1);
 	const [showPrevButton, SetShowPrevButton] = useState(false);
 	const [selectedOptions, setSelectedOptions] = useState({});
@@ -50,6 +51,11 @@ function App() {
 	function handleNextButtonClick() {
 		setCurrentQuestionNumber(prevQuestionNum => {
 			let totalQuestions = Object.keys(questions).length;
+
+			if (prevQuestionNum === 1 && selectedCategories.length === 0) {
+				setShowQuestions(false);
+				setShowThankYou(true);
+			}
 
 			// Last question.
 			if (prevQuestionNum === totalQuestions) {
@@ -125,26 +131,29 @@ function App() {
 
 	return (
 		<div className="app-container">
-			<div className="navigation">
-				{showPrevButton && (
-					<button onClick={() => handlePrevButtonClick()}>Previous</button>
-				)}
-				<button onClick={() => handleNextButtonClick()}>Next</button>
-			</div>
+			{content && showQuestions && (
+				<div className="questions-container">
+					<div className="navigation">
+						{showPrevButton && (
+							<button onClick={() => handlePrevButtonClick()}>Previous</button>
+						)}
+						<button onClick={() => handleNextButtonClick()}>Next</button>
+					</div>
+					<Question
+						questionNumber={currentQuestionNumber}
+						question={currentQuestion}
+						categories={categories}
+						selectedOptions={selectedOptions}
+						handleChange={handleChange}
+					/>
+				</div>
+			)}
 
-			<div className="questions-container">
-				{content && showQuestions && (
-					<form action="#">
-						<Question
-							questionNumber={currentQuestionNumber}
-							question={currentQuestion}
-							categories={categories}
-							selectedOptions={selectedOptions}
-							handleChange={handleChange}
-						/>
-					</form>
-				)}
-			</div>
+			{content && showThankYou && (
+				<div className="thank-you-container">
+					<p>Thank you page.</p>
+				</div>
+			)}
 		</div>
 	);
 }
