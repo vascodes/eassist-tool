@@ -48,7 +48,7 @@ function App() {
 	}
 
 	function handleNextButtonClick() {
-		setCurrentQuestionNumber((prevQuestionNum) => {
+		setCurrentQuestionNumber(prevQuestionNum => {
 			let totalQuestions = Object.keys(questions).length;
 
 			// Last question.
@@ -63,7 +63,7 @@ function App() {
 	}
 
 	function handlePrevButtonClick() {
-		setCurrentQuestionNumber((prevNum) => {
+		setCurrentQuestionNumber(prevNum => {
 			return prevNum === 1 ? prevNum : prevNum - 1;
 		});
 	}
@@ -81,7 +81,7 @@ function App() {
 			optionScore = target.value,
 			optionText = target.dataset.optionText;
 
-		setSelectedOptions((prev) => {
+		setSelectedOptions(prev => {
 			const newSelectedOptions = { ...prev };
 
 			newSelectedOptions[questionId] ??= {};
@@ -91,9 +91,14 @@ function App() {
 
 			if (currentQuestionNumber === 1) {
 				if (optionText.toLowerCase() === "yes") {
-					setSelectedCategories((prevSelectedCategories) => [...prevSelectedCategories, substanceId]);
+					setSelectedCategories(prevSelectedCategories => [
+						...prevSelectedCategories,
+						substanceId,
+					]);
 				} else {
-					setSelectedCategories((prevSelectedCategories) => prevSelectedCategories.filter((substance) => substance !== substanceId));
+					setSelectedCategories(prevSelectedCategories =>
+						prevSelectedCategories.filter(substance => substance !== substanceId),
+					);
 				}
 			}
 
@@ -106,7 +111,11 @@ function App() {
 			setCategories(currentQuestion?.substances);
 		} else {
 			const selectedCategoriesSet = new Set(selectedCategories);
-			setCategories(currentQuestion?.substances?.filter((substanceData) => selectedCategoriesSet.has(substanceData.id)));
+			setCategories(
+				currentQuestion?.substances?.filter(substanceData =>
+					selectedCategoriesSet.has(substanceData.id),
+				),
+			);
 		}
 	}
 
@@ -117,19 +126,23 @@ function App() {
 	return (
 		<div className="app-container">
 			<div className="navigation">
-				{showPrevButton && <button onClick={() => handlePrevButtonClick()}>Previous</button>}
+				{showPrevButton && (
+					<button onClick={() => handlePrevButtonClick()}>Previous</button>
+				)}
 				<button onClick={() => handleNextButtonClick()}>Next</button>
 			</div>
 
 			<div className="questions-container">
 				{content && showQuestions && (
-					<Question
-						questionNumber={currentQuestionNumber}
-						question={currentQuestion}
-						categories={categories}
-						selectedOptions={selectedOptions}
-						handleChange={handleChange}
-					/>
+					<form action="#">
+						<Question
+							questionNumber={currentQuestionNumber}
+							question={currentQuestion}
+							categories={categories}
+							selectedOptions={selectedOptions}
+							handleChange={handleChange}
+						/>
+					</form>
 				)}
 			</div>
 		</div>

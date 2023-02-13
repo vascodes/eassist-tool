@@ -13,13 +13,13 @@ function CategoryBlock({ questionNumber, category, selectedOptions, handleChange
 			) : null}
 
 			<div className="options">
-				{category?.options?.map((option) => {					
+				{category?.options?.map(option => {
 					return (
 						<Option
 							key={option.id}
-							questionNumber = {questionNumber}
-							categoryId={category.id}							
-							optionText={option.text}							
+							questionNumber={questionNumber}
+							categoryId={category.id}
+							optionText={option.text}
 							score={option.score}
 							selectedOptions={selectedOptions}
 							handleChange={handleChange}

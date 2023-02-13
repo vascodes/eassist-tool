@@ -4,12 +4,12 @@ function Question({ questionNumber, question, categories, selectedOptions, handl
 	return (
 		<div className="question-block">
 			<p className="question-text">{`${questionNumber}. ${question.text}`}</p>
-			{categories?.map((category) => (
+			{categories?.map(category => (
 				<CategoryBlock
 					key={category.id}
-					questionNumber = {questionNumber}
+					questionNumber={questionNumber}
 					category={category}
-					selectedOptions = {selectedOptions}
+					selectedOptions={selectedOptions}
 					handleChange={handleChange}
 				/>
 			))}
