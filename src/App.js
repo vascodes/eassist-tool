@@ -28,7 +28,7 @@ function App() {
 
 	const questions = content?.questions;
 	const questionId = "question" + currentQuestionNumber; //ex: question5
-	const currentQuestion = questions ? questions[questionId] : {};
+	const currentQuestion = questions ? questions[questionId] : null;
 
 	function calculateCategoryScores() {
 		// Find total score of each category from questions in selectedOptions.
@@ -49,9 +49,31 @@ function App() {
 	}
 
 	function handleNextButtonClick() {
+		const requiredMsg = "Please complete all questions on the page to continue.";
+
+		if (!selectedOptions[questionId]) {
+			console.log(requiredMsg);
+			return;
+		}
+
+		const numSelectedOptions = Object.keys(selectedOptions[questionId]).length;
+		let totalCategories = 0;
+
+		if (currentQuestionNumber === 1 || currentQuestionNumber === 8) {
+			totalCategories = currentQuestion?.substances?.length;
+		} else {
+			totalCategories = selectedCategories?.length;
+		}
+		if (numSelectedOptions !== totalCategories) {
+			console.log(selectedCategories);
+			console.log(requiredMsg);
+			return;
+		}
+
 		setCurrentQuestionNumber(prevQuestionNum => {
 			let totalQuestions = Object.keys(questions).length;
 
+			// Show Thank you page if no categories are selected in first question.
 			if (prevQuestionNum === 1 && selectedCategories.length === 0) {
 				setShowQuestions(false);
 				setShowThankYou(true);
@@ -88,7 +110,7 @@ function App() {
 			optionText = target.dataset.optionText;
 
 		setSelectedOptions(prev => {
-			const newSelectedOptions = { ...prev };
+			let newSelectedOptions = { ...prev };
 
 			newSelectedOptions[questionId] ??= {};
 			newSelectedOptions[questionId][substanceId] ??= { text: "", score: 0 };
@@ -101,6 +123,9 @@ function App() {
 						...prevSelectedCategories,
 						substanceId,
 					]);
+					setSelectedCategories(prevSelectedCategories =>
+						Array.from(new Set(prevSelectedCategories)),
+					);
 				} else {
 					setSelectedCategories(prevSelectedCategories =>
 						prevSelectedCategories.filter(substance => substance !== substanceId),
