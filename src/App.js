@@ -25,15 +25,16 @@ function App() {
 	const [selectedOptions, setSelectedOptions] = useState({});
 	const [selectedCategories, setSelectedCategories] = useState([]);
 	const [categories, setCategories] = useState([]);
+	const [showRequiredMsg, setShowRequiredMsg] = useState(false);
 
 	const questions = content?.questions;
-	const questionId = "question" + currentQuestionNumber; //ex: question5
-	const currentQuestion = questions ? questions[questionId] : null;
+	const currentQuestionId = "question" + currentQuestionNumber; //ex: question5
+	const currentQuestion = questions ? questions[currentQuestionId] : null;
 
 	function calculateCategoryScores() {
 		// Find total score of each category from questions in selectedOptions.
-		for (let questionId in selectedOptions) {
-			const categories = selectedOptions[questionId];
+		for (let currentQuestionId in selectedOptions) {
+			const categories = selectedOptions[currentQuestionId];
 
 			for (let categoryName in categories) {
 				let category = categories[categoryName];
@@ -49,14 +50,15 @@ function App() {
 	}
 
 	function handleNextButtonClick() {
-		const requiredMsg = "Please complete all questions on the page to continue.";
+		setShowRequiredMsg(false);
 
-		if (!selectedOptions[questionId]) {
-			console.log(requiredMsg);
+		// Show required message if NO questions are answered.
+		if (!selectedOptions[currentQuestionId]) {
+			setShowRequiredMsg(true);
 			return;
 		}
 
-		const numSelectedOptions = Object.keys(selectedOptions[questionId]).length;
+		const numSelectedOptions = Object.keys(selectedOptions[currentQuestionId]).length;
 		let totalCategories = 0;
 
 		if (currentQuestionNumber === 1 || currentQuestionNumber === 8) {
@@ -64,9 +66,11 @@ function App() {
 		} else {
 			totalCategories = selectedCategories?.length;
 		}
+
+		// Show required message if all questions are not answered.
 		if (numSelectedOptions !== totalCategories) {
 			console.log(selectedCategories);
-			console.log(requiredMsg);
+			setShowRequiredMsg(true);
 			return;
 		}
 
@@ -86,7 +90,14 @@ function App() {
 				console.log(categoryScores);
 			}
 
-			return prevQuestionNum === totalQuestions ? prevQuestionNum : prevQuestionNum + 1;
+			let newQuestionNum;
+			if (prevQuestionNum === totalQuestions) {
+				newQuestionNum = prevQuestionNum;
+			} else {
+				newQuestionNum = prevQuestionNum + 1;
+			}
+
+			return newQuestionNum;
 		});
 	}
 
@@ -112,10 +123,10 @@ function App() {
 		setSelectedOptions(prev => {
 			let newSelectedOptions = { ...prev };
 
-			newSelectedOptions[questionId] ??= {};
-			newSelectedOptions[questionId][substanceId] ??= { text: "", score: 0 };
-			newSelectedOptions[questionId][substanceId].text = optionText;
-			newSelectedOptions[questionId][substanceId].score = optionScore;
+			newSelectedOptions[currentQuestionId] ??= {};
+			newSelectedOptions[currentQuestionId][substanceId] ??= { text: "", score: 0 };
+			newSelectedOptions[currentQuestionId][substanceId].text = optionText;
+			newSelectedOptions[currentQuestionId][substanceId].score = optionScore;
 
 			if (currentQuestionNumber === 1) {
 				if (optionText.toLowerCase() === "yes") {
@@ -158,11 +169,14 @@ function App() {
 		<div className="app-container">
 			{content && showQuestions && (
 				<div className="questions-container">
-					<div className="navigation">
+					<div className="question-navigation">
 						{showPrevButton && (
 							<button onClick={() => handlePrevButtonClick()}>Previous</button>
 						)}
 						<button onClick={() => handleNextButtonClick()}>Next</button>
+						{showRequiredMsg && (
+							<p>Please complete all questions on the page to continue.</p>
+						)}
 					</div>
 					<Question
 						questionNumber={currentQuestionNumber}
@@ -176,7 +190,12 @@ function App() {
 
 			{content && showThankYou && (
 				<div className="thank-you-container">
-					<p>Thank you page.</p>
+					<h3>eASSIST Results</h3>
+					<p>
+						Thank you for completing the questions. Based on your answers, you are not
+						at any risk of harms from Tobacco, Alcohol, Cannabis, Cocaine, Inhalants,
+						Hallucinogens, Sedatives, Opioids, Other use at this time.
+					</p>
 				</div>
 			)}
 		</div>
