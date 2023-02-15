@@ -19,6 +19,7 @@ function App() {
 
 	const [content, setContent] = useState(null);
 	const [showQuestions, setShowQuestions] = useState(true);
+	const [results, setResults] = useState(null);
 	const [showThankYou, setShowThankYou] = useState(false);
 	const [currentQuestionNumber, setCurrentQuestionNumber] = useState(1);
 	const [showPrevButton, SetShowPrevButton] = useState(false);
@@ -88,6 +89,8 @@ function App() {
 				calculateCategoryScores();
 				console.log(selectedOptions);
 				console.log(categoryScores);
+
+				setResults(categoryScores);
 			}
 
 			let newQuestionNum;
@@ -187,6 +190,10 @@ function App() {
 					/>
 				</div>
 			)}
+
+			{content &&
+				results &&
+				Object.keys(results).map(category => <p>{`${category}: ${results[category]}`}</p>)}
 
 			{content && showThankYou && (
 				<div className="thank-you-container">
