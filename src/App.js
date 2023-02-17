@@ -4,19 +4,6 @@ import { data } from "./data";
 import Question from "./components/Question";
 
 function App() {
-	const categoryScores = {
-		tobacco: 0,
-		alcohol: 0,
-		cannabis: 0,
-		cocaine: 0,
-		amphetamine: 0,
-		inhalants: 0,
-		sedatives: 0,
-		hallucinogens: 0,
-		opioids: 0,
-		other: 0,
-	};
-
 	const [content, setContent] = useState(null);
 	const [showQuestions, setShowQuestions] = useState(true);
 	const [results, setResults] = useState(null);
@@ -32,7 +19,20 @@ function App() {
 	const currentQuestionId = "question" + currentQuestionNumber; //ex: question5
 	const currentQuestion = questions ? questions[currentQuestionId] : null;
 
-	function calculateCategoryScores() {
+	function getCategoryScores() {
+		const categoryScores = {
+			tobacco: 0,
+			alcohol: 0,
+			cannabis: 0,
+			cocaine: 0,
+			amphetamine: 0,
+			inhalants: 0,
+			sedatives: 0,
+			hallucinogens: 0,
+			opioids: 0,
+			other: 0,
+		};
+
 		// Find total score of each category from questions in selectedOptions.
 		for (let currentQuestionId in selectedOptions) {
 			const categories = selectedOptions[currentQuestionId];
@@ -48,9 +48,12 @@ function App() {
 				categoryScores[categoryName] += Number(category.score);
 			}
 		}
+
+		return categoryScores;
 	}
 
 	function handleNextButtonClick() {
+		//TODO: Fix bug where required message is shown when one of the category that was selected is removed and quiz is retaken.
 		setShowRequiredMsg(false);
 
 		// Show required message if NO questions are answered.
@@ -70,6 +73,8 @@ function App() {
 
 		// Show required message if all questions are not answered.
 		if (numSelectedOptions !== totalCategories) {
+			console.log(selectedOptions);
+			console.log(totalCategories);
 			console.log(selectedCategories);
 			setShowRequiredMsg(true);
 			return;
@@ -86,7 +91,7 @@ function App() {
 
 			// Last question.
 			if (prevQuestionNum === totalQuestions) {
-				calculateCategoryScores();
+				const categoryScores = getCategoryScores();
 				console.log(selectedOptions);
 				console.log(categoryScores);
 
@@ -105,6 +110,7 @@ function App() {
 	}
 
 	function handlePrevButtonClick() {
+		setResults(null);
 		setCurrentQuestionNumber(prevNum => {
 			return prevNum === 1 ? prevNum : prevNum - 1;
 		});
@@ -137,10 +143,13 @@ function App() {
 						...prevSelectedCategories,
 						substanceId,
 					]);
+
+					// Remove duplicates.
 					setSelectedCategories(prevSelectedCategories =>
 						Array.from(new Set(prevSelectedCategories)),
 					);
 				} else {
+					// Deselect a category.
 					setSelectedCategories(prevSelectedCategories =>
 						prevSelectedCategories.filter(substance => substance !== substanceId),
 					);
