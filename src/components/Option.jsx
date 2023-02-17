@@ -24,8 +24,9 @@ function Option({ questionNumber, categoryId, selectedOptions, optionText, score
 	}, [selectedOptions, categoryId, questionNumber, optionText]);
 
 	return (
-		<div className="option-group">
+		<div className="form-check radio-spacing option-group">
 			<input
+				className="form-check-input"
 				type="radio"
 				name={categoryId}
 				id={radioButtonId}
@@ -35,7 +36,7 @@ function Option({ questionNumber, categoryId, selectedOptions, optionText, score
 				data-option-text={optionText}
 				required
 			/>
-			<label htmlFor={radioButtonId}>{optionText}</label>
+			<label className="form-check-label" htmlFor={radioButtonId}>{optionText}</label>
 		</div>
 	);
 }
