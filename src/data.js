@@ -2105,7 +2105,8 @@ export const data = {
 	},
 	scoreMeaning: {
 		Lower: "You are at lower risk of health and other problems from your current pattern of use.",
-		Moderate: "You are at moderate risk of health and other problems from your current pattern of substance use.",
+		Moderate:
+			"You are at moderate risk of health and other problems from your current pattern of substance use.",
 		High: "You are at high risk of experiencing severe problems (health, social, financial, legal, relationship) as a result of your current pattern of use and are likely to be dependent.",
-	}
+	},
 };

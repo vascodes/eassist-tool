@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { data } from "./data";
 
 import Question from "./components/Question";
+import ScoresTable from "./components/ScoresTable";
 
 function App() {
 	const [content, setContent] = useState(null);
@@ -206,74 +207,11 @@ function App() {
 		);
 	}
 
-	function ScoresTableRow({ results, category, rowClassName }) {
-		return (
-			<>
-				<tr
-					key={category}
-					className={rowClassName}
-				>
-					<th rowSpan={4}>{category}</th>
-					<td rowSpan={4}>{results[category]}</td>
-					<td rowSpan={4}>Low</td>
-				</tr>
-				<tr className={rowClassName}>
-					<td>1-3 Low</td>
-				</tr>
-				<tr className={rowClassName}>
-					<td>4-26 Moderate</td>
-				</tr>
-				<tr className={rowClassName}>
-					<td>27+ High</td>
-				</tr>
-			</>
-		);
-	}
-
-	function ScoresTable() {
-		return (
-			<div className="row">
-				<div className="container-fluid col-lg-8">
-					<div className="card">
-						<div className="card-body">
-							<h3>eAssist Results</h3>
-
-							<table className="table table-borderless">
-								<thead className="table-dark">
-									<tr>
-										<th scope="col">Substance</th>
-										<th scope="col">Score</th>
-										<th scope="col">Risk</th>
-										<th scope="col">Criteria</th>
-									</tr>
-								</thead>
-								<tbody>
-									{Object.keys(results).map((category, index) => {
-										let rowClassName = "";
-										rowClassName = index % 2 === 0 ? null : "table-secondary";
-
-										return (
-											<ScoresTableRow
-												key={category}
-												results={results}
-												category={category}
-												rowClassName={rowClassName}
-											/>
-										);
-									})}
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</div>
-			</div>
-		);
-	}
-
 	useEffect(() => setContent(data), []); // Fetch data on app load.
 	useEffect(() => togglePrevButton(currentQuestionNumber), [currentQuestionNumber]);
 	useEffect(selectCategories, [currentQuestionNumber, currentQuestion, selectedCategories]);
 
+	//TODO: Remove injection from results.
 	return (
 		<>
 			<header>
@@ -387,7 +325,19 @@ function App() {
 					</div>
 				)}
 
-				{content && results && <ScoresTable />}
+				{content && results && (
+					<div className="row">
+						<div className="container-fluid col-lg-8 scores-table-container">
+							<div className="card">
+								<div className="card-body">
+									<ScoresTable results={results} />
+								</div>
+							</div>
+						</div>
+
+						<InfoCard />
+					</div>
+				)}
 
 				{content && showThankYou && (
 					<div className="row">
