@@ -95,6 +95,8 @@ function App() {
 				console.log(selectedOptions);
 				console.log(categoryScores);
 
+				setShowQuestions(false);
+				SetShowPrevButton(false);
 				setResults(categoryScores);
 			}
 
@@ -229,8 +231,6 @@ function App() {
 	}
 
 	function ScoresTable() {
-		// Object.keys(results).map(category => <p>{`${category}: ${results[category]}`}</p>);
-
 		return (
 			<div className="row">
 				<div className="container-fluid col-lg-8">
@@ -386,12 +386,6 @@ function App() {
 						<InfoCard />
 					</div>
 				)}
-
-				{/* {content &&
-					results &&
-					Object.keys(results).map(category => (
-						<p>{`${category}: ${results[category]}`}</p>
-					))} */}
 
 				{content && results && <ScoresTable />}
 
