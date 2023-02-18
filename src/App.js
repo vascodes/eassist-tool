@@ -173,6 +173,103 @@ function App() {
 		}
 	}
 
+	function InfoCard() {
+		return (
+			<div className="container-fluid col-lg info-container">
+				<div className="card border-remove">
+					<div className="card-body">
+						<div className="container">
+							<h3>What is the eASSIST?</h3>
+							<p>
+								The eASSIST is an electronic version of the Alcohol, Smoking and
+								Substance Involvement Screening Test (ASSIST) which was developed by
+								the World Health Organization. The ASSIST has eight questions and
+								takes approximately 5-10 minutes to complete. The ASSIST helps
+								identify the risks associated with substance use and the
+								personalised feedback helps explore options for change.
+							</p>
+
+							<h3>Need Help?</h3>
+							<p>
+								The Alcohol and Drug Information Service (ADIS) are State and
+								Territory based phone services that offer information, advice and
+								support. They provide services for health professionals,
+								individuals, business and community groups. Phone 1800 250 015 to be
+								linked to your nearest service.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		);
+	}
+
+	function ScoresTableRow({ results, category, rowClassName }) {
+		return (
+			<>
+				<tr
+					key={category}
+					className={rowClassName}
+				>
+					<th rowSpan={4}>{category}</th>
+					<td rowSpan={4}>{results[category]}</td>
+					<td rowSpan={4}>Low</td>
+				</tr>
+				<tr className={rowClassName}>
+					<td>1-3 Low</td>
+				</tr>
+				<tr className={rowClassName}>
+					<td>4-26 Moderate</td>
+				</tr>
+				<tr className={rowClassName}>
+					<td>27+ High</td>
+				</tr>
+			</>
+		);
+	}
+
+	function ScoresTable() {
+		// Object.keys(results).map(category => <p>{`${category}: ${results[category]}`}</p>);
+
+		return (
+			<div className="row">
+				<div className="container-fluid col-lg-8">
+					<div className="card">
+						<div className="card-body">
+							<h3>eAssist Results</h3>
+
+							<table className="table table-borderless">
+								<thead className="table-dark">
+									<tr>
+										<th scope="col">Substance</th>
+										<th scope="col">Score</th>
+										<th scope="col">Risk</th>
+										<th scope="col">Criteria</th>
+									</tr>
+								</thead>
+								<tbody>
+									{Object.keys(results).map((category, index) => {
+										let rowClassName = "";
+										rowClassName = index % 2 === 0 ? null : "table-secondary";
+
+										return (
+											<ScoresTableRow
+												key={category}
+												results={results}
+												category={category}
+												rowClassName={rowClassName}
+											/>
+										);
+									})}
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		);
+	}
+
 	useEffect(() => setContent(data), []); // Fetch data on app load.
 	useEffect(() => togglePrevButton(currentQuestionNumber), [currentQuestionNumber]);
 	useEffect(selectCategories, [currentQuestionNumber, currentQuestion, selectedCategories]);
@@ -182,24 +279,24 @@ function App() {
 			<header>
 				<nav
 					className="navbar navbar-expand-lg navbar-light"
-					style={{ "background-color": "#158852" }}
+					style={{ backgroundColor: "#158852" }}
 				>
-					<div class="container-fluid">
+					<div className="container-fluid">
 						<a
-							class="navbar-brand"
+							className="navbar-brand"
 							href="https://rajagiri.edu/"
 						>
 							<img
 								src={`${process.env.PUBLIC_URL}/assets/images/rajagiri_logo.jpg`}
 								width="70"
 								height="70"
-								class="d-inline-block align-top"
+								className="d-inline-block align-top"
 								alt="logo"
 							/>
 						</a>
 
 						<button
-							class="navbar-toggler"
+							className="navbar-toggler"
 							type="button"
 							data-bs-toggle="collapse"
 							data-bs-target="#navbarTogglerDemo02"
@@ -207,25 +304,25 @@ function App() {
 							aria-expanded="false"
 							aria-label="Toggle navigation"
 						>
-							<span class="navbar-toggler-icon"></span>
+							<span className="navbar-toggler-icon"></span>
 						</button>
 
 						<div
-							class="collapse navbar-collapse"
+							className="collapse navbar-collapse"
 							id="navbarTogglerDemo02"
 						>
-							<ul class="navbar-nav ms-auto px-5 mb-2 mb-lg-0">
-								<li class="nav-item">
+							<ul className="navbar-nav ms-auto px-5 mb-2 mb-lg-0">
+								<li className="nav-item">
 									<a
-										class="nav-link text-white active"
+										className="nav-link text-white active"
 										href="#"
 									>
 										Home
 									</a>
 								</li>
-								<li class="nav-item">
+								<li className="nav-item">
 									<a
-										class="nav-link text-white"
+										className="nav-link text-white"
 										href="#"
 									>
 										Contact
@@ -286,51 +383,35 @@ function App() {
 							</div>
 						</div>
 
-						<div className="container-fluid col-lg info-container">
-							<div className="card border-remove">
-								<div className="card-body">
-									<div className="container">
-										<h2>What is the eASSIST?</h2>
-										<p>
-											The eASSIST is an electronic version of the Alcohol,
-											Smoking and Substance Involvement Screening Test
-											(ASSIST) which was developed by the World Health
-											Organization. The ASSIST has eight questions and takes
-											approximately 5-10 minutes to complete. The ASSIST helps
-											identify the risks associated with substance use and the
-											personalised feedback helps explore options for change.
-										</p>
-
-										<h2>Need Help?</h2>
-										<p>
-											The Alcohol and Drug Information Service (ADIS) are
-											State and Territory based phone services that offer
-											information, advice and support. They provide services
-											for health professionals, individuals, business and
-											community groups. Phone 1800 250 015 to be linked to
-											your nearest service.
-										</p>
-									</div>
-								</div>
-							</div>
-						</div>
+						<InfoCard />
 					</div>
 				)}
 
-				{content &&
+				{/* {content &&
 					results &&
 					Object.keys(results).map(category => (
 						<p>{`${category}: ${results[category]}`}</p>
-					))}
+					))} */}
+
+				{content && results && <ScoresTable />}
 
 				{content && showThankYou && (
-					<div className="thank-you-container">
-						<h3>eASSIST Results</h3>
-						<p>
-							Thank you for completing the questions. Based on your answers, you are
-							not at any risk of harms from Tobacco, Alcohol, Cannabis, Cocaine,
-							Inhalants, Hallucinogens, Sedatives, Opioids, Other use at this time.
-						</p>
+					<div className="row">
+						<div className="container-fluid col-lg-8 thank-you-container">
+							<div className="card">
+								<div className="card-body">
+									<h3>eASSIST Results</h3>
+									<p>
+										Thank you for completing the questions. Based on your
+										answers, you are not at any risk of harms from Tobacco,
+										Alcohol, Cannabis, Cocaine, Inhalants, Hallucinogens,
+										Sedatives, Opioids, Other use at this time.
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<InfoCard />
 					</div>
 				)}
 			</div>
