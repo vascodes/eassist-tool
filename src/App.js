@@ -36,8 +36,10 @@ function App() {
 
 		// Find total score of each category from questions in selectedOptions.
 		for (let currentQuestionId in selectedOptions) {
-			const categories = selectedOptions[currentQuestionId];
+			// Answers of Question 8 should not be considered in results.
+			if (currentQuestionId === "question8") break;
 
+			const categories = selectedOptions[currentQuestionId];
 			for (let categoryName in categories) {
 				let category = categories[categoryName];
 
@@ -132,6 +134,9 @@ function App() {
 			optionScore = target.value,
 			optionText = target.dataset.optionText;
 
+		console.log(selectedCategories);
+		console.log(selectedOptions);
+
 		setSelectedOptions(prev => {
 			let newSelectedOptions = { ...prev };
 
@@ -167,6 +172,8 @@ function App() {
 		if (currentQuestionNumber === 1 || currentQuestionNumber === 8) {
 			setCategories(currentQuestion?.substances);
 		} else {
+			// For questions other than 1 and 8,
+			// only categories selected in Question 1 should be displayed.
 			const selectedCategoriesSet = new Set(selectedCategories);
 			setCategories(
 				currentQuestion?.substances?.filter(substanceData =>
