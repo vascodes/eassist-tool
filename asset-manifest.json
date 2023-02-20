@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/eassist-tool/static/css/main.243203b6.css",
+    "main.js": "/eassist-tool/static/js/main.cc553526.js",
+    "index.html": "/eassist-tool/index.html",
+    "main.243203b6.css.map": "/eassist-tool/static/css/main.243203b6.css.map",
+    "main.cc553526.js.map": "/eassist-tool/static/js/main.cc553526.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.243203b6.css",
+    "static/js/main.cc553526.js"
+  ]
+}
