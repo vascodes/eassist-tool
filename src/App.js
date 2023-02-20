@@ -218,7 +218,6 @@ function App() {
 	useEffect(() => togglePrevButton(currentQuestionNumber), [currentQuestionNumber]);
 	useEffect(selectCategories, [currentQuestionNumber, currentQuestion, selectedCategories]);
 
-	//TODO: Remove injection from finalScores.
 	return (
 		<>
 			<header>
@@ -337,7 +336,10 @@ function App() {
 						<div className="container-fluid col-lg-8 scores-table-container">
 							<div className="card">
 								<div className="card-body">
-									<ScoresTable scores={finalScores} />
+									<ScoresTable
+										scores={finalScores}
+										substanceRiskLevels={content?.substanceRiskLevels}
+									/>
 								</div>
 							</div>
 						</div>
