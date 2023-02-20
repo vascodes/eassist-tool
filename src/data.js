@@ -1962,151 +1962,211 @@ export const data = {
 		},
 	},
 	substanceRiskLevels: {
-		"Tobacco products": {
-			Lower: {
+		tobacco: {
+			id: "tobacco",
+			name: "Tobacco Products",
+			criterias: ["1-3 Lower", "4-26 Moderate", "27+ High"],
+			lower: {
+				text: "Lower",
 				min: 0,
 				max: 3,
 			},
-			Moderate: {
+			moderate: {
+				text: "Moderate",
 				min: 4,
 				max: 26,
 			},
-			High: {
+			high: {
+				text: "High",
 				min: 27,
 				max: null,
 			},
 		},
-		"Alcoholic beverages": {
-			Lower: {
+		alcohol: {
+			id: "alcohol",
+			name: "Alcoholic beverages",
+			criterias: ["0-10 Lower", "11-26 Moderate", "27+ High"],
+			lower: {
+				text: "Lower",
 				min: 0,
 				max: 10,
 			},
-			Moderate: {
+			moderate: {
+				text: "Moderate",
 				min: 11,
 				max: 26,
 			},
-			High: {
+			high: {
+				text: "High",
 				min: 27,
 				max: null,
 			},
 		},
-		Cannabis: {
-			Lower: {
+		cannabis: {
+			id: "cannabis",
+			name: "Cannabis",
+			criterias: ["0-3 Lower", "4-26 Moderate", "27+ High"],
+			lower: {
+				text: "Lower",
 				min: 0,
 				max: 3,
 			},
-			Moderate: {
+			moderate: {
+				text: "Moderate",
 				min: 4,
 				max: 26,
 			},
-			High: {
+			high: {
+				text: "High",
 				min: 27,
 				max: null,
 			},
 		},
-		Cocaine: {
-			Lower: {
+		cocaine: {
+			id: "cocaine",
+			name: "Cocaine",
+			criterias: ["0-3 Lower", "4-26 Moderate", "27+ High"],
+			lower: {
+				text: "Lower",
 				min: 0,
 				max: 3,
 			},
-			Moderate: {
+			moderate: {
+				text: "Moderate",
 				min: 4,
 				max: 26,
 			},
-			High: {
+			high: {
+				text: "High",
 				min: 27,
 				max: null,
 			},
 		},
-		"Amphetamine-type stimulants": {
-			Lower: {
+		amphetamine: {
+			id: "amphetamine",
+			name: "Amphetamine-type stimulants",
+			criterias: ["0-3 Lower", "4-26 Moderate", "27+ High"],
+			lower: {
+				text: "Lower",
 				min: 0,
 				max: 3,
 			},
-			Moderate: {
+			moderate: {
+				text: "Moderate",
 				min: 4,
 				max: 26,
 			},
-			High: {
+			high: {
+				text: "High",
 				min: 27,
 				max: null,
 			},
 		},
-		Inhalants: {
-			Lower: {
+		inhalants: {
+			id: "inhalants",
+			name: "Inhalants",
+			criterias: ["0-3 Lower", "4-26 Moderate", "27+ High"],
+			lower: {
+				text: "Lower",
 				min: 0,
 				max: 3,
 			},
-			Moderate: {
+			moderate: {
+				text: "Moderate",
 				min: 4,
 				max: 26,
 			},
-			High: {
+			high: {
+				text: "High",
 				min: 27,
 				max: null,
 			},
 		},
-		"Sedatives or sleeping pills": {
-			Lower: {
+		sedatives: {
+			id: "sedatives",
+			name: "Sedatives or sleeping pills",
+			criterias: ["0-3 Lower", "4-26 Moderate", "27+ High"],
+			lower: {
+				text: "Lower",
 				min: 0,
 				max: 3,
 			},
-			Moderate: {
+			moderate: {
+				text: "Moderate",
 				min: 4,
 				max: 26,
 			},
-			High: {
+			high: {
+				text: "High",
 				min: 27,
 				max: null,
 			},
 		},
-		Hallucinogens: {
-			Lower: {
+		hallucinogens: {
+			id: "hallucinogens",
+			name: "Hallucinogens",
+			criterias: ["0-3 Lower", "4-26 Moderate", "27+ High"],
+			lower: {
+				text: "Lower",
 				min: 0,
 				max: 3,
 			},
-			Moderate: {
+			moderate: {
+				text: "Moderate",
 				min: 4,
 				max: 26,
 			},
-			High: {
+			high: {
+				text: "High",
 				min: 27,
 				max: null,
 			},
 		},
-		Opioids: {
-			Lower: {
+		opioids: {
+			id: "opioids",
+			name: "Opioids",
+			criterias: ["0-3 Lower", "4-26 Moderate", "27+ High"],
+			lower: {
+				text: "Lower",
 				min: 0,
 				max: 3,
 			},
-			Moderate: {
+			moderate: {
+				text: "Moderate",
 				min: 4,
 				max: 26,
 			},
-			High: {
+			high: {
+				text: "High",
 				min: 27,
 				max: null,
 			},
 		},
-		Other: {
-			Lower: {
+		other: {
+			id: "other",
+			name: "Other",
+			criterias: ["0-3 Lower", "4-26 Moderate", "27+ High"],
+			lower: {
+				text: "Lower",
 				min: 0,
 				max: 3,
 			},
-			Moderate: {
+			moderate: {
+				text: "Moderate",
 				min: 4,
 				max: 26,
 			},
-			High: {
+			high: {
+				text: "High",
 				min: 27,
 				max: null,
 			},
 		},
 	},
 	scoreMeaning: {
-		Lower: "You are at lower risk of health and other problems from your current pattern of use.",
-		Moderate:
+		lower: "You are at lower risk of health and other problems from your current pattern of use.",
+		moderate:
 			"You are at moderate risk of health and other problems from your current pattern of substance use.",
-		High: "You are at high risk of experiencing severe problems (health, social, financial, legal, relationship) as a result of your current pattern of use and are likely to be dependent.",
+		high: "You are at high risk of experiencing severe problems (health, social, financial, legal, relationship) as a result of your current pattern of use and are likely to be dependent.",
 	},
 };
