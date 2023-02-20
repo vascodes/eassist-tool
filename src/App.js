@@ -278,7 +278,7 @@ function App() {
 				</nav>
 			</header>
 
-			<div className="container pt-4 app-container">
+			<div className="container pt-4 pb-5 app-container">
 				{content && showQuestions && (
 					<div className="row">
 						<div className="container-fluid col-lg-8 questions-container">
