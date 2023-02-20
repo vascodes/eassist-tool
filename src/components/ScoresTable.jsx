@@ -1,4 +1,4 @@
-function ScoresTableRow({ rowNum, results, category, rowClassName }) {
+function ScoresTableRow({ rowNum, scores, category, rowClassName }) {
 	return (
 		<>
 			<tr
@@ -6,7 +6,7 @@ function ScoresTableRow({ rowNum, results, category, rowClassName }) {
 				className={rowClassName}
 			>
 				<th rowSpan={4}>{`${rowNum}. `} {category}</th>
-				<td rowSpan={4}>{results[category]}</td>
+				<td rowSpan={4}>{scores[category]}</td>
 				<td rowSpan={4}>Low</td>
 			</tr>
 			<tr className={rowClassName}>
@@ -22,10 +22,10 @@ function ScoresTableRow({ rowNum, results, category, rowClassName }) {
 	);
 }
 
-function ScoresTable({ results }) {
+function ScoresTable({ scores }) {
 	return (
 		<>
-			<h3>eAssist Results</h3>
+			<h3>eAssist scores</h3>
 
 			<table className="table table-borderless">
 				<thead className="table-dark">
@@ -37,7 +37,7 @@ function ScoresTable({ results }) {
 					</tr>
 				</thead>
 				<tbody>
-					{Object.keys(results).map((category, index) => {
+					{Object.keys(scores).map((category, index) => {
 						let rowClassName = "";
 						rowClassName = index % 2 === 0 ? null : "table-secondary";
 
@@ -45,7 +45,7 @@ function ScoresTable({ results }) {
 							<ScoresTableRow
 								key={category}
                                 rowNum = {index + 1}
-								results={results}
+								scores={scores}
 								category={category}
 								rowClassName={rowClassName}
 							/>

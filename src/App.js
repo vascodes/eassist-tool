@@ -7,7 +7,7 @@ import ScoresTable from "./components/ScoresTable";
 function App() {
 	const [content, setContent] = useState(null);
 	const [showQuestions, setShowQuestions] = useState(true);
-	const [results, setResults] = useState(null);
+	const [finalScores, setFinalScores] = useState(null);
 	const [showThankYou, setShowThankYou] = useState(false);
 	const [currentQuestionNumber, setCurrentQuestionNumber] = useState(1);
 	const [showPrevButton, SetShowPrevButton] = useState(false);
@@ -36,7 +36,7 @@ function App() {
 
 		// Find total score of each category from questions in selectedOptions.
 		for (let currentQuestionId in selectedOptions) {
-			// Answers of Question 8 should not be considered in results.
+			// Answers of Question 8 should not be considered in finalScores.
 			if (currentQuestionId === "question8") break;
 
 			const categories = selectedOptions[currentQuestionId];
@@ -100,7 +100,7 @@ function App() {
 
 				setShowQuestions(false);
 				SetShowPrevButton(false);
-				setResults(categoryScores);
+				setFinalScores(categoryScores);
 			}
 
 			let newQuestionNum;
@@ -115,7 +115,7 @@ function App() {
 	}
 
 	function handlePrevButtonClick() {
-		setResults(null);
+		setFinalScores(null);
 		setCurrentQuestionNumber(prevNum => {
 			return prevNum === 1 ? prevNum : prevNum - 1;
 		});
@@ -218,7 +218,7 @@ function App() {
 	useEffect(() => togglePrevButton(currentQuestionNumber), [currentQuestionNumber]);
 	useEffect(selectCategories, [currentQuestionNumber, currentQuestion, selectedCategories]);
 
-	//TODO: Remove injection from results.
+	//TODO: Remove injection from finalScores.
 	return (
 		<>
 			<header>
@@ -332,12 +332,12 @@ function App() {
 					</div>
 				)}
 
-				{content && results && (
+				{content && finalScores && (
 					<div className="row">
 						<div className="container-fluid col-lg-8 scores-table-container">
 							<div className="card">
 								<div className="card-body">
-									<ScoresTable results={results} />
+									<ScoresTable scores={finalScores} />
 								</div>
 							</div>
 						</div>
@@ -351,7 +351,7 @@ function App() {
 						<div className="container-fluid col-lg-8 thank-you-container">
 							<div className="card">
 								<div className="card-body">
-									<h3>eASSIST Results</h3>
+									<h3>eASSIST finalScores</h3>
 									<p>
 										Thank you for completing the questions. Based on your
 										answers, you are not at any risk of harms from Tobacco,
