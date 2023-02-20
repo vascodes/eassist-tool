@@ -1,4 +1,12 @@
-function ScoresTableRow({ rowNum, rowClassName, categoryName, score, risk, criterias }) {
+function ScoresTableRow({
+	rowNum,
+	rowClassName,
+	categoryName,
+	score,
+	risk,
+	riskClassName,
+	criterias,
+}) {
 	return (
 		<>
 			<tr
@@ -14,11 +22,16 @@ function ScoresTableRow({ rowNum, rowClassName, categoryName, score, risk, crite
 				<td rowSpan={4}>{score}</td>
 
 				{/* Category Risk */}
-				<td rowSpan={4}>{risk}</td>
+				<td
+					rowSpan={4}
+					className={riskClassName}
+				>
+					{risk}
+				</td>
 			</tr>
 
 			{/* Category Criterias */}
-			{criterias.map((criteria) => (
+			{criterias.map(criteria => (
 				<tr
 					key={criteria}
 					className={rowClassName}
@@ -68,9 +81,9 @@ function ScoresTable({ scores, substanceRiskLevels }) {
 					{Object.keys(scores).map((category, index) => {
 						let rowClassName = "";
 						rowClassName = index % 2 === 0 ? null : "table-secondary";
-						
+
 						const categoryScore = scores[category];
-						
+
 						let substanceRiskText = "";
 						const substanceRisk = substanceRiskLevels[category];
 						const categoryName = substanceRisk.name;
@@ -78,8 +91,10 @@ function ScoresTable({ scores, substanceRiskLevels }) {
 						const riskLowMax = substanceRisk?.lower.max;
 						const riskModerateMax = substanceRisk?.moderate.max;
 
+						let substanceRiskTextClassName = "text-danger";
 						if (categoryScore < riskLowMax) {
 							substanceRiskText = substanceRisk.lower.text;
+							substanceRiskTextClassName = null;
 						} else if (categoryScore < riskModerateMax) {
 							substanceRiskText = substanceRisk.moderate.text;
 						} else {
@@ -94,6 +109,7 @@ function ScoresTable({ scores, substanceRiskLevels }) {
 								risk={substanceRiskText}
 								criterias={criterias}
 								rowNum={index + 1}
+								riskClassName={substanceRiskTextClassName}
 								rowClassName={rowClassName}
 							/>
 						);
