@@ -3,6 +3,8 @@ import { data } from "./data";
 
 import Question from "./components/Question";
 import ScoresTable from "./components/ScoresTable";
+import NavBar from "./components/NavBar";
+import InfoCard from "./components/InfoCard";
 
 function App() {
 	const [content, setContent] = useState(null);
@@ -183,102 +185,16 @@ function App() {
 		}
 	}
 
-	function InfoCard() {
-		return (
-			<div className="container-fluid col-lg info-container">
-				<div className="card border-remove">
-					<div className="card-body">
-						<div className="container">
-							<h3>What is the eASSIST?</h3>
-							<p>
-								The eASSIST is an electronic version of the Alcohol, Smoking and
-								Substance Involvement Screening Test (ASSIST) which was developed by
-								the World Health Organization. The ASSIST has eight questions and
-								takes approximately 5-10 minutes to complete. The ASSIST helps
-								identify the risks associated with substance use and the
-								personalised feedback helps explore options for change.
-							</p>
-
-							<h3>Need Help?</h3>
-							<p>
-								The Alcohol and Drug Information Service (ADIS) are State and
-								Territory based phone services that offer information, advice and
-								support. They provide services for health professionals,
-								individuals, business and community groups. Phone 1800 250 015 to be
-								linked to your nearest service.
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		);
-	}
-
 	useEffect(() => setContent(data), []); // Fetch data on app load.
 	useEffect(() => togglePrevButton(currentQuestionNumber), [currentQuestionNumber]);
 	useEffect(selectCategories, [currentQuestionNumber, currentQuestion, selectedCategories]);
 
 	return (
 		<>
-			<header>
-				<nav
-					className="navbar navbar-expand-lg navbar-light"
-					style={{ backgroundColor: "#158852" }}
-				>
-					<div className="container-fluid">
-						<a
-							className="navbar-brand"
-							href="https://rajagiri.edu/"
-						>
-							<img
-								src={`${process.env.PUBLIC_URL}/assets/images/rajagiri_logo.jpg`}
-								width="70"
-								height="70"
-								className="d-inline-block align-top"
-								alt="logo"
-							/>
-						</a>
-
-						<button
-							className="navbar-toggler"
-							type="button"
-							data-bs-toggle="collapse"
-							data-bs-target="#navbarTogglerDemo02"
-							aria-controls="navbarTogglerDemo02"
-							aria-expanded="false"
-							aria-label="Toggle navigation"
-						>
-							<span className="navbar-toggler-icon"></span>
-						</button>
-
-						<div
-							className="collapse navbar-collapse"
-							id="navbarTogglerDemo02"
-						>
-							<ul className="navbar-nav ms-auto px-5 mb-2 mb-lg-0">
-								<li className="nav-item">
-									<a
-										className="nav-link text-white active"
-										href="#"
-									>
-										Home
-									</a>
-								</li>
-								<li className="nav-item">
-									<a
-										className="nav-link text-white"
-										href="#"
-									>
-										Contact
-									</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</nav>
-			</header>
+			<NavBar />
 
 			<div className="container pt-4 pb-5 app-container">
+				{/* Question Container */}
 				{content && showQuestions && (
 					<div className="row">
 						<div className="container-fluid col-lg-8 questions-container">
@@ -331,6 +247,7 @@ function App() {
 					</div>
 				)}
 
+				{/* Scores Table */}
 				{content && finalScores && (
 					<div className="row">
 						<div className="container-fluid col-lg-8 scores-table-container">
@@ -348,6 +265,7 @@ function App() {
 					</div>
 				)}
 
+				{/* Thank You page */}
 				{content && showThankYou && (
 					<div className="row">
 						<div className="container-fluid col-lg-8 thank-you-container">
