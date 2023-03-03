@@ -1,193 +1,244 @@
 import { useEffect, useState } from "react";
 import { data } from "./data";
 
-import Question from "./components/Question";
+import QuestionContainer from "./components/QuestionContainer";
 import ScoresTable from "./components/ScoresTable";
 import NavBar from "./components/NavBar";
 import InfoCard from "./components/InfoCard";
 
 function App() {
 	const [content, setContent] = useState(null);
-	const [showQuestions, setShowQuestions] = useState(true);
+	const [showQuestions, setShowQuestions] = useState(true); //change to true
 	const [finalScores, setFinalScores] = useState(null);
 	const [showThankYou, setShowThankYou] = useState(false);
-	const [currentQuestionNumber, setCurrentQuestionNumber] = useState(1);
-	const [showPrevButton, SetShowPrevButton] = useState(false);
-	const [selectedOptions, setSelectedOptions] = useState({});
-	const [selectedCategories, setSelectedCategories] = useState([]);
-	const [categories, setCategories] = useState([]);
+	const [showPrevButton, SetShowPrevButton] = useState(false);	
 	const [showRequiredMsg, setShowRequiredMsg] = useState(false);
+	const [showResults, setShowResults] = useState(false); // change to false.
 
-	const questions = content?.questions;
-	const currentQuestionId = "question" + currentQuestionNumber; //ex: question5
-	const currentQuestion = questions ? questions[currentQuestionId] : null;
-
-	function getCategoryScores() {
-		const categoryScores = {
-			tobacco: 0,
-			alcohol: 0,
-			cannabis: 0,
-			cocaine: 0,
-			amphetamine: 0,
-			inhalants: 0,
-			sedatives: 0,
-			hallucinogens: 0,
-			opioids: 0,
-			other: 0,
-		};
-
-		// Find total score of each category from questions in selectedOptions.
-		for (let currentQuestionId in selectedOptions) {
-			// Answers of Question 8 should not be considered in finalScores.
-			if (currentQuestionId === "question8") break;
-
-			const categories = selectedOptions[currentQuestionId];
-			for (let categoryName in categories) {
-				let category = categories[categoryName];
-
-				// If category doesn't exist in categoryScores,
-				// add category to categoryScores and initialize it to 0.
-				if (!categoryScores[categoryName]) categoryScores[categoryName] = 0;
-
-				// Update score of current category in categoryScores.
-				categoryScores[categoryName] += Number(category.score);
-			}
-		}
-
-		return categoryScores;
-	}
-
-	function handleNextButtonClick() {
-		//TODO: Fix bug where required message is shown when one of the category that was selected is removed and quiz is retaken.
-		setShowRequiredMsg(false);
-
-		// Show required message if NO questions are answered.
-		if (!selectedOptions[currentQuestionId]) {
-			setShowRequiredMsg(true);
-			return;
-		}
-
-		const numSelectedOptions = Object.keys(selectedOptions[currentQuestionId]).length;
-		let totalCategories = 0;
-
-		if (currentQuestionNumber === 1 || currentQuestionNumber === 8) {
-			totalCategories = currentQuestion?.substances?.length;
-		} else {
-			totalCategories = selectedCategories?.length;
-		}
-
-		// Show required message if all questions are not answered.
-		if (numSelectedOptions !== totalCategories) {
-			console.log(selectedOptions);
-			console.log(totalCategories);
-			console.log(selectedCategories);
-			setShowRequiredMsg(true);
-			return;
-		}
-
-		setCurrentQuestionNumber(prevQuestionNum => {
-			let totalQuestions = Object.keys(questions).length;
-
-			// Show Thank you page if no categories are selected in first question.
-			if (prevQuestionNum === 1 && selectedCategories.length === 0) {
-				setShowQuestions(false);
-				setShowThankYou(true);
-			}
-
-			// Last question.
-			if (prevQuestionNum === totalQuestions) {
-				const categoryScores = getCategoryScores();
-				console.log(selectedOptions);
-				console.log(categoryScores);
-
-				setShowQuestions(false);
-				SetShowPrevButton(false);
-				setFinalScores(categoryScores);
-			}
-
-			let newQuestionNum;
-			if (prevQuestionNum === totalQuestions) {
-				newQuestionNum = prevQuestionNum;
-			} else {
-				newQuestionNum = prevQuestionNum + 1;
-			}
-
-			return newQuestionNum;
-		});
-	}
-
-	function handlePrevButtonClick() {
-		setFinalScores(null);
-		setCurrentQuestionNumber(prevNum => {
-			return prevNum === 1 ? prevNum : prevNum - 1;
-		});
-	}
-
+	const questions = content?.questions;		
+		
 	function togglePrevButton(currentQuestionNumber) {
 		if (currentQuestionNumber === 1) {
 			SetShowPrevButton(false);
 		} else {
 			SetShowPrevButton(true);
 		}
+	}		
+
+	useEffect(() => setContent(data), []); // Fetch data on app load.	
+
+	function ResultContainer() {
+		return (
+			<>
+				<div>
+					<h4 class="text-center">What's next?</h4>
+					<p class="result-container">
+						Thanks for completing the questions. Click each section below to view
+						further information and advice.
+					</p>
+				</div>
+
+				<h5>Moderate Advice</h5>
+				<div
+					class="accordion"
+					id="accordionExample"
+				>
+					<div class="accordion-item">
+						<h2
+							class="accordion-header"
+							id="headingOne"
+						>
+							<button
+								class="accordion-button collapsed"
+								type="button"
+								data-bs-toggle="collapse"
+								data-bs-target="#collapseOne"
+								aria-expanded="true"
+								aria-controls="collapseOne"
+							>
+								Tobacco
+							</button>
+						</h2>
+
+						<div
+							id="collapseOne"
+							class="accordion-collapse collapse"
+							aria-labelledby="headingOne"
+							data-bs-parent="#accordionExample"
+						>
+							<div class="accordion-body">
+								<p class="text-success">
+									BASED ON YOUR ANSWERS, YOUR SMOKING IS PUTTING YOU AT MODERATE
+									RISK OF HEALTH AND FINANCIAL PROBLEMS
+								</p>
+								<p>
+									There are no health benefits of tobacco use and no safe level of
+									smoking. If you choose to smoke be aware of the many health
+									problems associated with smoking tobacco such as:
+								</p>
+								<ul>
+									<li>Premature ageing, wrinkling of the skin</li>
+									<li>
+										Asthma, respiratory infections, chronic obstructive airways
+										disease
+									</li>
+									<li>High blood pressure</li>
+									<li>Diabetes, and serious complications of diabetes</li>
+									<li>
+										Miscarriage, premature labour and low birthweight babies
+									</li>
+									<li>Kidney disease</li>
+									<li>Heart disease, stroke, vascular disease</li>
+									<li>Cancers</li>
+									<li>
+										Respiratory infections, allergies and asthma in the children
+										of smokers.
+									</li>
+								</ul>
+								<p>
+									If you would like more information about &nbsp;
+									<a
+										href="#"
+										class="advice-anchortag"
+									>
+										Tobacco click here.
+									</a>
+								</p>
+								<p class="text-success">
+									Based on your responses it seems that you may have experienced
+									one or more tobacco related problems in the last 3 months.
+								</p>
+								<p class="text-success">
+									How concerned are you about these problems?
+								</p>
+								<p>
+									If any of these things have happened to you and you are
+									concerned you may want to consider stopping smoking. If you are
+									not sure it can be helpful to list all the good things and the
+									not so good things about your smoking as well as the benefits
+									and costs of stopping. You can find a Cost-Benefit Analysis
+									&nbsp;
+									<a
+										href="#"
+										class="advice-anchortag"
+									>
+										worksheet and other useful tools here
+									</a>
+									<br />
+									By quitting you will find that you will look and feel younger,
+									you will get fitter, your breath, hair and clothes will smell
+									better, your sense of taste and smell will improve, your dental
+									and physical health will improve and you and your family will be
+									at much less risk of serious health problems.
+									<br />A list of the benefits of stopping can be found on the
+									&nbsp;
+									<a
+										href="#"
+										class="advice-anchortag"
+									>
+										Quit Now website
+									</a>
+								</p>
+								<p>
+									If you would like to quit smoking here are some strategies to
+									help you:
+								</p>
+								<ul>
+									<li>Set a target date and stop on that date</li>
+									<li>
+										Tell a friend or family member that you are going to stop so
+										that they can support you.
+									</li>
+									<li>
+										Plan some alternative activities to fill the extra time when
+										you are not smoking.
+									</li>
+									<li>
+										Think about situations where you might be tempted to use and
+										plan to avoid them or plan how you will avoid smoking.
+									</li>
+									<li>
+										Get more help from the &nbsp;
+										<a
+											href="#"
+											class="advice-anchortag"
+										>
+											Quit Now website
+										</a>
+									</li>
+									<li>
+										If you would like more help you can download &nbsp;
+										<a
+											href="#"
+											class="advice-anchortag"
+										>
+											this free Quit Buddy app
+										</a>
+										&nbsp; and/or talk to a health care professional.
+									</li>
+								</ul>
+								<p>
+									To avoid increasing your risk of smoking related problems in the
+									future you can use My Diary to track how often and how much you
+									smoke and how much you spend.
+									<br />
+									You can come back and complete the Check Up again in 3 months
+									time if you would like to see how you are going.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<br />
+				<h5>Test Advice</h5>
+				<div
+					class="accordion"
+					id="accordionExample2"
+				>
+					<div class="accordion-item">
+						<h2
+							class="accordion-header"
+							id="headingOne"
+						>
+							<button
+								class="accordion-button collapsed"
+								type="button"
+								data-bs-toggle="collapse"
+								data-bs-target="#collapseOne2"
+								aria-expanded="true"
+								aria-controls="collapseOne2"
+							>
+								TEST
+							</button>
+						</h2>
+
+						<div
+							id="collapseOne2"
+							class="accordion-collapse collapse"
+							aria-labelledby="headingOne"
+							data-bs-parent="#accordionExample2"
+						>
+							<div className="accordion-body"></div>
+						</div>
+					</div>
+				</div>
+			</>
+		);
 	}
 
-	function handleChange({ target }) {
-		let substanceId = target.name,
-			optionScore = target.value,
-			optionText = target.dataset.optionText;
-
-		console.log(selectedCategories);
-		console.log(selectedOptions);
-
-		setSelectedOptions(prev => {
-			let newSelectedOptions = { ...prev };
-
-			newSelectedOptions[currentQuestionId] ??= {};
-			newSelectedOptions[currentQuestionId][substanceId] ??= { text: "", score: 0 };
-			newSelectedOptions[currentQuestionId][substanceId].text = optionText;
-			newSelectedOptions[currentQuestionId][substanceId].score = optionScore;
-
-			if (currentQuestionNumber === 1) {
-				if (optionText.toLowerCase() === "yes") {
-					setSelectedCategories(prevSelectedCategories => [
-						...prevSelectedCategories,
-						substanceId,
-					]);
-
-					// Remove duplicates.
-					setSelectedCategories(prevSelectedCategories =>
-						Array.from(new Set(prevSelectedCategories)),
-					);
-				} else {
-					// Deselect a category.
-					setSelectedCategories(prevSelectedCategories =>
-						prevSelectedCategories.filter(substance => substance !== substanceId),
-					);
-				}
-			}
-
-			return newSelectedOptions;
-		});
+	function ThankYouContainer() {
+		return (
+			<>
+				<h3>eASSIST finalScores</h3>
+				<p>
+					Thank you for completing the questions. Based on your answers, you are not at
+					any risk of harms from Tobacco, Alcohol, Cannabis, Cocaine, Inhalants,
+					Hallucinogens, Sedatives, Opioids, Other use at this time.
+				</p>
+			</>
+		);
 	}
-
-	function selectCategories() {
-		if (currentQuestionNumber === 1 || currentQuestionNumber === 8) {
-			setCategories(currentQuestion?.substances);
-		} else {
-			// For questions other than 1 and 8,
-			// only categories selected in Question 1 should be displayed.
-			const selectedCategoriesSet = new Set(selectedCategories);
-			setCategories(
-				currentQuestion?.substances?.filter(substanceData =>
-					selectedCategoriesSet.has(substanceData.id),
-				),
-			);
-		}
-	}
-
-	useEffect(() => setContent(data), []); // Fetch data on app load.
-	useEffect(() => togglePrevButton(currentQuestionNumber), [currentQuestionNumber]);
-	useEffect(selectCategories, [currentQuestionNumber, currentQuestion, selectedCategories]);
 
 	return (
 		<>
@@ -195,89 +246,36 @@ function App() {
 
 			<div className="container pt-4 pb-5 app-container">
 				{/* Question Container */}
-				{content && showQuestions && (
+				{content && (
 					<div className="row">
 						<div className="container-fluid col-lg-8 questions-container">
 							<div className="card">
 								<div className="card-body">
-									<Question
-										questionNumber={currentQuestionNumber}
-										question={currentQuestion}
-										categories={categories}
-										selectedOptions={selectedOptions}
-										handleChange={handleChange}
-									/>
-									<div className="question-navigation">
-										{showRequiredMsg && (
-											<div
-												className="alert alert-danger mt-4"
-												role="alert"
-											>
-												Please complete all questions on the page to
-												continue.
-											</div>
-										)}
+									{showQuestions && (
+										<QuestionContainer
+											questions = {content?.questions}
+																						
+											showPrevButton = {showPrevButton}
+											showRequiredMsg = {showRequiredMsg}
+											setShowRequiredMsg = {setShowRequiredMsg}
+											setShowQuestions = {setShowQuestions}
+											setShowThankYou = {setShowThankYou}
+											setShowResults = {setShowResults}
+											setFinalScores = {setFinalScores}
+											togglePrevButton = {togglePrevButton}
+										/>
+									)}
 
-										<div className="text-center mt-4 mx-5 d-grid gap-2 d-md-block row d-flex">
-											<button
-												type="button"
-												className="btn btn-success"
-												onClick={() => handleNextButtonClick()}
-											>
-												Next {">"}
-											</button>
-										</div>
+									{showResults && <ResultContainer />}
 
-										{showPrevButton && (
-											<div className="text-center mt-4 mx-5 d-grid gap-2 d-md-block row d-flex">
-												<button
-													className="btn btn-outline-success"
-													onClick={() => handlePrevButtonClick()}
-												>
-													{"<"} Changed my mind
-												</button>
-											</div>
-										)}
-									</div>
-								</div>
-							</div>
-						</div>
+									{finalScores && (
+										<ScoresTable
+											scores={finalScores}
+											substanceRiskLevels={content?.substanceRiskLevels}
+										/>
+									)}
 
-						<InfoCard />
-					</div>
-				)}
-
-				{/* Scores Table */}
-				{content && finalScores && (
-					<div className="row">
-						<div className="container-fluid col-lg-8 scores-table-container">
-							<div className="card">
-								<div className="card-body">
-									<ScoresTable
-										scores={finalScores}
-										substanceRiskLevels={content?.substanceRiskLevels}
-									/>
-								</div>
-							</div>
-						</div>
-
-						<InfoCard />
-					</div>
-				)}
-
-				{/* Thank You page */}
-				{content && showThankYou && (
-					<div className="row">
-						<div className="container-fluid col-lg-8 thank-you-container">
-							<div className="card">
-								<div className="card-body">
-									<h3>eASSIST finalScores</h3>
-									<p>
-										Thank you for completing the questions. Based on your
-										answers, you are not at any risk of harms from Tobacco,
-										Alcohol, Cannabis, Cocaine, Inhalants, Hallucinogens,
-										Sedatives, Opioids, Other use at this time.
-									</p>
+									{showThankYou && <ThankYouContainer />}
 								</div>
 							</div>
 						</div>
