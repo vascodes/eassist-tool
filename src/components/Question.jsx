@@ -1,8 +1,7 @@
-import CategoryBlock from "./CategoryBlock";
+import SubstanceBlock from "./SubstanceBlock";
 
-function Question({ questionNumber, question, categories, selectedOptions, handleChange }) {
-	// TODO: Change 8 to totalQuestions length
-	const progressBarWidth = Math.floor((questionNumber / 8) * 100);
+function Question({ questionNumber, question, totalQuestions, substances, selectedOptions, handleChange }) {	
+	const progressBarWidth = Math.floor((questionNumber / totalQuestions) * 100);
 	return (
 		<div className="question-block">
 			<p className="d-flex question-text">{`${questionNumber}. ${question.text}`}</p>
@@ -22,11 +21,11 @@ function Question({ questionNumber, question, categories, selectedOptions, handl
 			</div>
 
 			<ol className="list-group list-group-flush">
-				{categories?.map(category => (
-					<CategoryBlock
-						key={category.id}
+				{substances?.map(substance => (
+					<SubstanceBlock
+						key={substance.id}
 						questionNumber={questionNumber}
-						category={category}
+						substance={substance}
 						selectedOptions={selectedOptions}
 						handleChange={handleChange}
 					/>

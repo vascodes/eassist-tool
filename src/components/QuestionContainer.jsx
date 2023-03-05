@@ -6,9 +6,9 @@ import PageButton from "./PageButton";
 function QuestionContainer(props) {
 	const [questionNumber, setQuestionNumber] = useState(1);
 	const [selectedOptions, setSelectedOptions] = useState({});
-	const [selectedCategories, setSelectedCategories] = useState([]);
-	const [categories, setCategories] = useState([]);
-	const [showPrevButton, SetShowPrevButton] = useState(false);
+	const [selectedSubstances, setSelectedSubstances] = useState([]);
+	const [substances, setSubstances] = useState([]);
+	const [showPrevButton, setShowPrevButton] = useState(false);
 	const [showRequiredMsg, setShowRequiredMsg] = useState(false);
 
 	const questionId = "question" + questionNumber; //ex: question5
@@ -19,32 +19,34 @@ function QuestionContainer(props) {
 			optionScore = target.value,
 			optionText = target.dataset.optionText;
 
-		console.log(selectedCategories);
+		console.log(selectedSubstances);
 		console.log(selectedOptions);
 
 		setSelectedOptions(prev => {
 			let newSelectedOptions = { ...prev };
 
+			// Initialize selected option for current question.
 			newSelectedOptions[questionId] ??= {};
 			newSelectedOptions[questionId][substanceId] ??= { text: "", score: 0 };
 			newSelectedOptions[questionId][substanceId].text = optionText;
 			newSelectedOptions[questionId][substanceId].score = optionScore;
 
+			// For question 1, Add substance to selected substances if selected option of that substance is "Yes".
 			if (questionNumber === 1) {
 				if (optionText.toLowerCase() === "yes") {
-					setSelectedCategories(prevSelectedCategories => [
-						...prevSelectedCategories,
+					setSelectedSubstances(prevselectedSubstances => [
+						...prevselectedSubstances,
 						substanceId,
 					]);
 
 					// Remove duplicates.
-					setSelectedCategories(prevSelectedCategories =>
-						Array.from(new Set(prevSelectedCategories)),
+					setSelectedSubstances(prevselectedSubstances =>
+						Array.from(new Set(prevselectedSubstances)),
 					);
 				} else {
-					// Deselect a category.
-					setSelectedCategories(prevSelectedCategories =>
-						prevSelectedCategories.filter(substance => substance !== substanceId),
+					// Deselect a substance.
+					setSelectedSubstances(prevselectedSubstances =>
+						prevselectedSubstances.filter(substance => substance !== substanceId),
 					);
 				}
 			}
@@ -53,16 +55,16 @@ function QuestionContainer(props) {
 		});
 	}
 
-	function selectCategories() {
+	function selectSubstances() {
 		if (questionNumber === 1 || questionNumber === 8) {
-			setCategories(question?.substances);
+			setSubstances(question?.substances);
 		} else {
 			// For questions other than 1 and 8,
-			// only categories selected in Question 1 should be displayed.
-			const selectedCategoriesSet = new Set(selectedCategories);
-			setCategories(
+			// only substances selected in Question 1 should be displayed.
+			const selectedSubstancesSet = new Set(selectedSubstances);
+			setSubstances(
 				question?.substances?.filter(substanceData =>
-					selectedCategoriesSet.has(substanceData.id),
+					selectedSubstancesSet.has(substanceData.id),
 				),
 			);
 		}
@@ -70,14 +72,14 @@ function QuestionContainer(props) {
 
 	function togglePrevButton(currentQuestionNumber) {
 		if (currentQuestionNumber === 1) {
-			SetShowPrevButton(false);
+			setShowPrevButton(false);
 		} else {
-			SetShowPrevButton(true);
+			setShowPrevButton(true);
 		}
 	}
 
 	function handleNextButtonClick() {
-		//TODO: Fix bug where required message is shown when one of the category that was selected is removed and quiz is retaken.
+		//TODO: Fix bug where required message is shown when one of the substance that was selected is removed and quiz is retaken.
 		setShowRequiredMsg(false);
 
 		// Show required message if NO questions are answered.
@@ -87,19 +89,19 @@ function QuestionContainer(props) {
 		}
 
 		const numSelectedOptions = Object.keys(selectedOptions[questionId]).length;
-		let totalCategories = 0;
+		let totalSubstances = 0;
 
 		if (questionNumber === 1 || questionNumber === 8) {
-			totalCategories = question?.substances?.length;
+			totalSubstances = question?.substances?.length;
 		} else {
-			totalCategories = selectedCategories?.length;
+			totalSubstances = selectedSubstances?.length;
 		}
 
 		// Show required message if all questions are not answered.
-		if (numSelectedOptions !== totalCategories) {
+		if (numSelectedOptions !== totalSubstances) {
 			console.log(selectedOptions);
-			console.log(totalCategories);
-			console.log(selectedCategories);
+			console.log(totalSubstances);
+			console.log(selectedSubstances);
 			setShowRequiredMsg(true);
 			return;
 		}
@@ -107,18 +109,18 @@ function QuestionContainer(props) {
 		setQuestionNumber(prevQuestionNum => {
 			let totalQuestions = Object.keys(props.questions).length;
 
-			// Show Thank you page if no categories are selected in first question.
-			if (prevQuestionNum === 1 && selectedCategories.length === 0) {
+			// Show Thank you page if no substances are selected in first question.
+			if (prevQuestionNum === 1 && selectedSubstances.length === 0) {
 				props.handlePage(props.allPages.thankYou);
 			}
 
 			// Last question.
 			if (prevQuestionNum === totalQuestions) {
-				const categoryScores = getCategoryScores();
+				const substanceScores = getSubstanceScores();
 				console.log(selectedOptions);
-				console.log(categoryScores);
+				console.log(substanceScores);
 
-				props.handleScores(categoryScores);
+				props.handleScores(substanceScores);
 			}
 
 			let newQuestionNum;
@@ -139,8 +141,8 @@ function QuestionContainer(props) {
 		});
 	}
 
-	function getCategoryScores() {
-		const categoryScores = {
+	function getSubstanceScores() {
+		const substanceScores = {
 			tobacco: 0,
 			alcohol: 0,
 			cannabis: 0,
@@ -153,36 +155,37 @@ function QuestionContainer(props) {
 			other: 0,
 		};
 
-		// Find total score of each category from questions in selectedOptions.
+		// Find total score of each substance from questions in selectedOptions.
 		for (let questionId in selectedOptions) {
 			// Answers of Question 8 should not be considered in finalScores.
 			if (questionId === "question8") break;
 
-			const categories = selectedOptions[questionId];
-			for (let categoryName in categories) {
-				let category = categories[categoryName];
+			const substances = selectedOptions[questionId];
+			for (let substanceName in substances) {
+				let substance = substances[substanceName];
 
-				// If category doesn't exist in categoryScores,
-				// add category to categoryScores and initialize it to 0.
-				if (!categoryScores[categoryName]) categoryScores[categoryName] = 0;
+				// If substance doesn't exist in substanceScores,
+				// add substance to substanceScores and initialize it to 0.
+				if (!substanceScores[substanceName]) substanceScores[substanceName] = 0;
 
-				// Update score of current category in categoryScores.
-				categoryScores[categoryName] += Number(category.score);
+				// Update score of current substance in substanceScores.
+				substanceScores[substanceName] += Number(substance.score);
 			}
 		}
 
-		return categoryScores;
+		return substanceScores;
 	}
 
 	useEffect(() => togglePrevButton(questionNumber), [questionNumber]);
-	useEffect(selectCategories, [questionNumber, question, selectedCategories]);
+	useEffect(selectSubstances, [questionNumber, question, selectedSubstances]);
 
 	return (
 		<>
 			<Question
 				questionNumber={questionNumber}
 				question={question}
-				categories={categories}
+				totalQuestions={Object.keys(props?.questions)?.length}
+				substances={substances}
 				selectedOptions={selectedOptions}
 				handleChange={handleChange}
 			/>
@@ -208,7 +211,7 @@ function QuestionContainer(props) {
 
 				{/* Previous Button */}
 				<div className="text-center mt-4 mx-5 d-grid gap-2 d-md-block row d-flex">
-					{props.showPrevButton && (
+					{showPrevButton && (
 						<PageButton
 							buttonText={"< Changed my mind"}
 							buttonClass="btn btn-outline-success"
