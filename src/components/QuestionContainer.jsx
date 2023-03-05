@@ -31,7 +31,7 @@ function QuestionContainer(props) {
 			newSelectedOptions[questionId][substanceId].text = optionText;
 			newSelectedOptions[questionId][substanceId].score = optionScore;
 
-			// For question 1, Add substance to selected substances if selected option of that substance is "Yes".
+			// For question 1, Add substance to selectedSubstances if selected option of that substance is "Yes".
 			if (questionNumber === 1) {
 				if (optionText.toLowerCase() === "yes") {
 					setSelectedSubstances(prevselectedSubstances => [
@@ -60,13 +60,26 @@ function QuestionContainer(props) {
 			setSubstances(question?.substances);
 		} else {
 			// For questions other than 1 and 8,
-			// only substances selected in Question 1 should be displayed.
+			// only substances selected in Question 1 (selectedSubstances) should be displayed.
 			const selectedSubstancesSet = new Set(selectedSubstances);
 			setSubstances(
 				question?.substances?.filter(substanceData =>
 					selectedSubstancesSet.has(substanceData.id),
 				),
 			);
+		}
+
+		// For questions 3, 4 and 5, display only substances that,
+		// were not answered as "Never" in question 2.
+		if (questionNumber >= 3 && questionNumber <= 5) {
+			const newSubstances = substances.filter(
+				substance => {
+                    console.log(substance);
+                    return selectedOptions["question2"][substance.id]?.text?.toLowerCase() !== "never"
+                }
+			);
+
+            setSubstances(newSubstances);
 		}
 	}
 
@@ -82,29 +95,7 @@ function QuestionContainer(props) {
 		//TODO: Fix bug where required message is shown when one of the substance that was selected is removed and quiz is retaken.
 		setShowRequiredMsg(false);
 
-		// Show required message if NO questions are answered.
-		if (!selectedOptions[questionId]) {
-			setShowRequiredMsg(true);
-			return;
-		}
-
-		const numSelectedOptions = Object.keys(selectedOptions[questionId]).length;
-		let totalSubstances = 0;
-
-		if (questionNumber === 1 || questionNumber === 8) {
-			totalSubstances = question?.substances?.length;
-		} else {
-			totalSubstances = selectedSubstances?.length;
-		}
-
-		// Show required message if all questions are not answered.
-		if (numSelectedOptions !== totalSubstances) {
-			console.log(selectedOptions);
-			console.log(totalSubstances);
-			console.log(selectedSubstances);
-			setShowRequiredMsg(true);
-			return;
-		}
+		
 
 		setQuestionNumber(prevQuestionNum => {
 			let totalQuestions = Object.keys(props.questions).length;
@@ -135,7 +126,7 @@ function QuestionContainer(props) {
 	}
 
 	function handlePrevButtonClick() {
-		props.setFinalScores(null);
+		props.handleScores(null);
 		setQuestionNumber(prevNum => {
 			return prevNum === 1 ? prevNum : prevNum - 1;
 		});
