@@ -3,6 +3,7 @@ import { data } from "./data";
 
 import QuestionContainer from "./components/QuestionContainer";
 import ResultContainer from "./components/ResultContainer";
+import ThankYouContainer from "./components/ThankYouContainer";
 import ScoresTable from "./components/ScoresTable";
 import NavBar from "./components/NavBar";
 import InfoCard from "./components/InfoCard";
@@ -26,19 +27,6 @@ function App() {
 	}
 
 	useEffect(() => setContent(data), []); // Fetch data on app load.		
-
-	function ThankYouContainer() {
-		return (
-			<>
-				<h3>eASSIST finalScores</h3>
-				<p>
-					Thank you for completing the questions. Based on your answers, you are not at
-					any risk of harms from Tobacco, Alcohol, Cannabis, Cocaine, Inhalants,
-					Hallucinogens, Sedatives, Opioids, Other use at this time.
-				</p>
-			</>
-		);
-	}
 
 	return (
 		<>
