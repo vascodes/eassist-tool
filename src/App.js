@@ -11,19 +11,18 @@ function App() {
 	const [showQuestions, setShowQuestions] = useState(true); //change to true
 	const [finalScores, setFinalScores] = useState(null);
 	const [showThankYou, setShowThankYou] = useState(false);
-	const [showPrevButton, SetShowPrevButton] = useState(false);	
-	const [showRequiredMsg, setShowRequiredMsg] = useState(false);
+	const [showPrevButton, SetShowPrevButton] = useState(false);
 	const [showResults, setShowResults] = useState(false); // change to false.
 
-	const questions = content?.questions;		
-		
+	const questions = content?.questions;
+
 	function togglePrevButton(currentQuestionNumber) {
 		if (currentQuestionNumber === 1) {
 			SetShowPrevButton(false);
 		} else {
 			SetShowPrevButton(true);
 		}
-	}		
+	}
 
 	useEffect(() => setContent(data), []); // Fetch data on app load.	
 
@@ -253,16 +252,14 @@ function App() {
 								<div className="card-body">
 									{showQuestions && (
 										<QuestionContainer
-											questions = {content?.questions}
-																						
-											showPrevButton = {showPrevButton}
-											showRequiredMsg = {showRequiredMsg}
-											setShowRequiredMsg = {setShowRequiredMsg}
-											setShowQuestions = {setShowQuestions}
-											setShowThankYou = {setShowThankYou}
-											setShowResults = {setShowResults}
-											setFinalScores = {setFinalScores}
-											togglePrevButton = {togglePrevButton}
+											questions={questions}
+
+											showPrevButton={showPrevButton}
+											setShowQuestions={setShowQuestions}
+											setShowThankYou={setShowThankYou}
+											setShowResults={setShowResults}
+											setFinalScores={setFinalScores}
+											togglePrevButton={togglePrevButton}
 										/>
 									)}
 
@@ -276,6 +273,7 @@ function App() {
 									)}
 
 									{showThankYou && <ThankYouContainer />}
+
 								</div>
 							</div>
 						</div>
