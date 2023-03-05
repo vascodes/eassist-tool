@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import Question from "./Question";
 
 function QuestionContainer(props) {
-    const [questionNumber, setquestionNumber] = useState(1);
+    const [questionNumber, setQuestionNumber] = useState(1);
     const [selectedOptions, setSelectedOptions] = useState({});
     const [selectedCategories, setSelectedCategories] = useState([]);
     const [categories, setCategories] = useState([]);
@@ -94,7 +94,7 @@ function QuestionContainer(props) {
             return;
         }
 
-        setquestionNumber(prevQuestionNum => {
+        setQuestionNumber(prevQuestionNum => {
             let totalQuestions = Object.keys(props.questions).length;
 
             // Show Thank you page if no categories are selected in first question.
@@ -109,9 +109,9 @@ function QuestionContainer(props) {
                 console.log(selectedOptions);
                 console.log(categoryScores);
 
+                props.handleScores(categoryScores);                
                 props.setShowQuestions(false);
                 props.SetShowPrevButton(false);
-                props.setFinalScores(categoryScores);
             }
 
             let newQuestionNum;
@@ -127,7 +127,7 @@ function QuestionContainer(props) {
 
     function handlePrevButtonClick() {
         props.setFinalScores(null);
-        setquestionNumber(prevNum => {
+        setQuestionNumber(prevNum => {
             return prevNum === 1 ? prevNum : prevNum - 1;
         });
     }
