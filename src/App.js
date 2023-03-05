@@ -10,12 +10,23 @@ import InfoCard from "./components/InfoCard";
 
 function App() {
 	const [content, setContent] = useState(null);
-	const [showQuestions, setShowQuestions] = useState(true); //change to true
-	const [finalScores, setFinalScores] = useState(null);
+	const [showQuestions, setShowQuestions] = useState(true);
 	const [showThankYou, setShowThankYou] = useState(false);
+	const [showScores, setShowScores] = useState(false);
+	const [finalScores, setFinalScores] = useState(null);
 	const [showPrevButton, SetShowPrevButton] = useState(false);
-	const [showResults, setShowResults] = useState(false); // change to false.
-	
+	const [showResults, setShowResults] = useState(false);
+
+	const allPages = Object.freeze({
+		home: 0,
+		questions: 1,
+		thankYou: 2,
+		advice: 3,
+		scores: 4
+	});
+
+	useEffect(() => setContent(data), []); // Fetch data on app load.
+
 	function togglePrevButton(currentQuestionNumber) {
 		if (currentQuestionNumber === 1) {
 			SetShowPrevButton(false);
@@ -24,11 +35,46 @@ function App() {
 		}
 	}
 
-	function handleScores(score) {		
+	function resetPages(){
+		setShowQuestions(false);
+		setShowResults(false);
+		setShowScores(false);
+		setShowThankYou(false);		
+	}	
+	
+	function handlePage(selectedPage) {
+		resetPages();
+		
+		switch (selectedPage) {
+			case allPages.home:
+				console.log("home page");
+				break;
+
+			case allPages.questions:				
+				setShowQuestions(true);
+				break;
+
+			case allPages.thankYou:				
+				setShowThankYou(true);
+				break;
+
+			case allPages.advice:
+				console.log("advice page");
+				break;
+
+			case allPages.scores:
+				setShowScores(true);				
+				break;
+
+			default:
+				console.log("error page.");
+				break;
+		}		
+	}	
+
+	function handleScores(score) {
 		setFinalScores(score);
 	}
-	
-	useEffect(() => setContent(data), []); // Fetch data on app load.
 
 	return (
 		<>
@@ -43,21 +89,22 @@ function App() {
 								<div className="card-body">
 									{showQuestions && (
 										<QuestionContainer
+											allPages={allPages}
 											questions={content?.questions}
-
+											handlePage={handlePage}
 											showPrevButton={showPrevButton}
 											setShowQuestions={setShowQuestions}
 											setShowThankYou={setShowThankYou}
 											setShowResults={setShowResults}
-											setFinalScores={setFinalScores}											
+											setFinalScores={setFinalScores}
 											togglePrevButton={togglePrevButton}
-											handleScores = {handleScores}
+											handleScores={handleScores}
 										/>
 									)}
 
 									{showResults && <ResultContainer />}
 
-									{finalScores && (
+									{showScores && (
 										<ScoresTable
 											scores={finalScores}
 											substanceRiskLevels={content?.substanceRiskLevels}
@@ -65,7 +112,6 @@ function App() {
 									)}
 
 									{showThankYou && <ThankYouContainer />}
-
 								</div>
 							</div>
 						</div>

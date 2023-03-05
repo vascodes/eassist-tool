@@ -99,8 +99,7 @@ function QuestionContainer(props) {
 
             // Show Thank you page if no categories are selected in first question.
             if (prevQuestionNum === 1 && selectedCategories.length === 0) {
-                props.setShowQuestions(false);
-                props.setShowThankYou(true);
+                props.handlePage(props.allPages.thankYou);
             }
 
             // Last question.
@@ -110,8 +109,7 @@ function QuestionContainer(props) {
                 console.log(categoryScores);
 
                 props.handleScores(categoryScores);                
-                props.setShowQuestions(false);
-                props.SetShowPrevButton(false);
+                props.handlePage(props.allPages.scores);
             }
 
             let newQuestionNum;
