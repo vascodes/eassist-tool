@@ -14,7 +14,6 @@ function App() {
 	const [showThankYou, setShowThankYou] = useState(false);
 	const [showScores, setShowScores] = useState(false);
 	const [finalScores, setFinalScores] = useState(null);
-	const [showPrevButton, SetShowPrevButton] = useState(false);
 	const [showResults, setShowResults] = useState(false);
 
 	const allPages = Object.freeze({
@@ -22,39 +21,29 @@ function App() {
 		questions: 1,
 		thankYou: 2,
 		advice: 3,
-		scores: 4
+		scores: 4,
 	});
 
-	useEffect(() => setContent(data), []); // Fetch data on app load.
-
-	function togglePrevButton(currentQuestionNumber) {
-		if (currentQuestionNumber === 1) {
-			SetShowPrevButton(false);
-		} else {
-			SetShowPrevButton(true);
-		}
-	}
-
-	function resetPages(){
+	function resetPages() {
 		setShowQuestions(false);
 		setShowResults(false);
 		setShowScores(false);
-		setShowThankYou(false);		
-	}	
-	
+		setShowThankYou(false);
+	}
+
 	function handlePage(selectedPage) {
 		resetPages();
-		
+
 		switch (selectedPage) {
 			case allPages.home:
 				console.log("home page");
 				break;
 
-			case allPages.questions:				
+			case allPages.questions:
 				setShowQuestions(true);
 				break;
 
-			case allPages.thankYou:				
+			case allPages.thankYou:
 				setShowThankYou(true);
 				break;
 
@@ -63,17 +52,20 @@ function App() {
 				break;
 
 			case allPages.scores:
-				setShowScores(true);				
+				setShowScores(true);
 				break;
 
 			default:
 				console.log("error page.");
 				break;
-		}		
-	}	
+		}
+	}
+
+	useEffect(() => setContent(data), []); // Fetch data on app load.
 
 	function handleScores(score) {
 		setFinalScores(score);
+		handlePage(allPages.scores);
 	}
 
 	return (
@@ -81,7 +73,6 @@ function App() {
 			<NavBar />
 
 			<div className="container pt-4 pb-5 app-container">
-				{/* Question Container */}
 				{content && (
 					<div className="row">
 						<div className="container-fluid col-lg-8 questions-container">
@@ -92,12 +83,6 @@ function App() {
 											allPages={allPages}
 											questions={content?.questions}
 											handlePage={handlePage}
-											showPrevButton={showPrevButton}
-											setShowQuestions={setShowQuestions}
-											setShowThankYou={setShowThankYou}
-											setShowResults={setShowResults}
-											setFinalScores={setFinalScores}
-											togglePrevButton={togglePrevButton}
 											handleScores={handleScores}
 										/>
 									)}

@@ -1,217 +1,224 @@
 import { useState, useEffect } from "react";
 
 import Question from "./Question";
+import PageButton from "./PageButton";
 
 function QuestionContainer(props) {
-    const [questionNumber, setQuestionNumber] = useState(1);
-    const [selectedOptions, setSelectedOptions] = useState({});
-    const [selectedCategories, setSelectedCategories] = useState([]);
-    const [categories, setCategories] = useState([]);
-    const [showRequiredMsg, setShowRequiredMsg] = useState(false);
+	const [questionNumber, setQuestionNumber] = useState(1);
+	const [selectedOptions, setSelectedOptions] = useState({});
+	const [selectedCategories, setSelectedCategories] = useState([]);
+	const [categories, setCategories] = useState([]);
+	const [showPrevButton, SetShowPrevButton] = useState(false);
+	const [showRequiredMsg, setShowRequiredMsg] = useState(false);
 
-    const questionId = "question" + questionNumber; //ex: question5
-    const question = props.questions ? props.questions[questionId] : null;
+	const questionId = "question" + questionNumber; //ex: question5
+	const question = props.questions ? props.questions[questionId] : null;
 
-    function handleChange({ target }) {
-        let substanceId = target.name,
-            optionScore = target.value,
-            optionText = target.dataset.optionText;
+	function handleChange({ target }) {
+		let substanceId = target.name,
+			optionScore = target.value,
+			optionText = target.dataset.optionText;
 
-        console.log(selectedCategories);
-        console.log(selectedOptions);
+		console.log(selectedCategories);
+		console.log(selectedOptions);
 
-        setSelectedOptions(prev => {
-            let newSelectedOptions = { ...prev };
+		setSelectedOptions(prev => {
+			let newSelectedOptions = { ...prev };
 
-            newSelectedOptions[questionId] ??= {};
-            newSelectedOptions[questionId][substanceId] ??= { text: "", score: 0 };
-            newSelectedOptions[questionId][substanceId].text = optionText;
-            newSelectedOptions[questionId][substanceId].score = optionScore;
+			newSelectedOptions[questionId] ??= {};
+			newSelectedOptions[questionId][substanceId] ??= { text: "", score: 0 };
+			newSelectedOptions[questionId][substanceId].text = optionText;
+			newSelectedOptions[questionId][substanceId].score = optionScore;
 
-            if (questionNumber === 1) {
-                if (optionText.toLowerCase() === "yes") {
-                    setSelectedCategories(prevSelectedCategories => [
-                        ...prevSelectedCategories,
-                        substanceId,
-                    ]);
+			if (questionNumber === 1) {
+				if (optionText.toLowerCase() === "yes") {
+					setSelectedCategories(prevSelectedCategories => [
+						...prevSelectedCategories,
+						substanceId,
+					]);
 
-                    // Remove duplicates.
-                    setSelectedCategories(prevSelectedCategories =>
-                        Array.from(new Set(prevSelectedCategories)),
-                    );
-                } else {
-                    // Deselect a category.
-                    setSelectedCategories(prevSelectedCategories =>
-                        prevSelectedCategories.filter(substance => substance !== substanceId),
-                    );
-                }
-            }
+					// Remove duplicates.
+					setSelectedCategories(prevSelectedCategories =>
+						Array.from(new Set(prevSelectedCategories)),
+					);
+				} else {
+					// Deselect a category.
+					setSelectedCategories(prevSelectedCategories =>
+						prevSelectedCategories.filter(substance => substance !== substanceId),
+					);
+				}
+			}
 
-            return newSelectedOptions;
-        });
-    }
+			return newSelectedOptions;
+		});
+	}
 
-    function selectCategories() {
-        if (questionNumber === 1 || questionNumber === 8) {
-            setCategories(question?.substances);
-        } else {
-            // For questions other than 1 and 8,
-            // only categories selected in Question 1 should be displayed.
-            const selectedCategoriesSet = new Set(selectedCategories);
-            setCategories(
-                question?.substances?.filter(substanceData =>
-                    selectedCategoriesSet.has(substanceData.id),
-                ),
-            );
-        }
-    }
+	function selectCategories() {
+		if (questionNumber === 1 || questionNumber === 8) {
+			setCategories(question?.substances);
+		} else {
+			// For questions other than 1 and 8,
+			// only categories selected in Question 1 should be displayed.
+			const selectedCategoriesSet = new Set(selectedCategories);
+			setCategories(
+				question?.substances?.filter(substanceData =>
+					selectedCategoriesSet.has(substanceData.id),
+				),
+			);
+		}
+	}
 
-    function handleNextButtonClick() {
-        //TODO: Fix bug where required message is shown when one of the category that was selected is removed and quiz is retaken.
-        setShowRequiredMsg(false);
+	function togglePrevButton(currentQuestionNumber) {
+		if (currentQuestionNumber === 1) {
+			SetShowPrevButton(false);
+		} else {
+			SetShowPrevButton(true);
+		}
+	}
 
-        // Show required message if NO questions are answered.
-        if (!selectedOptions[questionId]) {
-            setShowRequiredMsg(true);
-            return;
-        }
+	function handleNextButtonClick() {
+		//TODO: Fix bug where required message is shown when one of the category that was selected is removed and quiz is retaken.
+		setShowRequiredMsg(false);
 
-        const numSelectedOptions = Object.keys(selectedOptions[questionId]).length;
-        let totalCategories = 0;
+		// Show required message if NO questions are answered.
+		if (!selectedOptions[questionId]) {
+			setShowRequiredMsg(true);
+			return;
+		}
 
-        if (questionNumber === 1 || questionNumber === 8) {
-            totalCategories = question?.substances?.length;
-        } else {
-            totalCategories = selectedCategories?.length;
-        }
+		const numSelectedOptions = Object.keys(selectedOptions[questionId]).length;
+		let totalCategories = 0;
 
-        // Show required message if all questions are not answered.
-        if (numSelectedOptions !== totalCategories) {
-            console.log(selectedOptions);
-            console.log(totalCategories);
-            console.log(selectedCategories);
-            setShowRequiredMsg(true);
-            return;
-        }
+		if (questionNumber === 1 || questionNumber === 8) {
+			totalCategories = question?.substances?.length;
+		} else {
+			totalCategories = selectedCategories?.length;
+		}
 
-        setQuestionNumber(prevQuestionNum => {
-            let totalQuestions = Object.keys(props.questions).length;
+		// Show required message if all questions are not answered.
+		if (numSelectedOptions !== totalCategories) {
+			console.log(selectedOptions);
+			console.log(totalCategories);
+			console.log(selectedCategories);
+			setShowRequiredMsg(true);
+			return;
+		}
 
-            // Show Thank you page if no categories are selected in first question.
-            if (prevQuestionNum === 1 && selectedCategories.length === 0) {
-                props.handlePage(props.allPages.thankYou);
-            }
+		setQuestionNumber(prevQuestionNum => {
+			let totalQuestions = Object.keys(props.questions).length;
 
-            // Last question.
-            if (prevQuestionNum === totalQuestions) {
-                const categoryScores = getCategoryScores();
-                console.log(selectedOptions);
-                console.log(categoryScores);
+			// Show Thank you page if no categories are selected in first question.
+			if (prevQuestionNum === 1 && selectedCategories.length === 0) {
+				props.handlePage(props.allPages.thankYou);
+			}
 
-                props.handleScores(categoryScores);                
-                props.handlePage(props.allPages.scores);
-            }
+			// Last question.
+			if (prevQuestionNum === totalQuestions) {
+				const categoryScores = getCategoryScores();
+				console.log(selectedOptions);
+				console.log(categoryScores);
 
-            let newQuestionNum;
-            if (prevQuestionNum === totalQuestions) {
-                newQuestionNum = prevQuestionNum;
-            } else {
-                newQuestionNum = prevQuestionNum + 1;
-            }
+				props.handleScores(categoryScores);
+			}
 
-            return newQuestionNum;
-        });
-    }
+			let newQuestionNum;
+			if (prevQuestionNum === totalQuestions) {
+				newQuestionNum = prevQuestionNum;
+			} else {
+				newQuestionNum = prevQuestionNum + 1;
+			}
 
-    function handlePrevButtonClick() {
-        props.setFinalScores(null);
-        setQuestionNumber(prevNum => {
-            return prevNum === 1 ? prevNum : prevNum - 1;
-        });
-    }
+			return newQuestionNum;
+		});
+	}
 
-    function getCategoryScores() {
-        const categoryScores = {
-            tobacco: 0,
-            alcohol: 0,
-            cannabis: 0,
-            cocaine: 0,
-            amphetamine: 0,
-            inhalants: 0,
-            sedatives: 0,
-            hallucinogens: 0,
-            opioids: 0,
-            other: 0,
-        };
+	function handlePrevButtonClick() {
+		props.setFinalScores(null);
+		setQuestionNumber(prevNum => {
+			return prevNum === 1 ? prevNum : prevNum - 1;
+		});
+	}
 
-        // Find total score of each category from questions in selectedOptions.
-        for (let questionId in selectedOptions) {
-            // Answers of Question 8 should not be considered in finalScores.
-            if (questionId === "question8") break;
+	function getCategoryScores() {
+		const categoryScores = {
+			tobacco: 0,
+			alcohol: 0,
+			cannabis: 0,
+			cocaine: 0,
+			amphetamine: 0,
+			inhalants: 0,
+			sedatives: 0,
+			hallucinogens: 0,
+			opioids: 0,
+			other: 0,
+		};
 
-            const categories = selectedOptions[questionId];
-            for (let categoryName in categories) {
-                let category = categories[categoryName];
+		// Find total score of each category from questions in selectedOptions.
+		for (let questionId in selectedOptions) {
+			// Answers of Question 8 should not be considered in finalScores.
+			if (questionId === "question8") break;
 
-                // If category doesn't exist in categoryScores,
-                // add category to categoryScores and initialize it to 0.
-                if (!categoryScores[categoryName]) categoryScores[categoryName] = 0;
+			const categories = selectedOptions[questionId];
+			for (let categoryName in categories) {
+				let category = categories[categoryName];
 
-                // Update score of current category in categoryScores.
-                categoryScores[categoryName] += Number(category.score);
-            }
-        }
+				// If category doesn't exist in categoryScores,
+				// add category to categoryScores and initialize it to 0.
+				if (!categoryScores[categoryName]) categoryScores[categoryName] = 0;
 
-        return categoryScores;
-    }
+				// Update score of current category in categoryScores.
+				categoryScores[categoryName] += Number(category.score);
+			}
+		}
 
-    useEffect(() => props.togglePrevButton(questionNumber), [questionNumber]);
-    useEffect(selectCategories, [questionNumber, question, selectedCategories]);
+		return categoryScores;
+	}
 
-    return (
-        <>
-            <Question
-                questionNumber={questionNumber}
-                question={question}
-                categories={categories}
-                selectedOptions={selectedOptions}
-                handleChange={handleChange}
-            />
+	useEffect(() => togglePrevButton(questionNumber), [questionNumber]);
+	useEffect(selectCategories, [questionNumber, question, selectedCategories]);
 
-            <div className="question-navigation">
-                {showRequiredMsg && (
-                    <div
-                        className="alert alert-danger mt-4"
-                        role="alert"
-                    >
-                        Please complete all questions on the page to
-                        continue.
-                    </div>
-                )}
+	return (
+		<>
+			<Question
+				questionNumber={questionNumber}
+				question={question}
+				categories={categories}
+				selectedOptions={selectedOptions}
+				handleChange={handleChange}
+			/>
 
-                <div className="text-center mt-4 mx-5 d-grid gap-2 d-md-block row d-flex">
-                    <button
-                        type="button"
-                        className="btn btn-success"
-                        onClick={() => handleNextButtonClick()}
-                    >
-                        Next {">"}
-                    </button>
-                </div>
+			<div className="question-navigation">
+				{showRequiredMsg && (
+					<div
+						className="alert alert-danger mt-4"
+						role="alert"
+					>
+						Please complete all questions on the page to continue.
+					</div>
+				)}
 
-                {props.showPrevButton && (
-                    <div className="text-center mt-4 mx-5 d-grid gap-2 d-md-block row d-flex">
-                        <button
-                            className="btn btn-outline-success"
-                            onClick={() => handlePrevButtonClick()}
-                        >
-                            {"<"} Changed my mind
-                        </button>
-                    </div>
-                )}
-            </div>
-        </>
-    );
+				{/* Next Button */}
+				<div className="text-center mt-4 mx-5 d-grid gap-2 d-md-block row d-flex">
+					<PageButton
+						buttonText={"Next >"}
+						buttonClass="btn btn-success"
+						handlePageButtonClick={handleNextButtonClick}
+					/>
+				</div>
+
+				{/* Previous Button */}
+				<div className="text-center mt-4 mx-5 d-grid gap-2 d-md-block row d-flex">
+					{props.showPrevButton && (
+						<PageButton
+							buttonText={"< Changed my mind"}
+							buttonClass="btn btn-outline-success"
+							handlePageButtonClick={handlePrevButtonClick}
+						/>
+					)}
+				</div>
+			</div>
+		</>
+	);
 }
 
 export default QuestionContainer;
