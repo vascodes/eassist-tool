@@ -8,7 +8,6 @@ function QuestionContainer(props) {
 	const [selectedOptions, setSelectedOptions] = useState({});
 	const [selectedSubstances, setSelectedSubstances] = useState([]);
 	const [substances, setSubstances] = useState([]);
-	const [showPrevButton, setShowPrevButton] = useState(false);
 	const [showRequiredMsg, setShowRequiredMsg] = useState(false);
 
 	const questionId = "question" + questionNumber; //ex: question5
@@ -61,41 +60,32 @@ function QuestionContainer(props) {
 		} else {
 			// For questions other than 1 and 8,
 			// only substances selected in Question 1 (selectedSubstances) should be displayed.
-			const selectedSubstancesSet = new Set(selectedSubstances);
 			setSubstances(
 				question?.substances?.filter(substanceData =>
-					selectedSubstancesSet.has(substanceData.id),
+					selectedSubstances.includes(substanceData.id),
 				),
 			);
 		}
 
 		// For questions 3, 4 and 5, display only substances that,
 		// were not answered as "Never" in question 2.
-		if (questionNumber >= 3 && questionNumber <= 5) {
-			const newSubstances = substances.filter(
-				substance => {
-                    console.log(substance);
-                    return selectedOptions["question2"][substance.id]?.text?.toLowerCase() !== "never"
-                }
-			);
+		// if (questionNumber >= 3 && questionNumber <= 5) {
+		// 	const newSubstances = substances.filter(
+		// 		substance => {
+		//             console.log(substance);
+		//             return selectedOptions["question2"][substance.id]?.text?.toLowerCase() !== "never"
+		//         }
+		// 	);
 
-            setSubstances(newSubstances);
-		}
+		//     setSubstances(newSubstances);
+		// }
 	}
 
-	function togglePrevButton(currentQuestionNumber) {
-		if (currentQuestionNumber === 1) {
-			setShowPrevButton(false);
-		} else {
-			setShowPrevButton(true);
-		}
-	}
+	useEffect(selectSubstances, [question?.substances, questionNumber, selectedSubstances]);
 
 	function handleNextButtonClick() {
 		//TODO: Fix bug where required message is shown when one of the substance that was selected is removed and quiz is retaken.
 		setShowRequiredMsg(false);
-
-		
 
 		setQuestionNumber(prevQuestionNum => {
 			let totalQuestions = Object.keys(props.questions).length;
@@ -127,6 +117,7 @@ function QuestionContainer(props) {
 
 	function handlePrevButtonClick() {
 		props.handleScores(null);
+
 		setQuestionNumber(prevNum => {
 			return prevNum === 1 ? prevNum : prevNum - 1;
 		});
@@ -167,9 +158,6 @@ function QuestionContainer(props) {
 		return substanceScores;
 	}
 
-	useEffect(() => togglePrevButton(questionNumber), [questionNumber]);
-	useEffect(selectSubstances, [questionNumber, question, selectedSubstances]);
-
 	return (
 		<>
 			<Question
@@ -202,7 +190,7 @@ function QuestionContainer(props) {
 
 				{/* Previous Button */}
 				<div className="text-center mt-4 mx-5 d-grid gap-2 d-md-block row d-flex">
-					{showPrevButton && (
+					{questionNumber !== 1 && (
 						<PageButton
 							buttonText={"< Changed my mind"}
 							buttonClass="btn btn-outline-success"

@@ -56,6 +56,7 @@ function App() {
 				break;
 
 			default:
+				setShowQuestions(true);
 				console.log("error page.");
 				break;
 		}
@@ -65,7 +66,8 @@ function App() {
 
 	function handleScores(score) {
 		setFinalScores(score);
-		handlePage(allPages.scores);
+		if (score)
+			handlePage(allPages.scores);
 	}
 
 	return (
