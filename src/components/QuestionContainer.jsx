@@ -161,6 +161,7 @@ function QuestionContainer(props) {
 	return (
 		<>
 			<Question
+				key = {questionNumber}
 				questionNumber={questionNumber}
 				question={question}
 				totalQuestions={Object.keys(props?.questions)?.length}

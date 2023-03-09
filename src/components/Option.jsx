@@ -1,5 +1,3 @@
-import { useEffect, useState } from "react";
-
 function replaceSpecialCharsInString(str, replaceStr = "") {
 	return str.replace(/[\s\W]/gi, replaceStr);
 }
@@ -10,18 +8,18 @@ function Option({ questionNumber, substanceId, selectedOptions, optionText, scor
 
 	let radioButtonId = `radio-${substanceId}-${optionTextWithHyphens}`; // ex: radio-cannabis-no
 	radioButtonId = replaceSpecialCharsInString(radioButtonId, "-"); // Remove multiple hyphens.
-
-	const [isChecked, setIsChecked] = useState(false);
-	useEffect(() => {
-		setIsChecked(false);
+		
+	function getIsChecked(){		
 		let key = "question" + questionNumber;
 
 		if (selectedOptions[key]) {
 			if (selectedOptions[key][substanceId]?.text === optionText) {
-				setIsChecked(true);
+				return true;
 			}
 		}
-	}, [selectedOptions, substanceId, questionNumber, optionText]);
+
+		return false;
+	}
 
 	return (
 		<div className="form-check radio-spacing option-group">
@@ -31,7 +29,7 @@ function Option({ questionNumber, substanceId, selectedOptions, optionText, scor
 				name={substanceId}
 				id={radioButtonId}
 				value={score}
-				checked={isChecked}
+				checked={getIsChecked()}
 				onChange={handleChange}
 				data-option-text={optionText}
 				required
