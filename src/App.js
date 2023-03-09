@@ -23,7 +23,7 @@ function App() {
 
 	function handlePage(selectedPage) {
 		setCurrentPage(selectedPage);				
-	}
+	}	
 
 	useEffect(() => setContent(data), []); // Fetch data on app load.
 
@@ -43,6 +43,8 @@ function App() {
 						<div className="container-fluid col-lg-8 questions-container">
 							<div className="card">
 								<div className="card-body">
+									{currentPage === allPages.home && <h1>HOME PAGE</h1>}
+									
 									{currentPage === allPages.questions && (
 										<QuestionContainer
 											allPages={allPages}
