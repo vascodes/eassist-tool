@@ -9,13 +9,6 @@ import NavBar from "./components/NavBar";
 import InfoCard from "./components/InfoCard";
 
 function App() {
-	const [content, setContent] = useState(null);
-	const [showQuestions, setShowQuestions] = useState(true);
-	const [showThankYou, setShowThankYou] = useState(false);
-	const [showScores, setShowScores] = useState(false);
-	const [finalScores, setFinalScores] = useState(null);
-	const [showResults, setShowResults] = useState(false);
-
 	const allPages = Object.freeze({
 		home: 0,
 		questions: 1,
@@ -23,43 +16,13 @@ function App() {
 		advice: 3,
 		scores: 4,
 	});
-
-	function resetPages() {
-		setShowQuestions(false);
-		setShowResults(false);
-		setShowScores(false);
-		setShowThankYou(false);
-	}
+	
+	const [content, setContent] = useState(null);	
+	const [finalScores, setFinalScores] = useState(null);
+	const [currentPage, setCurrentPage] = useState(allPages.questions);	
 
 	function handlePage(selectedPage) {
-		resetPages();
-
-		switch (selectedPage) {
-			case allPages.home:
-				console.log("home page");
-				break;
-
-			case allPages.questions:
-				setShowQuestions(true);
-				break;
-
-			case allPages.thankYou:
-				setShowThankYou(true);
-				break;
-
-			case allPages.advice:
-				console.log("advice page");
-				break;
-
-			case allPages.scores:
-				setShowScores(true);
-				break;
-
-			default:
-				setShowQuestions(true);
-				console.log("error page.");
-				break;
-		}
+		setCurrentPage(selectedPage);				
 	}
 
 	useEffect(() => setContent(data), []); // Fetch data on app load.
@@ -80,25 +43,25 @@ function App() {
 						<div className="container-fluid col-lg-8 questions-container">
 							<div className="card">
 								<div className="card-body">
-									{showQuestions && (
+									{currentPage === allPages.questions && (
 										<QuestionContainer
 											allPages={allPages}
 											questions={content?.questions}
 											handlePage={handlePage}
-											handleScores={handleScores}
+											handleScores={handleScores}											
 										/>
 									)}
 
-									{showResults && <ResultContainer />}
+									{currentPage === allPages.advice && <ResultContainer />}
 
-									{showScores && (
+									{currentPage === allPages.scores && (
 										<ScoresTable
 											scores={finalScores}
 											substanceRiskLevels={content?.substanceRiskLevels}
 										/>
 									)}
 
-									{showThankYou && <ThankYouContainer />}
+									{currentPage === allPages.thankYou && <ThankYouContainer />}
 								</div>
 							</div>
 						</div>

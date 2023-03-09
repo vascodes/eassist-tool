@@ -6,7 +6,7 @@ import PageButton from "./PageButton";
 function QuestionContainer(props) {
 	const [questionNumber, setQuestionNumber] = useState(1);
 	const [selectedOptions, setSelectedOptions] = useState({});
-	const [selectedSubstances, setSelectedSubstances] = useState([]);
+	const [selectedSubstances, setSelectedSubstances] = useState([]); // Substances selected in Q1.
 	const [substances, setSubstances] = useState([]);
 	const [showRequiredMsg, setShowRequiredMsg] = useState(false);
 
