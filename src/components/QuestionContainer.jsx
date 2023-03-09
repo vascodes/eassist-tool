@@ -139,8 +139,8 @@ function QuestionContainer(props) {
 
 		// Find total score of each substance from questions in selectedOptions.
 		for (let questionId in selectedOptions) {
-			// Answers of Question 8 should not be considered in finalScores.
-			if (questionId === "question8") break;
+			// Answers of Question 1 or Question 8 should not be considered in finalScores.
+			if (questionId === "question1" || questionId === "question8") continue;
 
 			const substances = selectedOptions[questionId];
 			for (let substanceName in substances) {
