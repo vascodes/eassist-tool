@@ -10,22 +10,21 @@ function getQuestion(questionNumber) {
 }
 
 function QuestionContainer({ allPages, questions, handlePage, handleScores }) {
+	/* 	
+		Separate state is used for question and substances as substances displayed
+		for a question may vary based on the answers selected in previous questions.
+	*/
 	const [question, setQuestion] = useState(getQuestion(1));
-	const [substances, setSubstances] = useState(questions["question1"]?.substances);
+	const [substances, setSubstances] = useState(questions[question?.id]?.substances);
+	const [selectedSubstances, setSelectedSubstances] = useState(new Set()); // Substances selected in Q1.	
 	const [selectedOptions, setSelectedOptions] = useState({});
 	const [showRequiredMsg, setShowRequiredMsg] = useState(false);
-	// const [selectedSubstances, setSelectedSubstances] = useState([]); // Substances selected in Q1.
-
-	// const questionId = "question" + questionNumber; //ex: question5
-	// const question = questions ? questions[questionId] : null;
-	const selectedSubstancesInQ1 = new Set();
 
 	function handleChange({ target }) {
 		let substanceId = target.name,
 			optionScore = target.value,
 			optionText = target.dataset.optionText;
-
-		// console.log(selectedSubstances);
+		
 		console.log(selectedOptions);
 
 		setSelectedOptions(prev => {
@@ -40,24 +39,14 @@ function QuestionContainer({ allPages, questions, handlePage, handleScores }) {
 			// For question 1, Add substance to selectedSubstances if selected option of that substance is "Yes".
 			if (question.number === 1) {
 				if (optionText.toLowerCase() === "yes") {
-					selectedSubstancesInQ1.add(substanceId);
-
-					// setSelectedSubstances(prevselectedSubstances => [
-					// 	...prevselectedSubstances,
-					// 	substanceId,
-					// ]);
-
-					// Remove duplicates.
-					// setSelectedSubstances(prevselectedSubstances =>
-					// 	Array.from(new Set(prevselectedSubstances)),
-					// );
+					setSelectedSubstances(
+						prevSelectedSubstances => new Set([...prevSelectedSubstances, substanceId]),
+					);
 				} else {
 					// Deselect a substance.
-					// setSelectedSubstances(prevselectedSubstances =>
-					// 	prevselectedSubstances.filter(substance => substance !== substanceId),
-					// );
-
-					selectedSubstancesInQ1.delete(substanceId);
+					const selectedSet = selectedSubstances;
+					selectedSet.delete(substanceId);
+					setSelectedSubstances(selectedSet);
 				}
 			}
 
@@ -71,11 +60,13 @@ function QuestionContainer({ allPages, questions, handlePage, handleScores }) {
 			setSubstances(questions[questionId]?.substances);
 		} else {
 			// For questions other than 1 and 8,
-			// only substances selected in Question 1 (selectedSubstances) should be displayed.
-			setSubstances(
-				questions[questionId]?.substances, // CHANGE
-				// substances.filter(substanceData => !selectedSubstancesInQ1.has(substanceData.id)),
+			// only substances selected in Question 1 should be displayed.
+			const actualSubstances = questions[questionId]?.substances;
+			const filteredSubstances = actualSubstances.filter(substance =>
+				selectedSubstances.has(substance.id),
 			);
+
+			setSubstances(filteredSubstances);
 		}
 
 		// For questions 3, 4 and 5, display only substances that,
@@ -92,9 +83,6 @@ function QuestionContainer({ allPages, questions, handlePage, handleScores }) {
 		// }
 	}
 
-	// useEffect(selectSubstances, [question?.substances, questionNumber, selectedSubstances]);
-	// useEffect(() => setSubstances(questions[question?.id]?.substances), [question]);
-
 	function handleNextButtonClick() {
 		//TODO: Fix bug where required message is shown when one of the substance that was selected is removed and quiz is retaken.
 		setShowRequiredMsg(false);
@@ -103,7 +91,7 @@ function QuestionContainer({ allPages, questions, handlePage, handleScores }) {
 			let totalQuestions = Object.keys(questions).length;
 
 			// Show Thank you page if no substances are selected in first question.
-			if (prevQuestion.number === 1 && selectedSubstancesInQ1.length === 0) {
+			if (prevQuestion.number === 1 && selectedSubstances.length === 0) {
 				handlePage(allPages.thankYou);
 				// setShowRequiredMsg(true);
 				return prevQuestion;
@@ -116,7 +104,7 @@ function QuestionContainer({ allPages, questions, handlePage, handleScores }) {
 				console.log(substanceScores);
 
 				handleScores(substanceScores);
-				
+
 				return prevQuestion;
 			}
 
@@ -128,9 +116,9 @@ function QuestionContainer({ allPages, questions, handlePage, handleScores }) {
 
 				return newQuestion;
 			}
-						
+
 			return prevQuestion;
-		});		
+		});
 	}
 
 	function handlePrevButtonClick() {
@@ -140,13 +128,12 @@ function QuestionContainer({ allPages, questions, handlePage, handleScores }) {
 			if (prevQuestion.number !== 1) {
 				let newQuestionNumber = prevQuestion.number - 1;
 				selectSubstances(newQuestionNumber);
-				
+
 				return getQuestion(newQuestionNumber);
 			}
 
 			return prevQuestion;
 		});
-
 	}
 
 	function getSubstanceScores() {
