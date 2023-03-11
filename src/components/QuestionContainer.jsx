@@ -14,10 +14,10 @@ function QuestionContainer({ allPages, questions, handlePage, handleScores }) {
 		Separate state is used for question and substances as substances displayed
 		for a question may vary based on the answers selected in previous questions.
 	*/
-	const [question, setQuestion] = useState(getQuestion(1));	
+	const [question, setQuestion] = useState(getQuestion(1));
 	const [selectedSubstances, setSelectedSubstances] = useState(new Set()); // Substances selected in Q1.
 	const [selectedOptions, setSelectedOptions] = useState({});
-	const [showRequiredMsg, setShowRequiredMsg] = useState(false);
+	const [showRequiredMessage, setShowRequiredMessage] = useState(false);
 
 	function handleChange({ target }) {
 		let substanceId = target.name,
@@ -56,7 +56,7 @@ function QuestionContainer({ allPages, questions, handlePage, handleScores }) {
 	function getSubstances(questionNumber) {
 		let questionId = "question" + questionNumber;
 		if (questionNumber === 1 || questionNumber === 8) {
-			return questions[questionId]?.substances
+			return questions[questionId]?.substances;
 			// setSubstances(questions[questionId]?.substances);
 		} else {
 			// For questions other than 1 and 8,
@@ -85,10 +85,36 @@ function QuestionContainer({ allPages, questions, handlePage, handleScores }) {
 	}
 
 	function handleNextButtonClick() {
-		//TODO: Fix bug where required message is shown when one of the substance that was selected is removed and quiz is retaken.						
-		
+		//TODO: Fix bug where required message is shown when one of the substance that was selected is removed and quiz is retaken.
+		setShowRequiredMessage(false); // reset required message.
+
+		// Show required message if NO options of current question are selected.
+		if (!selectedOptions[question.id]) {
+			setShowRequiredMessage(true);
+			console.log("no options selected.");
+			return;
+		} else {
+			let totalSelectedOptions = Object.keys(selectedOptions[question.id]).length ?? 0;
+			const currSubstances = getSubstances(question.number);
+			
+			// If all options are answered as "No" in question 1 then,
+			// show Thank You page.
+			if (question.number === 1) {
+				if (totalSelectedOptions > 0 && selectedSubstances.size === 0) {
+					handlePage(allPages.thankYou);
+					return;
+				}
+			}
+
+			// Show required message if ALL options of current question are NOT selected.
+			if (totalSelectedOptions < currSubstances.length) {
+				setShowRequiredMessage(true);
+				return;
+			}
+		}
+
 		setQuestion(prevQuestion => {
-			let totalQuestions = Object.keys(questions).length;			
+			let totalQuestions = Object.keys(questions).length;
 
 			// Last question.
 			if (prevQuestion.number === totalQuestions) {
@@ -105,8 +131,6 @@ function QuestionContainer({ allPages, questions, handlePage, handleScores }) {
 			if (prevQuestion.number !== totalQuestions) {
 				let newQuestionNumber = prevQuestion.number + 1;
 				const newQuestion = getQuestion(newQuestionNumber);
-				// selectSubstances(newQuestionNumber);
-
 				return newQuestion;
 			}
 
@@ -120,8 +144,6 @@ function QuestionContainer({ allPages, questions, handlePage, handleScores }) {
 		setQuestion(prevQuestion => {
 			if (prevQuestion.number !== 1) {
 				let newQuestionNumber = prevQuestion.number - 1;
-				// selectSubstances(newQuestionNumber);
-
 				return getQuestion(newQuestionNumber);
 			}
 
@@ -178,7 +200,7 @@ function QuestionContainer({ allPages, questions, handlePage, handleScores }) {
 			/>
 
 			<div className="question-navigation">
-				{showRequiredMsg && (
+				{showRequiredMessage && (
 					<div
 						className="alert alert-danger mt-4"
 						role="alert"
