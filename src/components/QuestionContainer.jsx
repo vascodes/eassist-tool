@@ -15,7 +15,7 @@ function QuestionContainer({ allPages, questions, handlePage, handleScores }) {
 		for a question may vary based on the answers selected in previous questions.
 	*/
 	const [question, setQuestion] = useState(getQuestion(1));
-	const [selectedSubstances, setSelectedSubstances] = useState(new Set()); // Substances selected in Q1.
+	const [selectedSubstancesSet, setSelectedSubstancesSet] = useState(new Set()); // Substances selected in Q1.
 	const [selectedOptions, setSelectedOptions] = useState({});
 	const [showRequiredMessage, setShowRequiredMessage] = useState(false);
 
@@ -35,17 +35,17 @@ function QuestionContainer({ allPages, questions, handlePage, handleScores }) {
 			newSelectedOptions[question.id][substanceId].text = optionText;
 			newSelectedOptions[question.id][substanceId].score = optionScore;
 
-			// For question 1, Add substance to selectedSubstances if selected option of that substance is "Yes".
+			// For question 1, Add substance to selectedSubstancesSet if selected option of that substance is "Yes".
 			if (question.number === 1) {
 				if (optionText.toLowerCase() === "yes") {
-					setSelectedSubstances(
+					setSelectedSubstancesSet(
 						prevSelectedSubstances => new Set([...prevSelectedSubstances, substanceId]),
 					);
 				} else {
 					// Deselect a substance.
-					const selectedSet = selectedSubstances;
+					const selectedSet = selectedSubstancesSet;
 					selectedSet.delete(substanceId);
-					setSelectedSubstances(selectedSet);
+					setSelectedSubstancesSet(selectedSet);
 				}
 			}
 
@@ -55,33 +55,36 @@ function QuestionContainer({ allPages, questions, handlePage, handleScores }) {
 
 	function getSubstances(questionNumber) {
 		let questionId = "question" + questionNumber;
+
+		// Display all substances for question 1 and question 8.
 		if (questionNumber === 1 || questionNumber === 8) {
 			return questions[questionId]?.substances;
-			// setSubstances(questions[questionId]?.substances);
 		} else {
-			// For questions other than 1 and 8,
-			// only substances selected in Question 1 should be displayed.
+			// For other questions, only substances selected in Question 1 should be displayed.
 			const actualSubstances = questions[questionId]?.substances;
-			const filteredSubstances = actualSubstances.filter(substance =>
-				selectedSubstances.has(substance.id),
+			const substancesSelectedInQ1 = actualSubstances?.filter(substance =>
+				selectedSubstancesSet.has(substance.id),
 			);
 
-			return filteredSubstances;
-			// setSubstances(filteredSubstances);
+			let newSubstances = substancesSelectedInQ1;
+
+			// For questions 3, 4 and 5, display only substances that,
+			// were not answered as "Never" in question 2.
+			if (questionNumber >= 3 && questionNumber <= 5) {
+				newSubstances = substancesSelectedInQ1.filter(substance => {
+					return (
+						selectedOptions["question2"][substance.id]?.text?.toLowerCase() !== "never"
+					);
+				});
+			}
+
+			// Remove tobacco in question 5.
+			if (questionNumber === 5) {
+				newSubstances = newSubstances.filter(substance => substance.id !== "tobacco");
+			}
+
+			return newSubstances;
 		}
-
-		// For questions 3, 4 and 5, display only substances that,
-		// were not answered as "Never" in question 2.
-		// if (questionNumber >= 3 && questionNumber <= 5) {
-		// 	const newSubstances = substances.filter(
-		// 		substance => {
-		//             console.log(substance);
-		//             return selectedOptions["question2"][substance.id]?.text?.toLowerCase() !== "never"
-		//         }
-		// 	);
-
-		//     setSubstances(newSubstances);
-		// }
 	}
 
 	function handleNextButtonClick() {
@@ -96,11 +99,11 @@ function QuestionContainer({ allPages, questions, handlePage, handleScores }) {
 		} else {
 			let totalSelectedOptions = Object.keys(selectedOptions[question.id]).length ?? 0;
 			const currSubstances = getSubstances(question.number);
-			
+
 			// If all options are answered as "No" in question 1 then,
 			// show Thank You page.
 			if (question.number === 1) {
-				if (totalSelectedOptions > 0 && selectedSubstances.size === 0) {
+				if (totalSelectedOptions > 0 && selectedSubstancesSet.size === 0) {
 					handlePage(allPages.thankYou);
 					return;
 				}
@@ -188,13 +191,13 @@ function QuestionContainer({ allPages, questions, handlePage, handleScores }) {
 	}
 
 	return (
-		<>
+		<>			
 			<Question
-				key={question.number}
-				questionNumber={question.number}
-				question={questions[question.id]}
+				key={question?.number}
+				questionNumber={question?.number}
+				question={questions[question?.id]}
 				totalQuestions={Object.keys(questions)?.length}
-				substances={getSubstances(question.number)}
+				substances={getSubstances(question?.number)}
 				selectedOptions={selectedOptions}
 				handleChange={handleChange}
 			/>
