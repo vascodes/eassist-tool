@@ -3,50 +3,61 @@ import { useState, useEffect } from "react";
 import Question from "./Question";
 import PageButton from "./PageButton";
 
-function QuestionContainer(props) {
-	const [questionNumber, setQuestionNumber] = useState(1);
-	const [selectedOptions, setSelectedOptions] = useState({});
-	const [selectedSubstances, setSelectedSubstances] = useState([]); // Substances selected in Q1.
-	const [substances, setSubstances] = useState([]);
-	const [showRequiredMsg, setShowRequiredMsg] = useState(false);
+function getQuestion(questionNumber) {
+	let questionId = "question" + questionNumber;
 
-	const questionId = "question" + questionNumber; //ex: question5
-	const question = props.questions ? props.questions[questionId] : null;
+	return { id: questionId, number: questionNumber };
+}
+
+function QuestionContainer({ allPages, questions, handlePage, handleScores }) {
+	const [question, setQuestion] = useState(getQuestion(1));
+	const [substances, setSubstances] = useState(questions["question1"]?.substances);
+	const [selectedOptions, setSelectedOptions] = useState({});
+	const [showRequiredMsg, setShowRequiredMsg] = useState(false);
+	// const [selectedSubstances, setSelectedSubstances] = useState([]); // Substances selected in Q1.
+
+	// const questionId = "question" + questionNumber; //ex: question5
+	// const question = questions ? questions[questionId] : null;
+	const selectedSubstancesInQ1 = new Set();
 
 	function handleChange({ target }) {
 		let substanceId = target.name,
 			optionScore = target.value,
 			optionText = target.dataset.optionText;
 
-		console.log(selectedSubstances);
+		// console.log(selectedSubstances);
 		console.log(selectedOptions);
 
 		setSelectedOptions(prev => {
 			let newSelectedOptions = { ...prev };
 
 			// Initialize selected option for current question.
-			newSelectedOptions[questionId] ??= {};
-			newSelectedOptions[questionId][substanceId] ??= { text: "", score: 0 };
-			newSelectedOptions[questionId][substanceId].text = optionText;
-			newSelectedOptions[questionId][substanceId].score = optionScore;
+			newSelectedOptions[question.id] ??= {};
+			newSelectedOptions[question.id][substanceId] ??= { text: "", score: 0 };
+			newSelectedOptions[question.id][substanceId].text = optionText;
+			newSelectedOptions[question.id][substanceId].score = optionScore;
 
 			// For question 1, Add substance to selectedSubstances if selected option of that substance is "Yes".
-			if (questionNumber === 1) {
+			if (question.number === 1) {
 				if (optionText.toLowerCase() === "yes") {
-					setSelectedSubstances(prevselectedSubstances => [
-						...prevselectedSubstances,
-						substanceId,
-					]);
+					selectedSubstancesInQ1.add(substanceId);
+
+					// setSelectedSubstances(prevselectedSubstances => [
+					// 	...prevselectedSubstances,
+					// 	substanceId,
+					// ]);
 
 					// Remove duplicates.
-					setSelectedSubstances(prevselectedSubstances =>
-						Array.from(new Set(prevselectedSubstances)),
-					);
+					// setSelectedSubstances(prevselectedSubstances =>
+					// 	Array.from(new Set(prevselectedSubstances)),
+					// );
 				} else {
 					// Deselect a substance.
-					setSelectedSubstances(prevselectedSubstances =>
-						prevselectedSubstances.filter(substance => substance !== substanceId),
-					);
+					// setSelectedSubstances(prevselectedSubstances =>
+					// 	prevselectedSubstances.filter(substance => substance !== substanceId),
+					// );
+
+					selectedSubstancesInQ1.delete(substanceId);
 				}
 			}
 
@@ -54,16 +65,16 @@ function QuestionContainer(props) {
 		});
 	}
 
-	function selectSubstances() {
+	function selectSubstances(questionNumber) {
+		let questionId = "question" + questionNumber;
 		if (questionNumber === 1 || questionNumber === 8) {
-			setSubstances(question?.substances);
+			setSubstances(questions[questionId]?.substances);
 		} else {
 			// For questions other than 1 and 8,
 			// only substances selected in Question 1 (selectedSubstances) should be displayed.
 			setSubstances(
-				question?.substances?.filter(substanceData =>
-					selectedSubstances.includes(substanceData.id),
-				),
+				questions[questionId]?.substances, // CHANGE
+				// substances.filter(substanceData => !selectedSubstancesInQ1.has(substanceData.id)),
 			);
 		}
 
@@ -81,49 +92,65 @@ function QuestionContainer(props) {
 		// }
 	}
 
-	useEffect(selectSubstances, [question?.substances, questionNumber, selectedSubstances]);
+	// useEffect(selectSubstances, [question?.substances, questionNumber, selectedSubstances]);
+	// useEffect(() => setSubstances(questions[question?.id]?.substances), [question]);
 
 	function handleNextButtonClick() {
 		//TODO: Fix bug where required message is shown when one of the substance that was selected is removed and quiz is retaken.
 		setShowRequiredMsg(false);
 
-		setQuestionNumber(prevQuestionNum => {
-			let totalQuestions = Object.keys(props.questions).length;
+		setQuestion(prevQuestion => {
+			let totalQuestions = Object.keys(questions).length;
 
 			// Show Thank you page if no substances are selected in first question.
-			if (prevQuestionNum === 1 && selectedSubstances.length === 0) {
-				props.handlePage(props.allPages.thankYou);
+			if (prevQuestion.number === 1 && selectedSubstancesInQ1.length === 0) {
+				handlePage(allPages.thankYou);
+				// setShowRequiredMsg(true);
+				return prevQuestion;
 			}
 
 			// Last question.
-			if (prevQuestionNum === totalQuestions) {
+			if (prevQuestion.number === totalQuestions) {
 				const substanceScores = getSubstanceScores();
 				console.log(selectedOptions);
 				console.log(substanceScores);
 
-				props.handleScores(substanceScores);
+				handleScores(substanceScores);
+				
+				return prevQuestion;
 			}
 
-			let newQuestionNum;
-			if (prevQuestionNum === totalQuestions) {
-				newQuestionNum = prevQuestionNum;
-			} else {
-				newQuestionNum = prevQuestionNum + 1;
-			}
+			// Change question if current question is not last question.
+			if (prevQuestion.number !== totalQuestions) {
+				let newQuestionNumber = prevQuestion.number + 1;
+				const newQuestion = getQuestion(newQuestionNumber);
+				selectSubstances(newQuestionNumber);
 
-			return newQuestionNum;
-		});
+				return newQuestion;
+			}
+						
+			return prevQuestion;
+		});		
 	}
 
 	function handlePrevButtonClick() {
-		props.handleScores(null);
+		handleScores(null);
 
-		setQuestionNumber(prevNum => {
-			return prevNum === 1 ? prevNum : prevNum - 1;
+		setQuestion(prevQuestion => {
+			if (prevQuestion.number !== 1) {
+				let newQuestionNumber = prevQuestion.number - 1;
+				selectSubstances(newQuestionNumber);
+				
+				return getQuestion(newQuestionNumber);
+			}
+
+			return prevQuestion;
 		});
+
 	}
 
 	function getSubstanceScores() {
+		// TODO: Use substances from data.js to initialize substanceScores.
 		const substanceScores = {
 			tobacco: 0,
 			alcohol: 0,
@@ -161,10 +188,10 @@ function QuestionContainer(props) {
 	return (
 		<>
 			<Question
-				key = {questionNumber}
-				questionNumber={questionNumber}
-				question={question}
-				totalQuestions={Object.keys(props?.questions)?.length}
+				key={question.number}
+				questionNumber={question.number}
+				question={questions[question.id]}
+				totalQuestions={Object.keys(questions)?.length}
 				substances={substances}
 				selectedOptions={selectedOptions}
 				handleChange={handleChange}
@@ -191,7 +218,7 @@ function QuestionContainer(props) {
 
 				{/* Previous Button */}
 				<div className="text-center mt-4 mx-5 d-grid gap-2 d-md-block row d-flex">
-					{questionNumber !== 1 && (
+					{question.number !== 1 && (
 						<PageButton
 							buttonText={"< Changed my mind"}
 							buttonClass="btn btn-outline-success"
