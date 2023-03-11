@@ -14,9 +14,8 @@ function QuestionContainer({ allPages, questions, handlePage, handleScores }) {
 		Separate state is used for question and substances as substances displayed
 		for a question may vary based on the answers selected in previous questions.
 	*/
-	const [question, setQuestion] = useState(getQuestion(1));
-	const [substances, setSubstances] = useState(questions[question?.id]?.substances);
-	const [selectedSubstances, setSelectedSubstances] = useState(new Set()); // Substances selected in Q1.	
+	const [question, setQuestion] = useState(getQuestion(1));	
+	const [selectedSubstances, setSelectedSubstances] = useState(new Set()); // Substances selected in Q1.
 	const [selectedOptions, setSelectedOptions] = useState({});
 	const [showRequiredMsg, setShowRequiredMsg] = useState(false);
 
@@ -24,7 +23,7 @@ function QuestionContainer({ allPages, questions, handlePage, handleScores }) {
 		let substanceId = target.name,
 			optionScore = target.value,
 			optionText = target.dataset.optionText;
-		
+
 		console.log(selectedOptions);
 
 		setSelectedOptions(prev => {
@@ -54,10 +53,11 @@ function QuestionContainer({ allPages, questions, handlePage, handleScores }) {
 		});
 	}
 
-	function selectSubstances(questionNumber) {
+	function getSubstances(questionNumber) {
 		let questionId = "question" + questionNumber;
 		if (questionNumber === 1 || questionNumber === 8) {
-			setSubstances(questions[questionId]?.substances);
+			return questions[questionId]?.substances
+			// setSubstances(questions[questionId]?.substances);
 		} else {
 			// For questions other than 1 and 8,
 			// only substances selected in Question 1 should be displayed.
@@ -66,7 +66,8 @@ function QuestionContainer({ allPages, questions, handlePage, handleScores }) {
 				selectedSubstances.has(substance.id),
 			);
 
-			setSubstances(filteredSubstances);
+			return filteredSubstances;
+			// setSubstances(filteredSubstances);
 		}
 
 		// For questions 3, 4 and 5, display only substances that,
@@ -84,18 +85,10 @@ function QuestionContainer({ allPages, questions, handlePage, handleScores }) {
 	}
 
 	function handleNextButtonClick() {
-		//TODO: Fix bug where required message is shown when one of the substance that was selected is removed and quiz is retaken.
-		setShowRequiredMsg(false);
-
+		//TODO: Fix bug where required message is shown when one of the substance that was selected is removed and quiz is retaken.						
+		
 		setQuestion(prevQuestion => {
-			let totalQuestions = Object.keys(questions).length;
-
-			// Show Thank you page if no substances are selected in first question.
-			if (prevQuestion.number === 1 && selectedSubstances.length === 0) {
-				handlePage(allPages.thankYou);
-				// setShowRequiredMsg(true);
-				return prevQuestion;
-			}
+			let totalQuestions = Object.keys(questions).length;			
 
 			// Last question.
 			if (prevQuestion.number === totalQuestions) {
@@ -105,19 +98,19 @@ function QuestionContainer({ allPages, questions, handlePage, handleScores }) {
 
 				handleScores(substanceScores);
 
-				return prevQuestion;
+				return;
 			}
 
 			// Change question if current question is not last question.
 			if (prevQuestion.number !== totalQuestions) {
 				let newQuestionNumber = prevQuestion.number + 1;
 				const newQuestion = getQuestion(newQuestionNumber);
-				selectSubstances(newQuestionNumber);
+				// selectSubstances(newQuestionNumber);
 
 				return newQuestion;
 			}
 
-			return prevQuestion;
+			return;
 		});
 	}
 
@@ -127,7 +120,7 @@ function QuestionContainer({ allPages, questions, handlePage, handleScores }) {
 		setQuestion(prevQuestion => {
 			if (prevQuestion.number !== 1) {
 				let newQuestionNumber = prevQuestion.number - 1;
-				selectSubstances(newQuestionNumber);
+				// selectSubstances(newQuestionNumber);
 
 				return getQuestion(newQuestionNumber);
 			}
@@ -179,7 +172,7 @@ function QuestionContainer({ allPages, questions, handlePage, handleScores }) {
 				questionNumber={question.number}
 				question={questions[question.id]}
 				totalQuestions={Object.keys(questions)?.length}
-				substances={substances}
+				substances={getSubstances(question.number)}
 				selectedOptions={selectedOptions}
 				handleChange={handleChange}
 			/>
