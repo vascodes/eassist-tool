@@ -1,4 +1,16 @@
 export const data = {
+	substances: [
+		{ id: "tobacco", name: "Tobacco products" },
+		{ id: "alcohol", name: "Alcoholic beverages" },
+		{ id: "cannabis", name: "Cannabis" },
+		{ id: "cocaine", name: "Cocaine" },
+		{ id: "amphetamine", name: "Amphetamine-type stimulants" },
+		{ id: "inhalants", name: "Inhalants" },
+		{ id: "sedatives", name: "Sedatives or sleeping pills" },
+		{ id: "hallucinogens", name: "Hallucinogens" },
+		{ id: "opioids", name: "Opioids" },
+		{ id: "other", name: "Other" },
+	],
 	questions: {
 		question1: {
 			id: "q1",
