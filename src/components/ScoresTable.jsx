@@ -92,10 +92,10 @@ function ScoresTable({ scores, substanceRiskLevels }) {
 						const riskModerateMax = substanceRisk?.moderate.max;
 
 						let substanceRiskTextClassName = "text-danger";
-						if (categoryScore < riskLowMax) {
+						if (categoryScore <= riskLowMax) {
 							substanceRiskText = substanceRisk.lower.text;
 							substanceRiskTextClassName = null;
-						} else if (categoryScore < riskModerateMax) {
+						} else if (categoryScore <= riskModerateMax) {
 							substanceRiskText = substanceRisk.moderate.text;
 						} else {
 							substanceRiskText = substanceRisk.high.text;
