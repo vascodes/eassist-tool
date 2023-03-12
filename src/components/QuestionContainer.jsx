@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 import Question from "./Question";
 import PageButton from "./PageButton";
@@ -18,6 +18,8 @@ function QuestionContainer({ allPages, questions, handlePage, handleScores }) {
 	const [selectedSubstancesSet, setSelectedSubstancesSet] = useState(new Set()); // Substances selected in Q1.
 	const [selectedOptions, setSelectedOptions] = useState({});
 	const [showRequiredMessage, setShowRequiredMessage] = useState(false);
+
+	const totalQuestions = Object.keys(questions).length;
 
 	function handleChange({ target }) {
 		let substanceId = target.name,
@@ -94,7 +96,6 @@ function QuestionContainer({ allPages, questions, handlePage, handleScores }) {
 		// Show required message if NO options of current question are selected.
 		if (!selectedOptions[question.id]) {
 			setShowRequiredMessage(true);
-			console.log("no options selected.");
 			return;
 		} else {
 			let totalSelectedOptions = Object.keys(selectedOptions[question.id]).length ?? 0;
@@ -116,32 +117,29 @@ function QuestionContainer({ allPages, questions, handlePage, handleScores }) {
 			}
 		}
 
+		// Last question.
+		if (question.number === totalQuestions) {
+			const substanceScores = getSubstanceScores();
+			console.log(selectedOptions);
+			console.log(substanceScores);
+
+			handleScores(substanceScores);
+
+			return;
+		}
+
 		setQuestion(prevQuestion => {
-			let totalQuestions = Object.keys(questions).length;
-
-			// Last question.
-			if (prevQuestion.number === totalQuestions) {
-				const substanceScores = getSubstanceScores();
-				console.log(selectedOptions);
-				console.log(substanceScores);
-
-				handleScores(substanceScores);
-
-				return;
-			}
-
 			// Change question if current question is not last question.
 			if (prevQuestion.number !== totalQuestions) {
 				let newQuestionNumber = prevQuestion.number + 1;
 				const newQuestion = getQuestion(newQuestionNumber);
 				return newQuestion;
 			}
-
-			return;
 		});
 	}
 
 	function handlePrevButtonClick() {
+		setShowRequiredMessage(false);
 		handleScores(null);
 
 		setQuestion(prevQuestion => {
@@ -191,12 +189,12 @@ function QuestionContainer({ allPages, questions, handlePage, handleScores }) {
 	}
 
 	return (
-		<>			
+		<>
 			<Question
 				key={question?.number}
 				questionNumber={question?.number}
 				question={questions[question?.id]}
-				totalQuestions={Object.keys(questions)?.length}
+				totalQuestions={totalQuestions}
 				substances={getSubstances(question?.number)}
 				selectedOptions={selectedOptions}
 				handleChange={handleChange}
@@ -223,7 +221,7 @@ function QuestionContainer({ allPages, questions, handlePage, handleScores }) {
 
 				{/* Previous Button */}
 				<div className="text-center mt-4 mx-5 d-grid gap-2 d-md-block row d-flex">
-					{question.number !== 1 && (
+					{question?.number !== 1 && (
 						<PageButton
 							buttonText={"< Changed my mind"}
 							buttonClass="btn btn-outline-success"
