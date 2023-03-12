@@ -15,9 +15,10 @@ function QuestionContainer({ allPages, questions, handlePage, handleScores }) {
 		for a question may vary based on the answers selected in previous questions.
 	*/
 	const [question, setQuestion] = useState(getQuestion(1));
-	const [selectedSubstancesSet, setSelectedSubstancesSet] = useState(new Set()); // Substances selected in Q1.
 	const [selectedOptions, setSelectedOptions] = useState({});
-	const [showRequiredMessage, setShowRequiredMessage] = useState(false);
+	const [substancesUsed, setSubstancesUsed] = useState(new Set()); // Ids of substances selected in Q1.
+	const [substancesUsedInPast3Months, setSubstancesUsedInPast3Months] = useState(new Set()); // Ids of Substances selected in Q2.
+	const [showRequiredMessage, setShowRequiredMessage] = useState(false);	
 
 	const totalQuestions = Object.keys(questions).length;
 
@@ -37,17 +38,31 @@ function QuestionContainer({ allPages, questions, handlePage, handleScores }) {
 			newSelectedOptions[question.id][substanceId].text = optionText;
 			newSelectedOptions[question.id][substanceId].score = optionScore;
 
-			// For question 1, Add substance to selectedSubstancesSet if selected option of that substance is "Yes".
+			// For question 1, Add substance to substancesUsed if selected option of that substance is "Yes".
 			if (question.number === 1) {
 				if (optionText.toLowerCase() === "yes") {
-					setSelectedSubstancesSet(
+					setSubstancesUsed(
 						prevSelectedSubstances => new Set([...prevSelectedSubstances, substanceId]),
 					);
 				} else {
 					// Deselect a substance.
-					const selectedSet = selectedSubstancesSet;
+					const selectedSet = substancesUsed;
 					selectedSet.delete(substanceId);
-					setSelectedSubstancesSet(selectedSet);
+					setSubstancesUsed(selectedSet);
+				}
+			}
+
+			// For question 2, add substance to substancesUsedInPast3Months if selected option of that substance is not "Never".
+			if (question.number === 2) {
+				if (optionText.toLowerCase() !== "never") {
+					setSubstancesUsedInPast3Months(
+						prevSubstances => new Set([...prevSubstances, substanceId]),
+					);
+				} else {
+					// Remove substance from substancesUsedInPast3Months.
+					const selectedSet = substancesUsedInPast3Months;
+					selectedSet.delete(substanceId);
+					setSubstancesUsedInPast3Months(selectedSet);
 				}
 			}
 
@@ -58,26 +73,24 @@ function QuestionContainer({ allPages, questions, handlePage, handleScores }) {
 	function getSubstances(questionNumber) {
 		let questionId = "question" + questionNumber;
 
-		// Display all substances for question 1 and question 8.
+		// Display all substances for question 1 and question 8, if exists.
 		if (questionNumber === 1 || questionNumber === 8) {
 			return questions[questionId]?.substances;
 		} else {
 			// For other questions, only substances selected in Question 1 should be displayed.
 			const actualSubstances = questions[questionId]?.substances;
-			const substancesSelectedInQ1 = actualSubstances?.filter(substance =>
-				selectedSubstancesSet.has(substance.id),
+			const filteredSubstances = actualSubstances?.filter(substance =>
+				substancesUsed.has(substance.id),
 			);
 
-			let newSubstances = substancesSelectedInQ1;
+			let newSubstances = filteredSubstances;
 
 			// For questions 3, 4 and 5, display only substances that,
 			// were not answered as "Never" in question 2.
 			if (questionNumber >= 3 && questionNumber <= 5) {
-				newSubstances = substancesSelectedInQ1.filter(substance => {
-					return (
-						selectedOptions["question2"][substance.id]?.text?.toLowerCase() !== "never"
-					);
-				});
+				newSubstances = filteredSubstances.filter(substance =>
+					substancesUsedInPast3Months.has(substance.id),
+				);
 			}
 
 			// Remove tobacco in question 5.
@@ -98,49 +111,50 @@ function QuestionContainer({ allPages, questions, handlePage, handleScores }) {
 			setShowRequiredMessage(true);
 			return;
 		} else {
+			let currentQuestionNumber = question.number;
+			const currentSubstances = getSubstances(currentQuestionNumber);
 			let totalSelectedOptions = Object.keys(selectedOptions[question.id]).length ?? 0;
-			const currSubstances = getSubstances(question.number);
+
+			console.log(currentSubstances);
 
 			// If all options are answered as "No" in question 1 then,
 			// show Thank You page.
-			if (question.number === 1) {
-				if (totalSelectedOptions > 0 && selectedSubstancesSet.size === 0) {
+			if (currentQuestionNumber === 1) {
+				if (totalSelectedOptions > 0 && substancesUsed.size === 0) {
 					handlePage(allPages.thankYou);
 					return;
 				}
 			}
 
 			// Show required message if ALL options of current question are NOT selected.
-			if (totalSelectedOptions < currSubstances.length) {
+			if (totalSelectedOptions < currentSubstances.length) {
 				setShowRequiredMessage(true);
 				return;
 			}
-		}
+			
+			// Show scores after last question.
+			if (currentQuestionNumber === totalQuestions) {
+				const substanceScores = getSubstanceScores();
+				console.log(selectedOptions);
+				console.log(substanceScores);
 
-		// Last question.
-		if (question.number === totalQuestions) {
-			const substanceScores = getSubstanceScores();
-			console.log(selectedOptions);
-			console.log(substanceScores);
+				handleScores(substanceScores);
 
-			handleScores(substanceScores);
+				return;
+			} else {
+				// Change to next question.
+				setQuestion(prevQuestion => {
+					let newQuestionNumber = prevQuestion.number + 1;					
+					const newQuestion = getQuestion(newQuestionNumber);
 
-			return;
-		}
-
-		setQuestion(prevQuestion => {
-			// Change question if current question is not last question.
-			if (prevQuestion.number !== totalQuestions) {
-				let newQuestionNumber = prevQuestion.number + 1;
-				const newQuestion = getQuestion(newQuestionNumber);
-				return newQuestion;
+					return newQuestion;
+				});
 			}
-		});
+		}
 	}
 
 	function handlePrevButtonClick() {
 		setShowRequiredMessage(false);
-		handleScores(null);
 
 		setQuestion(prevQuestion => {
 			if (prevQuestion.number !== 1) {
