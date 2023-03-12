@@ -18,7 +18,7 @@ function QuestionContainer({ allPages, questions, handlePage, handleScores }) {
 	const [selectedOptions, setSelectedOptions] = useState({});
 	const [substancesUsed, setSubstancesUsed] = useState(new Set()); // Ids of substances selected in Q1.
 	const [substancesUsedInPast3Months, setSubstancesUsedInPast3Months] = useState(new Set()); // Ids of Substances selected in Q2.
-	const [showRequiredMessage, setShowRequiredMessage] = useState(false);	
+	const [showRequiredMessage, setShowRequiredMessage] = useState(false);
 
 	const totalQuestions = Object.keys(questions).length;
 
@@ -126,12 +126,36 @@ function QuestionContainer({ allPages, questions, handlePage, handleScores }) {
 				}
 			}
 
-			// Show required message if ALL options of current question are NOT selected.
+			// Show required message if only SOME options of current question are selected.
 			if (totalSelectedOptions < currentSubstances.length) {
 				setShowRequiredMessage(true);
 				return;
 			}
-			
+
+			/* 
+				If "never" is selected for all options in Question 2
+				(ie: no substances were used in past 3 months) then, 
+				Question 6 should be shown.
+			*/
+			if (currentQuestionNumber === 2 && substancesUsedInPast3Months.size === 0) {
+				setQuestion(getQuestion(6));
+				return;
+			}
+
+			/*
+				If only tobacco is NOT selected as "Never" in Q2 
+				(ie: if only tobacco is used in past 3 months) then,
+				skip to Question 6 after Question 4 as tobacco is not displayed in Question 5.				
+			*/
+			if (
+				currentQuestionNumber === 4 &&
+				substancesUsedInPast3Months.size === 1 &&
+				substancesUsedInPast3Months.has("tobacco")
+			) {
+				setQuestion(getQuestion(6));
+				return;
+			}
+
 			// Show scores after last question.
 			if (currentQuestionNumber === totalQuestions) {
 				const substanceScores = getSubstanceScores();
@@ -144,7 +168,7 @@ function QuestionContainer({ allPages, questions, handlePage, handleScores }) {
 			} else {
 				// Change to next question.
 				setQuestion(prevQuestion => {
-					let newQuestionNumber = prevQuestion.number + 1;					
+					let newQuestionNumber = prevQuestion.number + 1;
 					const newQuestion = getQuestion(newQuestionNumber);
 
 					return newQuestion;
