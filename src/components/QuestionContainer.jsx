@@ -19,24 +19,10 @@ function QuestionContainer({ allPages, questions, handlePage, handleScores }) {
 	const [substancesUsed, setSubstancesUsed] = useState(new Set()); // Ids of substances selected in Q1.
 	const [substancesUsedInPast3Months, setSubstancesUsedInPast3Months] = useState(new Set()); // Ids of Substances selected in Q2.
 	const [showRequiredMessage, setShowRequiredMessage] = useState(false);
-	const [questionStack, setQuestionStack] = useState([1]);
-	
+	const [questionHistory, setQuestionHistory] = useState([1]);
+
 	const totalQuestions = Object.keys(questions).length;
 
-	function pushToQuestionStack(questionNumber){
-		const newQuestionStack = questionStack;
-		newQuestionStack.push(questionNumber);
-		
-		setQuestionStack(newQuestionStack);
-	}
-
-	function popFromQuestionStack(){
-		const newQuestionStack = questionStack;
-		let popped = newQuestionStack.pop();
-
-		setQuestionStack(newQuestionStack);
-	}
-	
 	function handleChange({ target }) {
 		let substanceId = target.name,
 			optionScore = target.value,
@@ -117,9 +103,30 @@ function QuestionContainer({ allPages, questions, handlePage, handleScores }) {
 		}
 	}
 
-	function changeQuestion() {
-		let lastVisitedQuestion = questionStack[questionStack.length - 1];
-				
+	function pushQuestionHistory(questionNumber) {
+		const newQuestionStack = questionHistory;
+		newQuestionStack.push(questionNumber);
+
+		setQuestionHistory(newQuestionStack);
+	}
+
+	function popQuestionHistory() {
+		const newQuestionStack = questionHistory;
+		newQuestionStack.pop();
+
+		setQuestionHistory(newQuestionStack);
+	}
+
+	// Change to next question if nextQuestionNumber is not null.
+	// else change to previous question.
+	function changeQuestion(nextQuestionNumber = null) {
+		if (nextQuestionNumber) {
+			pushQuestionHistory(nextQuestionNumber);
+		} else {
+			popQuestionHistory();
+		}
+
+		let lastVisitedQuestion = questionHistory[questionHistory.length - 1];
 		setQuestion(getQuestion(lastVisitedQuestion));
 	}
 
@@ -158,10 +165,8 @@ function QuestionContainer({ allPages, questions, handlePage, handleScores }) {
 				(ie: no substances were used in past 3 months) then, 
 				Question 6 should be shown.
 			*/
-			if (currentQuestionNumber === 2 && substancesUsedInPast3Months.size === 0) {				
-				pushToQuestionStack(6);		
-				changeQuestion();
-				
+			if (currentQuestionNumber === 2 && substancesUsedInPast3Months.size === 0) {
+				changeQuestion(6);
 				return;
 			}
 
@@ -174,9 +179,8 @@ function QuestionContainer({ allPages, questions, handlePage, handleScores }) {
 				currentQuestionNumber === 4 &&
 				substancesUsedInPast3Months.size === 1 &&
 				substancesUsedInPast3Months.has("tobacco")
-			) {				
-				pushToQuestionStack(6);
-				changeQuestion();				
+			) {
+				changeQuestion(6);
 				return;
 			}
 
@@ -190,17 +194,14 @@ function QuestionContainer({ allPages, questions, handlePage, handleScores }) {
 
 				return;
 			} else {
-				pushToQuestionStack(question.number + 1);	
-				changeQuestion();				
+				changeQuestion(question.number + 1);
 			}
 		}
 	}
 
 	function handlePrevButtonClick() {
 		setShowRequiredMessage(false);
-
-		popFromQuestionStack();
-		changeQuestion();				
+		changeQuestion();
 	}
 
 	function getSubstanceScores() {
