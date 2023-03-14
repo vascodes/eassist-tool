@@ -143,8 +143,6 @@ function QuestionContainer({ allPages, questions, handlePage, handleScores }) {
 			const currentSubstances = getSubstances(currentQuestionNumber);
 			let totalSelectedOptions = Object.keys(selectedOptions[question.id]).length ?? 0;
 
-			console.log(currentSubstances);
-
 			// If all options are answered as "No" in question 1 then,
 			// show Thank You page.
 			if (currentQuestionNumber === 1) {
@@ -184,24 +182,20 @@ function QuestionContainer({ allPages, questions, handlePage, handleScores }) {
 				return;
 			}
 
-			// Show scores after last question.
-			if (currentQuestionNumber === totalQuestions) {
-				const substanceScores = getSubstanceScores();
-				console.log(selectedOptions);
-				console.log(substanceScores);
-
-				handleScores(substanceScores);
-
-				return;
-			} else {
+			if (currentQuestionNumber !== totalQuestions) {
 				changeQuestion(question.number + 1);
+			} else {
+				// Show scores after last question.
+				const substanceScores = getSubstanceScores();
+				handleScores(substanceScores);
 			}
 		}
 	}
 
 	function handlePrevButtonClick() {
-		setShowRequiredMessage(false);
-		changeQuestion();
+		setShowRequiredMessage(false); // Reset required message.
+
+		if (question.number !== 1) changeQuestion();
 	}
 
 	function getSubstanceScores() {
