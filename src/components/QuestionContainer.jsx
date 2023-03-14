@@ -19,9 +19,24 @@ function QuestionContainer({ allPages, questions, handlePage, handleScores }) {
 	const [substancesUsed, setSubstancesUsed] = useState(new Set()); // Ids of substances selected in Q1.
 	const [substancesUsedInPast3Months, setSubstancesUsedInPast3Months] = useState(new Set()); // Ids of Substances selected in Q2.
 	const [showRequiredMessage, setShowRequiredMessage] = useState(false);
-
+	const [questionStack, setQuestionStack] = useState([1]);
+	
 	const totalQuestions = Object.keys(questions).length;
 
+	function pushToQuestionStack(questionNumber){
+		const newQuestionStack = questionStack;
+		newQuestionStack.push(questionNumber);
+		
+		setQuestionStack(newQuestionStack);
+	}
+
+	function popFromQuestionStack(){
+		const newQuestionStack = questionStack;
+		let popped = newQuestionStack.pop();
+
+		setQuestionStack(newQuestionStack);
+	}
+	
 	function handleChange({ target }) {
 		let substanceId = target.name,
 			optionScore = target.value,
@@ -102,6 +117,12 @@ function QuestionContainer({ allPages, questions, handlePage, handleScores }) {
 		}
 	}
 
+	function changeQuestion() {
+		let lastVisitedQuestion = questionStack[questionStack.length - 1];
+				
+		setQuestion(getQuestion(lastVisitedQuestion));
+	}
+
 	function handleNextButtonClick() {
 		//TODO: Fix bug where required message is shown when one of the substance that was selected is removed and quiz is retaken.
 		setShowRequiredMessage(false); // reset required message.
@@ -137,8 +158,10 @@ function QuestionContainer({ allPages, questions, handlePage, handleScores }) {
 				(ie: no substances were used in past 3 months) then, 
 				Question 6 should be shown.
 			*/
-			if (currentQuestionNumber === 2 && substancesUsedInPast3Months.size === 0) {
-				setQuestion(getQuestion(6));
+			if (currentQuestionNumber === 2 && substancesUsedInPast3Months.size === 0) {				
+				pushToQuestionStack(6);		
+				changeQuestion();
+				
 				return;
 			}
 
@@ -151,8 +174,9 @@ function QuestionContainer({ allPages, questions, handlePage, handleScores }) {
 				currentQuestionNumber === 4 &&
 				substancesUsedInPast3Months.size === 1 &&
 				substancesUsedInPast3Months.has("tobacco")
-			) {
-				setQuestion(getQuestion(6));
+			) {				
+				pushToQuestionStack(6);
+				changeQuestion();				
 				return;
 			}
 
@@ -166,13 +190,8 @@ function QuestionContainer({ allPages, questions, handlePage, handleScores }) {
 
 				return;
 			} else {
-				// Change to next question.
-				setQuestion(prevQuestion => {
-					let newQuestionNumber = prevQuestion.number + 1;
-					const newQuestion = getQuestion(newQuestionNumber);
-
-					return newQuestion;
-				});
+				pushToQuestionStack(question.number + 1);	
+				changeQuestion();				
 			}
 		}
 	}
@@ -180,14 +199,8 @@ function QuestionContainer({ allPages, questions, handlePage, handleScores }) {
 	function handlePrevButtonClick() {
 		setShowRequiredMessage(false);
 
-		setQuestion(prevQuestion => {
-			if (prevQuestion.number !== 1) {
-				let newQuestionNumber = prevQuestion.number - 1;
-				return getQuestion(newQuestionNumber);
-			}
-
-			return prevQuestion;
-		});
+		popFromQuestionStack();
+		changeQuestion();				
 	}
 
 	function getSubstanceScores() {
