@@ -215,18 +215,32 @@ function QuestionContainer({ allPages, questions, handlePage, handleScores }) {
 			other: 0,
 		};
 
-		// Find total score of each substance from questions in selectedOptions.
+		/* 	
+			Remove options of questions in selectedOptions that are not in questionHistory.
+
+			This ensures that only the selected options of visted questions
+			are considered when calculating the substance's score.
+		*/
+		const filteredSelectedOptions = {};
 		for (let questionId in selectedOptions) {
+			for (let question of questionHistory) {
+				if (question.id === questionId) {
+					filteredSelectedOptions[questionId] = selectedOptions[questionId];
+				}
+			}
+		}		
+
+		// Find total score of each substance from questions in selectedOptions.
+		for (let questionId in filteredSelectedOptions) {
 			// Answers of Question 1 or Question 8 should not be considered in finalScores.
 			if (questionId === "question1" || questionId === "question8") continue;
 
-			const substances = selectedOptions[questionId];
+			const substances = filteredSelectedOptions[questionId];
 			for (let substanceName in substances) {
 				let substance = substances[substanceName];
 
-				// If substance doesn't exist in substanceScores,
-				// add substance to substanceScores and initialize it to 0.
-				if (!substanceScores[substanceName]) substanceScores[substanceName] = 0;
+				// Add substance to substanceScores (if not exists) and initialize score to 0.
+				substanceScores[substanceName] ||= 0;
 
 				// Update score of current substance in substanceScores.
 				substanceScores[substanceName] += Number(substance.score);
