@@ -3,10 +3,11 @@ import { useState } from "react";
 import Question from "./Question";
 import PageButton from "./PageButton";
 
-function getQuestion(questionNumber) {
+function getQuestionFromNumber(questionNumber) {
 	let questionId = "question" + questionNumber;
+	const question = { id: questionId, number: questionNumber };
 
-	return { id: questionId, number: questionNumber };
+	return question;
 }
 
 function QuestionContainer({ allPages, questions, handlePage, handleScores }) {
@@ -14,12 +15,12 @@ function QuestionContainer({ allPages, questions, handlePage, handleScores }) {
 		Separate state is used for question and substances as substances displayed
 		for a question may vary based on the answers selected in previous questions.
 	*/
-	const [question, setQuestion] = useState(getQuestion(1));
+	const [question, setQuestion] = useState(getQuestionFromNumber(1));
 	const [selectedOptions, setSelectedOptions] = useState({});
 	const [substancesUsed, setSubstancesUsed] = useState(new Set()); // Ids of substances selected in Q1.
 	const [substancesUsedInPast3Months, setSubstancesUsedInPast3Months] = useState(new Set()); // Ids of Substances selected in Q2.
 	const [showRequiredMessage, setShowRequiredMessage] = useState(false);
-	const [questionHistory, setQuestionHistory] = useState([1]);
+	const [questionHistory, setQuestionHistory] = useState([getQuestionFromNumber(1)]);
 
 	const totalQuestions = Object.keys(questions).length;
 
@@ -33,13 +34,13 @@ function QuestionContainer({ allPages, questions, handlePage, handleScores }) {
 		setSelectedOptions(prev => {
 			let newSelectedOptions = { ...prev };
 
-			// Initialize selected option for current question.
+			// Update score and selected option for current question.
 			newSelectedOptions[question.id] ??= {};
 			newSelectedOptions[question.id][substanceId] ??= { text: "", score: 0 };
 			newSelectedOptions[question.id][substanceId].text = optionText;
 			newSelectedOptions[question.id][substanceId].score = optionScore;
 
-			// For question 1, Add substance to substancesUsed if selected option of that substance is "Yes".
+			// Add substance to substancesUsed if selected option of that substance is "Yes" in Question 1.
 			if (question.number === 1) {
 				if (optionText.toLowerCase() === "yes") {
 					setSubstancesUsed(
@@ -53,7 +54,8 @@ function QuestionContainer({ allPages, questions, handlePage, handleScores }) {
 				}
 			}
 
-			// For question 2, add substance to substancesUsedInPast3Months if selected option of that substance is not "Never".
+			// Add substance to substancesUsedInPast3Months if,
+			// selected option of that substance is NOT "Never" in question 2.
 			if (question.number === 2) {
 				if (optionText.toLowerCase() !== "never") {
 					setSubstancesUsedInPast3Months(
@@ -74,11 +76,11 @@ function QuestionContainer({ allPages, questions, handlePage, handleScores }) {
 	function getSubstances(questionNumber) {
 		let questionId = "question" + questionNumber;
 
-		// Display all substances for question 1 and question 8, if exists.
+		// Return all substances for question 1 and question 8, if exists.
 		if (questionNumber === 1 || questionNumber === 8) {
 			return questions[questionId]?.substances;
 		} else {
-			// For other questions, only substances selected in Question 1 should be displayed.
+			// For other questions, only return substances selected in Question 1.
 			const actualSubstances = questions[questionId]?.substances;
 			const filteredSubstances = actualSubstances?.filter(substance =>
 				substancesUsed.has(substance.id),
@@ -86,7 +88,7 @@ function QuestionContainer({ allPages, questions, handlePage, handleScores }) {
 
 			let newSubstances = filteredSubstances;
 
-			// For questions 3, 4 and 5, display only substances that,
+			// For questions 3, 4 and 5, return substances that,
 			// were not answered as "Never" in question 2.
 			if (questionNumber >= 3 && questionNumber <= 5) {
 				newSubstances = filteredSubstances.filter(substance =>
@@ -103,9 +105,9 @@ function QuestionContainer({ allPages, questions, handlePage, handleScores }) {
 		}
 	}
 
-	function pushQuestionHistory(questionNumber) {
+	function pushQuestionHistory(nextQuestion) {
 		const newQuestionStack = questionHistory;
-		newQuestionStack.push(questionNumber);
+		newQuestionStack.push(nextQuestion);
 
 		setQuestionHistory(newQuestionStack);
 	}
@@ -117,17 +119,17 @@ function QuestionContainer({ allPages, questions, handlePage, handleScores }) {
 		setQuestionHistory(newQuestionStack);
 	}
 
-	// Change to next question if nextQuestionNumber is not null.
-	// else change to previous question.
-	function changeQuestion(nextQuestionNumber = null) {
-		if (nextQuestionNumber) {
-			pushQuestionHistory(nextQuestionNumber);
-		} else {
+	// Change to previous question if nextQuestionNumber is null else change to previous question.
+	function changeQuestionByNumber(nextQuestionNumber = null) {
+		if (!nextQuestionNumber) {
 			popQuestionHistory();
+		} else {
+			const nextQuestion = getQuestionFromNumber(nextQuestionNumber);
+			pushQuestionHistory(nextQuestion);
 		}
 
-		let lastVisitedQuestion = questionHistory[questionHistory.length - 1];
-		setQuestion(getQuestion(lastVisitedQuestion));
+		const lastVisitedQuestion = questionHistory.at(-1);
+		setQuestion(lastVisitedQuestion);
 	}
 
 	function handleNextButtonClick() {
@@ -164,7 +166,7 @@ function QuestionContainer({ allPages, questions, handlePage, handleScores }) {
 				Question 6 should be shown.
 			*/
 			if (currentQuestionNumber === 2 && substancesUsedInPast3Months.size === 0) {
-				changeQuestion(6);
+				changeQuestionByNumber(6);
 				return;
 			}
 
@@ -178,15 +180,15 @@ function QuestionContainer({ allPages, questions, handlePage, handleScores }) {
 				substancesUsedInPast3Months.size === 1 &&
 				substancesUsedInPast3Months.has("tobacco")
 			) {
-				changeQuestion(6);
+				changeQuestionByNumber(6);
 				return;
 			}
 
 			if (currentQuestionNumber !== totalQuestions) {
-				changeQuestion(question.number + 1);
+				changeQuestionByNumber(question.number + 1);
 			} else {
 				// Show scores after last question.
-				const substanceScores = getSubstanceScores();
+				const substanceScores = getSubstanceScores();				
 				handleScores(substanceScores);
 			}
 		}
@@ -195,7 +197,7 @@ function QuestionContainer({ allPages, questions, handlePage, handleScores }) {
 	function handlePrevButtonClick() {
 		setShowRequiredMessage(false); // Reset required message.
 
-		if (question.number !== 1) changeQuestion();
+		if (question.number !== 1) changeQuestionByNumber();
 	}
 
 	function getSubstanceScores() {
