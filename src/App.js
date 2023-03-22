@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { data } from "./data";
 
+import Home from "./components/Home";
 import QuestionContainer from "./components/QuestionContainer";
 import ResultContainer from "./components/ResultContainer";
 import ThankYouContainer from "./components/ThankYouContainer";
@@ -16,41 +17,46 @@ function App() {
 		advice: 3,
 		scores: 4,
 	});
-	
-	const [content, setContent] = useState(null);	
+
+	const [content, setContent] = useState(null);
 	const [finalScores, setFinalScores] = useState(null);
-	const [currentPage, setCurrentPage] = useState(allPages.questions);	
+	const [currentPage, setCurrentPage] = useState(allPages.home);
 
 	function handlePage(selectedPage) {
-		setCurrentPage(selectedPage);				
-	}	
+		setCurrentPage(selectedPage);
+	}
 
 	useEffect(() => setContent(data), []); // Fetch data on app load.
 
 	function handleScores(score) {
 		setFinalScores(score);
-		if (score)
-			handlePage(allPages.scores);
+		if (score) handlePage(allPages.scores);
 	}
 
 	return (
 		<>
 			<NavBar />
 
+			{/* TODO: Save input data in Home */}
 			<div className="container pt-4 pb-5 app-container">
 				{content && (
 					<div className="row">
-						<div className="container-fluid col-lg-8 questions-container">
+						<div className="container-fluid col-lg-8 mb-3">
 							<div className="card">
 								<div className="card-body">
-									{currentPage === allPages.home && <h1>HOME PAGE</h1>}
-									
+									{currentPage === allPages.home && (
+										<Home
+											allPages={allPages}
+											handlePage={handlePage}
+										/>
+									)}
+
 									{currentPage === allPages.questions && (
 										<QuestionContainer
 											allPages={allPages}
 											questions={content?.questions}
 											handlePage={handlePage}
-											handleScores={handleScores}											
+											handleScores={handleScores}
 										/>
 									)}
 
