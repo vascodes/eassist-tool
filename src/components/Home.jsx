@@ -1,6 +1,6 @@
 import PageButton from "./PageButton";
 
-function Home({allPages, handlePage}) {
+function Home({ allPages, handlePage }) {
 	return (
 		<>
 			<ol className="list-group list-group-flush">
@@ -11,12 +11,12 @@ function Home({allPages, handlePage}) {
 							<input
 								className="form-check-input"
 								type="radio"
-								name="flexRadioDefault"
-								id="flexRadioDefault1"
+								name="radio-gender"
+								id="radio-gender"
 							/>
 							<label
 								className="form-check-label"
-								htmlFor="flexRadioDefault1"
+								htmlFor="radio-gender"
 							>
 								Male
 							</label>
@@ -25,7 +25,7 @@ function Home({allPages, handlePage}) {
 							<input
 								className="form-check-input"
 								type="radio"
-								name="flexRadioDefault"
+								name="radio-gender"
 								id="flexRadioDefault2"
 							/>
 							<label
@@ -39,7 +39,7 @@ function Home({allPages, handlePage}) {
 							<input
 								className="form-check-input"
 								type="radio"
-								name="flexRadioDefault"
+								name="radio-gender"
 								id="flexRadioDefault3"
 							/>
 							<label
@@ -73,12 +73,12 @@ function Home({allPages, handlePage}) {
 							<input
 								className="form-check-input"
 								type="radio"
-								name="flexRadioDefault"
-								id="flexRadioDefault1"
+								name="radio-employment-status"
+								id="radio-employment-status"
 							/>
 							<label
 								className="form-check-label"
-								htmlFor="flexRadioDefault1"
+								htmlFor="radio-employment-status"
 							>
 								Not employed
 							</label>
@@ -87,7 +87,7 @@ function Home({allPages, handlePage}) {
 							<input
 								className="form-check-input"
 								type="radio"
-								name="flexRadioDefault"
+								name="radio-employment-status"
 								id="flexRadioDefault2"
 							/>
 							<label
@@ -101,7 +101,7 @@ function Home({allPages, handlePage}) {
 							<input
 								className="form-check-input"
 								type="radio"
-								name="flexRadioDefault"
+								name="radio-employment-status"
 								id="flexRadioDefault3"
 							/>
 							<label
@@ -115,7 +115,7 @@ function Home({allPages, handlePage}) {
 							<input
 								className="form-check-input"
 								type="radio"
-								name="flexRadioDefault"
+								name="radio-employment-status"
 								id="flexRadioDefault4"
 							/>
 							<label
@@ -129,7 +129,7 @@ function Home({allPages, handlePage}) {
 							<input
 								className="form-check-input"
 								type="radio"
-								name="flexRadioDefault"
+								name="radio-employment-status"
 								id="flexRadioDefault5"
 							/>
 							<label
