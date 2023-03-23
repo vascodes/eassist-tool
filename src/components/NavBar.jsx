@@ -8,7 +8,7 @@ function NavBar() {
 				<div className="container-fluid">
 					<a
 						className="navbar-brand"
-						href="https://rajagiri.edu/"
+						href="/"
 					>
 						<img
 							src={`${process.env.PUBLIC_URL}/assets/images/rajagiri_logo.jpg`}
@@ -39,7 +39,7 @@ function NavBar() {
 							<li className="nav-item">
 								<a
 									className="nav-link text-white active"
-									href="#"
+									href="/"
 								>
 									Home
 								</a>
@@ -47,7 +47,7 @@ function NavBar() {
 							<li className="nav-item">
 								<a
 									className="nav-link text-white"
-									href="#"
+									href="/"
 								>
 									Contact
 								</a>
