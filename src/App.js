@@ -3,7 +3,7 @@ import { data } from "./data";
 
 import Home from "./components/Home";
 import QuestionContainer from "./components/QuestionContainer";
-import ResultContainer from "./components/ResultContainer";
+import ResultContainer from "./components/AdviceContainer";
 import ThankYouContainer from "./components/ThankYouContainer";
 import ScoresTable from "./components/ScoresTable";
 import NavBar from "./components/NavBar";
@@ -26,12 +26,12 @@ function App() {
 		setCurrentPage(selectedPage);
 	}
 
-	useEffect(() => setContent(data), []); // Fetch data on app load.
-
 	function handleScores(score) {
 		setFinalScores(score);
-		if (score) handlePage(allPages.scores);
+		if (score) handlePage(allPages.advice);
 	}
+
+	useEffect(() => setContent(data), []); // Fetch data on app load.
 
 	return (
 		<>
@@ -60,7 +60,12 @@ function App() {
 										/>
 									)}
 
-									{currentPage === allPages.advice && <ResultContainer />}
+									{currentPage === allPages.advice && (
+										<ResultContainer
+											allPages={allPages}
+											handlePage={handlePage}
+										/>
+									)}
 
 									{currentPage === allPages.scores && (
 										<ScoresTable
