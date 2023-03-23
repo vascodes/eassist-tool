@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/rcss-eassist-tool/static/css/main.243203b6.css",
-    "main.js": "/rcss-eassist-tool/static/js/main.bfda0742.js",
+    "main.js": "/rcss-eassist-tool/static/js/main.40130f26.js",
     "index.html": "/rcss-eassist-tool/index.html",
     "main.243203b6.css.map": "/rcss-eassist-tool/static/css/main.243203b6.css.map",
-    "main.bfda0742.js.map": "/rcss-eassist-tool/static/js/main.bfda0742.js.map"
+    "main.40130f26.js.map": "/rcss-eassist-tool/static/js/main.40130f26.js.map"
   },
   "entrypoints": [
     "static/css/main.243203b6.css",
-    "static/js/main.bfda0742.js"
+    "static/js/main.40130f26.js"
   ]
 }
