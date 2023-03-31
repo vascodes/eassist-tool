@@ -39,6 +39,8 @@ function App() {
 
 			{/* TODO: Save input data in Home */}
 			<div className="container pt-4 pb-5 app-container">
+				{!content && <h1>Loading</h1>}
+
 				{content && (
 					<div className="row">
 						<div className="container-fluid col-lg-8 mb-3">
