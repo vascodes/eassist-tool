@@ -1,12 +1,15 @@
 import PageButton from "./PageButton";
 
-function Home({ allPages, handlePage }) {
+// TODO: Save Input data
+function UserDetails({ allPages, handlePage }) {
 	return (
 		<>
 			<ol className="list-group list-group-flush">
 				<li className="list-group-item">
 					<div>
-						<div className="sub-question-container">What is your gender?</div>
+						<div className="sub-question-container">
+							<strong>What is your gender?</strong>
+						</div>
 						<div className="form-check radio-spacing mt-2">
 							<input
 								className="form-check-input"
@@ -51,8 +54,10 @@ function Home({ allPages, handlePage }) {
 						</div>
 					</div>
 
-					<div>
-						<div className="sub-question-container">What is your age?</div>
+					<div className="mt-4">
+						<div className="sub-question-container">
+							<strong>What is your age?</strong>
+						</div>
 						<div className="form-group col-sm-4 input-group-sm mt-2">
 							<input
 								type="number"
@@ -65,9 +70,9 @@ function Home({ allPages, handlePage }) {
 						</div>
 					</div>
 
-					<div>
+					<div className="mt-2">
 						<div className="sub-question-container">
-							How are you mainly employed at the moment?
+							<strong>How are you mainly employed at the moment?</strong>
 						</div>
 						<div className="form-check radio-spacing mt-2">
 							<input
@@ -154,4 +159,4 @@ function Home({ allPages, handlePage }) {
 	);
 }
 
-export default Home;
+export default UserDetails;
