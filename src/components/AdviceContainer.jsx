@@ -1,7 +1,6 @@
 import PageButton from "./PageButton";
 import Advice from "./Advice";
 
-// TODO: Dynamically populate advice.
 function AdviceContainer({
 	allPages,
 	handlePage,
@@ -16,28 +15,6 @@ function AdviceContainer({
 	function handlePrevButtonClick() {
 		handlePage(allPages.questions);
 	}
-
-	// Object.keys(scores).map(substance => {
-	// 	const substanceScore = scores[substance];
-
-	// 	let substanceRiskText = "";
-	// 	let substanceRiskAdviceText = "";
-	// 	const substanceRisk = substanceRiskLevels[substance];
-	// 	const substanceName = substanceRisk?.name;
-	// 	const criterias = substanceRisk?.criterias;
-	// 	const riskLowMax = substanceRisk?.lower.max;
-	// 	const riskModerateMax = substanceRisk?.moderate.max;
-
-	// 	if (substanceScore <= riskLowMax) {
-	// 		substanceRiskText = substanceRisk.lower.text;
-	// 	} else if (substanceScore <= riskModerateMax) {
-	// 		substanceRiskText = substanceRisk.moderate.text;
-	// 		substanceRiskAdviceText = substanceRisk.moderate.adviceText;
-	// 	} else {
-	// 		substanceRiskText = substanceRisk.high.text;
-	// 		substanceRiskAdviceText = substanceRisk.high.adviceText;
-	// 	}
-	// });
 
 	return (
 		<>

@@ -34,13 +34,14 @@ function App() {
 		setFinalScores(scores);
 
 		/*
-			find substances with moderate risk and put them in moderateList
-			find substances with high risk and put them in referralList
-			pass both lists as props to AdviceContainer.
-			show advice for substances in respective lists.
-			pass these lists as props to ScoresTable.
-			If score > 0 for any substance in scores, then check if substance is in moderate or referral List
-				and display each row accordingly else display score as 0 and risk as low.
+			TODO:
+				find substances with moderate risk and put them in moderateList
+				find substances with high risk and put them in referralList
+				pass both lists as props to AdviceContainer.
+				show advice for substances in respective lists.
+				pass these lists as props to ScoresTable.
+				If score > 0 for any substance in scores, then check if substance is in moderate or referral List
+					and display each row accordingly else display score as 0 and risk as low.
 		*/
 		const substancesWithModerateRisk = [];
 		const substancesWithHighRisk = [];

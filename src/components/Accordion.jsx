@@ -22,7 +22,6 @@ function Accordion({ title, children, capitalize }) {
 						aria-expanded="true"
 						aria-controls={dataTarget}
 					>
-						{/* TODO: Make Substance name dynamic */}
 						{title}
 					</button>
 				</h2>
@@ -32,8 +31,7 @@ function Accordion({ title, children, capitalize }) {
 					className="accordion-collapse collapse"
 					aria-labelledby={headingId}
 					data-bs-parent={`#${accordionId}`}
-				>
-					{/* TODO: Make advice dynamic */}
+				>					
 					<div className="accordion-body">{children}</div>
 				</div>
 			</div>
