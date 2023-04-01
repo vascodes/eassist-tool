@@ -1,22 +1,22 @@
 import Accordion from "./Accordion";
 
-function Advice({ type, substances }) {
-	function getAdvice(type, substanceId) {
-		/* GET ADVICE FROM FILE */
-		return "TEST ADVICE CONTENT.";
-	}
+function capitalize(str) {
+	return str.charAt(0).toUpperCase() + str.slice(1);
+}
 
+function Advice({ type, substances, getSubstanceAdviceHTML }) {
 	return (
 		<>
-			<h5>{type} Advice</h5>
+			<h5>{capitalize(type)} Advice</h5>
 
 			{substances.map(substance => {
 				return (
 					<Accordion
 						key={substance.id}
 						title={substance.name}
+						capitalize={capitalize}
 					>
-						{getAdvice(type, substance.id)}
+						{getSubstanceAdviceHTML(type, substance.id)}
 					</Accordion>
 				);
 			})}

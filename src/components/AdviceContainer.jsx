@@ -1,16 +1,21 @@
-import { useEffect, useState } from "react";
 import PageButton from "./PageButton";
 import Advice from "./Advice";
 
 // TODO: Dynamically populate advice.
-function AdviceContainer({ allPages, handlePage, moderateSubstances, referralSubstances }) {
+function AdviceContainer({
+	allPages,
+	handlePage,
+	moderateSubstances,
+	referralSubstances,
+	getSubstanceAdviceHTML,
+}) {
 	function handleNextButtonClick() {
 		handlePage(allPages.scores);
 	}
 
 	function handlePrevButtonClick() {
 		handlePage(allPages.questions);
-	}	
+	}
 
 	// Object.keys(scores).map(substance => {
 	// 	const substanceScore = scores[substance];
@@ -33,7 +38,7 @@ function AdviceContainer({ allPages, handlePage, moderateSubstances, referralSub
 	// 		substanceRiskAdviceText = substanceRisk.high.adviceText;
 	// 	}
 	// });
-	
+
 	return (
 		<>
 			<div>
@@ -45,13 +50,15 @@ function AdviceContainer({ allPages, handlePage, moderateSubstances, referralSub
 			</div>
 
 			<Advice
-				type="Moderate"
+				type="moderate"
 				substances={moderateSubstances}
+				getSubstanceAdviceHTML={getSubstanceAdviceHTML}
 			/>
 
 			<Advice
-				type="Referral"
+				type="referral"
 				substances={referralSubstances}
+				getSubstanceAdviceHTML={getSubstanceAdviceHTML}
 			/>
 
 			{/* Next Button */}

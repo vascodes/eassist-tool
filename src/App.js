@@ -28,11 +28,11 @@ function App() {
 
 	function handlePage(selectedPage) {
 		setCurrentPage(selectedPage);
-	}	
+	}
 
 	function handleScores(scores) {
-		setFinalScores(scores);				
-		
+		setFinalScores(scores);
+
 		/*
 			find substances with moderate risk and put them in moderateList
 			find substances with high risk and put them in referralList
@@ -44,27 +44,33 @@ function App() {
 		*/
 		const substancesWithModerateRisk = [];
 		const substancesWithHighRisk = [];
-		
+
 		for (let substance in scores) {
 			let substanceScore = scores[substance];
-			const substanceRisk = content?.substanceRiskLevels[substance];						
+			const substanceRisk = content?.substanceRiskLevels[substance];
 
 			const riskLowMax = substanceRisk?.lower.max;
 			const riskModerateMax = substanceRisk?.moderate.max;
 
 			if (substanceScore <= riskLowMax) {
-				
-			} else if (substanceScore <= riskModerateMax) {				
+			} else if (substanceScore <= riskModerateMax) {
 				substancesWithModerateRisk.push(substanceRisk);
-			} else {				
+			} else {
 				substancesWithHighRisk.push(substanceRisk);
 			}
 		}
 
 		setModerateSubstances(substancesWithModerateRisk);
 		setReferralSubstances(substancesWithHighRisk);
-		
-		if (scores) handlePage(allPages.advice);		
+
+		if (scores) handlePage(allPages.advice);
+	}
+
+	function getSubstanceAdviceHTML(type, substanceId) {
+		type = type.toLowerCase();
+		substanceId = substanceId.toLowerCase();
+
+		return content?.substanceAdvice[type][substanceId];
 	}
 
 	useEffect(() => setContent(data), []); // Fetch data on app load.
@@ -103,6 +109,7 @@ function App() {
 								substanceRiskLevels={content?.substanceRiskLevels}
 								moderateSubstances={moderateSubstances}
 								referralSubstances={referralSubstances}
+								getSubstanceAdviceHTML={getSubstanceAdviceHTML}
 							/>
 						)}
 
