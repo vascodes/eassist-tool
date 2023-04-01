@@ -27,9 +27,7 @@ function QuestionContainer({ allPages, questions, substances, handlePage, handle
 	function handleChange({ target }) {
 		let substanceId = target.name,
 			optionScore = target.value,
-			optionText = target.dataset.optionText;
-
-		console.log(selectedOptions);
+			optionText = target.dataset.optionText;		
 
 		setSelectedOptions(prev => {
 			let newSelectedOptions = { ...prev };

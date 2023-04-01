@@ -1,7 +1,7 @@
 function ScoresTableRow({
 	rowNum,
 	rowClassName,
-	categoryName,
+	substanceName,
 	score,
 	risk,
 	riskClassName,
@@ -10,12 +10,12 @@ function ScoresTableRow({
 	return (
 		<>
 			<tr
-				key={categoryName}
+				key={substanceName}
 				className={rowClassName}
 			>
 				{/* Category name */}
 				<td rowSpan={4}>
-					{`${rowNum}. `} {categoryName}
+					{`${rowNum}. `} {substanceName}
 				</td>
 
 				{/* Category Score */}
@@ -78,24 +78,24 @@ function ScoresTable({ scores, substanceRiskLevels }) {
 					</tr>
 				</thead>
 				<tbody>
-					{Object.keys(scores).map((category, index) => {
+					{Object.keys(scores).map((substance, index) => {
 						let rowClassName = "";
 						rowClassName = index % 2 === 0 ? null : "table-secondary";
 
-						const categoryScore = scores[category];
+						const substanceScore = scores[substance];
 
 						let substanceRiskText = "";
-						const substanceRisk = substanceRiskLevels[category];
-						const categoryName = substanceRisk.name;
+						const substanceRisk = substanceRiskLevels[substance];
+						const substanceName = substanceRisk?.name;
 						const criterias = substanceRisk?.criterias;
 						const riskLowMax = substanceRisk?.lower.max;
 						const riskModerateMax = substanceRisk?.moderate.max;
 
 						let substanceRiskTextClassName = "text-danger";
-						if (categoryScore <= riskLowMax) {
+						if (substanceScore <= riskLowMax) {
 							substanceRiskText = substanceRisk.lower.text;
 							substanceRiskTextClassName = null;
-						} else if (categoryScore <= riskModerateMax) {
+						} else if (substanceScore <= riskModerateMax) {
 							substanceRiskText = substanceRisk.moderate.text;
 						} else {
 							substanceRiskText = substanceRisk.high.text;
@@ -103,9 +103,9 @@ function ScoresTable({ scores, substanceRiskLevels }) {
 
 						return (
 							<ScoresTableRow
-								key={category}
-								categoryName={categoryName}
-								score={categoryScore}
+								key={substance}
+								substanceName={substanceName}
+								score={substanceScore}
 								risk={substanceRiskText}
 								criterias={criterias}
 								rowNum={index + 1}

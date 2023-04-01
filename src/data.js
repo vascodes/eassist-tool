@@ -1,14 +1,34 @@
 export const data = {
 	substances: [
-		{ id: "tobacco", name: "Tobacco products" },
-		{ id: "alcohol", name: "Alcoholic beverages" },
-		{ id: "cannabis", name: "Cannabis" },
-		{ id: "cocaine", name: "Cocaine" },
-		{ id: "amphetamine", name: "Amphetamine-type stimulants" },
-		{ id: "inhalants", name: "Inhalants" },
-		{ id: "sedatives", name: "Sedatives or sleeping pills" },
-		{ id: "hallucinogens", name: "Hallucinogens" },
-		{ id: "opioids", name: "Opioids" },
+		{
+			id: "tobacco",
+			name: "Tobacco products",
+			examples: "cigarettes, chewing tobacco, cigars",
+		},
+		{ id: "alcohol", name: "Alcoholic beverages", examples: "beer, wine, spirits" },
+		{ id: "cannabis", name: "Cannabis", examples: "marijuana, pot, grass, hash" },
+		{ id: "cocaine", name: "Cocaine", examples: "coke, crack" },
+		{
+			id: "amphetamine",
+			name: "Amphetamine-type stimulants",
+			examples: "speed, meth, ecstasy",
+		},
+		{ id: "inhalants", name: "Inhalants", examples: "nitrous, glue, petrol, paint thinner" },
+		{
+			id: "sedatives",
+			name: "Sedatives or sleeping pills",
+			examples: "diazepam, alprazolam, flunitrazepam, midazolam",
+		},
+		{
+			id: "hallucinogens",
+			name: "Hallucinogens",
+			examples: "LSD, acid, mushrooms, trips, ketamine",
+		},
+		{
+			id: "opioids",
+			name: "Opioids",
+			examples: "heroin, morphine, methadone, buprenorphine, codeine",
+		},
 		{ id: "other", name: "Other" },
 	],
 	questions: {

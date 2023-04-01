@@ -5,7 +5,7 @@ import Layout from "./components/layouts/Layout";
 import CardLayout from "./components/layouts/CardLayout";
 import UserDetails from "./components/UserDetails";
 import QuestionContainer from "./components/QuestionContainer";
-import Advice from "./components/Advice";
+import AdviceContainer from "./components/AdviceContainer";
 import ThankYou from "./components/ThankYou";
 import ScoresTable from "./components/ScoresTable";
 import Home from "./components/Home";
@@ -22,15 +22,49 @@ function App() {
 
 	const [content, setContent] = useState(null);
 	const [finalScores, setFinalScores] = useState(null);
+	const [moderateSubstances, setModerateSubstances] = useState([]);
+	const [referralSubstances, setReferralSubstances] = useState([]);
 	const [currentPage, setCurrentPage] = useState(allPages.userDetails);
 
 	function handlePage(selectedPage) {
 		setCurrentPage(selectedPage);
-	}
+	}	
 
-	function handleScores(score) {
-		setFinalScores(score);
-		if (score) handlePage(allPages.advice);
+	function handleScores(scores) {
+		setFinalScores(scores);				
+		
+		/*
+			find substances with moderate risk and put them in moderateList
+			find substances with high risk and put them in referralList
+			pass both lists as props to AdviceContainer.
+			show advice for substances in respective lists.
+			pass these lists as props to ScoresTable.
+			If score > 0 for any substance in scores, then check if substance is in moderate or referral List
+				and display each row accordingly else display score as 0 and risk as low.
+		*/
+		const substancesWithModerateRisk = [];
+		const substancesWithHighRisk = [];
+		
+		for (let substance in scores) {
+			let substanceScore = scores[substance];
+			const substanceRisk = content?.substanceRiskLevels[substance];						
+
+			const riskLowMax = substanceRisk?.lower.max;
+			const riskModerateMax = substanceRisk?.moderate.max;
+
+			if (substanceScore <= riskLowMax) {
+				
+			} else if (substanceScore <= riskModerateMax) {				
+				substancesWithModerateRisk.push(substanceRisk);
+			} else {				
+				substancesWithHighRisk.push(substanceRisk);
+			}
+		}
+
+		setModerateSubstances(substancesWithModerateRisk);
+		setReferralSubstances(substancesWithHighRisk);
+		
+		if (scores) handlePage(allPages.advice);		
 	}
 
 	useEffect(() => setContent(data), []); // Fetch data on app load.
@@ -62,11 +96,13 @@ function App() {
 						)}
 
 						{currentPage === allPages.advice && (
-							<Advice
+							<AdviceContainer
 								allPages={allPages}
 								handlePage={handlePage}
 								scores={finalScores}
 								substanceRiskLevels={content?.substanceRiskLevels}
+								moderateSubstances={moderateSubstances}
+								referralSubstances={referralSubstances}
 							/>
 						)}
 
