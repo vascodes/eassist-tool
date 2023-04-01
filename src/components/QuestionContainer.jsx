@@ -10,7 +10,7 @@ function getQuestionFromNumber(questionNumber) {
 	return question;
 }
 
-function QuestionContainer({ allPages, questions, handlePage, handleScores }) {
+function QuestionContainer({ allPages, questions, substances, handlePage, handleScores }) {
 	/* 	
 		Separate state is used for question and substances as substances displayed
 		for a question may vary based on the answers selected in previous questions.
@@ -200,20 +200,14 @@ function QuestionContainer({ allPages, questions, handlePage, handleScores }) {
 		if (question.number !== 1) changeQuestionByNumber();
 	}
 
-	function getSubstanceScores() {
-		// TODO: Use substances from data.js to initialize substanceScores.
-		const substanceScores = {
-			tobacco: 0,
-			alcohol: 0,
-			cannabis: 0,
-			cocaine: 0,
-			amphetamine: 0,
-			inhalants: 0,
-			sedatives: 0,
-			hallucinogens: 0,
-			opioids: 0,
-			other: 0,
-		};
+	function getSubstanceScores() {		
+		const substanceScores = {};
+		
+		// Initialize scores for all substances as 0.
+		for(let substance of substances){
+			let substanceId = substance.id;
+			substanceScores[substanceId] = 0;
+		}		
 
 		/* 	
 			Remove options of questions in selectedOptions that are not in questionHistory.

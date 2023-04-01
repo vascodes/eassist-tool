@@ -1,7 +1,7 @@
 import PageButton from "./PageButton";
 
 // TODO: Dynamically populate advice.
-function Advice({ allPages, handlePage }) {
+function Advice({ allPages, handlePage, scores, substanceRiskLevels }) {
 	
 	function handleNextButtonClick() {
 		handlePage(allPages.scores);

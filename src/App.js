@@ -55,6 +55,7 @@ function App() {
 							<QuestionContainer
 								allPages={allPages}
 								questions={content?.questions}
+								substances={content?.substances}
 								handlePage={handlePage}
 								handleScores={handleScores}
 							/>
@@ -64,6 +65,8 @@ function App() {
 							<Advice
 								allPages={allPages}
 								handlePage={handlePage}
+								scores={finalScores}
+								substanceRiskLevels={content?.substanceRiskLevels}
 							/>
 						)}
 
