@@ -5,17 +5,19 @@ import Layout from "./components/layouts/Layout";
 import CardLayout from "./components/layouts/CardLayout";
 import UserDetails from "./components/UserDetails";
 import QuestionContainer from "./components/QuestionContainer";
-import ResultContainer from "./components/AdviceContainer";
+import AdviceContainer from "./components/AdviceContainer";
 import ThankYouContainer from "./components/ThankYouContainer";
 import ScoresTable from "./components/ScoresTable";
+import Home from "./components/Home";
 
 function App() {
 	const allPages = Object.freeze({
-		userDetails: 0,
-		questions: 1,
-		thankYou: 2,
-		advice: 3,
-		scores: 4,
+		home: 0,
+		userDetails: 1,
+		questions: 2,
+		thankYou: 3,
+		advice: 4,
+		scores: 5,
 	});
 
 	const [content, setContent] = useState(null);
@@ -37,41 +39,44 @@ function App() {
 		<Layout>
 			{!content && <h1>Loading</h1>}
 
-			{content && (
-				<CardLayout>
-					{currentPage === allPages.userDetails && (
-						<UserDetails
-							allPages={allPages}
-							handlePage={handlePage}
-						/>
-					)}
+			{content &&
+				(currentPage === allPages.home ? (
+					<Home />
+				) : (
+					<CardLayout>
+						{currentPage === allPages.userDetails && (
+							<UserDetails
+								allPages={allPages}
+								handlePage={handlePage}
+							/>
+						)}
 
-					{currentPage === allPages.questions && (
-						<QuestionContainer
-							allPages={allPages}
-							questions={content?.questions}
-							handlePage={handlePage}
-							handleScores={handleScores}
-						/>
-					)}
+						{currentPage === allPages.questions && (
+							<QuestionContainer
+								allPages={allPages}
+								questions={content?.questions}
+								handlePage={handlePage}
+								handleScores={handleScores}
+							/>
+						)}
 
-					{currentPage === allPages.advice && (
-						<ResultContainer
-							allPages={allPages}
-							handlePage={handlePage}
-						/>
-					)}
+						{currentPage === allPages.advice && (
+							<AdviceContainer
+								allPages={allPages}
+								handlePage={handlePage}
+							/>
+						)}
 
-					{currentPage === allPages.scores && (
-						<ScoresTable
-							scores={finalScores}
-							substanceRiskLevels={content?.substanceRiskLevels}
-						/>
-					)}
+						{currentPage === allPages.scores && (
+							<ScoresTable
+								scores={finalScores}
+								substanceRiskLevels={content?.substanceRiskLevels}
+							/>
+						)}
 
-					{currentPage === allPages.thankYou && <ThankYouContainer />}
-				</CardLayout>
-			)}
+						{currentPage === allPages.thankYou && <ThankYouContainer />}
+					</CardLayout>
+				))}
 		</Layout>
 	);
 }

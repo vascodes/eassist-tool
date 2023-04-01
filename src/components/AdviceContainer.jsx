@@ -1,7 +1,7 @@
 import PageButton from "./PageButton";
 
 // TODO: Dynamically populate advice.
-function ResultContainer({ allPages, handlePage }) {
+function AdviceContainer({ allPages, handlePage }) {
 	
 	function handleNextButtonClick() {
 		handlePage(allPages.scores);
@@ -362,4 +362,4 @@ function ResultContainer({ allPages, handlePage }) {
 	);
 }
 
-export default ResultContainer;
+export default AdviceContainer;
