@@ -5,8 +5,8 @@ import Layout from "./components/layouts/Layout";
 import CardLayout from "./components/layouts/CardLayout";
 import UserDetails from "./components/UserDetails";
 import QuestionContainer from "./components/QuestionContainer";
-import AdviceContainer from "./components/AdviceContainer";
-import ThankYouContainer from "./components/ThankYouContainer";
+import Advice from "./components/Advice";
+import ThankYou from "./components/ThankYou";
 import ScoresTable from "./components/ScoresTable";
 import Home from "./components/Home";
 
@@ -61,7 +61,7 @@ function App() {
 						)}
 
 						{currentPage === allPages.advice && (
-							<AdviceContainer
+							<Advice
 								allPages={allPages}
 								handlePage={handlePage}
 							/>
@@ -74,7 +74,7 @@ function App() {
 							/>
 						)}
 
-						{currentPage === allPages.thankYou && <ThankYouContainer />}
+						{currentPage === allPages.thankYou && <ThankYou />}
 					</CardLayout>
 				))}
 		</Layout>

@@ -1,4 +1,4 @@
-function ThankYouContainer() {
+function ThankYou() {
     return (
         <>
             <h3>eASSIST finalScores</h3>
@@ -11,4 +11,4 @@ function ThankYouContainer() {
     );
 }
 
-export default ThankYouContainer;
+export default ThankYou;
