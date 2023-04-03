@@ -52,7 +52,7 @@ export const data = {
 	],
 	"questions": [
 		{
-			"id": "1",
+			"id": 1,
 			"text": "In your life, which of the following substances have you ever used (non-medical use only)?",
 			"substances": [
 				{
@@ -208,7 +208,7 @@ export const data = {
 			]
 		},
 		{
-			"id": "2",
+			"id": 2,
 			"text": "In the past three months, how often have you used the substances you mentioned (first drug, second drug, etc)?",
 			"substances": [
 				{
@@ -514,7 +514,7 @@ export const data = {
 			]
 		},
 		{
-			"id": "3",
+			"id": 3,
 			"text": "During the past three months, how often have you had a strong desire or urge to use (first drug, second drug, etc)?",
 			"substances": [
 				{
@@ -820,7 +820,7 @@ export const data = {
 			]
 		},
 		{
-			"id": "4",
+			"id": 4,
 			"text": "During the past three months, how often has your use of (first drug, second drug, etc) led to health, social, legal or financial problems?",
 			"substances": [
 				{
@@ -1126,7 +1126,7 @@ export const data = {
 			]
 		},
 		{
-			"id": "5",
+			"id": 5,
 			"text": "During the past three months, how often have you failed to do what was normally expected of you because of your use of (first drug, second drug, etc)?",
 			"substances": [
 				{
@@ -1432,7 +1432,7 @@ export const data = {
 			]
 		},
 		{
-			"id": "6",
+			"id": 6,
 			"text": "Has a friend or relative or anyone else ever expressed concern about your use of (first drug, second drug, etc)?",
 			"substances": [
 				{
@@ -1638,7 +1638,7 @@ export const data = {
 			]
 		},
 		{
-			"id": "7",
+			"id": 7,
 			"text": "Have you ever tried to cut down on using (first drug, second drug, etc) but failed?",
 			"substances": [
 				{
@@ -1844,7 +1844,7 @@ export const data = {
 			]
 		},
 		{
-			"id": "8",
+			"id": 8,
 			"text": "Have you ever used any drug by injection (non-medical use only)?",
 			"substances": [
 				{
@@ -1872,6 +1872,7 @@ export const data = {
 	],
 	"substanceRiskLevels": {
 		"tobacco": {
+			"id": "tobacco",
 			"criterias": [
 				"1-3 Lower",
 				"4-26 Moderate",
@@ -1894,6 +1895,7 @@ export const data = {
 			}
 		},
 		"alcohol": {
+			"id": "alcohol",
 			"criterias": [
 				"0-10 Lower",
 				"11-26 Moderate",
@@ -1916,6 +1918,7 @@ export const data = {
 			}
 		},
 		"cannabis": {
+			"id": "cannabis",
 			"criterias": [
 				"0-3 Lower",
 				"4-26 Moderate",
@@ -1938,6 +1941,7 @@ export const data = {
 			}
 		},
 		"cocaine": {
+			"id": "cocaine",
 			"criterias": [
 				"0-3 Lower",
 				"4-26 Moderate",
@@ -1960,6 +1964,7 @@ export const data = {
 			}
 		},
 		"amphetamine": {
+			"id": "amphetamine",
 			"criterias": [
 				"0-3 Lower",
 				"4-26 Moderate",
@@ -1982,6 +1987,7 @@ export const data = {
 			}
 		},
 		"inhalants": {
+			"id": "inhalants",
 			"criterias": [
 				"0-3 Lower",
 				"4-26 Moderate",
@@ -2004,6 +2010,7 @@ export const data = {
 			}
 		},
 		"sedatives": {
+			"id": "sedatives",
 			"criterias": [
 				"0-3 Lower",
 				"4-26 Moderate",
@@ -2026,6 +2033,7 @@ export const data = {
 			}
 		},
 		"hallucinogens": {
+			"id": "hallucinogens",
 			"criterias": [
 				"0-3 Lower",
 				"4-26 Moderate",
@@ -2048,6 +2056,7 @@ export const data = {
 			}
 		},
 		"opioids": {
+			"id": "opioids",
 			"criterias": [
 				"0-3 Lower",
 				"4-26 Moderate",
@@ -2070,6 +2079,7 @@ export const data = {
 			}
 		},
 		"other": {
+			"id": "other",
 			"criterias": [
 				"0-3 Lower",
 				"4-26 Moderate",

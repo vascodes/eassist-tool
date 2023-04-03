@@ -21,9 +21,9 @@ function App() {
 	});
 
 	const [content, setContent] = useState(null);
-	const [finalScores, setFinalScores] = useState(null);
-	const [moderateSubstances, setModerateSubstances] = useState([]);
-	const [referralSubstances, setReferralSubstances] = useState([]);
+	const [finalScores, setFinalScores] = useState(null);	
+	const [moderateRiskSubstances, setModerateRiskSubstances] = useState([]);
+	const [referralRiskSubstances, setReferralRiskSubstances] = useState([]);
 	const [currentPage, setCurrentPage] = useState(allPages.userDetails);
 
 	function handlePage(selectedPage) {
@@ -31,6 +31,7 @@ function App() {
 	}
 
 	function handleScores(scores) {
+		console.log(scores);
 		setFinalScores(scores);
 
 		/*
@@ -43,33 +44,43 @@ function App() {
 				If score > 0 for any substance in scores, then check if substance is in moderate or referral List
 					and display each row accordingly else display score as 0 and risk as low.
 		*/
+		const substancesWithLowRisk = [];
 		const substancesWithModerateRisk = [];
 		const substancesWithHighRisk = [];
 
-		for (let substance in scores) {
-			let substanceScore = scores[substance];
-			const substanceRisk = content?.substanceRiskLevels[substance];
+		for (let substanceId in scores) {
+			const substance = getSubstanceDetails(substanceId);
 
-			const riskLowMax = substanceRisk?.lower.max;
-			const riskModerateMax = substanceRisk?.moderate.max;
+			let substanceScore = scores[substanceId];
+			const substanceRisk = content?.substanceRiskLevels[substanceId];
+			console.log(substanceRisk);
 
-			if (substanceScore <= riskLowMax) {
-			} else if (substanceScore <= riskModerateMax) {
-				substancesWithModerateRisk.push(substanceRisk);
-			} else {
-				substancesWithHighRisk.push(substanceRisk);
+			const { min: moderateMin, max: moderateMax } = substanceRisk.moderate;
+			const { min: highMin } = substanceRisk.high;
+
+			if (substanceScore >= moderateMin && substanceScore <= moderateMax) {
+				substancesWithModerateRisk.push(substance);
+			} else if (substanceScore >= highMin) {
+				substancesWithHighRisk.push(substance);
 			}
 		}
 
-		setModerateSubstances(substancesWithModerateRisk);
-		setReferralSubstances(substancesWithHighRisk);
+		setModerateRiskSubstances(substancesWithModerateRisk);
+		setReferralRiskSubstances(substancesWithHighRisk);
+
+		console.log(substancesWithModerateRisk);
+		console.log(substancesWithHighRisk);
 
 		if (scores) handlePage(allPages.advice);
 	}
 
+	function getSubstanceDetails(substanceId){
+		return content?.substances.find(substance => substance.id === substanceId);
+	}
+		
 	function getSubstanceAdviceHTML(type, substanceId) {
-		type = type.toLowerCase();
-		substanceId = substanceId.toLowerCase();
+		type = type?.toLowerCase();
+		substanceId = substanceId?.toLowerCase();
 
 		return content?.substanceAdvice[type][substanceId];
 	}
@@ -96,9 +107,10 @@ function App() {
 							<QuestionContainer
 								allPages={allPages}
 								questions={content?.questions}
-								substances={content?.substances}
+								allSubstances={content?.substances}
 								handlePage={handlePage}
 								handleScores={handleScores}
+								getSubstanceDetails = {getSubstanceDetails}
 							/>
 						)}
 
@@ -106,10 +118,8 @@ function App() {
 							<AdviceContainer
 								allPages={allPages}
 								handlePage={handlePage}
-								scores={finalScores}
-								substanceRiskLevels={content?.substanceRiskLevels}
-								moderateSubstances={moderateSubstances}
-								referralSubstances={referralSubstances}
+								moderateRiskSubstances={moderateRiskSubstances}
+								referralRiskSubstances={referralRiskSubstances}
 								getSubstanceAdviceHTML={getSubstanceAdviceHTML}
 							/>
 						)}
@@ -118,6 +128,7 @@ function App() {
 							<ScoresTable
 								scores={finalScores}
 								substanceRiskLevels={content?.substanceRiskLevels}
+								getSubstanceDetails = {getSubstanceDetails}
 							/>
 						)}
 

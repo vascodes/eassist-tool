@@ -4,8 +4,8 @@ import Advice from "./Advice";
 function AdviceContainer({
 	allPages,
 	handlePage,
-	moderateSubstances,
-	referralSubstances,
+	moderateRiskSubstances,
+	referralRiskSubstances,
 	getSubstanceAdviceHTML,
 }) {
 	function handleNextButtonClick() {
@@ -28,13 +28,13 @@ function AdviceContainer({
 
 			<Advice
 				type="moderate"
-				substances={moderateSubstances}
+				substances={moderateRiskSubstances}
 				getSubstanceAdviceHTML={getSubstanceAdviceHTML}
 			/>
 
 			<Advice
 				type="referral"
-				substances={referralSubstances}
+				substances={referralRiskSubstances}
 				getSubstanceAdviceHTML={getSubstanceAdviceHTML}
 			/>
 

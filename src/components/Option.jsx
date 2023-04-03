@@ -2,18 +2,19 @@ function replaceSpecialCharsInString(str, replaceStr = "") {
 	return str.replace(/[\s\W]/gi, replaceStr);
 }
 
-function Option({ questionNumber, substanceId, selectedOptions, optionText, score, handleChange }) {
+function Option({ questionId, substanceId, selectedOptions, optionText, score, handleChange }) {
 	// convert to lowercase and remove spaces, special characters.
 	let optionTextWithHyphens = replaceSpecialCharsInString(optionText.toLowerCase(), "-");
 
 	let radioButtonId = `radio-${substanceId}-${optionTextWithHyphens}`; // ex: radio-cannabis-no
 	radioButtonId = replaceSpecialCharsInString(radioButtonId, "-"); // Remove multiple hyphens.
-		
-	function getIsChecked(){		
-		let key = "question" + questionNumber;
 
-		if (selectedOptions[key]) {
-			if (selectedOptions[key][substanceId]?.text === optionText) {
+	function getIsChecked() {
+		if (selectedOptions[questionId]) {
+			if (
+				selectedOptions[questionId][substanceId]?.text.toLowerCase() ===
+				optionText.toLowerCase()
+			) {
 				return true;
 			}
 		}
@@ -23,6 +24,12 @@ function Option({ questionNumber, substanceId, selectedOptions, optionText, scor
 
 	return (
 		<div className="form-check radio-spacing option-group">
+			<label
+				className="form-check-label"
+				htmlFor={radioButtonId}
+			>
+				{optionText}
+			</label>
 			<input
 				className="form-check-input"
 				type="radio"
@@ -34,7 +41,6 @@ function Option({ questionNumber, substanceId, selectedOptions, optionText, scor
 				data-option-text={optionText}
 				required
 			/>
-			<label className="form-check-label" htmlFor={radioButtonId}>{optionText}</label>
 		</div>
 	);
 }

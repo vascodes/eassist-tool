@@ -1,10 +1,10 @@
-import SubstanceBlock from "./SubstanceBlock";
+import OptionContainer from "./OptionContainer";
 
-function Question({ questionNumber, question, totalQuestions, substances, selectedOptions, handleChange }) {	
-	const progressBarWidth = Math.floor((questionNumber / totalQuestions) * 100);
+function Question({ questionId, question, totalQuestions, substances, selectedOptions, handleChange, getSubstanceDetails }) {			
+	const progressBarWidth = Math.floor((questionId / totalQuestions) * 100);
 	return (
 		<div className="question-block">
-			<p className="d-flex question-text">{`${questionNumber}. ${question.text}`}</p>
+			<p className="d-flex question-text">{`${questionId}. ${question.text}`}</p>
 
 			{/* Progress Bar */}
 			<div className="progress mb-4">
@@ -22,10 +22,11 @@ function Question({ questionNumber, question, totalQuestions, substances, select
 
 			<ol className="list-group list-group-flush">
 				{substances?.map(substance => (
-					<SubstanceBlock
+					<OptionContainer
 						key={substance.id}
-						questionNumber={questionNumber}
+						questionId={questionId}						
 						substance={substance}
+						substanceDetails = {getSubstanceDetails(substance.id)}
 						selectedOptions={selectedOptions}
 						handleChange={handleChange}
 					/>

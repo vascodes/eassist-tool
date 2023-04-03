@@ -1,8 +1,8 @@
 import Option from "./Option";
 
-function SubstanceBlock({ questionNumber, substance, selectedOptions, handleChange }) {
-	let substanceName = substance?.name,
-		substanceExamples = substance?.examples !== "" ? `(${substance.examples}, etc.)` : "";
+function OptionContainer({ questionId, substance, substanceDetails, selectedOptions, handleChange }) {		
+	let substanceName = substanceDetails?.name,
+		substanceExamples = substanceDetails?.examples && `(${substanceDetails.examples}, etc.)`;
 
 	return (
 		<li className="list-group-item d-flex">
@@ -18,7 +18,7 @@ function SubstanceBlock({ questionNumber, substance, selectedOptions, handleChan
 						return (
 							<Option
 								key={option.id}
-								questionNumber={questionNumber}
+								questionId={questionId}
 								substanceId={substance.id}
 								optionText={option.text}
 								score={option.score}
@@ -33,4 +33,4 @@ function SubstanceBlock({ questionNumber, substance, selectedOptions, handleChan
 	);
 }
 
-export default SubstanceBlock;
+export default OptionContainer;

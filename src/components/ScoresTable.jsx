@@ -43,7 +43,7 @@ function ScoresTableRow({
 	);
 }
 
-function ScoresTable({ scores, substanceRiskLevels }) {
+function ScoresTable({ scores, substanceRiskLevels, getSubstanceDetails }) {
 	return (
 		<>
 			<h3>eAssist scores</h3>
@@ -78,19 +78,21 @@ function ScoresTable({ scores, substanceRiskLevels }) {
 					</tr>
 				</thead>
 				<tbody>
-					{Object.keys(scores).map((substance, index) => {
+					{Object.keys(scores).map((substanceId, index) => {
 						let rowClassName = "";
 						rowClassName = index % 2 === 0 ? null : "table-secondary";
 
-						const substanceScore = scores[substance];
+						const substance = getSubstanceDetails(substanceId);
+						const substanceScore = scores[substanceId];
 
 						let substanceRiskText = "";
-						const substanceRisk = substanceRiskLevels[substance];
-						const substanceName = substanceRisk?.name;
+						const substanceRisk = substanceRiskLevels[substanceId];
+						const substanceName = substance.name;
 						const criterias = substanceRisk?.criterias;
 						const riskLowMax = substanceRisk?.lower.max;
 						const riskModerateMax = substanceRisk?.moderate.max;
 
+						// TODO: Use moderateRiskSubstances and referralRiskSubstances in app.js for below.
 						let substanceRiskTextClassName = "text-danger";
 						if (substanceScore <= riskLowMax) {
 							substanceRiskText = substanceRisk.lower.text;
@@ -103,7 +105,7 @@ function ScoresTable({ scores, substanceRiskLevels }) {
 
 						return (
 							<ScoresTableRow
-								key={substance}
+								key={substanceId}
 								substanceName={substanceName}
 								score={substanceScore}
 								risk={substanceRiskText}
