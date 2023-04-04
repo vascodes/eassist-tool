@@ -241,6 +241,7 @@ function QuestionContainer({ allPages, questions, handlePage, handleScores, allS
 			// Answers of Question 1 or Question 8 should not be considered in finalScores.
 			if (questionId === 1 || questionId === 8) continue;
 
+			if(questionId !== 1 || questionId !== 8){
 			const substances = selectedOptions[questionId];
 			for (let substanceId in substances) {
 				let substance = substances[substanceId];
@@ -248,11 +249,10 @@ function QuestionContainer({ allPages, questions, handlePage, handleScores, allS
 				// Add substance to substanceScores (if not exists) and initialize score to 0.
 				// substanceScores[substanceId] ||= 0;
 
-				// Update score of current substance in substanceScores.
-				// TODO: CHANGE INJECTION CONDITION
-				if(substanceId !== "injection")
+				// Update score of current substance in substanceScores.				
+				if(substanceId in substanceScores)
 					substanceScores[substanceId] += Number(substance.score);
-			}
+			}}
 		}
 		
 		return substanceScores;
