@@ -1128,37 +1128,7 @@ export const data = {
 		{
 			"id": 5,
 			"text": "During the past three months, how often have you failed to do what was normally expected of you because of your use of (first drug, second drug, etc)?",
-			"substances": [
-				{
-					"id": "tobacco",
-					"options": [
-						{
-							"id": 1,
-							"text": "Never",
-							"score": 0
-						},
-						{
-							"id": 2,
-							"text": "Once or twice",
-							"score": 5
-						},
-						{
-							"id": 3,
-							"text": "Monthly",
-							"score": 6
-						},
-						{
-							"id": 4,
-							"text": "Weekly",
-							"score": 7
-						},
-						{
-							"id": 5,
-							"text": "Daily or almost daily",
-							"score": 8
-						}
-					]
-				},
+			"substances": [				
 				{
 					"id": "alcohol",
 					"options": [

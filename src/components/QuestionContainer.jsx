@@ -68,11 +68,7 @@ function QuestionContainer({
 			}
 
 			return newSelectedOptions;
-		});
-
-		console.log(selectedOptions);
-		console.log(substancesUsed);
-		console.log(substancesUsedInPast3Months);
+		});		
 	}
 
 	function getSubstances(questionId) {
@@ -93,15 +89,13 @@ function QuestionContainer({
 				);
 			}
 
-			// TODO: DELETE BELOW CONDITION
 			// Remove tobacco in question 5.
-			if (questionId === 5) {
-				filteredSubstances = filteredSubstances.filter(
-					substance => substance.id !== "tobacco",
-				);
-			}
-
-			console.log(filteredSubstances);
+			// if (questionId === 5) {
+			// 	filteredSubstances = filteredSubstances.filter(
+			// 		substance => substance.id !== "tobacco",
+			// 	);
+			// }
+			
 			return filteredSubstances;
 		}
 	}
@@ -127,8 +121,7 @@ function QuestionContainer({
 		} else {
 			pushQuestionHistory(nextQuestionId);
 		}
-
-		console.log(questionHistory);
+		
 		const previousQuestionId = questionHistory.at(-1);
 		let index = previousQuestionId - 1;
 		setQuestion(questions[index]);

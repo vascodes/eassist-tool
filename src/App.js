@@ -21,7 +21,7 @@ function App() {
 	});
 
 	const [content, setContent] = useState(null);
-	const [finalScores, setFinalScores] = useState(null);	
+	const [finalScores, setFinalScores] = useState(null);
 	const [moderateRiskSubstances, setModerateRiskSubstances] = useState([]);
 	const [referralRiskSubstances, setReferralRiskSubstances] = useState([]);
 	const [currentPage, setCurrentPage] = useState(allPages.userDetails);
@@ -34,16 +34,6 @@ function App() {
 		console.log(scores);
 		setFinalScores(scores);
 
-		/*
-			TODO:
-				find substances with moderate risk and put them in moderateList
-				find substances with high risk and put them in referralList
-				pass both lists as props to AdviceContainer.
-				show advice for substances in respective lists.
-				pass these lists as props to ScoresTable.
-				If score > 0 for any substance in scores, then check if substance is in moderate or referral List
-					and display each row accordingly else display score as 0 and risk as low.
-		*/		
 		const substancesWithModerateRisk = [];
 		const substancesWithHighRisk = [];
 
@@ -51,8 +41,7 @@ function App() {
 			const substance = getSubstanceDetails(substanceId);
 
 			let substanceScore = scores[substanceId];
-			const substanceRisk = content?.substanceRiskLevels[substanceId];
-			console.log(substanceRisk);
+			const substanceRisk = content?.substanceRiskLevels[substanceId];			
 
 			const { min: moderateMin, max: moderateMax } = substanceRisk.moderate;
 			const { min: highMin } = substanceRisk.high;
@@ -67,16 +56,13 @@ function App() {
 		setModerateRiskSubstances(substancesWithModerateRisk);
 		setReferralRiskSubstances(substancesWithHighRisk);
 
-		console.log(substancesWithModerateRisk);
-		console.log(substancesWithHighRisk);
-
 		if (scores) handlePage(allPages.advice);
 	}
 
-	function getSubstanceDetails(substanceId){
+	function getSubstanceDetails(substanceId) {
 		return content?.substances.find(substance => substance.id === substanceId);
 	}
-		
+
 	function getSubstanceAdviceHTML(type, substanceId) {
 		type = type?.toLowerCase();
 		substanceId = substanceId?.toLowerCase();
@@ -109,7 +95,7 @@ function App() {
 								questions={content?.questions}
 								allSubstances={content?.substances}
 								handleScores={handleScores}
-								getSubstanceDetails = {getSubstanceDetails}
+								getSubstanceDetails={getSubstanceDetails}
 							/>
 						)}
 
@@ -126,10 +112,10 @@ function App() {
 						{currentPage === allPages.scores && (
 							<ScoresTable
 								scores={finalScores}
-								moderateRiskSubstances = {moderateRiskSubstances}
-								referralRiskSubstances = {referralRiskSubstances}
+								moderateRiskSubstances={moderateRiskSubstances}
+								referralRiskSubstances={referralRiskSubstances}
 								substanceRiskLevels={content?.substanceRiskLevels}
-								getSubstanceDetails = {getSubstanceDetails}
+								getSubstanceDetails={getSubstanceDetails}
 							/>
 						)}
 
