@@ -89,12 +89,6 @@ function QuestionContainer({
 				);
 			}
 
-			// Remove tobacco in question 5.
-			// if (questionId === 5) {
-			// 	filteredSubstances = filteredSubstances.filter(
-			// 		substance => substance.id !== "tobacco",
-			// 	);
-			// }
 			
 			return filteredSubstances;
 		}
