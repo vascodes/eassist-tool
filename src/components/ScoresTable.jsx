@@ -1,49 +1,14 @@
-function ScoresTableRow({
-	rowNum,
-	rowClassName,
-	substanceName,
-	score,
-	risk,
-	riskClassName,
-	criterias,
+import ScoresTableRow from "./ScoresTableRow";
+
+function ScoresTable({
+	scores,
+	moderateRiskSubstances,
+	referralRiskSubstances,
+	substanceRiskLevels,
+	getSubstanceDetails,
 }) {
-	return (
-		<>
-			<tr
-				key={substanceName}
-				className={rowClassName}
-			>
-				{/* Category name */}
-				<td rowSpan={4}>
-					{`${rowNum}. `} {substanceName}
-				</td>
-
-				{/* Category Score */}
-				<td rowSpan={4}>{score}</td>
-
-				{/* Category Risk */}
-				<td
-					rowSpan={4}
-					className={riskClassName}
-				>
-					{risk}
-				</td>
-			</tr>
-
-			{/* Category Criterias */}
-			{criterias.map(criteria => (
-				<tr
-					key={criteria}
-					className={rowClassName}
-				>
-					<td>{criteria}</td>
-				</tr>
-			))}
-		</>
-	);
-}
-
-function ScoresTable({ scores, substanceRiskLevels, getSubstanceDetails }) {
+	const substances = Object.keys(scores);
+	const scoreTableHeadings = ["Substance", "Score", "Risk", "Criteria"];
 	return (
 		<>
 			<h3>eAssist scores</h3>
@@ -51,65 +16,52 @@ function ScoresTable({ scores, substanceRiskLevels, getSubstanceDetails }) {
 			<table className="table table-borderless">
 				<thead className="table-dark">
 					<tr>
-						<th
-							className="py-4"
-							scope="col"
-						>
-							Substance
-						</th>
-						<th
-							className="py-4"
-							scope="col"
-						>
-							Score
-						</th>
-						<th
-							className="py-4"
-							scope="col"
-						>
-							Risk
-						</th>
-						<th
-							className="py-4"
-							scope="col"
-						>
-							Criteria
-						</th>
+						{scoreTableHeadings.map((heading, index) => (
+							<th
+								key={index}
+								className="py-4"
+								scope="col"
+							>
+								{heading}
+							</th>
+						))}
 					</tr>
 				</thead>
 				<tbody>
-					{Object.keys(scores).map((substanceId, index) => {
-						let rowClassName = "";
-						rowClassName = index % 2 === 0 ? null : "table-secondary";
+					{substances.map((substanceId, index) => {
+						// Alternate table row style.
+						let rowClassName = index % 2 === 0 ? null : "table-secondary";
 
 						const substance = getSubstanceDetails(substanceId);
-						const substanceScore = scores[substanceId];
+						const substanceRisk = substanceRiskLevels[substanceId];
 
 						let substanceRiskText = "";
-						const substanceRisk = substanceRiskLevels[substanceId];
-						const substanceName = substance.name;
-						const criterias = substanceRisk?.criterias;
-						const riskLowMax = substanceRisk?.lower.max;
-						const riskModerateMax = substanceRisk?.moderate.max;
-
-						// TODO: Use moderateRiskSubstances and referralRiskSubstances in app.js for below.
 						let substanceRiskTextClassName = "text-danger";
-						if (substanceScore <= riskLowMax) {
+
+						let isModerateRiskSubstance = moderateRiskSubstances.find(
+							s => s.id === substanceId,
+						);
+						let isReferralRiskSubstance = referralRiskSubstances.find(
+							s => s.id === substanceId,
+						);
+
+						if (isModerateRiskSubstance) {
+							substanceRiskText = substanceRisk.moderate.text;
+						} else if (isReferralRiskSubstance) {
+							substanceRiskText = substanceRisk.high.text;
+						} else {
+							// Low risk substance.
 							substanceRiskText = substanceRisk.lower.text;
 							substanceRiskTextClassName = null;
-						} else if (substanceScore <= riskModerateMax) {
-							substanceRiskText = substanceRisk.moderate.text;
-						} else {
-							substanceRiskText = substanceRisk.high.text;
 						}
 
 						return (
 							<ScoresTableRow
 								key={substanceId}
-								substanceName={substanceName}
-								score={substanceScore}
+								substanceName={substance.name}
+								score={scores[substanceId]}
 								risk={substanceRiskText}
-								criterias={criterias}
+								criterias={substanceRisk?.criterias}
 								rowNum={index + 1}
 								riskClassName={substanceRiskTextClassName}
 								rowClassName={rowClassName}

@@ -43,8 +43,7 @@ function App() {
 				pass these lists as props to ScoresTable.
 				If score > 0 for any substance in scores, then check if substance is in moderate or referral List
 					and display each row accordingly else display score as 0 and risk as low.
-		*/
-		const substancesWithLowRisk = [];
+		*/		
 		const substancesWithModerateRisk = [];
 		const substancesWithHighRisk = [];
 
@@ -106,9 +105,9 @@ function App() {
 						{currentPage === allPages.questions && (
 							<QuestionContainer
 								allPages={allPages}
+								handlePage={handlePage}
 								questions={content?.questions}
 								allSubstances={content?.substances}
-								handlePage={handlePage}
 								handleScores={handleScores}
 								getSubstanceDetails = {getSubstanceDetails}
 							/>
@@ -127,6 +126,8 @@ function App() {
 						{currentPage === allPages.scores && (
 							<ScoresTable
 								scores={finalScores}
+								moderateRiskSubstances = {moderateRiskSubstances}
+								referralRiskSubstances = {referralRiskSubstances}
 								substanceRiskLevels={content?.substanceRiskLevels}
 								getSubstanceDetails = {getSubstanceDetails}
 							/>
