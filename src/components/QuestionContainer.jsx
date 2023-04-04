@@ -3,7 +3,14 @@ import { useState } from "react";
 import Question from "./Question";
 import PageButton from "./PageButton";
 
-function QuestionContainer({ allPages, questions, handlePage, handleScores, allSubstances, getSubstanceDetails }) {
+function QuestionContainer({
+	allPages,
+	questions,
+	handlePage,
+	handleScores,
+	allSubstances,
+	getSubstanceDetails,
+}) {
 	/* 	
 		Separate state is used for question and substances as substances displayed
 		for a question may vary based on the answers selected in previous questions.
@@ -77,7 +84,7 @@ function QuestionContainer({ allPages, questions, handlePage, handleScores, allS
 			let filteredSubstances = question.substances?.filter(substance =>
 				substancesUsed.has(substance.id),
 			);
-			
+
 			// For questions 3, 4 and 5, return substances that,
 			// were not answered as "Never" in question 2.
 			if (questionId >= 3 && questionId <= 5) {
@@ -199,62 +206,41 @@ function QuestionContainer({ allPages, questions, handlePage, handleScores, allS
 		const substanceScores = {};
 
 		// Initialize scores for all substances as 0.
-		for (let substance of allSubstances) {						
+		for (let substance of allSubstances) {
 			substanceScores[substance.id] = 0;
 		}
-		
-		/* 	
-			Remove options of questions in selectedOptions that are not in questionHistory.
 
-			This ensures that only the selected options of visted questions
-			are considered when calculating the substance's score.
-		*/
-		/*			
-			selectedOptions = {
-				1: {
-					tobacco: {text: "Yes", score: 0},
-					alcohol: {text: "No", score: 0},
-					.
-					.
-				},
-				2: {
-					tobacco: {text: "test", score: 2},
-					alcohol: {text: "blah", score: 3},
-					.
-					.
-				}
-			}
-		*/
-		// const filteredSelectedOptions = {};		
-		// for (let selectedQuestionId in selectedOptions) {
-		// 	for (let questionId of questionHistory) {
-		// 		if (questionId === selectedQuestionId) {
-		// 			filteredSelectedOptions[selectedQuestionId] =
-		// 				selectedOptions[selectedQuestionId];
-		// 		}
-		// 	}
-		// }
-		// console.log(filteredSelectedOptions);
-
-		// Find total score for each substance of a question in selectedOptions.
+		// Compute total score of each substance.
 		for (let questionId in selectedOptions) {
-			// Answers of Question 1 or Question 8 should not be considered in finalScores.
-			if (questionId === 1 || questionId === 8) continue;
+			// Answers of Question 1, Question 8 should not be considered for calculating scores.
+			if (questionId === 1 || questionId === 8) {
+				continue;
+			}
+			
+			/*				
+				Ignore options of questions in selectedOptions that are not in questionHistory.
+				This ensures that only the selected options of visted questions
+				are considered when calculating the substance's score.
+				
+				Example: User might choose options of question 4, 5 but later change 
+				the answers of previous questions such that question 4 and 5 is skipped. 
+				In this case, answers of question 4, 5 should not be considered,
+				when calculating the score.
+			*/
+			if (!questionHistory.includes(Number(questionId))) {
+				continue;
+			}
 
-			if(questionId !== 1 || questionId !== 8){
-			const substances = selectedOptions[questionId];
-			for (let substanceId in substances) {
-				let substance = substances[substanceId];
+			const selectedSubstances = selectedOptions[questionId];
+			for (let substanceId in selectedSubstances) {
+				let substance = selectedSubstances[substanceId];
 
-				// Add substance to substanceScores (if not exists) and initialize score to 0.
-				// substanceScores[substanceId] ||= 0;
-
-				// Update score of current substance in substanceScores.				
-				if(substanceId in substanceScores)
+				// Update score of substance in substanceScores.
+				if (substanceId in substanceScores)
 					substanceScores[substanceId] += Number(substance.score);
-			}}
+			}
 		}
-		
+
 		return substanceScores;
 	}
 
