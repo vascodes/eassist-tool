@@ -1,5 +1,5 @@
 import ScoresTableRow from "./ScoresTableRow";
-import CardLayout from "./layouts/CardLayout";
+import CardLayout from "../layouts/CardLayout";
 
 function ScoresTable({
 	scores,

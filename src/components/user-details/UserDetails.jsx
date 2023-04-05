@@ -1,5 +1,5 @@
-import PageButton from "./PageButton";
-import CardLayout from "./layouts/CardLayout";
+import PageButton from "../ui/PageButton";
+import CardLayout from "../layouts/CardLayout";
 
 // TODO: Save Input data
 function UserDetails({ allPages, handlePage }) {

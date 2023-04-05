@@ -2,13 +2,12 @@ import { useEffect, useState } from "react";
 import { data } from "./data";
 
 import Layout from "./components/layouts/Layout";
-import CardLayout from "./components/layouts/CardLayout";
-import UserDetails from "./components/UserDetails";
-import QuestionContainer from "./components/QuestionContainer";
-import AdviceContainer from "./components/AdviceContainer";
-import ThankYou from "./components/ThankYou";
-import ScoresTable from "./components/ScoresTable";
-import Home from "./components/Home";
+import Home from "./components/home/Home";
+import UserDetails from "./components/user-details/UserDetails";
+import QuestionContainer from "./components/question/QuestionContainer";
+import AdviceContainer from "./components/advice/AdviceContainer";
+import ScoresTable from "./components/score/ScoresTable";
+import ThankYou from "./components/thank-you/ThankYou";
 
 function App() {
 	const allPages = Object.freeze({
@@ -83,10 +82,13 @@ function App() {
 
 	return (
 		<Layout>
+			{/* Loading Page. */}
 			{currentPage === allPages.loading && <h1>Loading</h1>}
 
+			{/* Home Page. */}
 			{currentPage === allPages.home && <Home />}
 
+			{/* User Details Page. */}
 			{currentPage === allPages.userDetails && (
 				<UserDetails
 					allPages={allPages}
@@ -94,6 +96,7 @@ function App() {
 				/>
 			)}
 
+			{/* Questions Page. */}
 			{currentPage === allPages.questions && (
 				<QuestionContainer
 					allPages={allPages}
@@ -105,6 +108,7 @@ function App() {
 				/>
 			)}
 
+			{/* Advice Page. */}
 			{currentPage === allPages.advice && (
 				<AdviceContainer
 					allPages={allPages}
@@ -115,6 +119,7 @@ function App() {
 				/>
 			)}
 
+			{/* Scores Page. */}
 			{currentPage === allPages.scores && (
 				<ScoresTable
 					scores={finalScores}
@@ -125,6 +130,7 @@ function App() {
 				/>
 			)}
 
+			{/* Thank You Page. */}
 			{currentPage === allPages.thankYou && <ThankYou />}
 		</Layout>
 	);

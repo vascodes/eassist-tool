@@ -1,4 +1,4 @@
-import Accordion from "./Accordion";
+import Accordion from "../ui/Accordion";
 
 function capitalize(str) {
 	return str.charAt(0).toUpperCase() + str.slice(1);
@@ -18,7 +18,6 @@ function Advice({ type, substances, getSubstanceAdviceHTML }) {
 						key={substance.id}
 						id={substance.id}
 						title={substance.name}
-						capitalize={capitalize}
 					>
 						{adviceContent}
 					</Accordion>

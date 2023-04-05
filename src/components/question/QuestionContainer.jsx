@@ -1,8 +1,8 @@
 import { useState } from "react";
 
 import Question from "./Question";
-import PageButton from "./PageButton";
-import CardLayout from "./layouts/CardLayout";
+import PageButton from "../ui/PageButton";
+import CardLayout from "../layouts/CardLayout";
 
 function QuestionContainer({
 	allPages,

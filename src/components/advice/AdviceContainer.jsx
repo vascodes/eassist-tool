@@ -1,6 +1,6 @@
-import PageButton from "./PageButton";
+import PageButton from "../ui/PageButton";
 import Advice from "./Advice";
-import CardLayout from "./layouts/CardLayout";
+import CardLayout from "../layouts/CardLayout";
 
 function AdviceContainer({
 	allPages,

@@ -1,11 +1,13 @@
-function Accordion({ id, title, children, capitalize }) {
+function capitalize(str) {
+	return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+function Accordion({ id, title, children }) {
 	let capitalizedId = capitalize(id);
 	let accordionId = `accordion${capitalizedId}`;
 	let headingId = `heading${capitalizedId}`;
 	let dataTarget = `collapse${capitalizedId}`;
 
-	console.log(children);
-	
 	return (
 		<div
 			className="accordion mb-4"
@@ -33,7 +35,7 @@ function Accordion({ id, title, children, capitalize }) {
 					className="accordion-collapse collapse"
 					aria-labelledby={headingId}
 					data-bs-parent={`#${accordionId}`}
-				>					
+				>
 					<div className="accordion-body">{children}</div>
 				</div>
 			</div>
