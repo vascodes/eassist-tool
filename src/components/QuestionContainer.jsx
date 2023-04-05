@@ -2,6 +2,7 @@ import { useState } from "react";
 
 import Question from "./Question";
 import PageButton from "./PageButton";
+import CardLayout from "./layouts/CardLayout";
 
 function QuestionContainer({
 	allPages,
@@ -232,7 +233,7 @@ function QuestionContainer({
 	}
 
 	return (
-		<>
+		<CardLayout>
 			<Question
 				key={question?.id}
 				questionId={question?.id}
@@ -274,7 +275,7 @@ function QuestionContainer({
 					)}
 				</div>
 			</div>
-		</>
+		</CardLayout>
 	);
 }
 

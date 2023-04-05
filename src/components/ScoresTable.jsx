@@ -1,4 +1,5 @@
 import ScoresTableRow from "./ScoresTableRow";
+import CardLayout from "./layouts/CardLayout";
 
 function ScoresTable({
 	scores,
@@ -10,7 +11,7 @@ function ScoresTable({
 	const substances = Object.keys(scores);
 	const scoreTableHeadings = ["Substance", "Score", "Risk", "Criteria"];
 	return (
-		<>
+		<CardLayout>
 			<h3>eAssist scores</h3>
 
 			<table className="table table-borderless">
@@ -70,7 +71,7 @@ function ScoresTable({
 					})}
 				</tbody>
 			</table>
-		</>
+		</CardLayout>
 	);
 }
 

@@ -1,9 +1,10 @@
 import PageButton from "./PageButton";
+import CardLayout from "./layouts/CardLayout";
 
 // TODO: Save Input data
 function UserDetails({ allPages, handlePage }) {
 	return (
-		<>
+		<CardLayout>
 			<ol className="list-group list-group-flush">
 				<li className="list-group-item">
 					<div>
@@ -155,7 +156,7 @@ function UserDetails({ allPages, handlePage }) {
 					handlePageButtonClick={() => handlePage(allPages.questions)}
 				/>
 			</div>
-		</>
+		</CardLayout>
 	);
 }
 

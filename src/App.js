@@ -12,19 +12,20 @@ import Home from "./components/Home";
 
 function App() {
 	const allPages = Object.freeze({
-		home: 0,
-		userDetails: 1,
-		questions: 2,
-		thankYou: 3,
-		advice: 4,
-		scores: 5,
+		loading: 0,
+		home: 1,
+		userDetails: 2,
+		questions: 3,
+		thankYou: 4,
+		advice: 5,
+		scores: 6,
 	});
 
 	const [content, setContent] = useState(null);
 	const [finalScores, setFinalScores] = useState(null);
 	const [moderateRiskSubstances, setModerateRiskSubstances] = useState([]);
 	const [referralRiskSubstances, setReferralRiskSubstances] = useState([]);
-	const [currentPage, setCurrentPage] = useState(allPages.userDetails);
+	const [currentPage, setCurrentPage] = useState(allPages.loading);
 
 	function handlePage(selectedPage) {
 		setCurrentPage(selectedPage);
@@ -67,64 +68,63 @@ function App() {
 		type = type.toLowerCase();
 		substanceId = substanceId?.toLowerCase();
 
-		// console.log(`type: ${type}, substance: ${substanceId}`);
-		// console.log(content?.substanceAdvice[type][substanceId]);
-		
 		return content?.substanceAdvice[type][substanceId];
 	}
 
 	useEffect(() => setContent(data), []); // Fetch data on app load.
 
+	// Change from loading page once data is fetched.
+	useEffect(() => {
+		if (content && currentPage === allPages.loading) {
+			setCurrentPage(allPages.userDetails);
+		}
+	}, [allPages, content, currentPage]);
+
 	return (
 		<Layout>
-			{!content && <h1>Loading</h1>}
+			{currentPage === allPages.loading && <h1>Loading</h1>}
 
-			{content &&
-				(currentPage === allPages.home ? (
-					<Home />
-				) : (
-					<CardLayout>
-						{currentPage === allPages.userDetails && (
-							<UserDetails
-								allPages={allPages}
-								handlePage={handlePage}
-							/>
-						)}
+			{currentPage === allPages.home && <Home />}
 
-						{currentPage === allPages.questions && (
-							<QuestionContainer
-								allPages={allPages}
-								handlePage={handlePage}
-								questions={content?.questions}
-								allSubstances={content?.substances}
-								handleScores={handleScores}
-								getSubstanceDetails={getSubstanceDetails}
-							/>
-						)}
+			{currentPage === allPages.userDetails && (
+				<UserDetails
+					allPages={allPages}
+					handlePage={handlePage}
+				/>
+			)}
 
-						{currentPage === allPages.advice && (
-							<AdviceContainer
-								allPages={allPages}
-								handlePage={handlePage}
-								moderateRiskSubstances={moderateRiskSubstances}
-								referralRiskSubstances={referralRiskSubstances}
-								getSubstanceAdviceHTML={getSubstanceAdviceHTML}
-							/>
-						)}
+			{currentPage === allPages.questions && (
+				<QuestionContainer
+					allPages={allPages}
+					handlePage={handlePage}
+					questions={content?.questions}
+					allSubstances={content?.substances}
+					handleScores={handleScores}
+					getSubstanceDetails={getSubstanceDetails}
+				/>
+			)}
 
-						{currentPage === allPages.scores && (
-							<ScoresTable
-								scores={finalScores}
-								moderateRiskSubstances={moderateRiskSubstances}
-								referralRiskSubstances={referralRiskSubstances}
-								substanceRiskLevels={content?.substanceRiskLevels}
-								getSubstanceDetails={getSubstanceDetails}
-							/>
-						)}
+			{currentPage === allPages.advice && (
+				<AdviceContainer
+					allPages={allPages}
+					handlePage={handlePage}
+					moderateRiskSubstances={moderateRiskSubstances}
+					referralRiskSubstances={referralRiskSubstances}
+					getSubstanceAdviceHTML={getSubstanceAdviceHTML}
+				/>
+			)}
 
-						{currentPage === allPages.thankYou && <ThankYou />}
-					</CardLayout>
-				))}
+			{currentPage === allPages.scores && (
+				<ScoresTable
+					scores={finalScores}
+					moderateRiskSubstances={moderateRiskSubstances}
+					referralRiskSubstances={referralRiskSubstances}
+					substanceRiskLevels={content?.substanceRiskLevels}
+					getSubstanceDetails={getSubstanceDetails}
+				/>
+			)}
+
+			{currentPage === allPages.thankYou && <ThankYou />}
 		</Layout>
 	);
 }

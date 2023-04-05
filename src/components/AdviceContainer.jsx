@@ -1,5 +1,6 @@
 import PageButton from "./PageButton";
 import Advice from "./Advice";
+import CardLayout from "./layouts/CardLayout";
 
 function AdviceContainer({
 	allPages,
@@ -17,7 +18,7 @@ function AdviceContainer({
 	}
 
 	return (
-		<>
+		<CardLayout>
 			<div>
 				<h4 className="text-center">What's next?</h4>
 				<p className="result-container">
@@ -55,7 +56,7 @@ function AdviceContainer({
 					handlePageButtonClick={handlePrevButtonClick}
 				/>
 			</div>
-		</>
+		</CardLayout>
 	);
 }
 
