@@ -4,7 +4,7 @@ import CardLayout from "../layouts/CardLayout";
 
 function AdviceContainer({
 	allPages,
-	handlePage,
+	setPage,
 	substanceRiskCategories,
 	getSubstanceAdviceHTML,
 }) {
@@ -12,11 +12,11 @@ function AdviceContainer({
 	const referralRiskSubstances = substanceRiskCategories.referral;
 
 	function handleNextButtonClick() {
-		handlePage(allPages.scores);
+		setPage(allPages.scores);
 	}
 
 	function handlePrevButtonClick() {
-		handlePage(allPages.questions);
+		setPage(allPages.questions);
 	}
 
 	return (

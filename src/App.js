@@ -21,17 +21,13 @@ function App() {
 	});
 
 	const [content, setContent] = useState(null);
-	const [currentPage, setCurrentPage] = useState(allPages.loading);
+	const [page, setPage] = useState(allPages.loading);
 	const [score, setScore] = useState(null);
 	const [substanceRiskCategories, setSubstanceRiskCategories] = useState({
 		low: [],
 		moderate: [],
 		referral: [],
 	});
-
-	function handlePage(selectedPage) {
-		setCurrentPage(selectedPage);
-	}
 
 	function categorizeSubstancesBasedOnScore(scores) {
 		const substancesWithLowRisk = [],
@@ -71,7 +67,7 @@ function App() {
 
 		categorizeSubstancesBasedOnScore(scores);
 
-		if (scores) handlePage(allPages.advice);
+		if (scores) setPage(allPages.advice);
 	}
 
 	function getSubstanceDetails(substanceId) {
@@ -90,32 +86,32 @@ function App() {
 
 	// Change from loading page once data is fetched.
 	useEffect(() => {
-		if (content && currentPage === allPages.loading) {
-			setCurrentPage(allPages.userDetails);
+		if (content && page === allPages.loading) {
+			setPage(allPages.userDetails);
 		}
-	}, [allPages, content, currentPage]);
+	}, [allPages, content, page]);
 
 	return (
 		<Layout>
 			{/* Loading Page. */}
-			{currentPage === allPages.loading && <h1>Loading</h1>}
+			{page === allPages.loading && <h1>Loading</h1>}
 
 			{/* Home Page. */}
-			{currentPage === allPages.home && <Home />}
+			{page === allPages.home && <Home />}
 
 			{/* User Details Page. */}
-			{currentPage === allPages.userDetails && (
+			{page === allPages.userDetails && (
 				<UserDetails
 					allPages={allPages}
-					handlePage={handlePage}
+					setPage={setPage}
 				/>
 			)}
 
 			{/* Questions Page. */}
-			{currentPage === allPages.questions && (
+			{page === allPages.questions && (
 				<QuestionContainer
 					allPages={allPages}
-					handlePage={handlePage}
+					setPage={setPage}
 					questions={content?.questions}
 					allSubstances={content?.substances}
 					handleScore={handleScore}
@@ -124,17 +120,17 @@ function App() {
 			)}
 
 			{/* Advice Page. */}
-			{currentPage === allPages.advice && (
+			{page === allPages.advice && (
 				<AdviceContainer
 					allPages={allPages}
-					handlePage={handlePage}
+					setPage={setPage}
 					substanceRiskCategories={substanceRiskCategories}
 					getSubstanceAdviceHTML={getSubstanceAdviceHTML}
 				/>
 			)}
 
 			{/* Scores Page. */}
-			{currentPage === allPages.scores && (
+			{page === allPages.scores && (
 				<ScoresTable
 					scores={score}
 					substanceRiskCategories={substanceRiskCategories}
@@ -144,7 +140,7 @@ function App() {
 			)}
 
 			{/* Thank You Page. */}
-			{currentPage === allPages.thankYou && <ThankYou />}
+			{page === allPages.thankYou && <ThankYou />}
 		</Layout>
 	);
 }

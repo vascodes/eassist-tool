@@ -2,7 +2,7 @@ import PageButton from "../ui/PageButton";
 import CardLayout from "../layouts/CardLayout";
 
 // TODO: Save Input data
-function UserDetails({ allPages, handlePage }) {
+function UserDetails({ allPages, setPage }) {
 	return (
 		<CardLayout>
 			<ol className="list-group list-group-flush">
@@ -153,7 +153,7 @@ function UserDetails({ allPages, handlePage }) {
 				<PageButton
 					buttonClass="btn btn-success"
 					buttonText="Next >"
-					handlePageButtonClick={() => handlePage(allPages.questions)}
+					handlePageButtonClick={() => setPage(allPages.questions)}
 				/>
 			</div>
 		</CardLayout>

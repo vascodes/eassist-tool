@@ -7,7 +7,7 @@ import CardLayout from "../layouts/CardLayout";
 function QuestionContainer({
 	allPages,
 	questions,
-	handlePage,
+	setPage,
 	handleScore,
 	allSubstances,
 	getSubstanceDetails,
@@ -139,7 +139,7 @@ function QuestionContainer({
 			// show Thank You page.
 			if (currentQuestionId === 1) {
 				if (totalSelectedOptions > 0 && substancesUsed.size === 0) {
-					handlePage(allPages.thankYou);
+					setPage(allPages.thankYou);
 					return;
 				}
 			}
