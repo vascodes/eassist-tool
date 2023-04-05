@@ -13,6 +13,7 @@ function Advice({ type, substances, getSubstanceAdviceHTML }) {
 				return (
 					<Accordion
 						key={substance.id}
+						id = {substance.id}
 						title={substance.name}
 						capitalize={capitalize}
 					>

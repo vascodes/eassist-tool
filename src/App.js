@@ -41,7 +41,7 @@ function App() {
 			const substance = getSubstanceDetails(substanceId);
 
 			let substanceScore = scores[substanceId];
-			const substanceRisk = content?.substanceRiskLevels[substanceId];			
+			const substanceRisk = content?.substanceRiskLevels[substanceId];
 
 			const { min: moderateMin, max: moderateMax } = substanceRisk.moderate;
 			const { min: highMin } = substanceRisk.high;
@@ -63,10 +63,13 @@ function App() {
 		return content?.substances.find(substance => substance.id === substanceId);
 	}
 
-	function getSubstanceAdviceHTML(type, substanceId) {
-		type = type?.toLowerCase();
+	function getSubstanceAdviceHTML(type = "moderate", substanceId) {
+		type = type.toLowerCase();
 		substanceId = substanceId?.toLowerCase();
 
+		// console.log(`type: ${type}, substance: ${substanceId}`);
+		// console.log(content?.substanceAdvice[type][substanceId]);
+		
 		return content?.substanceAdvice[type][substanceId];
 	}
 

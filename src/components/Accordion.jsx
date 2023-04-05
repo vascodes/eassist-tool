@@ -1,9 +1,11 @@
-function Accordion({ title, children, capitalize }) {
-	let capitalizedTitle = capitalize(title);
-	let accordionId = `accordion${capitalizedTitle}`;
-	let headingId = `heading${capitalizedTitle}`;
-	let dataTarget = `collapse${capitalizedTitle}`;
+function Accordion({ id, title, children, capitalize }) {
+	let capitalizedId = capitalize(id);
+	let accordionId = `accordion${capitalizedId}`;
+	let headingId = `heading${capitalizedId}`;
+	let dataTarget = `collapse${capitalizedId}`;
 
+	console.log(children);
+	
 	return (
 		<div
 			className="accordion mb-4"
