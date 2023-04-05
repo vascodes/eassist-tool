@@ -67,8 +67,9 @@ function App() {
 	function getSubstanceAdviceHTML(type = "moderate", substanceId) {
 		type = type.toLowerCase();
 		substanceId = substanceId?.toLowerCase();
+		const adviceHTML = content?.substanceAdvice[type][substanceId];
 
-		return content?.substanceAdvice[type][substanceId];
+		return adviceHTML;
 	}
 
 	useEffect(() => setContent(data), []); // Fetch data on app load.

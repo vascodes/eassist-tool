@@ -10,14 +10,17 @@ function Advice({ type, substances, getSubstanceAdviceHTML }) {
 			<h5>{capitalize(type)} Advice</h5>
 
 			{substances.map(substance => {
+				let adviceContent = getSubstanceAdviceHTML(type, substance.id);
+				adviceContent ||= "No advice.";
+
 				return (
 					<Accordion
 						key={substance.id}
-						id = {substance.id}
+						id={substance.id}
 						title={substance.name}
 						capitalize={capitalize}
 					>
-						{getSubstanceAdviceHTML(type, substance.id)}
+						{adviceContent}
 					</Accordion>
 				);
 			})}
