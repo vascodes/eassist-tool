@@ -5,10 +5,12 @@ import CardLayout from "../layouts/CardLayout";
 function AdviceContainer({
 	allPages,
 	handlePage,
-	moderateRiskSubstances,
-	referralRiskSubstances,
+	substanceRiskCategories,
 	getSubstanceAdviceHTML,
 }) {
+	const moderateRiskSubstances = substanceRiskCategories.moderate;
+	const referralRiskSubstances = substanceRiskCategories.referral;
+
 	function handleNextButtonClick() {
 		handlePage(allPages.scores);
 	}

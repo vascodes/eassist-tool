@@ -3,11 +3,13 @@ import CardLayout from "../layouts/CardLayout";
 
 function ScoresTable({
 	scores,
-	moderateRiskSubstances,
-	referralRiskSubstances,
+	substanceRiskCategories,
 	substanceRiskLevels,
 	getSubstanceDetails,
 }) {
+	const moderateRiskSubstances = substanceRiskCategories.moderate;
+	const referralRiskSubstances = substanceRiskCategories.referral;
+
 	const substances = Object.keys(scores);
 	const scoreTableHeadings = ["Substance", "Score", "Risk", "Criteria"];
 	return (

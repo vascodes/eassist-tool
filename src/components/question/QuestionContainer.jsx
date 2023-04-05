@@ -8,7 +8,7 @@ function QuestionContainer({
 	allPages,
 	questions,
 	handlePage,
-	handleScores,
+	handleScore,
 	allSubstances,
 	getSubstanceDetails,
 }) {
@@ -179,7 +179,7 @@ function QuestionContainer({
 			} else {
 				// Show scores after last question.
 				const substanceScores = getSubstanceScores();
-				handleScores(substanceScores);
+				handleScore(substanceScores);								
 			}
 		}
 	}

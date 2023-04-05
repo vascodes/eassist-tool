@@ -21,21 +21,22 @@ function App() {
 	});
 
 	const [content, setContent] = useState(null);
-	const [finalScores, setFinalScores] = useState(null);
-	const [moderateRiskSubstances, setModerateRiskSubstances] = useState([]);
-	const [referralRiskSubstances, setReferralRiskSubstances] = useState([]);
 	const [currentPage, setCurrentPage] = useState(allPages.loading);
+	const [score, setScore] = useState(null);
+	const [substanceRiskCategories, setSubstanceRiskCategories] = useState({
+		low: [],
+		moderate: [],
+		referral: [],
+	});
 
 	function handlePage(selectedPage) {
 		setCurrentPage(selectedPage);
 	}
 
-	function handleScores(scores) {
-		console.log(scores);
-		setFinalScores(scores);
-
-		const substancesWithModerateRisk = [];
-		const substancesWithHighRisk = [];
+	function categorizeSubstancesBasedOnScore(scores) {
+		const substancesWithLowRisk = [],
+			substancesWithModerateRisk = [],
+			substancesWithHighRisk = [];
 
 		for (let substanceId in scores) {
 			const substance = getSubstanceDetails(substanceId);
@@ -43,18 +44,32 @@ function App() {
 			let substanceScore = scores[substanceId];
 			const substanceRisk = content?.substanceRiskLevels[substanceId];
 
-			const { min: moderateMin, max: moderateMax } = substanceRisk.moderate;
-			const { min: highMin } = substanceRisk.high;
+			const lowMax = substanceRisk.lower.max;
+			const moderateMax = substanceRisk.moderate.max;
 
-			if (substanceScore >= moderateMin && substanceScore <= moderateMax) {
+			if (substanceScore <= lowMax) {
+				substancesWithLowRisk.push(substance);
+			} else if (substanceScore <= moderateMax) {
 				substancesWithModerateRisk.push(substance);
-			} else if (substanceScore >= highMin) {
+			} else {
 				substancesWithHighRisk.push(substance);
 			}
 		}
 
-		setModerateRiskSubstances(substancesWithModerateRisk);
-		setReferralRiskSubstances(substancesWithHighRisk);
+		const riskCategories = {
+			low: substancesWithLowRisk,
+			moderate: substancesWithModerateRisk,
+			referral: substancesWithHighRisk,
+		};
+
+		setSubstanceRiskCategories(riskCategories);
+	}
+
+	function handleScore(scores) {
+		console.log(scores);
+		setScore(scores);
+
+		categorizeSubstancesBasedOnScore(scores);
 
 		if (scores) handlePage(allPages.advice);
 	}
@@ -103,7 +118,7 @@ function App() {
 					handlePage={handlePage}
 					questions={content?.questions}
 					allSubstances={content?.substances}
-					handleScores={handleScores}
+					handleScore={handleScore}
 					getSubstanceDetails={getSubstanceDetails}
 				/>
 			)}
@@ -113,8 +128,7 @@ function App() {
 				<AdviceContainer
 					allPages={allPages}
 					handlePage={handlePage}
-					moderateRiskSubstances={moderateRiskSubstances}
-					referralRiskSubstances={referralRiskSubstances}
+					substanceRiskCategories={substanceRiskCategories}
 					getSubstanceAdviceHTML={getSubstanceAdviceHTML}
 				/>
 			)}
@@ -122,9 +136,8 @@ function App() {
 			{/* Scores Page. */}
 			{currentPage === allPages.scores && (
 				<ScoresTable
-					scores={finalScores}
-					moderateRiskSubstances={moderateRiskSubstances}
-					referralRiskSubstances={referralRiskSubstances}
+					scores={score}
+					substanceRiskCategories={substanceRiskCategories}
 					substanceRiskLevels={content?.substanceRiskLevels}
 					getSubstanceDetails={getSubstanceDetails}
 				/>
