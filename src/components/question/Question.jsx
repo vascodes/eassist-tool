@@ -1,4 +1,4 @@
-import OptionCard from "./OptionCard";
+import OptionGroup from "./OptionGroup";
 
 function Question({
 	questionId,
@@ -7,7 +7,7 @@ function Question({
 	substances,
 	selectedOptions,
 	handleChange,
-	getSubstanceDetails,
+	getSubstanceDetailsById,
 }) {
 	// console.count("Question");
 
@@ -32,11 +32,11 @@ function Question({
 
 			<ol className="list-group list-group-flush">
 				{substances?.map(substance => (
-					<OptionCard
+					<OptionGroup
 						key={substance.id}
 						questionId={questionId}
 						substance={substance}
-						substanceDetails={getSubstanceDetails(substance.id)}
+						substanceDetails={getSubstanceDetailsById(substance.id)}
 						selectedOptions={selectedOptions}
 						handleChange={handleChange}
 					/>

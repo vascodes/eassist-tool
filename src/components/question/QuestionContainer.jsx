@@ -1,16 +1,16 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 import Question from "./Question";
 import PageButton from "../ui/PageButton";
 import CardLayout from "../layouts/CardLayout";
 
-function QuestionCard({
+function QuestionContainer({
 	allPages,
 	questions,
 	setPage,
 	handleScore,
 	allSubstances,
-	getSubstanceDetails,
+	getSubstanceDetailsById,
 }) {
 	console.count("Question Container.");
 	/* 	
@@ -23,7 +23,7 @@ function QuestionCard({
 	const [substancesUsedInPast3Months, setSubstancesUsedInPast3Months] = useState(new Set()); // Ids of Substances selected in Q2.
 	const [showRequiredMessage, setShowRequiredMessage] = useState(false);
 	const [questionHistory, setQuestionHistory] = useState([question.id]);
-
+		
 	const totalQuestions = questions.length;
 
 	function handleChange({ target }) {
@@ -241,7 +241,7 @@ function QuestionCard({
 				question={question}
 				totalQuestions={totalQuestions}
 				substances={getSubstances(question.id)}
-				getSubstanceDetails={getSubstanceDetails}
+				getSubstanceDetailsById={getSubstanceDetailsById}
 				selectedOptions={selectedOptions}
 				handleChange={handleChange}
 			/>
@@ -280,4 +280,4 @@ function QuestionCard({
 	);
 }
 
-export default QuestionCard;
+export default QuestionContainer;

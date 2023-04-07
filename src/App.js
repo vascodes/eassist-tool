@@ -4,7 +4,7 @@ import { data } from "./data";
 import Layout from "./components/layouts/Layout";
 import Home from "./components/home/Home";
 import UserDetails from "./components/user-details/UserDetails";
-import QuestionCard from "./components/question/QuestionCard";
+import QuestionContainer from "./components/question/QuestionContainer";
 import AdviceContainer from "./components/advice/AdviceContainer";
 import ScoresTable from "./components/score/ScoresTable";
 import ThankYou from "./components/thank-you/ThankYou";
@@ -35,7 +35,7 @@ function App() {
 			substancesWithHighRisk = [];
 
 		for (let substanceId in scores) {
-			const substance = getSubstanceDetails(substanceId);
+			const substance = getSubstanceDetailsById(substanceId);
 
 			let substanceScore = scores[substanceId];
 			const substanceRisk = content?.substanceRiskLevels[substanceId];
@@ -68,7 +68,7 @@ function App() {
 		setPage(allPages.advice);
 	}
 
-	function getSubstanceDetails(substanceId) {
+	function getSubstanceDetailsById(substanceId) {
 		return content?.substances.find(substance => substance.id === substanceId);
 	}
 
@@ -107,13 +107,13 @@ function App() {
 
 			{/* Questions Page. */}
 			{page === allPages.questions && (
-				<QuestionCard
+				<QuestionContainer
 					allPages={allPages}
 					setPage={setPage}
 					questions={content?.questions}
 					allSubstances={content?.substances}
 					handleScore={handleScore}
-					getSubstanceDetails={getSubstanceDetails}
+					getSubstanceDetailsById={getSubstanceDetailsById}
 				/>
 			)}
 
@@ -133,7 +133,7 @@ function App() {
 					scores={score}
 					substanceRiskCategories={substanceRiskCategories}
 					substanceRiskLevels={content?.substanceRiskLevels}
-					getSubstanceDetails={getSubstanceDetails}
+					getSubstanceDetails={getSubstanceDetailsById}
 				/>
 			)}
 

@@ -1,6 +1,6 @@
 import Option from "./Option";
 
-function OptionCard({ questionId, substance, substanceDetails, selectedOptions, handleChange }) {		
+function OptionGroup({ questionId, substance, substanceDetails, selectedOptions, handleChange }) {		
 	let substanceName = substanceDetails?.name,
 		substanceExamples = substanceDetails?.examples && `(${substanceDetails.examples}, etc.)`;
 
@@ -33,4 +33,4 @@ function OptionCard({ questionId, substance, substanceDetails, selectedOptions, 
 	);
 }
 
-export default OptionCard;
+export default OptionGroup;
