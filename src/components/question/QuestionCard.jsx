@@ -4,7 +4,7 @@ import Question from "./Question";
 import PageButton from "../ui/PageButton";
 import CardLayout from "../layouts/CardLayout";
 
-function QuestionContainer({
+function QuestionCard({
 	allPages,
 	questions,
 	setPage,
@@ -12,6 +12,7 @@ function QuestionContainer({
 	allSubstances,
 	getSubstanceDetails,
 }) {
+	console.count("Question Container.");
 	/* 	
 		Separate state is used for question and substances as substances displayed
 		for a question may vary based on the answers selected in previous questions.
@@ -279,4 +280,4 @@ function QuestionContainer({
 	);
 }
 
-export default QuestionContainer;
+export default QuestionCard;

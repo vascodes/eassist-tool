@@ -4,7 +4,7 @@ import { data } from "./data";
 import Layout from "./components/layouts/Layout";
 import Home from "./components/home/Home";
 import UserDetails from "./components/user-details/UserDetails";
-import QuestionContainer from "./components/question/QuestionContainer";
+import QuestionCard from "./components/question/QuestionCard";
 import AdviceContainer from "./components/advice/AdviceContainer";
 import ScoresTable from "./components/score/ScoresTable";
 import ThankYou from "./components/thank-you/ThankYou";
@@ -64,10 +64,8 @@ function App() {
 	function handleScore(scores) {
 		console.log(scores);
 		setScore(scores);
-
 		categorizeSubstancesBasedOnScore(scores);
-
-		if (scores) setPage(allPages.advice);
+		setPage(allPages.advice);
 	}
 
 	function getSubstanceDetails(substanceId) {
@@ -109,7 +107,7 @@ function App() {
 
 			{/* Questions Page. */}
 			{page === allPages.questions && (
-				<QuestionContainer
+				<QuestionCard
 					allPages={allPages}
 					setPage={setPage}
 					questions={content?.questions}

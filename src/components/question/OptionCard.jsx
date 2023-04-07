@@ -1,6 +1,6 @@
 import Option from "./Option";
 
-function OptionContainer({ questionId, substance, substanceDetails, selectedOptions, handleChange }) {		
+function OptionCard({ questionId, substance, substanceDetails, selectedOptions, handleChange }) {		
 	let substanceName = substanceDetails?.name,
 		substanceExamples = substanceDetails?.examples && `(${substanceDetails.examples}, etc.)`;
 
@@ -33,4 +33,4 @@ function OptionContainer({ questionId, substance, substanceDetails, selectedOpti
 	);
 }
 
-export default OptionContainer;
+export default OptionCard;

@@ -2,7 +2,7 @@ import PageButton from "../ui/PageButton";
 import CardLayout from "../layouts/CardLayout";
 
 // TODO: Save Input data
-function UserDetails({ allPages, setPage }) {
+function UserDetails({ allPages, setPage }) {		
 	return (
 		<CardLayout>
 			<ol className="list-group list-group-flush">

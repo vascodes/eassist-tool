@@ -1,6 +1,16 @@
-import OptionContainer from "./OptionContainer";
+import OptionCard from "./OptionCard";
 
-function Question({ questionId, question, totalQuestions, substances, selectedOptions, handleChange, getSubstanceDetails }) {			
+function Question({
+	questionId,
+	question,
+	totalQuestions,
+	substances,
+	selectedOptions,
+	handleChange,
+	getSubstanceDetails,
+}) {
+	// console.count("Question");
+
 	const progressBarWidth = Math.floor((questionId / totalQuestions) * 100);
 	return (
 		<div className="question-block">
@@ -15,18 +25,18 @@ function Question({ questionId, question, totalQuestions, substances, selectedOp
 					aria-valuenow={progressBarWidth}
 					aria-valuemin="0"
 					aria-valuemax="100"
-				>					
+				>
 					{`${progressBarWidth}%`}
 				</div>
 			</div>
 
 			<ol className="list-group list-group-flush">
 				{substances?.map(substance => (
-					<OptionContainer
+					<OptionCard
 						key={substance.id}
-						questionId={questionId}						
+						questionId={questionId}
 						substance={substance}
-						substanceDetails = {getSubstanceDetails(substance.id)}
+						substanceDetails={getSubstanceDetails(substance.id)}
 						selectedOptions={selectedOptions}
 						handleChange={handleChange}
 					/>
