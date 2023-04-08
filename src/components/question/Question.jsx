@@ -1,20 +1,19 @@
 import OptionGroup from "./OptionGroup";
 
 function Question({
-	questionId,
-	question,
+	question,	
+	allSubstances,	
+	setAllSelectedOptionsRef,
 	totalQuestions,
-	substances,
-	selectedOptions,
-	handleChange,
-	getSubstanceDetailsById,
+	handleChange
 }) {
 	// console.count("Question");
 
-	const progressBarWidth = Math.floor((questionId / totalQuestions) * 100);
+	const progressBarWidth = Math.floor((question.id / totalQuestions) * 100);
+
 	return (
 		<div className="question-block">
-			<p className="d-flex question-text">{`${questionId}. ${question.text}`}</p>
+			<p className="d-flex question-text">{`${question.id}. ${question.text}`}</p>
 
 			{/* Progress Bar */}
 			<div className="progress mb-4">
@@ -31,14 +30,13 @@ function Question({
 			</div>
 
 			<ol className="list-group list-group-flush">
-				{substances?.map(substance => (
-					<OptionGroup
+				{question.substances?.map(substance => (
+					<OptionGroup												
 						key={substance.id}
-						questionId={questionId}
-						substance={substance}
-						substanceDetails={getSubstanceDetailsById(substance.id)}
-						selectedOptions={selectedOptions}
-						handleChange={handleChange}
+						questionId = {question.id}
+						category={substance}
+						allSubstances = {allSubstances}						
+						setAllSelectedOptionsRef = {setAllSelectedOptionsRef}
 					/>
 				))}
 			</ol>

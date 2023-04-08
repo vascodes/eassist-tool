@@ -4,27 +4,35 @@ import Question from "./Question";
 import PageButton from "../ui/PageButton";
 import CardLayout from "../layouts/CardLayout";
 
-function QuestionContainer({
-	allPages,
-	questions,
-	setPage,
-	handleScore,
-	allSubstances,
-	getSubstanceDetailsById,
-}) {
+function QuestionContainer(props) {
+	let { allPages, setPage, allQuestions, allSubstances, handleScore, getSubstanceDetailsById } =
+		props;
+
 	console.count("Question Container.");
 	/* 	
 		Separate state is used for question and substances as substances displayed
 		for a question may vary based on the answers selected in previous questions.
 	*/
-	const [question, setQuestion] = useState(questions[0]);
+	const [currentQuestion, setQuestion] = useState(allQuestions[0]);
 	const [selectedOptions, setSelectedOptions] = useState({});
 	const [substancesUsed, setSubstancesUsed] = useState(new Set()); // Ids of substances selected in Q1.
 	const [substancesUsedInPast3Months, setSubstancesUsedInPast3Months] = useState(new Set()); // Ids of Substances selected in Q2.
 	const [showRequiredMessage, setShowRequiredMessage] = useState(false);
-	const [questionHistory, setQuestionHistory] = useState([question.id]);
-		
-	const totalQuestions = questions.length;
+	const [questionHistory, setQuestionHistory] = useState([currentQuestion.id]);
+
+	const allSelectedOptionsRef = useRef({});
+
+	function setAllSelectedOptionsRef(questionId, categoryId, option) {
+		// Initialize allSelectedOptionsRef if it is an empty object.
+		if (Object.keys(allSelectedOptionsRef.current).length === 0) {
+			let categoryOption = { [categoryId]: null };
+			allSelectedOptionsRef.current = { [questionId]: categoryOption };
+		}
+		allSelectedOptionsRef.current[questionId][categoryId] = option;
+		console.log(allSelectedOptionsRef);
+	}
+
+	const totalQuestions = allQuestions.length;
 
 	function handleChange({ target }) {
 		let substanceId = target.name,
@@ -34,14 +42,14 @@ function QuestionContainer({
 		setSelectedOptions(prev => {
 			let newSelectedOptions = { ...prev };
 
-			// Update score and selected option for current question.
-			newSelectedOptions[question.id] ??= {};
-			newSelectedOptions[question.id][substanceId] ??= { text: "", score: 0 };
-			newSelectedOptions[question.id][substanceId].text = optionText;
-			newSelectedOptions[question.id][substanceId].score = optionScore;
+			// Update score and selected option for current currentQuestion.
+			newSelectedOptions[currentQuestion.id] ??= {};
+			newSelectedOptions[currentQuestion.id][substanceId] ??= { text: "", score: 0 };
+			newSelectedOptions[currentQuestion.id][substanceId].text = optionText;
+			newSelectedOptions[currentQuestion.id][substanceId].score = optionScore;
 
 			// Add substance to substancesUsed if selected option of that substance is "Yes" in Question 1.
-			if (question.id === 1) {
+			if (currentQuestion.id === 1) {
 				if (optionText.toLowerCase() === "yes") {
 					setSubstancesUsed(
 						prevSubstancesUsed => new Set([...prevSubstancesUsed, substanceId]),
@@ -55,8 +63,8 @@ function QuestionContainer({
 			}
 
 			// Add substance to substancesUsedInPast3Months if,
-			// selected option of that substance is NOT "Never" in question 2.
-			if (question.id === 2) {
+			// selected option of that substance is NOT "Never" in currentQuestion 2.
+			if (currentQuestion.id === 2) {
 				if (optionText.toLowerCase() !== "never") {
 					setSubstancesUsedInPast3Months(
 						prevSubstances => new Set([...prevSubstances, substanceId]),
@@ -70,28 +78,27 @@ function QuestionContainer({
 			}
 
 			return newSelectedOptions;
-		});		
+		});
 	}
 
 	function getSubstances(questionId) {
-		// Return all substances for question 1 and question 8, if exists.
+		// Return all substances for currentQuestion 1 and currentQuestion 8, if exists.
 		if (questionId === 1 || questionId === 8) {
-			return question?.substances;
+			return currentQuestion?.substances;
 		} else {
-			// For other questions, only return substances selected in Question 1.
-			let filteredSubstances = question.substances?.filter(substance =>
+			// For other allQuestions, only return substances selected in Question 1.
+			let filteredSubstances = currentQuestion.substances?.filter(substance =>
 				substancesUsed.has(substance.id),
 			);
 
-			// For questions 3, 4 and 5, return substances that,
-			// were not answered as "Never" in question 2.
+			// For allQuestions 3, 4 and 5, return substances that,
+			// were not answered as "Never" in currentQuestion 2.
 			if (questionId >= 3 && questionId <= 5) {
 				filteredSubstances = filteredSubstances.filter(substance =>
 					substancesUsedInPast3Months.has(substance.id),
 				);
 			}
 
-			
 			return filteredSubstances;
 		}
 	}
@@ -110,33 +117,33 @@ function QuestionContainer({
 		setQuestionHistory(newQuestionHistory);
 	}
 
-	// Change to previous question if nextQuestionId is null else change to next question.
+	// Change to previous currentQuestion if nextQuestionId is null else change to next currentQuestion.
 	function changeQuestionById(nextQuestionId = null) {
 		if (!nextQuestionId) {
 			popQuestionHistory();
 		} else {
 			pushQuestionHistory(nextQuestionId);
 		}
-		
+
 		const previousQuestionId = questionHistory.at(-1);
 		let index = previousQuestionId - 1;
-		setQuestion(questions[index]);
+		setQuestion(allQuestions[index]);
 	}
 
 	function handleNextButtonClick() {
 		//TODO: Fix bug where required message is shown when one of the substance that was selected is removed and quiz is retaken.
 		setShowRequiredMessage(false); // reset required message.
 
-		// Show required message if NO options of current question are selected.
-		if (!selectedOptions[question.id]) {
+		// Show required message if NO options of current currentQuestion are selected.
+		if (!selectedOptions[currentQuestion.id]) {
 			setShowRequiredMessage(true);
 			return;
 		} else {
-			let currentQuestionId = question.id;
+			let currentQuestionId = currentQuestion.id;
 			const currentSubstances = getSubstances(currentQuestionId);
-			let totalSelectedOptions = Object.keys(selectedOptions[question.id]).length ?? 0;
+			let totalSelectedOptions = Object.keys(selectedOptions[currentQuestion.id]).length ?? 0;
 
-			// If all options are answered as "No" in question 1 then,
+			// If all options are answered as "No" in currentQuestion 1 then,
 			// show Thank You page.
 			if (currentQuestionId === 1) {
 				if (totalSelectedOptions > 0 && substancesUsed.size === 0) {
@@ -145,7 +152,7 @@ function QuestionContainer({
 				}
 			}
 
-			// Show required message if only SOME options of current question are selected.
+			// Show required message if only SOME options of current currentQuestion are selected.
 			if (totalSelectedOptions < currentSubstances.length) {
 				setShowRequiredMessage(true);
 				return;
@@ -176,11 +183,11 @@ function QuestionContainer({
 			}
 
 			if (currentQuestionId !== totalQuestions) {
-				changeQuestionById(question.id + 1);
+				changeQuestionById(currentQuestion.id + 1);
 			} else {
-				// Show scores after last question.
+				// Show scores after last currentQuestion.
 				const substanceScores = getSubstanceScores();
-				handleScore(substanceScores);								
+				handleScore(substanceScores);
 			}
 		}
 	}
@@ -188,7 +195,7 @@ function QuestionContainer({
 	function handlePrevButtonClick() {
 		setShowRequiredMessage(false); // Reset required message.
 
-		if (question.id !== 1) changeQuestionById();
+		if (currentQuestion.id !== 1) changeQuestionById();
 	}
 
 	function getSubstanceScores() {
@@ -205,15 +212,15 @@ function QuestionContainer({
 			if (questionId === 1 || questionId === 8) {
 				continue;
 			}
-			
+
 			/*				
-				Ignore options of questions in selectedOptions that are not in questionHistory.
-				This ensures that only the selected options of visted questions
+				Ignore options of allQuestions in selectedOptions that are not in questionHistory.
+				This ensures that only the selected options of visted allQuestions
 				are considered when calculating the substance's score.
 				
-				Example: User might choose options of question 4, 5 but later change 
-				the answers of previous questions such that question 4 and 5 is skipped. 
-				In this case, answers of question 4, 5 should not be considered,
+				Example: User might choose options of currentQuestion 4, 5 but later change 
+				the answers of previous allQuestions such that currentQuestion 4 and 5 is skipped. 
+				In this case, answers of currentQuestion 4, 5 should not be considered,
 				when calculating the score.
 			*/
 			if (!questionHistory.includes(Number(questionId))) {
@@ -236,23 +243,20 @@ function QuestionContainer({
 	return (
 		<CardLayout>
 			<Question
-				key={question?.id}
-				questionId={question?.id}
-				question={question}
+				key={currentQuestion?.id}
+				question={currentQuestion}
+				allSubstances={allSubstances}				
+				setAllSelectedOptionsRef={setAllSelectedOptionsRef}
 				totalQuestions={totalQuestions}
-				substances={getSubstances(question.id)}
-				getSubstanceDetailsById={getSubstanceDetailsById}
-				selectedOptions={selectedOptions}
-				handleChange={handleChange}
 			/>
 
-			<div className="question-navigation">
+			<div className="currentQuestion-navigation">
 				{showRequiredMessage && (
 					<div
 						className="alert alert-danger mt-4"
 						role="alert"
 					>
-						Please complete all questions on the page to continue.
+						Please complete all allQuestions on the page to continue.
 					</div>
 				)}
 
@@ -267,7 +271,7 @@ function QuestionContainer({
 
 				{/* Previous Button */}
 				<div className="text-center mt-4 mx-5 d-grid gap-2 d-md-block row d-flex">
-					{question?.number !== 1 && (
+					{currentQuestion?.number !== 1 && (
 						<PageButton
 							buttonText={"< Changed my mind"}
 							buttonClass="btn btn-outline-success"

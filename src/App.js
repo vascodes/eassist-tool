@@ -85,7 +85,7 @@ function App() {
 	// Change from loading page once data is fetched.
 	useEffect(() => {
 		if (content && page === allPages.loading) {
-			setPage(allPages.userDetails);
+			setPage(allPages.questions);
 		}
 	}, [allPages, content, page]);
 
@@ -110,7 +110,7 @@ function App() {
 				<QuestionContainer
 					allPages={allPages}
 					setPage={setPage}
-					questions={content?.questions}
+					allQuestions={content?.questions}
 					allSubstances={content?.substances}
 					handleScore={handleScore}
 					getSubstanceDetailsById={getSubstanceDetailsById}
