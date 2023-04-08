@@ -107,6 +107,35 @@ function QuestionContainer(props) {
 
 		return true;
 	}
+	
+	function setSubstancesUsedByQuestionId(questionId) {
+		const selectedSubstances = [];
+
+		if (questionId === 1) {
+			// Add substance to substancesUsedInLifetime if selected option of that substance is "Yes" in Question 1.
+			for (let substanceId in allSelectedOptions[questionId]) {
+				const selectedOptionOfSubstance = allSelectedOptions[questionId][substanceId];
+
+				if (selectedOptionOfSubstance.text.toLowerCase() === "yes") {
+					selectedSubstances.push(substanceId);
+				}
+			}
+
+			setSubstancesUsed({ substancesUsedInLifetime: selectedSubstances });
+		} else if (questionId === 2) {
+			// Add substance to substancesUsedInPast3Months if,
+			// selected option of that substance is NOT "Never" in currentQuestion 2.
+			for (let substanceId in allSelectedOptions[questionId]) {
+				const selectedOptionOfSubstance = allSelectedOptions[questionId][substanceId];
+
+				if (selectedOptionOfSubstance.text.toLowerCase() !== "never") {
+					selectedSubstances.push(substanceId);
+				}
+			}
+
+			setSubstancesUsed({ substancesUsedInPast3Months: selectedSubstances });
+		}
+	}
 
 	function handleNextButtonClick() {
 		//TODO: Fix bug where required message is shown when one of the substance that was selected is removed and quiz is retaken.
@@ -117,43 +146,14 @@ function QuestionContainer(props) {
 			questionId: currentQuestion.id,
 			selectedOptions: allSelectedOptions[currentQuestion.id],
 		});
+
 		if (!isValidSelection) {
 			setShowRequiredMessage(true);
 			return;
 		}
 
-		// Add substance to substancesUsedInLifetime if selected option of that substance is "Yes" in Question 1.
-		if (currentQuestion.id === 1) {
-			const selectedSubstances = [];
-
-			for (let substanceId in allSelectedOptions[currentQuestion.id]) {
-				const selectedOptionOfSubstance =
-					allSelectedOptions[currentQuestion.id][substanceId];
-
-				if (selectedOptionOfSubstance.text.toLowerCase() === "yes") {
-					selectedSubstances.push(substanceId);
-				}
-			}
-
-			setSubstancesUsed({ substancesUsedInLifetime: selectedSubstances });
-		}
-
-		// Add substance to substancesUsedInPast3Months if,
-		// selected option of that substance is NOT "Never" in currentQuestion 2.
-		if (currentQuestion.id === 2) {
-			const selectedSubstances = [];
-
-			for (let substanceId in allSelectedOptions[currentQuestion.id]) {
-				const selectedOptionOfSubstance =
-					allSelectedOptions[currentQuestion.id][substanceId];
-
-				if (selectedOptionOfSubstance.text.toLowerCase() !== "never") {
-					selectedSubstances.push(substanceId);
-				}
-			}
-
-			setSubstancesUsed({ substancesUsedInPast3Months: selectedSubstances });
-		}
+		if (currentQuestion.id === 1 || currentQuestion.id === 2)
+			setSubstancesUsedByQuestionId(currentQuestion.id);
 
 		const { lifetime: substancesUsedInLifetime, past3Months: substancesUsedInPast3Months } =
 			getSubstancesUsed();
