@@ -20,7 +20,7 @@ function QuestionContainer(props) {
 
 	// lifetime: Ids of substances selected in Q1, past3Months: Ids of Substances selected in Q2.
 	const substancesUsedRef = useRef({ lifetime: new Set(), past3Months: new Set() });
-	
+
 	function getSubstancesUsed() {
 		return substancesUsedRef.current;
 	}
@@ -38,7 +38,7 @@ function QuestionContainer(props) {
 	}
 
 	const totalQuestions = allQuestions.length;
-	
+
 	function getSubstances(questionId) {
 		const { lifetime: substancesUsedInLifetime, past3Months: substancesUsedInPast3Months } =
 			getSubstancesUsed();
@@ -91,22 +91,33 @@ function QuestionContainer(props) {
 		setQuestion(allQuestions[index]);
 	}
 
+	function validateSelectedOptionsOfAQuestion({ questionId, selectedOptions }) {
+		// None of the options of a question are selected.
+		if (!selectedOptions) {
+			return false;
+		}
+
+		const allSubstancesOfQuestion = getSubstances(questionId);
+		let countOfSelectedSubstancesOfQuestion = Object.keys(selectedOptions).length ?? 0;
+
+		// Only some options of question are selected.
+		if (countOfSelectedSubstancesOfQuestion < allSubstancesOfQuestion.length) {
+			return false;
+		}
+
+		return true;
+	}
+
 	function handleNextButtonClick() {
 		//TODO: Fix bug where required message is shown when one of the substance that was selected is removed and quiz is retaken.
 
-		// setShowRequiredMessage(false); // reset required message.
+		setShowRequiredMessage(false); // reset required message.
 
-		// Show required message if NO options of current currentQuestion are selected.
-		if (!allSelectedOptions[currentQuestion.id]) {
-			setShowRequiredMessage(true);
-			return;
-		}
-
-		const currentSubstances = getSubstances(currentQuestion.id);
-		let totalSelectedOptions = Object.keys(allSelectedOptions[currentQuestion.id]).length ?? 0;
-
-		// Show required message if only SOME options of current currentQuestion are selected.
-		if (totalSelectedOptions < currentSubstances.length) {
+		const isValidSelection = validateSelectedOptionsOfAQuestion({
+			questionId: currentQuestion.id,
+			selectedOptions: allSelectedOptions[currentQuestion.id],
+		});
+		if (!isValidSelection) {
 			setShowRequiredMessage(true);
 			return;
 		}
@@ -147,13 +158,10 @@ function QuestionContainer(props) {
 		const { lifetime: substancesUsedInLifetime, past3Months: substancesUsedInPast3Months } =
 			getSubstancesUsed();
 
-		// If all options are answered as "No" in currentQuestion 1 then,
-		// show Thank You page.
-		if (currentQuestion.id === 1) {
-			if (totalSelectedOptions > 0 && substancesUsedInLifetime.size === 0) {
-				setPage(allPages.thankYou);
-				return;
-			}
+		// Show Thank You page if all options are answered as "No" in question 1.
+		if (substancesUsedInLifetime.size === 0) {
+			setPage(allPages.thankYou);
+			return;
 		}
 
 		/* 
