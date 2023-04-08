@@ -3,7 +3,8 @@ import OptionGroup from "./OptionGroup";
 function Question({
 	question,	
 	allSubstances,	
-	setAllSelectedOptionsRef,
+	substancesToDisplay,
+	setAllSelectedOptions,
 	totalQuestions,
 	handleChange
 }) {
@@ -30,13 +31,13 @@ function Question({
 			</div>
 
 			<ol className="list-group list-group-flush">
-				{question.substances?.map(substance => (
+				{substancesToDisplay?.map(substance => (
 					<OptionGroup												
 						key={substance.id}
 						questionId = {question.id}
 						category={substance}
 						allSubstances = {allSubstances}						
-						setAllSelectedOptionsRef = {setAllSelectedOptionsRef}
+						setAllSelectedOptions = {setAllSelectedOptions}
 					/>
 				))}
 			</ol>

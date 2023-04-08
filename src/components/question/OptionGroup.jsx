@@ -6,7 +6,7 @@ function OptionGroup({
 	questionId,
 	category,
 	allSubstances,	
-	setAllSelectedOptionsRef,
+	setAllSelectedOptions,
 }) {
 	let substanceDetails = allSubstances.find(s => s.id === category.id);
 
@@ -14,7 +14,7 @@ function OptionGroup({
 		substanceExamples = substanceDetails?.examples && `(${substanceDetails.examples}, etc.)`;
 
 	function handleChange(e, option, category) {		
-		setAllSelectedOptionsRef(questionId, category.id, option);
+		setAllSelectedOptions(questionId, category.id, option);
 	}
 
 	return (
