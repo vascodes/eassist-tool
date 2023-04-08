@@ -1,12 +1,13 @@
 import OptionGroup from "./OptionGroup";
 
 function Question({
-	question,	
-	allSubstances,	
+	question,
+	allSubstances,
 	substancesToDisplay,
+	allSelectedOptions,
 	setAllSelectedOptions,
 	totalQuestions,
-	handleChange
+	handleChange,
 }) {
 	// console.count("Question");
 
@@ -32,12 +33,13 @@ function Question({
 
 			<ol className="list-group list-group-flush">
 				{substancesToDisplay?.map(substance => (
-					<OptionGroup												
+					<OptionGroup
 						key={substance.id}
-						questionId = {question.id}
+						questionId={question.id}
 						category={substance}
-						allSubstances = {allSubstances}						
-						setAllSelectedOptions = {setAllSelectedOptions}
+						allSubstances={allSubstances}
+						allSelectedOptions={allSelectedOptions}
+						setAllSelectedOptions={setAllSelectedOptions}
 					/>
 				))}
 			</ol>

@@ -14,33 +14,13 @@ function QuestionContainer(props) {
 		for a question may vary based on the answers selected in previous questions.
 	*/
 	const [currentQuestion, setQuestion] = useState(allQuestions[0]);
+	const [allSelectedOptions, setAllSelectedOptions] = useState({});
 	const [showRequiredMessage, setShowRequiredMessage] = useState(false);
 	const [questionHistory, setQuestionHistory] = useState([currentQuestion.id]);
-		
+
 	// lifetime: Ids of substances selected in Q1, past3Months: Ids of Substances selected in Q2.
 	const substancesUsedRef = useRef({ lifetime: new Set(), past3Months: new Set() });
-	const allSelectedOptionsRef = useRef({});
-
-	function getAllSelectedOptions() {
-		return allSelectedOptionsRef.current;
-	}
-
-	function setAllSelectedOptions(questionId, categoryId, option) {
-		const currentValue = getAllSelectedOptions();
-
-		// Initialize allSelectedOptionsRef if it is an empty object.
-		if (Object.keys(currentValue).length === 0) {
-			let categoryOption = { [categoryId]: null };
-			allSelectedOptionsRef.current = { [questionId]: categoryOption };
-		}
-
-		// Initialize question in allSelectedOptionsRef if it is not set.
-		currentValue[questionId] ||= { [categoryId]: null };
-
-		allSelectedOptionsRef.current[questionId][categoryId] = option;
-		console.log(allSelectedOptionsRef);
-	}
-
+	
 	function getSubstancesUsed() {
 		return substancesUsedRef.current;
 	}
@@ -58,54 +38,7 @@ function QuestionContainer(props) {
 	}
 
 	const totalQuestions = allQuestions.length;
-
-	// function handleChange({ target }) {
-	// 	let substanceId = target.name,
-	// 		optionScore = target.value,
-	// 		optionText = target.dataset.optionText;
-
-	// 	setSelectedOptions(prev => {
-	// 		let newSelectedOptions = { ...prev };
-
-	// 		// Update score and selected option for current currentQuestion.
-	// 		newSelectedOptions[currentQuestion.id] ??= {};
-	// 		newSelectedOptions[currentQuestion.id][substanceId] ??= { text: "", score: 0 };
-	// 		newSelectedOptions[currentQuestion.id][substanceId].text = optionText;
-	// 		newSelectedOptions[currentQuestion.id][substanceId].score = optionScore;
-
-	// 		// Add substance to substancesUsedInLifetime if selected option of that substance is "Yes" in Question 1.
-	// 		if (currentQuestion.id === 1) {
-	// 			if (optionText.toLowerCase() === "yes") {
-	// 				setSubstancesUsedInLifetime(
-	// 					prevSubstancesUsed => new Set([...prevSubstancesUsed, substanceId]),
-	// 				);
-	// 			} else {
-	// 				// Deselect a substance.
-	// 				const newSubstancesUsed = substancesUsedInLifetime;
-	// 				newSubstancesUsed.delete(substanceId);
-	// 				setSubstancesUsedInLifetime(newSubstancesUsed);
-	// 			}
-	// 		}
-
-	// 		// Add substance to substancesUsedInPast3Months if,
-	// 		// selected option of that substance is NOT "Never" in currentQuestion 2.
-	// 		if (currentQuestion.id === 2) {
-	// 			if (optionText.toLowerCase() !== "never") {
-	// 				setSubstancesUsedInPast3Months(
-	// 					prevSubstances => new Set([...prevSubstances, substanceId]),
-	// 				);
-	// 			} else {
-	// 				// Remove substance from substancesUsedInPast3Months.
-	// 				const selectedSet = substancesUsedInPast3Months;
-	// 				selectedSet.delete(substanceId);
-	// 				setSubstancesUsedInPast3Months(selectedSet);
-	// 			}
-	// 		}
-
-	// 		return newSelectedOptions;
-	// 	});
-	// }
-
+	
 	function getSubstances(questionId) {
 		const { lifetime: substancesUsedInLifetime, past3Months: substancesUsedInPast3Months } =
 			getSubstancesUsed();
@@ -162,8 +95,6 @@ function QuestionContainer(props) {
 		//TODO: Fix bug where required message is shown when one of the substance that was selected is removed and quiz is retaken.
 
 		// setShowRequiredMessage(false); // reset required message.
-
-		const allSelectedOptions = getAllSelectedOptions();
 
 		// Show required message if NO options of current currentQuestion are selected.
 		if (!allSelectedOptions[currentQuestion.id]) {
@@ -265,7 +196,6 @@ function QuestionContainer(props) {
 	}
 
 	function getSubstanceScores() {
-		const allSelectedOptions = getAllSelectedOptions();
 		const substanceScores = {};
 
 		// Initialize scores for all substances as 0.
@@ -314,6 +244,7 @@ function QuestionContainer(props) {
 				question={currentQuestion}
 				allSubstances={allSubstances}
 				substancesToDisplay={getSubstances(currentQuestion.id)}
+				allSelectedOptions={allSelectedOptions}
 				setAllSelectedOptions={setAllSelectedOptions}
 				totalQuestions={totalQuestions}
 			/>

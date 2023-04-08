@@ -5,16 +5,38 @@ function replaceSpecialCharsInString(str, replaceStr = "") {
 function OptionGroup({
 	questionId,
 	category,
-	allSubstances,	
+	allSubstances,
+	allSelectedOptions,
 	setAllSelectedOptions,
 }) {
-	let substanceDetails = allSubstances.find(s => s.id === category.id);
+	let substanceDetails = allSubstances.find(substance => substance.id === category.id);
 
 	let substanceName = substanceDetails?.name,
 		substanceExamples = substanceDetails?.examples && `(${substanceDetails.examples}, etc.)`;
 
-	function handleChange(e, option, category) {		
-		setAllSelectedOptions(questionId, category.id, option);
+	function getIsOptionChecked(substanceId, selectedOptionId) {
+		let isChecked = false;
+
+		const selectedQuestion = allSelectedOptions[questionId];
+		const selectedQuestionOption = selectedQuestion ? selectedQuestion[substanceId] : null;
+
+		if (selectedQuestion && selectedQuestionOption) {
+			isChecked = selectedQuestionOption.id === selectedOptionId;
+		}
+
+		return isChecked;
+	}
+
+	function handleChange(category, option) {
+		setAllSelectedOptions(prev => {
+			let newSelectedOptions = { ...prev };
+
+			// Update score and selected option for current question.
+			newSelectedOptions[questionId] ??= { [category.id]: null };
+			newSelectedOptions[questionId][category.id] = option;
+
+			return newSelectedOptions;
+		});
 	}
 
 	return (
@@ -53,7 +75,8 @@ function OptionGroup({
 									name={category.id}
 									id={radioButtonId}
 									value={option.id}
-									onChange={e => handleChange(e, option, category)}
+									checked={getIsOptionChecked(category.id, option.id)}
+									onChange={() => handleChange(category, option)}
 									data-option-text={optionText}
 									required
 								/>
