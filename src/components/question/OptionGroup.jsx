@@ -9,16 +9,22 @@ function OptionGroup({
 	allSelectedAnswers,
 	setAllSelectedAnswers,
 }) {
-	let substanceDetails = allSubstances.find(substance => substance.id === category.id);
+	let substanceDetails = allSubstances.find(
+		substance => substance.id === category.id,
+	);
 
 	let substanceName = substanceDetails?.name,
-		substanceExamples = substanceDetails?.examples && `(${substanceDetails.examples}, etc.)`;
+		substanceExamples =
+			substanceDetails?.examples &&
+			`(${substanceDetails.examples}, etc.)`;
 
 	function getIsOptionChecked(substanceId, selectedOptionId) {
 		let isChecked = false;
 
 		const selectedQuestion = allSelectedAnswers[questionId];
-		const selectedQuestionOption = selectedQuestion ? selectedQuestion[substanceId] : null;
+		const selectedQuestionOption = selectedQuestion
+			? selectedQuestion[substanceId]
+			: null;
 
 		if (selectedQuestion && selectedQuestionOption) {
 			isChecked = selectedQuestionOption.id === selectedOptionId;
@@ -56,7 +62,10 @@ function OptionGroup({
 							"-",
 						);
 						let radioButtonId = `radio-${category.id}-${optionTextWithHyphens}`; // ex: radio-cannabis-no
-						radioButtonId = replaceSpecialCharsInString(radioButtonId, "-"); // Remove multiple hyphens.
+						radioButtonId = replaceSpecialCharsInString(
+							radioButtonId,
+							"-",
+						); // Remove multiple hyphens.
 
 						return (
 							<div
@@ -75,8 +84,13 @@ function OptionGroup({
 									name={category.id}
 									id={radioButtonId}
 									value={option.id}
-									checked={getIsOptionChecked(category.id, option.id)}
-									onChange={() => handleChange(category, option)}
+									checked={getIsOptionChecked(
+										category.id,
+										option.id,
+									)}
+									onChange={() =>
+										handleChange(category, option)
+									}
 									data-option-text={optionText}
 									required
 								/>

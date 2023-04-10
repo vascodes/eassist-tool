@@ -6,15 +6,14 @@ import CardLayout from "../layouts/CardLayout";
 
 function validateSelectedOptions(substancesOfQuestion, selectedOptions) {
 	// Check if none of the options of a question are selected.
-	if (!selectedOptions) {
-		return false;
-	}
+	if (!selectedOptions) return false;
 
 	// Check if only some options of question are selected.
-	let numSelectedSubstancesOfQuestion = Object.keys(selectedOptions).length ?? 0;
-	if (numSelectedSubstancesOfQuestion < substancesOfQuestion.length) {
+	let numSelectedSubstancesOfQuestion =
+		Object.keys(selectedOptions).length ?? 0;
+
+	if (numSelectedSubstancesOfQuestion < substancesOfQuestion.length)
 		return false;
-	}
 
 	return true;
 }
@@ -23,7 +22,8 @@ function filterSelectedSubstances(selectedAnswersOfQuestion, compareFunction) {
 	const filteredSubstances = [];
 
 	for (let substanceId in selectedAnswersOfQuestion) {
-		const selectedOptionOfSubstance = selectedAnswersOfQuestion[substanceId];
+		const selectedOptionOfSubstance =
+			selectedAnswersOfQuestion[substanceId];
 
 		if (compareFunction(selectedOptionOfSubstance.text.toLowerCase())) {
 			filteredSubstances.push(substanceId);
@@ -41,22 +41,31 @@ function QuestionContainer(props) {
 	const [currentQuestion, setQuestion] = useState(allQuestions[0]);
 	const [allSelectedAnswers, setAllSelectedAnswers] = useState({});
 	const [showRequiredMessage, setShowRequiredMessage] = useState(false);
-	const [questionHistory, setQuestionHistory] = useState([currentQuestion.id]);
+	const [questionHistory, setQuestionHistory] = useState([
+		currentQuestion.id,
+	]);
 
-	// lifetime: Ids of substances selected in Q1, past3Months: Ids of Substances selected in Q2.
-	const substancesUsedRef = useRef({ lifetime: new Set(), past3Months: new Set() });
+	const substancesUsedRef = useRef({
+		lifetime: new Set(), // Ids of substances selected in Q1,
+		past3Months: new Set(), // Ids of Substances selected in Q2.
+	});
 
-	function getSubstancesUsed() {
-		return substancesUsedRef.current;
-	}
+	const getSubstancesUsed = () => substancesUsedRef.current;
 
-	function setSubstancesUsed({ substancesUsedInLifetime, substancesUsedInPast3Months }) {
+	function setSubstancesUsed({
+		substancesUsedInLifetime,
+		substancesUsedInPast3Months,
+	}) {
 		if (substancesUsedInLifetime) {
-			substancesUsedRef.current.lifetime = new Set(substancesUsedInLifetime);
+			substancesUsedRef.current.lifetime = new Set(
+				substancesUsedInLifetime,
+			);
 		}
 
 		if (substancesUsedInPast3Months) {
-			substancesUsedRef.current.past3Months = new Set(substancesUsedInPast3Months);
+			substancesUsedRef.current.past3Months = new Set(
+				substancesUsedInPast3Months,
+			);
 		}
 
 		console.log(substancesUsedRef);
@@ -65,16 +74,18 @@ function QuestionContainer(props) {
 	const totalQuestions = allQuestions.length;
 
 	function getSubstances(questionId) {
-		const { lifetime: substancesUsedInLifetime, past3Months: substancesUsedInPast3Months } =
-			getSubstancesUsed();
+		const {
+			lifetime: substancesUsedInLifetime,
+			past3Months: substancesUsedInPast3Months,
+		} = getSubstancesUsed();
 
 		// Return all substances for currentQuestion 1 and currentQuestion 8, if exists.
 		if (questionId === 1 || questionId === 8) {
 			return currentQuestion?.substances;
 		} else {
 			// For other allQuestions, only return substances selected in Question 1.
-			let filteredSubstances = currentQuestion.substances?.filter(substance =>
-				substancesUsedInLifetime.has(substance.id),
+			let filteredSubstances = currentQuestion.substances?.filter(
+				substance => substancesUsedInLifetime.has(substance.id),
 			);
 
 			// For allQuestions 3, 4 and 5, return substances that,
@@ -142,7 +153,9 @@ function QuestionContainer(props) {
 				selectedOption => selectedOption === "yes",
 			);
 
-			setSubstancesUsed({ substancesUsedInLifetime: substancesUsedInLifetime });
+			setSubstancesUsed({
+				substancesUsedInLifetime: substancesUsedInLifetime,
+			});
 		}
 
 		/*
@@ -155,11 +168,15 @@ function QuestionContainer(props) {
 				selectedOption => selectedOption !== "never",
 			);
 
-			setSubstancesUsed({ substancesUsedInPast3Months: substancesUsedInPast3Months });
+			setSubstancesUsed({
+				substancesUsedInPast3Months: substancesUsedInPast3Months,
+			});
 		}
 
-		const { lifetime: substancesUsedInLifetime, past3Months: substancesUsedInPast3Months } =
-			getSubstancesUsed();
+		const {
+			lifetime: substancesUsedInLifetime,
+			past3Months: substancesUsedInPast3Months,
+		} = getSubstancesUsed();
 
 		// Show Thank You page if all options are answered as "No" in question 1.
 		if (substancesUsedInLifetime.size === 0) {
@@ -170,9 +187,12 @@ function QuestionContainer(props) {
 		/* 
 			If "never" is selected for all options in Question 2
 			(ie: no substances were used in past 3 months) then, 
-			Question 6 should be shown.
+			show Question 6.
 		*/
-		if (currentQuestion.id === 2 && substancesUsedInPast3Months.size === 0) {
+		if (
+			currentQuestion.id === 2 &&
+			substancesUsedInPast3Months.size === 0
+		) {
 			changeQuestionById(6);
 			return;
 		}
@@ -180,7 +200,8 @@ function QuestionContainer(props) {
 		/*
 			If only tobacco is NOT selected as "Never" in Q2 
 			(ie: if only tobacco is used in past 3 months) then,
-			skip to Question 6 after Question 4 as tobacco is not displayed in Question 5.				
+			skip to Question 6 after Question 4.
+			This is because tobacco should not be displayed in Question 5.
 		*/
 		if (
 			currentQuestion.id === 4 &&
@@ -191,10 +212,11 @@ function QuestionContainer(props) {
 			return;
 		}
 
+		// Change to next question.
 		if (currentQuestion.id !== totalQuestions) {
 			changeQuestionById(currentQuestion.id + 1);
 		} else {
-			// Show scores after last currentQuestion.
+			// Show scores after last question.
 			const substanceScores = getSubstanceScores();
 			handleScore(substanceScores);
 		}
@@ -216,20 +238,21 @@ function QuestionContainer(props) {
 
 		// Compute total score of each substance.
 		for (let questionId in allSelectedAnswers) {
-			// Answers of Question 1, Question 8 should not be considered for calculating scores.
+			// Answers of Question 1, Question 8 should not be considered.
 			if (questionId === 1 || questionId === 8) {
 				continue;
 			}
 
 			/*				
-				Ignore options of allQuestions in allSelectedAnswers that are not in questionHistory.
-				This ensures that only the selected options of visted allQuestions
+				Ignore options of questions in allSelectedAnswers that are not in questionHistory.
+				This ensures that only the selected options of visted questions
 				are considered when calculating the substance's score.
 				
-				Example: User might choose options of currentQuestion 4, 5 but later change 
-				the answers of previous allQuestions such that currentQuestion 4 and 5 is skipped. 
-				In this case, answers of currentQuestion 4, 5 should not be considered,
-				when calculating the score.
+				Example: 
+				User might choose options of question 4, 5 but later change 
+				the answers of previous question such that question 4 and 5 is skipped. 
+				In this case, answers of question 4, 5
+				should not be considered when calculating the score.
 			*/
 			if (!questionHistory.includes(Number(questionId))) {
 				continue;

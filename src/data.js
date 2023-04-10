@@ -1128,7 +1128,7 @@ export const data = {
 		{
 			"id": 5,
 			"text": "During the past three months, how often have you failed to do what was normally expected of you because of your use of (first drug, second drug, etc)?",
-			"substances": [				
+			"substances": [
 				{
 					"id": "alcohol",
 					"options": [
