@@ -1,7 +1,8 @@
 import { useRef, useState } from "react";
 
 import Question from "./Question";
-import PageButton from "../ui/PageButton";
+import AlertBox from "../ui/AlertBox";
+import PageNavigation from "../ui/PageNavigation";
 import CardLayout from "../layouts/CardLayout";
 
 function validateSelectedOptions(substancesOfQuestion, selectedOptions) {
@@ -295,36 +296,18 @@ function QuestionContainer(props) {
 				totalQuestions={totalQuestions}
 			/>
 
-			<div className="question-navigation">
-				{showRequiredMessage && (
-					<div
-						className="alert alert-danger mt-4"
-						role="alert"
-					>
-						Please complete all questions on the page to continue.
-					</div>
-				)}
+			{showRequiredMessage && (
+				<AlertBox type="danger">
+					Please complete all questions on the page to continue.
+				</AlertBox>
+			)}
 
-				{/* Next Button */}
-				<div className="text-center mt-4 mx-5 d-grid gap-2 d-md-block row d-flex">
-					<PageButton
-						buttonText={"Next >"}
-						buttonClass="btn btn-success"
-						handlePageButtonClick={handleNextButtonClick}
-					/>
-				</div>
-
-				{/* Previous Button */}
-				<div className="text-center mt-4 mx-5 d-grid gap-2 d-md-block row d-flex">
-					{currentQuestion?.number !== 1 && (
-						<PageButton
-							buttonText={"< Changed my mind"}
-							buttonClass="btn btn-outline-success"
-							handlePageButtonClick={handlePrevButtonClick}
-						/>
-					)}
-				</div>
-			</div>
+			<PageNavigation
+				showNextButton
+				showPreviousButton={currentQuestion.id !== 1}
+				handleNextButtonClick={handleNextButtonClick}
+				handlePrevButtonClick={handlePrevButtonClick}
+			/>
 		</CardLayout>
 	);
 }
