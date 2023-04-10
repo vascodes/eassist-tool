@@ -91,7 +91,7 @@ function QuestionContainer(props) {
 		setQuestion(allQuestions[index]);
 	}
 
-	function validateSelectedOptionsOfAQuestion({ questionId, selectedOptions }) {
+	function getIsValidSelectedOptions({ questionId, selectedOptions }) {
 		// None of the options of a question are selected.
 		if (!selectedOptions) {
 			return false;
@@ -108,33 +108,37 @@ function QuestionContainer(props) {
 		return true;
 	}
 	
-	function setSubstancesUsedByQuestionId(questionId) {
+	function getSubstancesUsedInLifetime(selectedOptions) {
 		const selectedSubstances = [];
+		const questionId = 1;
 
-		if (questionId === 1) {
-			// Add substance to substancesUsedInLifetime if selected option of that substance is "Yes" in Question 1.
-			for (let substanceId in allSelectedOptions[questionId]) {
-				const selectedOptionOfSubstance = allSelectedOptions[questionId][substanceId];
+		// Add substance to selectedSubstances if selected option of that substance is "Yes" in Question 1.
+		for (let substanceId in selectedOptions[questionId]) {
+			const selectedOptionOfSubstance = selectedOptions[questionId][substanceId];
 
-				if (selectedOptionOfSubstance.text.toLowerCase() === "yes") {
-					selectedSubstances.push(substanceId);
-				}
+			if (selectedOptionOfSubstance.text.toLowerCase() === "yes") {
+				selectedSubstances.push(substanceId);
 			}
-
-			setSubstancesUsed({ substancesUsedInLifetime: selectedSubstances });
-		} else if (questionId === 2) {
-			// Add substance to substancesUsedInPast3Months if,
-			// selected option of that substance is NOT "Never" in currentQuestion 2.
-			for (let substanceId in allSelectedOptions[questionId]) {
-				const selectedOptionOfSubstance = allSelectedOptions[questionId][substanceId];
-
-				if (selectedOptionOfSubstance.text.toLowerCase() !== "never") {
-					selectedSubstances.push(substanceId);
-				}
-			}
-
-			setSubstancesUsed({ substancesUsedInPast3Months: selectedSubstances });
 		}
+
+		return selectedSubstances;
+	}
+
+	function getSubstancesUsedInPast3Months(selectedOptions) {
+		const selectedSubstances = [];
+		const questionId = 2;
+
+		// Add substance to substancesUsedInPast3Months if,
+		// selected option of that substance is NOT "Never" in currentQuestion 2.
+		for (let substanceId in selectedOptions[questionId]) {
+			const selectedOptionOfSubstance = selectedOptions[questionId][substanceId];
+
+			if (selectedOptionOfSubstance.text.toLowerCase() !== "never") {
+				selectedSubstances.push(substanceId);
+			}
+		}
+
+		return selectedSubstances;
 	}
 
 	function handleNextButtonClick() {
@@ -142,18 +146,25 @@ function QuestionContainer(props) {
 
 		setShowRequiredMessage(false); // reset required message.
 
-		const isValidSelection = validateSelectedOptionsOfAQuestion({
+		const isValidSelectedOptions = getIsValidSelectedOptions({
 			questionId: currentQuestion.id,
 			selectedOptions: allSelectedOptions[currentQuestion.id],
 		});
 
-		if (!isValidSelection) {
+		if (!isValidSelectedOptions) {
 			setShowRequiredMessage(true);
 			return;
 		}
+		
+		if (currentQuestion.id === 1) {
+			const substancesUsedInLifetime = getSubstancesUsedInLifetime(allSelectedOptions);
+			setSubstancesUsed({ substancesUsedInLifetime: substancesUsedInLifetime });
+		}
 
-		if (currentQuestion.id === 1 || currentQuestion.id === 2)
-			setSubstancesUsedByQuestionId(currentQuestion.id);
+		if (currentQuestion.id === 2) {
+			const substancesUsedInPast3Months = getSubstancesUsedInPast3Months(allSelectedOptions);
+			setSubstancesUsed({ substancesUsedInPast3Months: substancesUsedInPast3Months });
+		}
 
 		const { lifetime: substancesUsedInLifetime, past3Months: substancesUsedInPast3Months } =
 			getSubstancesUsed();
