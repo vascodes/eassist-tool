@@ -114,6 +114,36 @@ function QuestionContainer(props) {
 		setQuestionHistory(newQuestionHistory);
 	}
 
+	function setSubstancesUsedInLifetime() {
+		/*
+			If selected option of a substance is "Yes" in Question 1, 
+			then it is a substance used in liftime.
+		*/
+		const substancesUsedInLifetime = filterSelectedSubstances(
+			allSelectedAnswers[currentQuestion.id],
+			selectedOption => selectedOption === "yes",
+		);
+
+		setSubstancesUsed({
+			substancesUsedInLifetime: substancesUsedInLifetime,
+		});
+	}
+
+	function setSubstancesUsedInPast3Months() {
+		/*
+			If selected option of a substance is not "Never" in Question 2, 
+			then it is a substance used in past 3 months.
+		*/
+		const substancesUsedInPast3Months = filterSelectedSubstances(
+			allSelectedAnswers[currentQuestion.id],
+			selectedOption => selectedOption !== "never",
+		);
+
+		setSubstancesUsed({
+			substancesUsedInPast3Months: substancesUsedInPast3Months,
+		});
+	}
+
 	// Change to previous currentQuestion if nextQuestionId is null else change to next currentQuestion.
 	function changeQuestionById(nextQuestionId = null) {
 		if (!nextQuestionId) {
@@ -125,6 +155,40 @@ function QuestionContainer(props) {
 		const previousQuestionId = questionHistory.at(-1);
 		let index = previousQuestionId - 1;
 		setQuestion(allQuestions[index]);
+	}
+
+	function getNextQuestionId(currentQuestionId) {
+		const { past3Months: substancesUsedInPast3Months } =
+			getSubstancesUsed();
+
+		/* 
+			If "never" is selected for all options in Question 2
+			(ie: no substances were used in past 3 months) then, 
+			show Question 6.
+		*/
+		if (currentQuestionId === 2 && substancesUsedInPast3Months.size === 0) {
+			return 6;
+		}
+
+		/*
+			If only tobacco is NOT selected as "Never" in Q2 
+			(ie: if only tobacco is used in past 3 months) then,
+			skip to Question 6 after Question 4.
+			This is because tobacco should not be displayed in Question 5.
+		*/
+		if (
+			currentQuestionId === 4 &&
+			substancesUsedInPast3Months.size === 1 &&
+			substancesUsedInPast3Months.has("tobacco")
+		) {
+			return 6;
+		}
+
+		if (currentQuestionId !== totalQuestions) {
+			return currentQuestionId + 1;
+		}
+
+		return null;
 	}
 
 	function handleNextButtonClick() {
@@ -143,78 +207,26 @@ function QuestionContainer(props) {
 			return;
 		}
 
-		/*
-			If selected option of a substance is "Yes" in Question 1, 
-			then it is a substance used in liftime.
-		*/
 		if (currentQuestion.id === 1) {
-			const substancesUsedInLifetime = filterSelectedSubstances(
-				allSelectedAnswers[currentQuestion.id],
-				selectedOption => selectedOption === "yes",
-			);
-
-			setSubstancesUsed({
-				substancesUsedInLifetime: substancesUsedInLifetime,
-			});
+			setSubstancesUsedInLifetime();
 		}
 
-		/*
-			If selected option of a substance is not "Never" in Question 2, 
-			then it is a substance used in past 3 months.
-		*/
 		if (currentQuestion.id === 2) {
-			const substancesUsedInPast3Months = filterSelectedSubstances(
-				allSelectedAnswers[currentQuestion.id],
-				selectedOption => selectedOption !== "never",
-			);
-
-			setSubstancesUsed({
-				substancesUsedInPast3Months: substancesUsedInPast3Months,
-			});
+			setSubstancesUsedInPast3Months();
 		}
 
-		const {
-			lifetime: substancesUsedInLifetime,
-			past3Months: substancesUsedInPast3Months,
-		} = getSubstancesUsed();
+		const { lifetime: substancesUsedInLifetime } = getSubstancesUsed();
 
 		// Show Thank You page if all options are answered as "No" in question 1.
-		if (substancesUsedInLifetime.size === 0) {
+		const isShowThankYouPage = substancesUsedInLifetime.size === 0;
+		if (isShowThankYouPage) {
 			setPage(allPages.thankYou);
 			return;
 		}
 
-		/* 
-			If "never" is selected for all options in Question 2
-			(ie: no substances were used in past 3 months) then, 
-			show Question 6.
-		*/
-		if (
-			currentQuestion.id === 2 &&
-			substancesUsedInPast3Months.size === 0
-		) {
-			changeQuestionById(6);
-			return;
-		}
-
-		/*
-			If only tobacco is NOT selected as "Never" in Q2 
-			(ie: if only tobacco is used in past 3 months) then,
-			skip to Question 6 after Question 4.
-			This is because tobacco should not be displayed in Question 5.
-		*/
-		if (
-			currentQuestion.id === 4 &&
-			substancesUsedInPast3Months.size === 1 &&
-			substancesUsedInPast3Months.has("tobacco")
-		) {
-			changeQuestionById(6);
-			return;
-		}
-
-		// Change to next question.
-		if (currentQuestion.id !== totalQuestions) {
-			changeQuestionById(currentQuestion.id + 1);
+		const nextQuestionId = getNextQuestionId(currentQuestion.id);
+		if (nextQuestionId) {
+			changeQuestionById(nextQuestionId);
 		} else {
 			// Show scores after last question.
 			const substanceScores = getSubstanceScores();
