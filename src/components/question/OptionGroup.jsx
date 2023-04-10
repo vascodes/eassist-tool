@@ -6,8 +6,8 @@ function OptionGroup({
 	questionId,
 	category,
 	allSubstances,
-	allSelectedOptions,
-	setAllSelectedOptions,
+	allSelectedAnswers,
+	setAllSelectedAnswers,
 }) {
 	let substanceDetails = allSubstances.find(substance => substance.id === category.id);
 
@@ -17,7 +17,7 @@ function OptionGroup({
 	function getIsOptionChecked(substanceId, selectedOptionId) {
 		let isChecked = false;
 
-		const selectedQuestion = allSelectedOptions[questionId];
+		const selectedQuestion = allSelectedAnswers[questionId];
 		const selectedQuestionOption = selectedQuestion ? selectedQuestion[substanceId] : null;
 
 		if (selectedQuestion && selectedQuestionOption) {
@@ -28,7 +28,7 @@ function OptionGroup({
 	}
 
 	function handleChange(category, option) {
-		setAllSelectedOptions(prev => {
+		setAllSelectedAnswers(prev => {
 			let newSelectedOptions = { ...prev };
 
 			// Update score and selected option for current question.

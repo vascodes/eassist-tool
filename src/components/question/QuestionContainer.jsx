@@ -1,20 +1,30 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 
 import Question from "./Question";
 import PageButton from "../ui/PageButton";
 import CardLayout from "../layouts/CardLayout";
 
+function filterSelectedSubstances(selectedAnswersOfQuestion, compareFunction) {
+	const filteredSubstances = [];
+
+	for (let substanceId in selectedAnswersOfQuestion) {
+		const selectedOptionOfSubstance = selectedAnswersOfQuestion[substanceId];
+
+		if (compareFunction(selectedOptionOfSubstance.text.toLowerCase())) {
+			filteredSubstances.push(substanceId);
+		}
+	}
+
+	return filteredSubstances;
+}
+
 function QuestionContainer(props) {
-	let { allPages, setPage, allQuestions, allSubstances, handleScore, getSubstanceDetailsById } =
-		props;
+	let { allPages, setPage, allQuestions, allSubstances, handleScore } = props;
 
 	console.count("Question Container.");
-	/* 	
-		Separate state is used for question and substances as substances displayed
-		for a question may vary based on the answers selected in previous questions.
-	*/
+
 	const [currentQuestion, setQuestion] = useState(allQuestions[0]);
-	const [allSelectedOptions, setAllSelectedOptions] = useState({});
+	const [allSelectedAnswers, setAllSelectedAnswers] = useState({});
 	const [showRequiredMessage, setShowRequiredMessage] = useState(false);
 	const [questionHistory, setQuestionHistory] = useState([currentQuestion.id]);
 
@@ -107,62 +117,46 @@ function QuestionContainer(props) {
 
 		return true;
 	}
-	
-	function getSubstancesUsedInLifetime(selectedOptions) {
-		const selectedSubstances = [];
-		const questionId = 1;
-
-		// Add substance to selectedSubstances if selected option of that substance is "Yes" in Question 1.
-		for (let substanceId in selectedOptions[questionId]) {
-			const selectedOptionOfSubstance = selectedOptions[questionId][substanceId];
-
-			if (selectedOptionOfSubstance.text.toLowerCase() === "yes") {
-				selectedSubstances.push(substanceId);
-			}
-		}
-
-		return selectedSubstances;
-	}
-
-	function getSubstancesUsedInPast3Months(selectedOptions) {
-		const selectedSubstances = [];
-		const questionId = 2;
-
-		// Add substance to substancesUsedInPast3Months if,
-		// selected option of that substance is NOT "Never" in currentQuestion 2.
-		for (let substanceId in selectedOptions[questionId]) {
-			const selectedOptionOfSubstance = selectedOptions[questionId][substanceId];
-
-			if (selectedOptionOfSubstance.text.toLowerCase() !== "never") {
-				selectedSubstances.push(substanceId);
-			}
-		}
-
-		return selectedSubstances;
-	}
 
 	function handleNextButtonClick() {
 		//TODO: Fix bug where required message is shown when one of the substance that was selected is removed and quiz is retaken.
 
 		setShowRequiredMessage(false); // reset required message.
 
+		// Validate selected options of a question.
 		const isValidSelectedOptions = getIsValidSelectedOptions({
 			questionId: currentQuestion.id,
-			selectedOptions: allSelectedOptions[currentQuestion.id],
+			selectedOptions: allSelectedAnswers[currentQuestion.id],
 		});
 
 		if (!isValidSelectedOptions) {
 			setShowRequiredMessage(true);
 			return;
 		}
-		
+
+		/*
+			If selected option of a substance is "Yes" in Question 1, 
+			then it is a substance used in liftime.
+		*/
 		if (currentQuestion.id === 1) {
-			const substancesUsedInLifetime = getSubstancesUsedInLifetime(allSelectedOptions);
+			const substancesUsedInLifetime = filterSelectedSubstances(
+				allSelectedAnswers[currentQuestion.id],
+				selectedOption => selectedOption === "yes",
+			);
+
 			setSubstancesUsed({ substancesUsedInLifetime: substancesUsedInLifetime });
 		}
 
+		/*
+			If selected option of a substance is not "Never" in Question 2, 
+			then it is a substance used in past 3 months.
+		*/
 		if (currentQuestion.id === 2) {
-			const substancesUsedInPast3Months = getSubstancesUsedInPast3Months(allSelectedOptions);
+			const substancesUsedInPast3Months = filterSelectedSubstances(
+				allSelectedAnswers[currentQuestion.id],
+				selectedOption => selectedOption !== "never",
+			);
+
 			setSubstancesUsed({ substancesUsedInPast3Months: substancesUsedInPast3Months });
 		}
 
@@ -223,14 +217,14 @@ function QuestionContainer(props) {
 		}
 
 		// Compute total score of each substance.
-		for (let questionId in allSelectedOptions) {
+		for (let questionId in allSelectedAnswers) {
 			// Answers of Question 1, Question 8 should not be considered for calculating scores.
 			if (questionId === 1 || questionId === 8) {
 				continue;
 			}
 
 			/*				
-				Ignore options of allQuestions in allSelectedOptions that are not in questionHistory.
+				Ignore options of allQuestions in allSelectedAnswers that are not in questionHistory.
 				This ensures that only the selected options of visted allQuestions
 				are considered when calculating the substance's score.
 				
@@ -243,7 +237,7 @@ function QuestionContainer(props) {
 				continue;
 			}
 
-			const selectedSubstances = allSelectedOptions[questionId];
+			const selectedSubstances = allSelectedAnswers[questionId];
 			for (let substanceId in selectedSubstances) {
 				let substance = selectedSubstances[substanceId];
 
@@ -263,8 +257,8 @@ function QuestionContainer(props) {
 				question={currentQuestion}
 				allSubstances={allSubstances}
 				substancesToDisplay={getSubstances(currentQuestion.id)}
-				allSelectedOptions={allSelectedOptions}
-				setAllSelectedOptions={setAllSelectedOptions}
+				allSelectedAnswers={allSelectedAnswers}
+				setAllSelectedAnswers={setAllSelectedAnswers}
 				totalQuestions={totalQuestions}
 			/>
 

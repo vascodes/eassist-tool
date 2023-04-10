@@ -4,10 +4,9 @@ function Question({
 	question,
 	allSubstances,
 	substancesToDisplay,
-	allSelectedOptions,
-	setAllSelectedOptions,
+	allSelectedAnswers,
+	setAllSelectedAnswers,
 	totalQuestions,
-	handleChange,
 }) {
 	// console.count("Question");
 
@@ -38,8 +37,8 @@ function Question({
 						questionId={question.id}
 						category={substance}
 						allSubstances={allSubstances}
-						allSelectedOptions={allSelectedOptions}
-						setAllSelectedOptions={setAllSelectedOptions}
+						allSelectedAnswers={allSelectedAnswers}
+						setAllSelectedAnswers={setAllSelectedAnswers}
 					/>
 				))}
 			</ol>
