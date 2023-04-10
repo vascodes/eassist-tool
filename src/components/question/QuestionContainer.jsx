@@ -4,6 +4,21 @@ import Question from "./Question";
 import PageButton from "../ui/PageButton";
 import CardLayout from "../layouts/CardLayout";
 
+function validateSelectedOptions(substancesOfQuestion, selectedOptions) {
+	// Check if none of the options of a question are selected.
+	if (!selectedOptions) {
+		return false;
+	}
+
+	// Check if only some options of question are selected.
+	let numSelectedSubstancesOfQuestion = Object.keys(selectedOptions).length ?? 0;
+	if (numSelectedSubstancesOfQuestion < substancesOfQuestion.length) {
+		return false;
+	}
+
+	return true;
+}
+
 function filterSelectedSubstances(selectedAnswersOfQuestion, compareFunction) {
 	const filteredSubstances = [];
 
@@ -101,33 +116,16 @@ function QuestionContainer(props) {
 		setQuestion(allQuestions[index]);
 	}
 
-	function getIsValidSelectedOptions({ questionId, selectedOptions }) {
-		// None of the options of a question are selected.
-		if (!selectedOptions) {
-			return false;
-		}
-
-		const allSubstancesOfQuestion = getSubstances(questionId);
-		let countOfSelectedSubstancesOfQuestion = Object.keys(selectedOptions).length ?? 0;
-
-		// Only some options of question are selected.
-		if (countOfSelectedSubstancesOfQuestion < allSubstancesOfQuestion.length) {
-			return false;
-		}
-
-		return true;
-	}
-
 	function handleNextButtonClick() {
 		//TODO: Fix bug where required message is shown when one of the substance that was selected is removed and quiz is retaken.
 
 		setShowRequiredMessage(false); // reset required message.
 
 		// Validate selected options of a question.
-		const isValidSelectedOptions = getIsValidSelectedOptions({
-			questionId: currentQuestion.id,
-			selectedOptions: allSelectedAnswers[currentQuestion.id],
-		});
+		const isValidSelectedOptions = validateSelectedOptions(
+			getSubstances(currentQuestion.id),
+			allSelectedAnswers[currentQuestion.id],
+		);
 
 		if (!isValidSelectedOptions) {
 			setShowRequiredMessage(true);
