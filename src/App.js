@@ -135,7 +135,7 @@ function App() {
 	// Change from loading page once data is fetched.
 	useEffect(() => {
 		if (content && !page) {
-			setPage(allPages.userDetails);
+			setPage(allPages.home);
 		}
 	}, [allPages, content, page]);
 

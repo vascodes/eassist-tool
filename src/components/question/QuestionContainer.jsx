@@ -236,7 +236,11 @@ function QuestionContainer(props) {
 
 			<PageNavigation
 				showNextButton
-				nextButtonText="Submit Answers >"
+				nextButtonText={
+					currentQuestion.id === totalQuestions
+						? "Submit Answers >"
+						: "Next >"
+				}
 				showPreviousButton={currentQuestion.id !== 1}
 				handleNextButtonClick={handleNextButtonClick}
 				handlePreviousButtonClick={handlePrevButtonClick}
