@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { data } from "./data";
 
 import Layout from "./components/layouts/Layout";
@@ -9,9 +9,10 @@ import AdviceContainer from "./components/advice/AdviceContainer";
 import ScoresTable from "./components/score/ScoresTable";
 import ThankYou from "./components/thank-you/ThankYou";
 
+import { PageContext } from "./components/contexts/PageContext";
+
 function App() {
 	const allPages = Object.freeze({
-		loading: 0,
 		home: 1,
 		userDetails: 2,
 		questions: 3,
@@ -20,14 +21,57 @@ function App() {
 		scores: 6,
 	});
 
-	const [content, setContent] = useState(null);
-	const [page, setPage] = useState(allPages.loading);
-	const [score, setScore] = useState(null);
+	const [content, setContent] = useState(data);
+	const [page, setPage] = useState(useContext(PageContext));
+	const [scores, setScores] = useState(null);
 	const [substanceRiskCategories, setSubstanceRiskCategories] = useState({
 		low: [],
 		moderate: [],
 		referral: [],
 	});
+
+	function getSubstanceScores(allSelectedAnswers, answeredQuestions) {
+		const substanceScores = {};
+
+		// Initialize scores for all substances as 0.
+		for (let substance of content?.substances) {
+			substanceScores[substance.id] = 0;
+		}
+
+		// Compute total score of each substance.
+		for (let questionId in allSelectedAnswers) {
+			// Answers of Question 1, Question 8 should not be considered.
+			if (questionId === 1 || questionId === 8) {
+				continue;
+			}
+
+			/*				
+				Ignore options of questions in allSelectedAnswers that are not in answeredQuestions list.
+				This ensures that only the selected options of visted questions
+				are considered when calculating the substance's score.
+				
+				Example: 
+				User might choose options of question 4, 5 but later change 
+				the answers of previous question such that question 4 and 5 is skipped. 
+				In this case, answers of question 4, 5
+				should not be considered when calculating the score.
+			*/
+			if (!answeredQuestions.includes(Number(questionId))) {
+				continue;
+			}
+
+			const selectedSubstances = allSelectedAnswers[questionId];
+			for (let substanceId in selectedSubstances) {
+				let substance = selectedSubstances[substanceId];
+
+				// Update score of substance in substanceScores.
+				if (substanceId in substanceScores)
+					substanceScores[substanceId] += Number(substance.score);
+			}
+		}
+
+		return substanceScores;
+	}
 
 	function categorizeSubstancesBasedOnScore(scores) {
 		const substancesWithLowRisk = [],
@@ -61,15 +105,21 @@ function App() {
 		setSubstanceRiskCategories(riskCategories);
 	}
 
-	function handleScore(scores) {
-		console.log(scores);
-		setScore(scores);
+	function showScores(allSelectedAnswers, answeredQuestions) {
+		const scores = getSubstanceScores(
+			allSelectedAnswers,
+			answeredQuestions,
+		);
 		categorizeSubstancesBasedOnScore(scores);
+		console.log(scores);
+		setScores(scores);
 		setPage(allPages.advice);
 	}
 
 	function getSubstanceDetailsById(substanceId) {
-		return content?.substances.find(substance => substance.id === substanceId);
+		return content?.substances.find(
+			substance => substance.id === substanceId,
+		);
 	}
 
 	function getSubstanceAdviceHTML(type = "moderate", substanceId) {
@@ -80,64 +130,55 @@ function App() {
 		return adviceHTML;
 	}
 
-	useEffect(() => setContent(data), []); // Fetch data on app load.
-
 	// Change from loading page once data is fetched.
 	useEffect(() => {
-		if (content && page === allPages.loading) {
+		if (content && !page) {
 			setPage(allPages.userDetails);
 		}
 	}, [allPages, content, page]);
 
 	return (
 		<Layout>
-			{/* Loading Page. */}
-			{page === allPages.loading && <h1>Loading</h1>}
+			<PageContext.Provider value={{ allPages, setPage }}>
+				{/* Loading Page. */}
+				{!page && <h1>Loading</h1>}
 
-			{/* Home Page. */}
-			{page === allPages.home && <Home />}
+				{/* Home Page. */}
+				{page === allPages.home && <Home />}
 
-			{/* User Details Page. */}
-			{page === allPages.userDetails && (
-				<UserDetails
-					allPages={allPages}
-					setPage={setPage}
-				/>
-			)}
+				{/* User Details Page. */}
+				{page === allPages.userDetails && <UserDetails />}
 
-			{/* Questions Page. */}
-			{page === allPages.questions && (
-				<QuestionContainer
-					allPages={allPages}
-					setPage={setPage}
-					allQuestions={content?.questions}
-					allSubstances={content?.substances}
-					handleScore={handleScore}					
-				/>
-			)}
+				{/* Questions Page. */}
+				{page === allPages.questions && (
+					<QuestionContainer
+						allQuestions={content?.questions}
+						allSubstances={content?.substances}
+						showScores={showScores}
+					/>
+				)}
 
-			{/* Advice Page. */}
-			{page === allPages.advice && (
-				<AdviceContainer
-					allPages={allPages}
-					setPage={setPage}
-					substanceRiskCategories={substanceRiskCategories}
-					getSubstanceAdviceHTML={getSubstanceAdviceHTML}
-				/>
-			)}
+				{/* Advice Page. */}
+				{page === allPages.advice && (
+					<AdviceContainer
+						substanceRiskCategories={substanceRiskCategories}
+						getSubstanceAdviceHTML={getSubstanceAdviceHTML}
+					/>
+				)}
 
-			{/* Scores Page. */}
-			{page === allPages.scores && (
-				<ScoresTable
-					scores={score}
-					substanceRiskCategories={substanceRiskCategories}
-					substanceRiskLevels={content?.substanceRiskLevels}
-					getSubstanceDetails={getSubstanceDetailsById}
-				/>
-			)}
+				{/* Scores Page. */}
+				{page === allPages.scores && (
+					<ScoresTable
+						scores={scores}
+						substanceRiskCategories={substanceRiskCategories}
+						substanceRiskLevels={content?.substanceRiskLevels}
+						getSubstanceDetails={getSubstanceDetailsById}
+					/>
+				)}
 
-			{/* Thank You Page. */}
-			{page === allPages.thankYou && <ThankYou />}
+				{/* Thank You Page. */}
+				{page === allPages.thankYou && <ThankYou />}
+			</PageContext.Provider>
 		</Layout>
 	);
 }

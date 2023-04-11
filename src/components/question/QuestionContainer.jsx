@@ -5,37 +5,15 @@ import AlertBox from "../ui/AlertBox";
 import PageNavigation from "../ui/PageNavigation";
 import CardLayout from "../layouts/CardLayout";
 
-function validateSelectedOptions(substancesOfQuestion, selectedOptions) {
-	// Check if none of the options of a question are selected.
-	if (!selectedOptions) return false;
+import { useContext } from "react";
+import { PageContext } from "../contexts/PageContext";
 
-	// Check if only some options of question are selected.
-	let numSelectedSubstancesOfQuestion =
-		Object.keys(selectedOptions).length ?? 0;
-
-	if (numSelectedSubstancesOfQuestion < substancesOfQuestion.length)
-		return false;
-
-	return true;
-}
-
-function filterSelectedSubstances(selectedAnswersOfQuestion, compareFunction) {
-	const filteredSubstances = [];
-
-	for (let substanceId in selectedAnswersOfQuestion) {
-		const selectedOptionOfSubstance =
-			selectedAnswersOfQuestion[substanceId];
-
-		if (compareFunction(selectedOptionOfSubstance.text.toLowerCase())) {
-			filteredSubstances.push(substanceId);
-		}
-	}
-
-	return filteredSubstances;
-}
+import * as helper from "./helpers/helper";
 
 function QuestionContainer(props) {
-	let { allPages, setPage, allQuestions, allSubstances, handleScore } = props;
+	let { allQuestions, allSubstances, showScores } = props;
+	const { allPages, setPage } = useContext(PageContext);
+	const totalQuestions = allQuestions.length;
 
 	console.count("Question Container.");
 
@@ -72,25 +50,23 @@ function QuestionContainer(props) {
 		console.log(substancesUsedRef);
 	}
 
-	const totalQuestions = allQuestions.length;
-
-	function getSubstances(questionId) {
+	function getSubstancesToDisplay(questionId) {
 		const {
 			lifetime: substancesUsedInLifetime,
 			past3Months: substancesUsedInPast3Months,
 		} = getSubstancesUsed();
 
-		// Return all substances for currentQuestion 1 and currentQuestion 8, if exists.
+		// Return all substances of question 1 and question 8, if exists.
 		if (questionId === 1 || questionId === 8) {
 			return currentQuestion?.substances;
 		} else {
-			// For other allQuestions, only return substances selected in Question 1.
+			// For other questions, only return substances selected in Question 1.
 			let filteredSubstances = currentQuestion.substances?.filter(
 				substance => substancesUsedInLifetime.has(substance.id),
 			);
 
-			// For allQuestions 3, 4 and 5, return substances that,
-			// were not answered as "Never" in currentQuestion 2.
+			// For questions 3, 4 and 5, return substances that,
+			// were not answered as "Never" in questions 2.
 			if (questionId >= 3 && questionId <= 5) {
 				filteredSubstances = filteredSubstances.filter(substance =>
 					substancesUsedInPast3Months.has(substance.id),
@@ -120,7 +96,7 @@ function QuestionContainer(props) {
 			If selected option of a substance is "Yes" in Question 1, 
 			then it is a substance used in liftime.
 		*/
-		const substancesUsedInLifetime = filterSelectedSubstances(
+		const substancesUsedInLifetime = helper.filterSelectedSubstances(
 			allSelectedAnswers[currentQuestion.id],
 			selectedOption => selectedOption === "yes",
 		);
@@ -135,7 +111,7 @@ function QuestionContainer(props) {
 			If selected option of a substance is not "Never" in Question 2, 
 			then it is a substance used in past 3 months.
 		*/
-		const substancesUsedInPast3Months = filterSelectedSubstances(
+		const substancesUsedInPast3Months = helper.filterSelectedSubstances(
 			allSelectedAnswers[currentQuestion.id],
 			selectedOption => selectedOption !== "never",
 		);
@@ -145,7 +121,7 @@ function QuestionContainer(props) {
 		});
 	}
 
-	// Change to previous currentQuestion if nextQuestionId is null else change to next currentQuestion.
+	// Change to previous question if nextQuestionId is null else change to next question.
 	function changeQuestionById(nextQuestionId = null) {
 		if (!nextQuestionId) {
 			popQuestionHistory();
@@ -198,8 +174,8 @@ function QuestionContainer(props) {
 		setShowRequiredMessage(false); // reset required message.
 
 		// Validate selected options of a question.
-		const isValidSelectedOptions = validateSelectedOptions(
-			getSubstances(currentQuestion.id),
+		const isValidSelectedOptions = helper.validateSelectedOptions(
+			getSubstancesToDisplay(currentQuestion.id),
 			allSelectedAnswers[currentQuestion.id],
 		);
 
@@ -230,8 +206,7 @@ function QuestionContainer(props) {
 			changeQuestionById(nextQuestionId);
 		} else {
 			// Show scores after last question.
-			const substanceScores = getSubstanceScores();
-			handleScore(substanceScores);
+			showScores(allSelectedAnswers, questionHistory);
 		}
 	}
 
@@ -241,56 +216,13 @@ function QuestionContainer(props) {
 		if (currentQuestion.id !== 1) changeQuestionById();
 	}
 
-	function getSubstanceScores() {
-		const substanceScores = {};
-
-		// Initialize scores for all substances as 0.
-		for (let substance of allSubstances) {
-			substanceScores[substance.id] = 0;
-		}
-
-		// Compute total score of each substance.
-		for (let questionId in allSelectedAnswers) {
-			// Answers of Question 1, Question 8 should not be considered.
-			if (questionId === 1 || questionId === 8) {
-				continue;
-			}
-
-			/*				
-				Ignore options of questions in allSelectedAnswers that are not in questionHistory.
-				This ensures that only the selected options of visted questions
-				are considered when calculating the substance's score.
-				
-				Example: 
-				User might choose options of question 4, 5 but later change 
-				the answers of previous question such that question 4 and 5 is skipped. 
-				In this case, answers of question 4, 5
-				should not be considered when calculating the score.
-			*/
-			if (!questionHistory.includes(Number(questionId))) {
-				continue;
-			}
-
-			const selectedSubstances = allSelectedAnswers[questionId];
-			for (let substanceId in selectedSubstances) {
-				let substance = selectedSubstances[substanceId];
-
-				// Update score of substance in substanceScores.
-				if (substanceId in substanceScores)
-					substanceScores[substanceId] += Number(substance.score);
-			}
-		}
-
-		return substanceScores;
-	}
-
 	return (
 		<CardLayout>
 			<Question
 				key={currentQuestion?.id}
 				question={currentQuestion}
 				allSubstances={allSubstances}
-				substancesToDisplay={getSubstances(currentQuestion.id)}
+				substancesToDisplay={getSubstancesToDisplay(currentQuestion.id)}
 				allSelectedAnswers={allSelectedAnswers}
 				setAllSelectedAnswers={setAllSelectedAnswers}
 				totalQuestions={totalQuestions}

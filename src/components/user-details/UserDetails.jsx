@@ -1,8 +1,12 @@
 import PageButton from "../ui/PageButton";
 import CardLayout from "../layouts/CardLayout";
+import { useContext } from "react";
+import { PageContext } from "../contexts/PageContext";
 
 // TODO: Save Input data
-function UserDetails({ allPages, setPage }) {		
+function UserDetails() {		
+	const {allPages, setPage} = useContext(PageContext);
+	
 	return (
 		<CardLayout>
 			<ol className="list-group list-group-flush">

@@ -1,5 +1,9 @@
+import { useContext } from "react";
+import { PageContext } from "../contexts/PageContext";
+
 import ScoresTableRow from "./ScoresTableRow";
 import CardLayout from "../layouts/CardLayout";
+import PageNavigation from "../ui/PageNavigation";
 
 function ScoresTable({
 	scores,
@@ -7,6 +11,12 @@ function ScoresTable({
 	substanceRiskLevels,
 	getSubstanceDetails,
 }) {
+	const { allPages, setPage } = useContext(PageContext);
+
+	function handlePrevButtonClick() {
+		setPage(allPages.advice);
+	}
+
 	const moderateRiskSubstances = substanceRiskCategories.moderate;
 	const referralRiskSubstances = substanceRiskCategories.referral;
 
@@ -33,7 +43,8 @@ function ScoresTable({
 				<tbody>
 					{substances.map((substanceId, index) => {
 						// Alternate table row style.
-						let rowClassName = index % 2 === 0 ? null : "table-secondary";
+						let rowClassName =
+							index % 2 === 0 ? null : "table-secondary";
 
 						const substance = getSubstanceDetails(substanceId);
 						const substanceRisk = substanceRiskLevels[substanceId];
@@ -41,12 +52,14 @@ function ScoresTable({
 						let substanceRiskText = "";
 						let substanceRiskTextClassName = "text-danger";
 
-						let isModerateRiskSubstance = moderateRiskSubstances.find(
-							s => s.id === substanceId,
-						);
-						let isReferralRiskSubstance = referralRiskSubstances.find(
-							s => s.id === substanceId,
-						);
+						let isModerateRiskSubstance =
+							moderateRiskSubstances.find(
+								s => s.id === substanceId,
+							);
+						let isReferralRiskSubstance =
+							referralRiskSubstances.find(
+								s => s.id === substanceId,
+							);
 
 						if (isModerateRiskSubstance) {
 							substanceRiskText = substanceRisk.moderate.text;
@@ -73,6 +86,11 @@ function ScoresTable({
 					})}
 				</tbody>
 			</table>
+
+			<PageNavigation				
+				showPreviousButton				
+				handlePrevButtonClick={handlePrevButtonClick}
+			/>
 		</CardLayout>
 	);
 }

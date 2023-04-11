@@ -1,8 +1,8 @@
 import PageButton from "./PageButton";
 
 function PageNavigation({
-	NextButtonText,
-	PreviousButtonText,
+	NextButtonText = "Next >",
+	PreviousButtonText = "< Changed my mind",
 	showNextButton,
 	showPreviousButton,
 	handleNextButtonClick,
@@ -14,7 +14,7 @@ function PageNavigation({
 			{showNextButton && (
 				<div className="text-center mt-4 mx-5 d-grid gap-2 d-md-block row d-flex">
 					<PageButton
-						buttonText={NextButtonText || "Next >"}
+						buttonText={NextButtonText}
 						buttonClass="btn btn-success"
 						handlePageButtonClick={handleNextButtonClick}
 					/>
@@ -25,7 +25,7 @@ function PageNavigation({
 			{showPreviousButton && (
 				<div className="text-center mt-4 mx-5 d-grid gap-2 d-md-block row d-flex">
 					<PageButton
-						buttonText={PreviousButtonText || "< Changed my mind"}
+						buttonText={PreviousButtonText}
 						buttonClass="btn btn-outline-success"
 						handlePageButtonClick={handlePrevButtonClick}
 					/>
