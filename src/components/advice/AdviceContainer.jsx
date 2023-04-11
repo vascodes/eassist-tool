@@ -2,7 +2,7 @@ import Advice from "./Advice";
 import CardLayout from "../layouts/CardLayout";
 import PageNavigation from "../ui/PageNavigation";
 
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { PageContext } from "../contexts/PageContext";
 
 function AdviceContainer({ substanceRiskCategories, getSubstanceAdviceHTML }) {
@@ -18,11 +18,6 @@ function AdviceContainer({ substanceRiskCategories, getSubstanceAdviceHTML }) {
 	function handlePrevButtonClick() {
 		setPage(allPages.questions);
 	}
-
-	useEffect(
-		() => console.log(moderateRiskSubstances, referralRiskSubstances),
-		[],
-	);
 
 	return (
 		<CardLayout>
@@ -52,9 +47,11 @@ function AdviceContainer({ substanceRiskCategories, getSubstanceAdviceHTML }) {
 
 			<PageNavigation
 				showNextButton
+				nextButtonText="View my scores >"
+				previousButtonText="Restart Questionnaire"
 				showPreviousButton
 				handleNextButtonClick={handleNextButtonClick}
-				handlePrevButtonClick={handlePrevButtonClick}
+				handlePreviousButtonClick={handlePrevButtonClick}
 			/>
 		</CardLayout>
 	);

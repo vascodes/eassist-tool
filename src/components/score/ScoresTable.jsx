@@ -87,9 +87,10 @@ function ScoresTable({
 				</tbody>
 			</table>
 
-			<PageNavigation				
-				showPreviousButton				
-				handlePrevButtonClick={handlePrevButtonClick}
+			<PageNavigation
+				showPreviousButton
+				previousButtonText="< Show Advice"
+				handlePreviousButtonClick={handlePrevButtonClick}
 			/>
 		</CardLayout>
 	);

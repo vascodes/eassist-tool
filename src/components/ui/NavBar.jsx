@@ -1,4 +1,17 @@
+import { useContext } from "react";
+import { PageContext } from "../contexts/PageContext";
+
 function NavBar() {
+	const { allPages, setPage } = useContext(PageContext);
+
+	function handleNavButtonClick() {
+		setPage(allPages.home);
+	}
+
+	function handleContactButtonClick() {
+		setPage(allPages.contact);
+	}
+
 	return (
 		<header>
 			<nav
@@ -6,9 +19,9 @@ function NavBar() {
 				style={{ backgroundColor: "#158852" }}
 			>
 				<div className="container-fluid">
-					<a
-						className="navbar-brand"
-						href="/"
+					<button
+						className="navbar-brand btn border-0"
+						onClick={handleNavButtonClick}
 					>
 						<img
 							src={`${process.env.PUBLIC_URL}/assets/images/rajagiri_logo.jpg`}
@@ -17,7 +30,7 @@ function NavBar() {
 							className="d-inline-block align-top"
 							alt="logo"
 						/>
-					</a>
+					</button>
 
 					<button
 						className="navbar-toggler"
@@ -37,20 +50,20 @@ function NavBar() {
 					>
 						<ul className="navbar-nav ms-auto px-5 mb-2 mb-lg-0">
 							<li className="nav-item">
-								<a
-									className="nav-link text-white active"
-									href="/"
+								<button
+									className="nav-link text-white active btn border-0"
+									onClick={handleNavButtonClick}
 								>
 									Home
-								</a>
+								</button>
 							</li>
 							<li className="nav-item">
-								<a
-									className="nav-link text-white"
-									href="/"
+								<button
+									className="nav-link text-white btn border-0"
+									onClick={handleContactButtonClick}
 								>
 									Contact
-								</a>
+								</button>
 							</li>
 						</ul>
 					</div>

@@ -11,7 +11,7 @@ import { PageContext } from "../contexts/PageContext";
 import * as helper from "./helpers/helper";
 
 function QuestionContainer(props) {
-	let { allQuestions, allSubstances, showScores } = props;
+	let { allQuestions, allSubstances, showAdvice } = props;
 	const { allPages, setPage } = useContext(PageContext);
 	const totalQuestions = allQuestions.length;
 
@@ -206,7 +206,7 @@ function QuestionContainer(props) {
 			changeQuestionById(nextQuestionId);
 		} else {
 			// Show scores after last question.
-			showScores(allSelectedAnswers, questionHistory);
+			showAdvice(allSelectedAnswers, questionHistory);
 		}
 	}
 
@@ -236,9 +236,10 @@ function QuestionContainer(props) {
 
 			<PageNavigation
 				showNextButton
+				nextButtonText="Submit Answers >"
 				showPreviousButton={currentQuestion.id !== 1}
 				handleNextButtonClick={handleNextButtonClick}
-				handlePrevButtonClick={handlePrevButtonClick}
+				handlePreviousButtonClick={handlePrevButtonClick}
 			/>
 		</CardLayout>
 	);

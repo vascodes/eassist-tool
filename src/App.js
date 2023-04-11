@@ -8,6 +8,7 @@ import QuestionContainer from "./components/question/QuestionContainer";
 import AdviceContainer from "./components/advice/AdviceContainer";
 import ScoresTable from "./components/score/ScoresTable";
 import ThankYou from "./components/thank-you/ThankYou";
+import Contact from "./components/contact/Contact";
 
 import { PageContext } from "./components/contexts/PageContext";
 
@@ -19,9 +20,10 @@ function App() {
 		thankYou: 4,
 		advice: 5,
 		scores: 6,
+		contact: 7,
 	});
 
-	const [content, setContent] = useState(data);
+	const [content] = useState(data);
 	const [page, setPage] = useState(useContext(PageContext));
 	const [scores, setScores] = useState(null);
 	const [substanceRiskCategories, setSubstanceRiskCategories] = useState({
@@ -105,7 +107,7 @@ function App() {
 		setSubstanceRiskCategories(riskCategories);
 	}
 
-	function showScores(allSelectedAnswers, answeredQuestions) {
+	function showAdvice(allSelectedAnswers, answeredQuestions) {
 		const scores = getSubstanceScores(
 			allSelectedAnswers,
 			answeredQuestions,
@@ -138,8 +140,8 @@ function App() {
 	}, [allPages, content, page]);
 
 	return (
-		<Layout>
-			<PageContext.Provider value={{ allPages, setPage }}>
+		<PageContext.Provider value={{ allPages, setPage }}>
+			<Layout>
 				{/* Loading Page. */}
 				{!page && <h1>Loading</h1>}
 
@@ -154,7 +156,7 @@ function App() {
 					<QuestionContainer
 						allQuestions={content?.questions}
 						allSubstances={content?.substances}
-						showScores={showScores}
+						showAdvice={showAdvice}
 					/>
 				)}
 
@@ -178,8 +180,10 @@ function App() {
 
 				{/* Thank You Page. */}
 				{page === allPages.thankYou && <ThankYou />}
-			</PageContext.Provider>
-		</Layout>
+
+				{page === allPages.contact && <Contact />}
+			</Layout>
+		</PageContext.Provider>
 	);
 }
 

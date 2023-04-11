@@ -1,12 +1,14 @@
 import PageButton from "./PageButton";
 
 function PageNavigation({
-	NextButtonText = "Next >",
-	PreviousButtonText = "< Changed my mind",
+	nextButtonText = "Next >",
+	nextButtonStyles,
 	showNextButton,
+	previousButtonText = "< Changed my mind",
+	previousButtonStyles,
 	showPreviousButton,
 	handleNextButtonClick,
-	handlePrevButtonClick,
+	handlePreviousButtonClick,
 }) {
 	return (
 		<div className="question-navigation">
@@ -14,7 +16,7 @@ function PageNavigation({
 			{showNextButton && (
 				<div className="text-center mt-4 mx-5 d-grid gap-2 d-md-block row d-flex">
 					<PageButton
-						buttonText={NextButtonText}
+						buttonText={nextButtonText}
 						buttonClass="btn btn-success"
 						handlePageButtonClick={handleNextButtonClick}
 					/>
@@ -25,9 +27,9 @@ function PageNavigation({
 			{showPreviousButton && (
 				<div className="text-center mt-4 mx-5 d-grid gap-2 d-md-block row d-flex">
 					<PageButton
-						buttonText={PreviousButtonText}
+						buttonText={previousButtonText}
 						buttonClass="btn btn-outline-success"
-						handlePageButtonClick={handlePrevButtonClick}
+						handlePageButtonClick={handlePreviousButtonClick}
 					/>
 				</div>
 			)}
