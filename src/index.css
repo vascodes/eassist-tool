@@ -1,5 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap');
+
 body {
 	margin: 0;
-	background-color: #dde5ee;
-	font-family: Helvetica, Arial, sans-serif;
+	background-color: #dde5ee;	
+	font-family: 'Rubik', sans-serif;
+}
+
+.bi-card-checklist{
+	font-size: 2.5rem;
+}
+
+.hero-text {
+	width: 80vw;
+	text-align: center;
+}
+
+.about-us-img{
+	max-width: 35vw;
+}
+
+.logos-row {
+	width: 15vw;	
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+	.hero-text {
+		width: 50vw;
+	}
 }
