@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { data } from "./data";
+import { data } from "./data-en";
 
 import Layout from "./components/layouts/Layout";
 import Home from "./components/home/Home";
