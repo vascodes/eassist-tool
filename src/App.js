@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 
 import Layout from "./components/layouts/Layout";
 import Home from "./components/home/Home";
@@ -11,7 +11,10 @@ import Contact from "./components/contact/Contact";
 
 import { PageContext } from "./components/contexts/PageContext";
 import useFetch from "./hooks/useFetch";
-import { calculateSubstanceScores } from "./utils/helper";
+import {
+	getInitialSubstanceScores,
+	getInitialCategories,
+} from "./utils/helper";
 
 function App() {
 	const allPages = Object.freeze({
@@ -27,12 +30,11 @@ function App() {
 	const { content, getSubstanceDetailsById, getSubstanceAdviceHTML } =
 		useFetch();
 
-	const [scores, setScores] = useState(null);
-	const [substanceRiskCategories, setSubstanceRiskCategories] = useState({
-		low: [],
-		moderate: [],
-		referral: [],
+	const resultsRef = useRef({
+		scores: getInitialSubstanceScores(content?.substances),
+		categorizedSubstances: getInitialCategories(),
 	});
+
 	const [page, setPage] = useState(useContext(PageContext));
 
 	// Change from loading page once data is fetched.
@@ -41,51 +43,6 @@ function App() {
 			setPage(allPages.home);
 		}
 	}, [allPages, content, page]);
-
-	function categorizeSubstancesBasedOnScore(substanceRiskLevels, scores) {
-		const substancesWithLowRisk = [],
-			substancesWithModerateRisk = [],
-			substancesWithHighRisk = [];
-
-		for (let substanceId in scores) {
-			const substance = getSubstanceDetailsById(substanceId);
-
-			let substanceScore = scores[substanceId];
-			const substanceRisk = content?.substanceRiskLevels[substanceId];
-
-			const lowMax = substanceRisk.lower.max;
-			const moderateMax = substanceRisk.moderate.max;
-
-			if (substanceScore <= lowMax) {
-				substancesWithLowRisk.push(substance);
-			} else if (substanceScore <= moderateMax) {
-				substancesWithModerateRisk.push(substance);
-			} else {
-				substancesWithHighRisk.push(substance);
-			}
-		}
-
-		const riskCategories = {
-			low: substancesWithLowRisk,
-			moderate: substancesWithModerateRisk,
-			referral: substancesWithHighRisk,
-		};
-
-		setSubstanceRiskCategories(riskCategories);
-	}
-
-	function showAdvice(allSelectedAnswers, answeredQuestions) {
-		const scores = calculateSubstanceScores(
-			content?.substances,
-			allSelectedAnswers,
-			answeredQuestions,
-		);
-
-		categorizeSubstancesBasedOnScore(content?.substanceRiskLevels, scores);
-		console.log(scores);
-		setScores(scores);
-		setPage(allPages.advice);
-	}
 
 	let pageToDisplay = null;
 	switch (page) {
@@ -102,7 +59,7 @@ function App() {
 				<QuestionContainer
 					allQuestions={content?.questions}
 					allSubstances={content?.substances}
-					showAdvice={showAdvice}
+					resultsRef={resultsRef}
 				/>
 			);
 			break;
@@ -110,7 +67,9 @@ function App() {
 		case allPages.advice:
 			pageToDisplay = (
 				<AdviceContainer
-					substanceRiskCategories={substanceRiskCategories}
+					resultsRef={resultsRef}
+					substanceRiskLevels={content?.substanceRiskLevels}
+					getSubstanceDetailsById={getSubstanceDetailsById}
 					getSubstanceAdviceHTML={getSubstanceAdviceHTML}
 				/>
 			);
@@ -119,8 +78,7 @@ function App() {
 		case allPages.scores:
 			pageToDisplay = (
 				<ScoresTable
-					scores={scores}
-					substanceRiskCategories={substanceRiskCategories}
+					resultsRef={resultsRef}
 					substanceRiskLevels={content?.substanceRiskLevels}
 					getSubstanceDetails={getSubstanceDetailsById}
 				/>

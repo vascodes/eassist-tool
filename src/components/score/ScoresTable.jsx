@@ -5,20 +5,18 @@ import ScoresTableRow from "./ScoresTableRow";
 import CardLayout from "../layouts/CardLayout";
 import PageNavigation from "../ui/PageNavigation";
 
-function ScoresTable({
-	scores,
-	substanceRiskCategories,
-	substanceRiskLevels,
-	getSubstanceDetails,
-}) {
+function ScoresTable({ resultsRef, substanceRiskLevels, getSubstanceDetails }) {
 	const { allPages, setPage } = useContext(PageContext);
 
 	function handlePrevButtonClick() {
 		setPage(allPages.advice);
 	}
 
-	const moderateRiskSubstances = substanceRiskCategories.moderate;
-	const referralRiskSubstances = substanceRiskCategories.referral;
+	const scores = resultsRef.current.scores;
+	const moderateRiskSubstances =
+		resultsRef.current.categorizedSubstances.moderate;
+	const referralRiskSubstances =
+		resultsRef.current.categorizedSubstances.referral;
 
 	const substances = Object.keys(scores);
 	const scoreTableHeadings = ["Substance", "Score", "Risk", "Criteria"];

@@ -11,7 +11,7 @@ import { PageContext } from "../contexts/PageContext";
 import * as helper from "./helpers/helper";
 
 function QuestionContainer(props) {
-	let { allQuestions, allSubstances, showAdvice } = props;
+	let { allQuestions, allSubstances, resultsRef } = props;
 	const { allPages, setPage } = useContext(PageContext);
 	const totalQuestions = allQuestions.length;
 
@@ -205,8 +205,21 @@ function QuestionContainer(props) {
 		if (nextQuestionId) {
 			changeQuestionById(nextQuestionId);
 		} else {
-			// Show scores after last question.
-			showAdvice(allSelectedAnswers, questionHistory);
+			const filteredAnswers = helper.filterAnswersNotInQuestionHistory(
+				allSelectedAnswers,
+				questionHistory,
+			);
+
+			const selectedSubstanceScores =
+				helper.calculateSubstanceScores(filteredAnswers);
+
+			// Update scores.
+			for (let substanceId in selectedSubstanceScores) {
+				resultsRef.current.scores[substanceId] =
+					selectedSubstanceScores[substanceId];
+			}
+
+			setPage(allPages.advice);
 		}
 	}
 

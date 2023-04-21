@@ -2,14 +2,29 @@ import Advice from "./Advice";
 import CardLayout from "../layouts/CardLayout";
 import PageNavigation from "../ui/PageNavigation";
 
-import { useContext } from "react";
+import { getCategorizedSubstances } from "./helper";
+
+import { useContext, useMemo } from "react";
 import { PageContext } from "../contexts/PageContext";
 
-function AdviceContainer({ substanceRiskCategories, getSubstanceAdviceHTML }) {
+function AdviceContainer({
+	resultsRef,	
+	substanceRiskLevels,
+	getSubstanceDetailsById,
+	getSubstanceAdviceHTML,
+}) {
 	const { allPages, setPage } = useContext(PageContext);
 
-	const moderateRiskSubstances = substanceRiskCategories.moderate;
-	const referralRiskSubstances = substanceRiskCategories.referral;
+	const categorizedSubstances = useMemo(() => getCategorizedSubstances(
+		resultsRef.current.scores,
+		substanceRiskLevels,
+		getSubstanceDetailsById,
+	), [getSubstanceDetailsById, resultsRef, substanceRiskLevels]);
+
+	resultsRef.current.categorizedSubstances = categorizedSubstances;
+
+	const moderateRiskSubstances = categorizedSubstances?.moderate;
+	const referralRiskSubstances = categorizedSubstances?.referral;
 
 	function handleNextButtonClick() {
 		setPage(allPages.scores);
