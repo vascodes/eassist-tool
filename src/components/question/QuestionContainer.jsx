@@ -9,6 +9,7 @@ import { useContext } from "react";
 import { PageContext } from "../contexts/PageContext";
 
 import * as helper from "./helpers/helper";
+import useHistory from "../../hooks/useHistory";
 
 function QuestionContainer(props) {
 	let { allQuestions, allSubstances, resultsRef } = props;
@@ -20,9 +21,11 @@ function QuestionContainer(props) {
 	const [currentQuestion, setQuestion] = useState(allQuestions[0]);
 	const [allSelectedAnswers, setAllSelectedAnswers] = useState({});
 	const [showRequiredMessage, setShowRequiredMessage] = useState(false);
-	const [questionHistory, setQuestionHistory] = useState([
-		currentQuestion.id,
-	]);
+	const {
+		history: questionHistory,
+		pushHistory: pushQuestionHistory,
+		popHistory: popQuestionHistory,
+	} = useHistory(currentQuestion.id);
 
 	const substancesUsedRef = useRef({
 		lifetime: new Set(), // Ids of substances selected in Q1,
@@ -75,20 +78,6 @@ function QuestionContainer(props) {
 
 			return filteredSubstances;
 		}
-	}
-
-	function pushQuestionHistory(nextQuestionId) {
-		const newQuestionHistory = questionHistory;
-		newQuestionHistory.push(nextQuestionId);
-
-		setQuestionHistory(newQuestionHistory);
-	}
-
-	function popQuestionHistory() {
-		const newQuestionHistory = questionHistory;
-		newQuestionHistory.pop();
-
-		setQuestionHistory(newQuestionHistory);
 	}
 
 	function setSubstancesUsedInLifetime() {
