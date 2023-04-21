@@ -1,4 +1,4 @@
-import { useContext, useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef } from "react";
 
 import Layout from "./components/layouts/Layout";
 import Home from "./components/home/Home";
@@ -11,38 +11,26 @@ import Contact from "./components/contact/Contact";
 
 import { PageContext } from "./components/contexts/PageContext";
 import useFetch from "./hooks/useFetch";
-import {
-	getInitialSubstanceScores,
-	getInitialCategories,
-} from "./utils/helper";
+import usePage from "./hooks/usePage";
+
+import { getInitialSubstanceScores, getInitialCategories } from "./utils/helper";
 
 function App() {
-	const allPages = Object.freeze({
-		home: 1,
-		userDetails: 2,
-		questions: 3,
-		thankYou: 4,
-		advice: 5,
-		scores: 6,
-		contact: 7,
-	});
-
-	const { content, getSubstanceDetailsById, getSubstanceAdviceHTML } =
-		useFetch();
+	const { content, getSubstanceDetailsById, getSubstanceAdviceHTML } = useFetch();
 
 	const resultsRef = useRef({
 		scores: getInitialSubstanceScores(content?.substances),
 		categorizedSubstances: getInitialCategories(),
 	});
 
-	const [page, setPage] = useState(useContext(PageContext));
+	const { page, setPage, allPages } = usePage(useContext(PageContext));
 
 	// Change from loading page once data is fetched.
 	useEffect(() => {
 		if (content && !page) {
 			setPage(allPages.home);
 		}
-	}, [allPages, content, page]);
+	}, []);
 
 	let pageToDisplay = null;
 	switch (page) {
