@@ -24,26 +24,23 @@ function App() {
 		contact: 7,
 	});
 
-	const {
-		content,		
-		getSubstanceDetailsById,
-		getSubstanceAdviceHTML,
-	} = useFetch();
-			
+	const { content, getSubstanceDetailsById, getSubstanceAdviceHTML } =
+		useFetch();
+
 	const [scores, setScores] = useState(null);
 	const [substanceRiskCategories, setSubstanceRiskCategories] = useState({
 		low: [],
 		moderate: [],
 		referral: [],
-	});	
+	});
 	const [page, setPage] = useState(useContext(PageContext));
-	
+
 	// Change from loading page once data is fetched.
 	useEffect(() => {
 		if (content && !page) {
 			setPage(allPages.home);
 		}
-	}, [allPages, content, page]);			
+	}, [allPages, content, page]);
 
 	function categorizeSubstancesBasedOnScore(substanceRiskLevels, scores) {
 		const substancesWithLowRisk = [],
@@ -89,51 +86,63 @@ function App() {
 		setScores(scores);
 		setPage(allPages.advice);
 	}
-	
+
+	let pageToDisplay = null;
+	switch (page) {
+		case allPages.home:
+			pageToDisplay = <Home />;
+			break;
+
+		case allPages.userDetails:
+			pageToDisplay = <UserDetails />;
+			break;
+
+		case allPages.questions:
+			pageToDisplay = (
+				<QuestionContainer
+					allQuestions={content?.questions}
+					allSubstances={content?.substances}
+					showAdvice={showAdvice}
+				/>
+			);
+			break;
+
+		case allPages.advice:
+			pageToDisplay = (
+				<AdviceContainer
+					substanceRiskCategories={substanceRiskCategories}
+					getSubstanceAdviceHTML={getSubstanceAdviceHTML}
+				/>
+			);
+			break;
+
+		case allPages.scores:
+			pageToDisplay = (
+				<ScoresTable
+					scores={scores}
+					substanceRiskCategories={substanceRiskCategories}
+					substanceRiskLevels={content?.substanceRiskLevels}
+					getSubstanceDetails={getSubstanceDetailsById}
+				/>
+			);
+			break;
+
+		case allPages.thankYou:
+			pageToDisplay = <ThankYou />;
+			break;
+
+		case allPages.contact:
+			pageToDisplay = <Contact />;
+			break;
+
+		default:
+			pageToDisplay = <h1>Loading</h1>;
+			break;
+	}
+
 	return (
 		<PageContext.Provider value={{ allPages, setPage }}>
-			<Layout>
-				{/* Loading Page. */}
-				{!page && <h1>Loading</h1>}
-
-				{/* Home Page. */}
-				{page === allPages.home && <Home />}
-
-				{/* User Details Page. */}
-				{page === allPages.userDetails && <UserDetails />}
-
-				{/* Questions Page. */}
-				{page === allPages.questions && (
-					<QuestionContainer
-						allQuestions={content?.questions}
-						allSubstances={content?.substances}
-						showAdvice={showAdvice}
-					/>
-				)}
-
-				{/* Advice Page. */}
-				{page === allPages.advice && (
-					<AdviceContainer
-						substanceRiskCategories={substanceRiskCategories}
-						getSubstanceAdviceHTML={getSubstanceAdviceHTML}
-					/>
-				)}
-
-				{/* Scores Page. */}
-				{page === allPages.scores && (
-					<ScoresTable
-						scores={scores}
-						substanceRiskCategories={substanceRiskCategories}
-						substanceRiskLevels={content?.substanceRiskLevels}
-						getSubstanceDetails={getSubstanceDetailsById}
-					/>
-				)}
-
-				{/* Thank You Page. */}
-				{page === allPages.thankYou && <ThankYou />}
-
-				{page === allPages.contact && <Contact />}
-			</Layout>
+			<Layout>{pageToDisplay}</Layout>
 		</PageContext.Provider>
 	);
 }
