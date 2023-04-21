@@ -1,12 +1,85 @@
 import PageButton from "../ui/PageButton";
+import AlertBox from "../ui/AlertBox";
 import CardLayout from "../layouts/CardLayout";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { PageContext } from "../contexts/PageContext";
 
+import { getIsValidAge } from "./helpers";
+
 // TODO: Save Input data
-function UserDetails() {		
-	const {allPages, setPage} = useContext(PageContext);
-	
+function UserDetails() {
+	const { allPages, setPage } = useContext(PageContext);
+
+	const [error, setError] = useState(null);
+	const [userDetails, setUserDetails] = useState({
+		gender: null,
+		age: null,
+		employmentStatus: null,
+	});
+
+	function handleAgeChange({ target }) {
+		const { value } = target;
+		const age = Number(value);
+
+		if (!getIsValidAge(age)) return; // Restrict input.
+
+		age < 18 ? setError("Please enter an age greater than 18.") : setError(null);
+
+		setUserDetails(prevUserDetails => {
+			const newUserDetails = { ...prevUserDetails };
+			newUserDetails.age = value;
+			return newUserDetails;
+		});
+	}
+
+	function handleRadioButtonChange({ target }) {
+		const { name } = target;
+
+		switch (name) {
+			case "radio-gender": {
+				const { value: gender } = target;
+
+				setUserDetails(prevUserDetails => {
+					const newUserDetails = { ...prevUserDetails };
+					newUserDetails.gender = gender;
+
+					return newUserDetails;
+				});
+				break;
+			}
+
+			case "radio-employment-status": {
+				const { value: employmentStatus } = target;
+
+				setUserDetails(prevUserDetails => {
+					const newUserDetails = { ...prevUserDetails };
+					newUserDetails.employmentStatus = employmentStatus;
+
+					return newUserDetails;
+				});
+				break;
+			}
+
+			default:
+				throw new Error("Invalid radio button.");
+		}
+	}
+
+	function handleNextButtonClick() {
+		if (!userDetails.gender || !userDetails.age || !userDetails.employmentStatus) {
+			setError("Please answer all questions to continue.");
+			return;
+		}
+
+		if(userDetails.age < 18){
+			setError("Please enter an age greater than 18.");
+			return;
+		}
+
+		setError(null);
+		setPage(allPages.questions);
+	}
+
 	return (
 		<CardLayout>
 			<ol className="list-group list-group-flush">
@@ -20,11 +93,14 @@ function UserDetails() {
 								className="form-check-input"
 								type="radio"
 								name="radio-gender"
-								id="radio-gender"
+								id="radioGenderMale"
+								value="male"
+								checked={userDetails.gender === "male"}
+								onChange={handleRadioButtonChange}
 							/>
 							<label
 								className="form-check-label"
-								htmlFor="radio-gender"
+								htmlFor="radioGenderMale"
 							>
 								Male
 							</label>
@@ -34,11 +110,14 @@ function UserDetails() {
 								className="form-check-input"
 								type="radio"
 								name="radio-gender"
-								id="flexRadioDefault2"
+								id="radioGenderFemale"
+								value="female"
+								checked={userDetails.gender === "female"}
+								onChange={handleRadioButtonChange}
 							/>
 							<label
 								className="form-check-label"
-								htmlFor="flexRadioDefault2"
+								htmlFor="radioGenderFemale"
 							>
 								Female
 							</label>
@@ -48,11 +127,14 @@ function UserDetails() {
 								className="form-check-input"
 								type="radio"
 								name="radio-gender"
-								id="flexRadioDefault3"
+								id="radioGenderTransgender"
+								value="transgender"
+								checked={userDetails.gender === "transgender"}
+								onChange={handleRadioButtonChange}
 							/>
 							<label
 								className="form-check-label"
-								htmlFor="flexRadioDefault3"
+								htmlFor="radioGenderTransgender"
 							>
 								Transgender
 							</label>
@@ -67,11 +149,14 @@ function UserDetails() {
 							<input
 								type="number"
 								className="form-control"
-								id="formGroupExampleInput"
-								min="10"
+								name="age"
+								id="txtAge"
+								value={userDetails.age || ""}
+								onChange={handleAgeChange}
+								min="18"
 								max="100"
 							/>
-							<label htmlFor="formGroupExampleInput"></label>
+							<label htmlFor="txtAge"></label>
 						</div>
 					</div>
 
@@ -84,11 +169,14 @@ function UserDetails() {
 								className="form-check-input"
 								type="radio"
 								name="radio-employment-status"
-								id="radio-employment-status"
+								id="radioEmploymentStatusNotEmployed"
+								value="notEmployed"
+								checked={userDetails.employmentStatus === "notEmployed"}
+								onChange={handleRadioButtonChange}
 							/>
 							<label
 								className="form-check-label"
-								htmlFor="radio-employment-status"
+								htmlFor="radioEmploymentStatusNotEmployed"
 							>
 								Not employed
 							</label>
@@ -98,11 +186,14 @@ function UserDetails() {
 								className="form-check-input"
 								type="radio"
 								name="radio-employment-status"
-								id="flexRadioDefault2"
+								id="radioEmploymentStatusFullTime"
+								value="fullTime"
+								checked={userDetails.employmentStatus === "fullTime"}
+								onChange={handleRadioButtonChange}
 							/>
 							<label
 								className="form-check-label"
-								htmlFor="flexRadioDefault2"
+								htmlFor="radioEmploymentStatusFullTime"
 							>
 								Full time
 							</label>
@@ -112,11 +203,14 @@ function UserDetails() {
 								className="form-check-input"
 								type="radio"
 								name="radio-employment-status"
-								id="flexRadioDefault3"
+								id="radioEmploymentStatusPartTime"
+								value="partTime"
+								checked={userDetails.employmentStatus === "partTime"}
+								onChange={handleRadioButtonChange}
 							/>
 							<label
 								className="form-check-label"
-								htmlFor="flexRadioDefault3"
+								htmlFor="radioEmploymentStatusPartTime"
 							>
 								Part time/casual
 							</label>
@@ -126,11 +220,14 @@ function UserDetails() {
 								className="form-check-input"
 								type="radio"
 								name="radio-employment-status"
-								id="flexRadioDefault4"
+								id="radioEmploymentStatusStudent"
+								value="student"
+								checked={userDetails.employmentStatus === "student"}
+								onChange={handleRadioButtonChange}
 							/>
 							<label
 								className="form-check-label"
-								htmlFor="flexRadioDefault4"
+								htmlFor="radioEmploymentStatusStudent"
 							>
 								Student
 							</label>
@@ -140,11 +237,14 @@ function UserDetails() {
 								className="form-check-input"
 								type="radio"
 								name="radio-employment-status"
-								id="flexRadioDefault5"
+								id="radioEmploymentStatusHomeDuties"
+								value="homeDuties"
+								checked={userDetails.employmentStatus === "homeDuties"}
+								onChange={handleRadioButtonChange}
 							/>
 							<label
 								className="form-check-label"
-								htmlFor="flexRadioDefault5"
+								htmlFor="radioEmploymentStatusHomeDuties"
 							>
 								Home duties
 							</label>
@@ -153,11 +253,13 @@ function UserDetails() {
 				</li>
 			</ol>
 
+			{error && <AlertBox>{error}</AlertBox>}
+
 			<div className="text-center mt-4 mb-2 p-2 mx-5 d-grid gap-2 d-md-block row d-flex">
 				<PageButton
 					buttonClass="btn btn-success"
 					buttonText="Next >"
-					handlePageButtonClick={() => setPage(allPages.questions)}
+					handlePageButtonClick={handleNextButtonClick}
 				/>
 			</div>
 		</CardLayout>

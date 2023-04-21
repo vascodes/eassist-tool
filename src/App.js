@@ -17,13 +17,11 @@ import { getInitialSubstanceScores, getInitialCategories } from "./utils/helper"
 
 function App() {
 	const { content, getSubstanceDetailsById, getSubstanceAdviceHTML } = useFetch();
-
+	const { page, setPage, allPages } = usePage(useContext(PageContext));
 	const resultsRef = useRef({
 		scores: getInitialSubstanceScores(content?.substances),
 		categorizedSubstances: getInitialCategories(),
-	});
-
-	const { page, setPage, allPages } = usePage(useContext(PageContext));
+	});	
 
 	// Change from loading page once data is fetched.
 	useEffect(() => {
@@ -32,18 +30,18 @@ function App() {
 		}
 	}, []);
 
-	let pageToDisplay = null;
+	let componentToDisplay = null;
 	switch (page) {
 		case allPages.home:
-			pageToDisplay = <Home />;
+			componentToDisplay = <Home />;
 			break;
 
 		case allPages.userDetails:
-			pageToDisplay = <UserDetails />;
+			componentToDisplay = <UserDetails />;
 			break;
 
 		case allPages.questions:
-			pageToDisplay = (
+			componentToDisplay = (
 				<QuestionContainer
 					allQuestions={content?.questions}
 					allSubstances={content?.substances}
@@ -53,7 +51,7 @@ function App() {
 			break;
 
 		case allPages.advice:
-			pageToDisplay = (
+			componentToDisplay = (
 				<AdviceContainer
 					resultsRef={resultsRef}
 					substanceRiskLevels={content?.substanceRiskLevels}
@@ -64,7 +62,7 @@ function App() {
 			break;
 
 		case allPages.scores:
-			pageToDisplay = (
+			componentToDisplay = (
 				<ScoresTable
 					resultsRef={resultsRef}
 					substanceRiskLevels={content?.substanceRiskLevels}
@@ -74,21 +72,21 @@ function App() {
 			break;
 
 		case allPages.thankYou:
-			pageToDisplay = <ThankYou />;
+			componentToDisplay = <ThankYou />;
 			break;
 
 		case allPages.contact:
-			pageToDisplay = <Contact />;
+			componentToDisplay = <Contact />;
 			break;
 
 		default:
-			pageToDisplay = <h1>Loading</h1>;
+			componentToDisplay = <h1>Loading</h1>;
 			break;
 	}
 
 	return (
 		<PageContext.Provider value={{ allPages, setPage }}>
-			<Layout>{pageToDisplay}</Layout>
+			<Layout>{componentToDisplay}</Layout>
 		</PageContext.Provider>
 	);
 }

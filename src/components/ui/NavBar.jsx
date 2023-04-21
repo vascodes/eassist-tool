@@ -70,7 +70,7 @@ function NavBar() {
 							</li>
 							<li className="nav-item">
 								<button name="btn-nav-assessment" className="nav-link btn border-0" onClick={handleClick}>
-									Assessment
+									Start Assessment
 								</button>
 							</li>
 							<li className="nav-item">
