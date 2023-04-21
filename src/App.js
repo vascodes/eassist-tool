@@ -21,7 +21,7 @@ function App() {
 	const resultsRef = useRef({
 		scores: getInitialSubstanceScores(content?.substances),
 		categorizedSubstances: getInitialCategories(),
-	});	
+	});
 
 	// Change from loading page once data is fetched.
 	useEffect(() => {
@@ -76,7 +76,7 @@ function App() {
 			break;
 
 		case allPages.contact:
-			componentToDisplay = <Contact />;
+			componentToDisplay = <Contact>{content?.contactDetails}</Contact>;
 			break;
 
 		default:

@@ -124,7 +124,7 @@ function QuestionContainer(props) {
 	}
 
 	return (
-		<CardLayout>
+		<CardLayout showInfo>
 			<Question
 				key={currentQuestion?.id}
 				question={currentQuestion}

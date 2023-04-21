@@ -1,6 +1,6 @@
 import InfoCard from "../common/InfoCard";
 
-function CardLayout({ children }) {
+function CardLayout({ showInfo, children }) {
 	return (
 		<div className="row p-4">
 			<div className="container-fluid col-lg-8 mb-3">
@@ -9,7 +9,7 @@ function CardLayout({ children }) {
 				</div>
 			</div>
 
-			<InfoCard />
+			{showInfo && <InfoCard />}
 		</div>
 	);
 }

@@ -81,7 +81,7 @@ function UserDetails() {
 	}
 
 	return (
-		<CardLayout>
+		<CardLayout showInfo>
 			<ol className="list-group list-group-flush">
 				<li className="list-group-item">
 					<div>
