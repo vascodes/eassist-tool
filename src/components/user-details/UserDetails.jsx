@@ -66,12 +66,19 @@ function UserDetails() {
 	}
 
 	function handleNextButtonClick() {
-		if (!userDetails.gender || !userDetails.age || !userDetails.employmentStatus) {
+		let isAllAnswered = false;
+		
+		for (let key in userDetails) {
+			isAllAnswered = Boolean(userDetails[key]);
+			if (!isAllAnswered) break;
+		}		
+
+		if (!isAllAnswered) {
 			setError("Please answer all questions to continue.");
 			return;
 		}
 
-		if(userDetails.age < 18){
+		if (userDetails.age < 18) {
 			setError("Please enter an age greater than 18.");
 			return;
 		}
