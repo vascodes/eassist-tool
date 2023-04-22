@@ -5,7 +5,7 @@ import ScoresTableRow from "./ScoresTableRow";
 import CardLayout from "../layouts/CardLayout";
 import PageNavigation from "../ui/PageNavigation";
 
-function ScoresTable({ resultsRef, substanceRiskLevels, getSubstanceDetails }) {
+function ScoresTable({ resultsRef, substanceRiskLevels, scoreMeaning, getSubstanceDetails }) {
 	const { allPages, setPage } = useContext(PageContext);
 
 	function handlePrevButtonClick() {
@@ -24,66 +24,95 @@ function ScoresTable({ resultsRef, substanceRiskLevels, getSubstanceDetails }) {
 		<CardLayout>
 			<h3>eAssist scores</h3>
 
-			<table className="table table-borderless">
-				<thead className="table-dark">
-					<tr>
-						{scoreTableHeadings.map((heading, index) => (
-							<th
-								key={index}
-								className="py-4"
-								scope="col"
-							>
-								{heading}
-							</th>
-						))}
-					</tr>
-				</thead>
-				<tbody>
-					{substances.map((substanceId, index) => {
-						// Alternate table row style.
-						let rowClassName =
-							index % 2 === 0 ? null : "table-secondary";
+			<div className="table-responsive">
+				<table className="table table-borderless">
+					<thead className="bg-success text-white">
+						<tr>
+							{scoreTableHeadings.map((heading, index) => (
+								<th
+									key={index}
+									className="py-4"
+									scope="col"
+								>
+									{heading}
+								</th>
+							))}
+						</tr>
+					</thead>
+					<tbody>
+						{substances.map((substanceId, index) => {
+							// Alternate table row style.
+							let rowClassName =
+								index % 2 === 0 ? null : "table-secondary";
 
-						const substance = getSubstanceDetails(substanceId);
-						const substanceRisk = substanceRiskLevels[substanceId];
+							const substance = getSubstanceDetails(substanceId);
+							const substanceRisk = substanceRiskLevels[substanceId];
 
-						let substanceRiskText = "";
-						let substanceRiskTextClassName = "text-danger";
+							let substanceRiskText = "";
+							let substanceRiskTextClassName = "text-danger";
 
-						let isModerateRiskSubstance =
-							moderateRiskSubstances.find(
-								s => s.id === substanceId,
+							let isModerateRiskSubstance =
+								moderateRiskSubstances.find(
+									s => s.id === substanceId,
+								);
+							let isReferralRiskSubstance =
+								referralRiskSubstances.find(
+									s => s.id === substanceId,
+								);
+
+							if (isModerateRiskSubstance) {
+								substanceRiskText = substanceRisk.moderate.text;
+							} else if (isReferralRiskSubstance) {
+								substanceRiskText = substanceRisk.high.text;
+							} else {
+								// Low risk substance.
+								substanceRiskText = substanceRisk.lower.text;
+								substanceRiskTextClassName = null;
+							}
+
+							return (
+								<ScoresTableRow
+									key={substanceId}
+									substanceName={substance.name}
+									score={scores[substanceId]}
+									risk={substanceRiskText}
+									criterias={substanceRisk?.criterias}
+									rowNum={index + 1}
+									riskClassName={substanceRiskTextClassName}
+									rowClassName={rowClassName}
+								/>
 							);
-						let isReferralRiskSubstance =
-							referralRiskSubstances.find(
-								s => s.id === substanceId,
-							);
+						})}
+					</tbody>
+				</table>
+			</div>
 
-						if (isModerateRiskSubstance) {
-							substanceRiskText = substanceRisk.moderate.text;
-						} else if (isReferralRiskSubstance) {
-							substanceRiskText = substanceRisk.high.text;
-						} else {
-							// Low risk substance.
-							substanceRiskText = substanceRisk.lower.text;
-							substanceRiskTextClassName = null;
-						}
+			<div class="table-responsive mt-5">
+				<h4>Score Meaning</h4>
+				<table class="table table-bordered table-striped">
+					<thead className="bg-success text-white">
+						<tr>
+							<th scope="col">Category</th>
+							<th scope="col">Meaning</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row">Lower</th>
+							<td>{scoreMeaning.lower}</td>
+						</tr>
+						<tr>
+							<th scope="row">Moderate</th>
+							<td>{scoreMeaning.moderate}</td>
+						</tr>
+						<tr>
+							<th scope="row">Referral / High</th>
+							<td>{scoreMeaning.high}</td>
+						</tr>
+					</tbody>
 
-						return (
-							<ScoresTableRow
-								key={substanceId}
-								substanceName={substance.name}
-								score={scores[substanceId]}
-								risk={substanceRiskText}
-								criterias={substanceRisk?.criterias}
-								rowNum={index + 1}
-								riskClassName={substanceRiskTextClassName}
-								rowClassName={rowClassName}
-							/>
-						);
-					})}
-				</tbody>
-			</table>
+				</table>
+			</div>
 
 			<PageNavigation
 				showPreviousButton

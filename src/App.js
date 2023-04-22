@@ -68,6 +68,7 @@ function App() {
 				<ScoresTable
 					resultsRef={resultsRef}
 					substanceRiskLevels={content?.substanceRiskLevels}
+					scoreMeaning={content?.scoreMeaning}
 					getSubstanceDetails={getSubstanceDetailsById}
 				/>
 			);
