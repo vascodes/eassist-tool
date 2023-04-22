@@ -36,72 +36,16 @@ function UserDetails() {
 	}
 
 	function handleRadioButtonChange({ target }) {
-		const { name } = target;
+		const { dataset, value } = target;
 
-		switch (name) {
-			case "radio-gender": {
-				const { value: gender } = target;
+		setUserDetails(prevUserDetails => {
+			let key = dataset.userDetail;			
 
-				setUserDetails(prevUserDetails => {
-					const newUserDetails = { ...prevUserDetails };
-					newUserDetails.gender = gender;
+			const newUserDetails = {...prevUserDetails};
+			newUserDetails[key] = value;
 
-					return newUserDetails;
-				});
-				break;
-			}
-
-			case "radio-education": {
-				const { value: education } = target;
-
-				setUserDetails(prevUserDetails => {
-					const newUserDetails = { ...prevUserDetails };
-					newUserDetails.education = education;
-
-					return newUserDetails;
-				});
-				break;
-			}
-
-			case "radio-place-of-residence": {
-				const { value: placeOfResidence } = target;
-
-				setUserDetails(prevUserDetails => {
-					const newUserDetails = { ...prevUserDetails };
-					newUserDetails.placeOfResidence = placeOfResidence;
-
-					return newUserDetails;
-				});
-				break;
-			}
-
-			case "radio-economic-status": {
-				const { value: economicStatus } = target;
-
-				setUserDetails(prevUserDetails => {
-					const newUserDetails = { ...prevUserDetails };
-					newUserDetails.economicStatus = economicStatus;
-
-					return newUserDetails;
-				});
-				break;
-			}
-
-			case "radio-employment-status": {
-				const { value: employmentStatus } = target;
-
-				setUserDetails(prevUserDetails => {
-					const newUserDetails = { ...prevUserDetails };
-					newUserDetails.employmentStatus = employmentStatus;
-
-					return newUserDetails;
-				});
-				break;
-			}
-
-			default:
-				throw new Error("Invalid radio button.");
-		}
+			return newUserDetails;
+		});
 	}
 
 	function handleNextButtonClick() {
@@ -144,6 +88,7 @@ function UserDetails() {
 								value="male"
 								checked={userDetails.gender === "male"}
 								onChange={handleRadioButtonChange}
+								data-user-detail = "gender"
 							/>
 							<label
 								className="form-check-label"
@@ -161,6 +106,7 @@ function UserDetails() {
 								value="female"
 								checked={userDetails.gender === "female"}
 								onChange={handleRadioButtonChange}
+								data-user-detail = "gender"
 							/>
 							<label
 								className="form-check-label"
@@ -178,6 +124,7 @@ function UserDetails() {
 								value="transgender"
 								checked={userDetails.gender === "transgender"}
 								onChange={handleRadioButtonChange}
+								data-user-detail = "gender"
 							/>
 							<label
 								className="form-check-label"
@@ -201,6 +148,7 @@ function UserDetails() {
 								id="txtAge"
 								value={userDetails.age || ""}
 								onChange={handleAgeChange}
+								data-user-detail = "age"
 								min="18"
 								max="100"
 							/>
@@ -222,6 +170,7 @@ function UserDetails() {
 								value="village"
 								checked={userDetails.placeOfResidence === "village"}
 								onChange={handleRadioButtonChange}
+								data-user-detail = "placeOfResidence"
 							/>
 							<label
 								className="form-check-label"
@@ -239,6 +188,7 @@ function UserDetails() {
 								value="urban"
 								checked={userDetails.placeOfResidence === "urban"}
 								onChange={handleRadioButtonChange}
+								data-user-detail = "placeOfResidence"
 							/>
 							<label
 								className="form-check-label"
@@ -263,6 +213,7 @@ function UserDetails() {
 								value="highSchool"
 								checked={userDetails.education === "highSchool"}
 								onChange={handleRadioButtonChange}
+								data-user-detail = "education"
 							/>
 							<label
 								className="form-check-label"
@@ -280,6 +231,7 @@ function UserDetails() {
 								value="degree"
 								checked={userDetails.education === "degree"}
 								onChange={handleRadioButtonChange}
+								data-user-detail = "education"
 							/>
 							<label
 								className="form-check-label"
@@ -297,6 +249,7 @@ function UserDetails() {
 								value="postGraduation"
 								checked={userDetails.education === "postGraduation"}
 								onChange={handleRadioButtonChange}
+								data-user-detail = "education"
 							/>
 							<label
 								className="form-check-label"
@@ -321,6 +274,7 @@ function UserDetails() {
 								value="bpl"
 								checked={userDetails.economicStatus === "bpl"}
 								onChange={handleRadioButtonChange}
+								data-user-detail = "economicStatus"
 							/>
 							<label
 								className="form-check-label"
@@ -338,6 +292,7 @@ function UserDetails() {
 								value="apl"
 								checked={userDetails.economicStatus === "apl"}
 								onChange={handleRadioButtonChange}
+								data-user-detail = "economicStatus"
 							/>
 							<label
 								className="form-check-label"
@@ -362,6 +317,7 @@ function UserDetails() {
 								value="notEmployed"
 								checked={userDetails.employmentStatus === "notEmployed"}
 								onChange={handleRadioButtonChange}
+								data-user-detail = "employmentStatus"
 							/>
 							<label
 								className="form-check-label"
@@ -379,6 +335,7 @@ function UserDetails() {
 								value="fullTime"
 								checked={userDetails.employmentStatus === "fullTime"}
 								onChange={handleRadioButtonChange}
+								data-user-detail = "employmentStatus"
 							/>
 							<label
 								className="form-check-label"
@@ -396,6 +353,7 @@ function UserDetails() {
 								value="partTime"
 								checked={userDetails.employmentStatus === "partTime"}
 								onChange={handleRadioButtonChange}
+								data-user-detail = "employmentStatus"
 							/>
 							<label
 								className="form-check-label"
@@ -413,6 +371,7 @@ function UserDetails() {
 								value="student"
 								checked={userDetails.employmentStatus === "student"}
 								onChange={handleRadioButtonChange}
+								data-user-detail = "employmentStatus"
 							/>
 							<label
 								className="form-check-label"
@@ -430,6 +389,7 @@ function UserDetails() {
 								value="homeDuties"
 								checked={userDetails.employmentStatus === "homeDuties"}
 								onChange={handleRadioButtonChange}
+								data-user-detail = "employmentStatus"
 							/>
 							<label
 								className="form-check-label"
