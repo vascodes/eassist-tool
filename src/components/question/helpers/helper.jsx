@@ -90,7 +90,7 @@ export function filterSelectedSubstances(
 		const selectedOptionOfSubstance =
 			selectedAnswersOfQuestion[substanceId];
 
-		if (compareFunction(selectedOptionOfSubstance.text.toLowerCase())) {
+		if (compareFunction(selectedOptionOfSubstance.id)) {
 			filteredSubstances.push(substanceId);
 		}
 	}
@@ -105,7 +105,7 @@ export function getSubstancesUsedInLifetime(allSelectedAnswers, questionId) {
 	*/
 	const substancesUsedInLifetime = filterSelectedSubstances(
 		allSelectedAnswers[questionId],
-		selectedOption => selectedOption === "yes",
+		selectedOptionId => selectedOptionId === 2,
 	);
 
 	return substancesUsedInLifetime;
@@ -118,7 +118,7 @@ export function getSubstancesUsedInPast3Months(allSelectedAnswers, questionId) {
 	*/
 	const substancesUsedInPast3Months = filterSelectedSubstances(
 		allSelectedAnswers[questionId],
-		selectedOption => selectedOption !== "never",
+		selectedOptionId => selectedOptionId !== 1,
 	);
 
 	return substancesUsedInPast3Months;
