@@ -1,11 +1,11 @@
 import { useState } from "react";
 
-export default function useHistory(initialValue) {
-	const [history, setHistory] = useState([initialValue]);
+export default function useHistory(initialItem) {
+	const [history, setHistory] = useState([initialItem]);
 
-	function pushHistory(nextQuestionId) {
+	function pushHistory(nextItem) {
 		const newHistory = history;
-		newHistory.push(nextQuestionId);
+		newHistory.push(nextItem);
 
 		setHistory(newHistory);
 	}
@@ -16,6 +16,10 @@ export default function useHistory(initialValue) {
 
 		setHistory(newHistory);
 	}
+
+	function searchHistory(searchItem){
+		return history.find(item => item === searchItem);
+	}
     
-    return {history, pushHistory, popHistory};
+    return {history, pushHistory, popHistory, searchHistory};
 }

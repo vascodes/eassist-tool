@@ -12,9 +12,7 @@ import * as helper from "./helpers/helper";
 import useHistory from "../../hooks/useHistory";
 import useSubstancesUsedRef from "../../hooks/useSubstancesUsedRef";
 
-function QuestionContainer(props) {
-	let { allQuestions, allSubstances, resultsRef } = props;
-
+function QuestionContainer({ allQuestions, allSubstances, resultsRef }) {
 	// Contexts.
 	const { allPages, setPage } = useContext(PageContext);
 
@@ -28,6 +26,7 @@ function QuestionContainer(props) {
 		history: questionHistory,
 		pushHistory: pushQuestionHistory,
 		popHistory: popQuestionHistory,
+		searchHistory,
 	} = useHistory(currentQuestion.id);
 
 	const { getSubstancesUsed, setSubstancesUsed } = useSubstancesUsedRef({
@@ -36,6 +35,7 @@ function QuestionContainer(props) {
 	});
 
 	const totalQuestions = allQuestions.length;
+	const currentQuestionIndex = helper.getQuestionIndexFromId(allQuestions, currentQuestion.id);
 
 	function getSubstancesToDisplay() {
 		const substancesToDisplay = helper.getSubstancesToDisplay(
@@ -56,7 +56,7 @@ function QuestionContainer(props) {
 		}
 
 		const newQuestionId = questionHistory.at(-1);
-		let index = newQuestionId - 1;
+		let index = helper.getQuestionIndexFromId(allQuestions, newQuestionId);
 		setCurrentQuestion(allQuestions[index]);
 	}
 
@@ -99,14 +99,14 @@ function QuestionContainer(props) {
 		const { lifetime: substancesUsedInLifetime } = getSubstancesUsed();
 
 		// Show Thank You page if all options are answered as "No" in question 1.
-		if (substancesUsedInLifetime.size === 0) {
+		if (searchHistory(1) && substancesUsedInLifetime.size === 0) {
 			setPage(allPages.thankYou);
 			return;
 		}
 
 		const nextQuestionId = helper.getNextQuestionId(
 			currentQuestion.id,
-			totalQuestions,
+			allQuestions,
 			getSubstancesUsed,
 		);
 
@@ -120,7 +120,7 @@ function QuestionContainer(props) {
 
 	function handlePrevButtonClick() {
 		setShowRequiredMessage(false); // Reset required message.
-		if (currentQuestion.id !== 1) changeQuestionById();
+		if (currentQuestionIndex !== 0) changeQuestionById();
 	}
 
 	return (
@@ -128,6 +128,7 @@ function QuestionContainer(props) {
 			<Question
 				key={currentQuestion?.id}
 				question={currentQuestion}
+				questionIndex={currentQuestionIndex}
 				allSubstances={allSubstances}
 				substancesToDisplay={getSubstancesToDisplay()}
 				allSelectedAnswers={allSelectedAnswers}
@@ -144,9 +145,9 @@ function QuestionContainer(props) {
 			<PageNavigation
 				showNextButton
 				nextButtonText={
-					currentQuestion.id === totalQuestions ? "Submit Answers >" : "Next >"
+					currentQuestionIndex === totalQuestions - 1 ? "Submit Answers >" : "Next >"
 				}
-				showPreviousButton={currentQuestion.id !== 1}
+				showPreviousButton={currentQuestionIndex !== 0}
 				handleNextButtonClick={handleNextButtonClick}
 				handlePreviousButtonClick={handlePrevButtonClick}
 			/>

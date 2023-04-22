@@ -1,39 +1,39 @@
-export function getSubstancesToDisplay(
-	questionId,
-	getSubstancesUsed,
-	currentQuestionSubstances,
-) {
-	const {
-		lifetime: substancesUsedInLifetime,
-		past3Months: substancesUsedInPast3Months,
-	} = getSubstancesUsed();
+export function getSubstancesToDisplay(questionId, getSubstancesUsed, currentQuestionSubstances) {
+	const { lifetime: substancesUsedInLifetime, past3Months: substancesUsedInPast3Months } =
+		getSubstancesUsed();
 
 	// Return all substances of question 1 and question 8, if exists.
 	if (questionId === 1 || questionId === 8) {
 		return currentQuestionSubstances;
-	} else {
-		// For other questions, only return substances selected in Question 1.
-		let filteredSubstances = currentQuestionSubstances.filter(substance =>
-			substancesUsedInLifetime.has(substance.id),
-		);
-
-		// For questions 3, 4 and 5, return substances that,
-		// were not answered as "Never" in questions 2.
-		if (questionId >= 3 && questionId <= 5) {
-			filteredSubstances = filteredSubstances.filter(substance =>
-				substancesUsedInPast3Months.has(substance.id),
-			);
-		}
-
-		return filteredSubstances;
 	}
+
+	// For other questions, only return substances selected in Question 1.
+	let filteredSubstances = currentQuestionSubstances.filter(substance =>
+		substancesUsedInLifetime.has(substance.id),
+	);
+
+	/* For questions 3, 4 and 5, return substances that, were not answered as "Never" in question 2. */
+	if (questionId >= 3 && questionId <= 5) {
+		filteredSubstances = filteredSubstances.filter(substance =>
+			substancesUsedInPast3Months.has(substance.id),
+		);
+	}
+
+	return filteredSubstances;
 }
 
-export function getNextQuestionId(
-	currentQuestionId,
-	totalQuestions,
-	getSubstancesUsed,
-) {
+export function getQuestionIndexFromId(allQuestions, questionId) {
+	let questionIndex = 0;
+	for (let index in allQuestions) {
+		if (allQuestions[index].id === questionId) {
+			questionIndex = index;
+		}
+	}
+
+	return Number(questionIndex);
+}
+
+export function getNextQuestionId(currentQuestionId, allQuestions, getSubstancesUsed) {
 	const { past3Months: substancesUsedInPast3Months } = getSubstancesUsed();
 
 	/* 
@@ -59,8 +59,9 @@ export function getNextQuestionId(
 		return 6;
 	}
 
-	if (currentQuestionId !== totalQuestions) {
-		return currentQuestionId + 1;
+	const questionIndex = getQuestionIndexFromId(allQuestions, currentQuestionId);
+	if (questionIndex !== allQuestions.length - 1) {
+		return allQuestions[questionIndex + 1].id;
 	}
 
 	return null;
@@ -71,24 +72,18 @@ export function validateSelectedOptions(substancesOfQuestion, selectedOptions) {
 	if (!selectedOptions) return false;
 
 	// Check if only some options of question are selected.
-	let numSelectedSubstancesOfQuestion =
-		Object.keys(selectedOptions).length ?? 0;
+	let numSelectedSubstancesOfQuestion = Object.keys(selectedOptions).length ?? 0;
 
-	if (numSelectedSubstancesOfQuestion < substancesOfQuestion.length)
-		return false;
+	if (numSelectedSubstancesOfQuestion < substancesOfQuestion.length) return false;
 
 	return true;
 }
 
-export function filterSelectedSubstances(
-	selectedAnswersOfQuestion,
-	compareFunction,
-) {
+export function filterSelectedSubstances(selectedAnswersOfQuestion, compareFunction) {
 	const filteredSubstances = [];
 
 	for (let substanceId in selectedAnswersOfQuestion) {
-		const selectedOptionOfSubstance =
-			selectedAnswersOfQuestion[substanceId];
+		const selectedOptionOfSubstance = selectedAnswersOfQuestion[substanceId];
 
 		if (compareFunction(selectedOptionOfSubstance.id)) {
 			filteredSubstances.push(substanceId);
@@ -124,10 +119,7 @@ export function getSubstancesUsedInPast3Months(allSelectedAnswers, questionId) {
 	return substancesUsedInPast3Months;
 }
 
-export function filterAnswersNotInQuestionHistory(
-	allSelectedAnswers,
-	questionHistory,
-) {
+export function filterAnswersNotInQuestionHistory(allSelectedAnswers, questionHistory) {
 	let filteredAnswers = {};
 
 	for (let questionId in allSelectedAnswers) {
@@ -163,16 +155,12 @@ export function calculateSubstanceScores(allSelectedAnswers) {
 }
 
 export function updateScores(allSelectedAnswers, questionHistory, resultsRef) {
-	const filteredAnswers = filterAnswersNotInQuestionHistory(
-		allSelectedAnswers,
-		questionHistory,
-	);
+	const filteredAnswers = filterAnswersNotInQuestionHistory(allSelectedAnswers, questionHistory);
 
 	const selectedSubstanceScores = calculateSubstanceScores(filteredAnswers);
 
 	// Update scores in result.
 	for (let substanceId in selectedSubstanceScores) {
-		resultsRef.current.scores[substanceId] =
-			selectedSubstanceScores[substanceId];
+		resultsRef.current.scores[substanceId] = selectedSubstanceScores[substanceId];
 	}
 }

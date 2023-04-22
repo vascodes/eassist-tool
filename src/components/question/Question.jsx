@@ -2,17 +2,18 @@ import OptionGroup from "./OptionGroup";
 
 function Question({
 	question,
+	questionIndex,
 	allSubstances,
 	substancesToDisplay,
 	allSelectedAnswers,
 	setAllSelectedAnswers,
 	totalQuestions,
 }) {	
-	const progressBarWidth = Math.floor((question.id / totalQuestions) * 100);
+	const progressBarWidth = Math.floor(((questionIndex + 1) / totalQuestions) * 100);
 
 	return (
 		<div className="question-block">
-			<p className="d-flex question-text">{`${question.id}. ${question.text}`}</p>
+			<p className="d-flex question-text">{`${questionIndex + 1}. ${question.text}`}</p>
 
 			{/* Progress Bar */}
 			<div className="progress mb-4">

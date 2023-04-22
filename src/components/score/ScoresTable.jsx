@@ -24,6 +24,7 @@ function ScoresTable({ resultsRef, substanceRiskLevels, scoreMeaning, getSubstan
 		<CardLayout>
 			<h3>eAssist scores</h3>
 
+			{/* Scores Table */}
 			<div className="table-responsive">
 				<table className="table table-borderless">
 					<thead className="bg-success text-white">
@@ -87,9 +88,10 @@ function ScoresTable({ resultsRef, substanceRiskLevels, scoreMeaning, getSubstan
 				</table>
 			</div>
 
-			<div class="table-responsive mt-5">
+			{/* Score Meaning Table */}
+			<div className="table-responsive mt-5">
 				<h4>Score Meaning</h4>
-				<table class="table table-bordered table-striped">
+				<table className="table table-bordered table-striped">
 					<thead className="bg-success text-white">
 						<tr>
 							<th scope="col">Category</th>

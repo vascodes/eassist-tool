@@ -208,6 +208,630 @@ export const data = {
 			]
 		},
 		{
+			"id": 9,
+			"text": "Have you ever felt you ought to cut down on your drinking or drug use?",
+			"substances": [
+				{
+					"id": "tobacco",
+					"options": [
+						{
+							"id": 1,
+							"text": "No",
+							"score": 0
+						},
+						{
+							"id": 2,
+							"text": "Yes",
+							"score": 0
+						}
+					]
+				},
+				{
+					"id": "alcohol",
+					"options": [
+						{
+							"id": 1,
+							"text": "No",
+							"score": 0
+						},
+						{
+							"id": 2,
+							"text": "Yes",
+							"score": 0
+						}
+					]
+				},
+				{
+					"id": "cannabis",
+					"options": [
+						{
+							"id": 1,
+							"text": "No",
+							"score": 0
+						},
+						{
+							"id": 2,
+							"text": "Yes",
+							"score": 0
+						}
+					]
+				},
+				{
+					"id": "cocaine",
+					"options": [
+						{
+							"id": 1,
+							"text": "No",
+							"score": 0
+						},
+						{
+							"id": 2,
+							"text": "Yes",
+							"score": 0
+						}
+					]
+				},
+				{
+					"id": "amphetamine",
+					"options": [
+						{
+							"id": 1,
+							"text": "No",
+							"score": 0
+						},
+						{
+							"id": 2,
+							"text": "Yes",
+							"score": 0
+						}
+					]
+				},
+				{
+					"id": "inhalants",
+					"options": [
+						{
+							"id": 1,
+							"text": "No",
+							"score": 0
+						},
+						{
+							"id": 2,
+							"text": "Yes",
+							"score": 0
+						}
+					]
+				},
+				{
+					"id": "sedatives",
+					"options": [
+						{
+							"id": 1,
+							"text": "No",
+							"score": 0
+						},
+						{
+							"id": 2,
+							"text": "Yes",
+							"score": 0
+						}
+					]
+				},
+				{
+					"id": "hallucinogens",
+					"options": [
+						{
+							"id": 1,
+							"text": "No",
+							"score": 0
+						},
+						{
+							"id": 2,
+							"text": "Yes",
+							"score": 0
+						}
+					]
+				},
+				{
+					"id": "opioids",
+					"options": [
+						{
+							"id": 1,
+							"text": "No",
+							"score": 0
+						},
+						{
+							"id": 2,
+							"text": "Yes",
+							"score": 0
+						}
+					]
+				},
+				{
+					"id": "other",
+					"options": [
+						{
+							"id": 1,
+							"text": "No",
+							"score": 0
+						},
+						{
+							"id": 2,
+							"text": "Yes",
+							"score": 0
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 10,
+			"text": "Have people annoyed you by criticizing your drinking or drug use?",
+			"substances": [
+				{
+					"id": "tobacco",
+					"options": [
+						{
+							"id": 1,
+							"text": "No",
+							"score": 0
+						},
+						{
+							"id": 2,
+							"text": "Yes",
+							"score": 0
+						}
+					]
+				},
+				{
+					"id": "alcohol",
+					"options": [
+						{
+							"id": 1,
+							"text": "No",
+							"score": 0
+						},
+						{
+							"id": 2,
+							"text": "Yes",
+							"score": 0
+						}
+					]
+				},
+				{
+					"id": "cannabis",
+					"options": [
+						{
+							"id": 1,
+							"text": "No",
+							"score": 0
+						},
+						{
+							"id": 2,
+							"text": "Yes",
+							"score": 0
+						}
+					]
+				},
+				{
+					"id": "cocaine",
+					"options": [
+						{
+							"id": 1,
+							"text": "No",
+							"score": 0
+						},
+						{
+							"id": 2,
+							"text": "Yes",
+							"score": 0
+						}
+					]
+				},
+				{
+					"id": "amphetamine",
+					"options": [
+						{
+							"id": 1,
+							"text": "No",
+							"score": 0
+						},
+						{
+							"id": 2,
+							"text": "Yes",
+							"score": 0
+						}
+					]
+				},
+				{
+					"id": "inhalants",
+					"options": [
+						{
+							"id": 1,
+							"text": "No",
+							"score": 0
+						},
+						{
+							"id": 2,
+							"text": "Yes",
+							"score": 0
+						}
+					]
+				},
+				{
+					"id": "sedatives",
+					"options": [
+						{
+							"id": 1,
+							"text": "No",
+							"score": 0
+						},
+						{
+							"id": 2,
+							"text": "Yes",
+							"score": 0
+						}
+					]
+				},
+				{
+					"id": "hallucinogens",
+					"options": [
+						{
+							"id": 1,
+							"text": "No",
+							"score": 0
+						},
+						{
+							"id": 2,
+							"text": "Yes",
+							"score": 0
+						}
+					]
+				},
+				{
+					"id": "opioids",
+					"options": [
+						{
+							"id": 1,
+							"text": "No",
+							"score": 0
+						},
+						{
+							"id": 2,
+							"text": "Yes",
+							"score": 0
+						}
+					]
+				},
+				{
+					"id": "other",
+					"options": [
+						{
+							"id": 1,
+							"text": "No",
+							"score": 0
+						},
+						{
+							"id": 2,
+							"text": "Yes",
+							"score": 0
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 11,
+			"text": "Have you felt bad or guilty about your drinking or drug use?",
+			"substances": [
+				{
+					"id": "tobacco",
+					"options": [
+						{
+							"id": 1,
+							"text": "No",
+							"score": 0
+						},
+						{
+							"id": 2,
+							"text": "Yes",
+							"score": 0
+						}
+					]
+				},
+				{
+					"id": "alcohol",
+					"options": [
+						{
+							"id": 1,
+							"text": "No",
+							"score": 0
+						},
+						{
+							"id": 2,
+							"text": "Yes",
+							"score": 0
+						}
+					]
+				},
+				{
+					"id": "cannabis",
+					"options": [
+						{
+							"id": 1,
+							"text": "No",
+							"score": 0
+						},
+						{
+							"id": 2,
+							"text": "Yes",
+							"score": 0
+						}
+					]
+				},
+				{
+					"id": "cocaine",
+					"options": [
+						{
+							"id": 1,
+							"text": "No",
+							"score": 0
+						},
+						{
+							"id": 2,
+							"text": "Yes",
+							"score": 0
+						}
+					]
+				},
+				{
+					"id": "amphetamine",
+					"options": [
+						{
+							"id": 1,
+							"text": "No",
+							"score": 0
+						},
+						{
+							"id": 2,
+							"text": "Yes",
+							"score": 0
+						}
+					]
+				},
+				{
+					"id": "inhalants",
+					"options": [
+						{
+							"id": 1,
+							"text": "No",
+							"score": 0
+						},
+						{
+							"id": 2,
+							"text": "Yes",
+							"score": 0
+						}
+					]
+				},
+				{
+					"id": "sedatives",
+					"options": [
+						{
+							"id": 1,
+							"text": "No",
+							"score": 0
+						},
+						{
+							"id": 2,
+							"text": "Yes",
+							"score": 0
+						}
+					]
+				},
+				{
+					"id": "hallucinogens",
+					"options": [
+						{
+							"id": 1,
+							"text": "No",
+							"score": 0
+						},
+						{
+							"id": 2,
+							"text": "Yes",
+							"score": 0
+						}
+					]
+				},
+				{
+					"id": "opioids",
+					"options": [
+						{
+							"id": 1,
+							"text": "No",
+							"score": 0
+						},
+						{
+							"id": 2,
+							"text": "Yes",
+							"score": 0
+						}
+					]
+				},
+				{
+					"id": "other",
+					"options": [
+						{
+							"id": 1,
+							"text": "No",
+							"score": 0
+						},
+						{
+							"id": 2,
+							"text": "Yes",
+							"score": 0
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 12,
+			"text": "Have you ever had a drink or used drugs first thing in the morning to steady your nerves or to get rid of a hangover (eye-opener)?",
+			"substances": [
+				{
+					"id": "tobacco",
+					"options": [
+						{
+							"id": 1,
+							"text": "No",
+							"score": 0
+						},
+						{
+							"id": 2,
+							"text": "Yes",
+							"score": 0
+						}
+					]
+				},
+				{
+					"id": "alcohol",
+					"options": [
+						{
+							"id": 1,
+							"text": "No",
+							"score": 0
+						},
+						{
+							"id": 2,
+							"text": "Yes",
+							"score": 0
+						}
+					]
+				},
+				{
+					"id": "cannabis",
+					"options": [
+						{
+							"id": 1,
+							"text": "No",
+							"score": 0
+						},
+						{
+							"id": 2,
+							"text": "Yes",
+							"score": 0
+						}
+					]
+				},
+				{
+					"id": "cocaine",
+					"options": [
+						{
+							"id": 1,
+							"text": "No",
+							"score": 0
+						},
+						{
+							"id": 2,
+							"text": "Yes",
+							"score": 0
+						}
+					]
+				},
+				{
+					"id": "amphetamine",
+					"options": [
+						{
+							"id": 1,
+							"text": "No",
+							"score": 0
+						},
+						{
+							"id": 2,
+							"text": "Yes",
+							"score": 0
+						}
+					]
+				},
+				{
+					"id": "inhalants",
+					"options": [
+						{
+							"id": 1,
+							"text": "No",
+							"score": 0
+						},
+						{
+							"id": 2,
+							"text": "Yes",
+							"score": 0
+						}
+					]
+				},
+				{
+					"id": "sedatives",
+					"options": [
+						{
+							"id": 1,
+							"text": "No",
+							"score": 0
+						},
+						{
+							"id": 2,
+							"text": "Yes",
+							"score": 0
+						}
+					]
+				},
+				{
+					"id": "hallucinogens",
+					"options": [
+						{
+							"id": 1,
+							"text": "No",
+							"score": 0
+						},
+						{
+							"id": 2,
+							"text": "Yes",
+							"score": 0
+						}
+					]
+				},
+				{
+					"id": "opioids",
+					"options": [
+						{
+							"id": 1,
+							"text": "No",
+							"score": 0
+						},
+						{
+							"id": 2,
+							"text": "Yes",
+							"score": 0
+						}
+					]
+				},
+				{
+					"id": "other",
+					"options": [
+						{
+							"id": 1,
+							"text": "No",
+							"score": 0
+						},
+						{
+							"id": 2,
+							"text": "Yes",
+							"score": 0
+						}
+					]
+				}
+			]
+		},
+		{
 			"id": 2,
 			"text": "In the past three months, how often have you used the substances you mentioned (first drug, second drug, etc)?",
 			"substances": [
@@ -1818,7 +2442,7 @@ export const data = {
 			"text": "Have you ever used any drug by injection (non-medical use only)?",
 			"substances": [
 				{
-					"id": "injection",
+					"id": "any",
 					"options": [
 						{
 							"id": 1,
@@ -4676,49 +5300,49 @@ export const data = {
 			"id": 1,
 			"name": "Outreach and drop-in centre",
 			"location": "Rajagiri College of Social Sciences, Koonammavu",
-			"contactDetails": ["8547502546", "9207297283"],			
+			"contactDetails": ["8547502546", "9207297283"],
 		},
 		{
 			"id": 2,
 			"name": "M.M.M",
 			"location": "De-addiction centre, MOSC Medical college hospital, Kolenchery",
-			"contactDetails": ["0484 2885499", "7510310404", "7034003331"],			
+			"contactDetails": ["0484 2885499", "7510310404", "7034003331"],
 		},
 		{
 			"id": 3,
 			"name": "Nirmal Nikethan",
 			"location": "Mukthi sadan, pukkattupady, Ernakulam",
-			"contactDetails": ["914842683000", "914842683001", "mukthi93@gmail.com"],			
+			"contactDetails": ["914842683000", "914842683001", "mukthi93@gmail.com"],
 		},
 		{
 			"id": 4,
 			"name": "Unity Group",
 			"location": "Perumabavoor",
-			"contactDetails": ["0484 2596113", "0484 3297121", "938889021"],			
+			"contactDetails": ["0484 2596113", "0484 3297121", "938889021"],
 		},
 		{
 			"id": 5,
 			"name": "Vimukthi",
 			"location": "Taluq hospital, Muvattupuzha",
-			"contactDetails": ["0485 2832360", "9400069564"],			
+			"contactDetails": ["0485 2832360", "9400069564"],
 		},
 		{
 			"id": 6,
 			"name": "Nirmal Nikethan (Only for ladies)",
 			"location": "Mukthi sadan, Njallor, Angamaly",
-			"contactDetails": ["0484 2949060"],			
+			"contactDetails": ["0484 2949060"],
 		},
 		{
 			"id": 7,
 			"name": "Vimukthi Counselling Centre",
 			"location": "Excise Zonal Headquarters, Kacherippady",
-			"contactDetails": ["9188520199"],			
+			"contactDetails": ["9188520199"],
 		},
 		{
 			"id": 8,
 			"name": "Nasha mukth helpline number",
 			"location": "",
-			"contactDetails": ["1800110031"],			
+			"contactDetails": ["1800110031"],
 		},
 	]
 };
