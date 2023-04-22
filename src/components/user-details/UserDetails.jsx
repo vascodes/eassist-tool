@@ -14,6 +14,9 @@ function UserDetails() {
 	const [userDetails, setUserDetails] = useState({
 		gender: null,
 		age: null,
+		education: null,
+		placeOfResidence: null,
+		economicStatus: null,
 		employmentStatus: null,
 	});
 
@@ -48,6 +51,42 @@ function UserDetails() {
 				break;
 			}
 
+			case "radio-education": {
+				const { value: education } = target;
+
+				setUserDetails(prevUserDetails => {
+					const newUserDetails = { ...prevUserDetails };
+					newUserDetails.education = education;
+
+					return newUserDetails;
+				});
+				break;
+			}
+
+			case "radio-place-of-residence": {
+				const { value: placeOfResidence } = target;
+
+				setUserDetails(prevUserDetails => {
+					const newUserDetails = { ...prevUserDetails };
+					newUserDetails.placeOfResidence = placeOfResidence;
+
+					return newUserDetails;
+				});
+				break;
+			}
+
+			case "radio-economic-status": {
+				const { value: economicStatus } = target;
+
+				setUserDetails(prevUserDetails => {
+					const newUserDetails = { ...prevUserDetails };
+					newUserDetails.economicStatus = economicStatus;
+
+					return newUserDetails;
+				});
+				break;
+			}
+
 			case "radio-employment-status": {
 				const { value: employmentStatus } = target;
 
@@ -67,11 +106,11 @@ function UserDetails() {
 
 	function handleNextButtonClick() {
 		let isAllAnswered = false;
-		
+
 		for (let key in userDetails) {
 			isAllAnswered = Boolean(userDetails[key]);
 			if (!isAllAnswered) break;
-		}		
+		}
 
 		if (!isAllAnswered) {
 			setError("Please answer all questions to continue.");
@@ -91,6 +130,7 @@ function UserDetails() {
 		<CardLayout showInfo>
 			<ol className="list-group list-group-flush">
 				<li className="list-group-item">
+					{/* Gender */}
 					<div>
 						<div className="sub-question-container">
 							<strong>What is your gender?</strong>
@@ -148,6 +188,7 @@ function UserDetails() {
 						</div>
 					</div>
 
+					{/* Age */}
 					<div className="mt-4">
 						<div className="sub-question-container">
 							<strong>What is your age?</strong>
@@ -167,7 +208,148 @@ function UserDetails() {
 						</div>
 					</div>
 
-					<div className="mt-2">
+					{/* Place of residence */}
+					<div className="mt-1">
+						<div className="sub-question-container">
+							<strong>Where is your place of residence?</strong>
+						</div>
+						<div className="form-check radio-spacing mt-2">
+							<input
+								className="form-check-input"
+								type="radio"
+								name="radio-place-of-residence"
+								id="radioPlaceOfResidenceVillage"
+								value="village"
+								checked={userDetails.placeOfResidence === "village"}
+								onChange={handleRadioButtonChange}
+							/>
+							<label
+								className="form-check-label"
+								htmlFor="radioPlaceOfResidenceVillage"
+							>
+								Village
+							</label>
+						</div>
+						<div className="form-check radio-spacing">
+							<input
+								className="form-check-input"
+								type="radio"
+								name="radio-place-of-residence"
+								id="radioPlaceOfResidenceUrban"
+								value="urban"
+								checked={userDetails.placeOfResidence === "urban"}
+								onChange={handleRadioButtonChange}
+							/>
+							<label
+								className="form-check-label"
+								htmlFor="radioPlaceOfResidenceUrban"
+							>
+								Urban
+							</label>
+						</div>
+					</div>
+
+					{/* Education */}
+					<div className="mt-4">
+						<div className="sub-question-container">
+							<strong>What is your Educational Qualification?</strong>
+						</div>
+						<div className="form-check radio-spacing mt-2">
+							<input
+								className="form-check-input"
+								type="radio"
+								name="radio-education"
+								id="radioEducationHighSchool"
+								value="highSchool"
+								checked={userDetails.education === "highSchool"}
+								onChange={handleRadioButtonChange}
+							/>
+							<label
+								className="form-check-label"
+								htmlFor="radioEducationHighSchool"
+							>
+								High School
+							</label>
+						</div>
+						<div className="form-check radio-spacing">
+							<input
+								className="form-check-input"
+								type="radio"
+								name="radio-education"
+								id="radioEducationDegree"
+								value="degree"
+								checked={userDetails.education === "degree"}
+								onChange={handleRadioButtonChange}
+							/>
+							<label
+								className="form-check-label"
+								htmlFor="radioEducationDegree"
+							>
+								Degree
+							</label>
+						</div>
+						<div className="form-check radio-spacing">
+							<input
+								className="form-check-input"
+								type="radio"
+								name="radio-education"
+								id="radioEducationPostGraduation"
+								value="postGraduation"
+								checked={userDetails.education === "postGraduation"}
+								onChange={handleRadioButtonChange}
+							/>
+							<label
+								className="form-check-label"
+								htmlFor="radioEducationPostGraduation"
+							>
+								Post Graduation and above
+							</label>
+						</div>
+					</div>
+
+					{/* Economic Status */}
+					<div className="mt-4">
+						<div className="sub-question-container">
+							<strong>What is your current economic status?</strong>
+						</div>
+						<div className="form-check radio-spacing mt-2">
+							<input
+								className="form-check-input"
+								type="radio"
+								name="radio-economic-status"
+								id="radioEconomicStatusBPL"
+								value="bpl"
+								checked={userDetails.economicStatus === "bpl"}
+								onChange={handleRadioButtonChange}
+							/>
+							<label
+								className="form-check-label"
+								htmlFor="radioEconomicStatusBPL"
+							>
+								BPL
+							</label>
+						</div>
+						<div className="form-check radio-spacing">
+							<input
+								className="form-check-input"
+								type="radio"
+								name="radio-economic-status"
+								id="radioEconomicStatusAPL"
+								value="apl"
+								checked={userDetails.economicStatus === "apl"}
+								onChange={handleRadioButtonChange}
+							/>
+							<label
+								className="form-check-label"
+								htmlFor="radioEconomicStatusAPL"
+							>
+								APL
+							</label>
+						</div>
+					</div>
+
+					{/* Employment Status */}
+					<div className="mt-4">
 						<div className="sub-question-container">
 							<strong>How are you mainly employed at the moment?</strong>
 						</div>
