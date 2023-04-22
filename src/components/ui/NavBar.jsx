@@ -1,12 +1,22 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AppContext } from "../../contexts/AppContext";
 
 function NavBar() {
-	const { changeLanguage, allPages, setPage } = useContext(AppContext);	
+	const { changeLanguage, allPages, setPage } = useContext(AppContext);
+	const [activeNavButton, setActiveNavButton] = useState("btn-nav-home");
+
+	function getNavButtonClass(buttonName) {
+		let defaultNavButtonClass = "nav-link btn border-0";
+		let navButtonClass = activeNavButton === buttonName ? `${defaultNavButtonClass} active` : defaultNavButtonClass;
+
+		return navButtonClass;
+	}
 
 	function handleClick({ target }) {
 		const { name } = target;
 		const section = name.split("-").at(-1);
+
+		setActiveNavButton(name);
 
 		switch (section) {
 			case "brand":
@@ -63,18 +73,18 @@ function NavBar() {
 					<div className="collapse navbar-collapse" id="navbarNav">
 						<ul className="navbar-nav ms-auto">
 							<li className="nav-item">
-								<button name="btn-nav-home" className="nav-link active btn border-0" aria-current="page"
+								<button name="btn-nav-home" className={getNavButtonClass("btn-nav-home")} aria-current="page"
 									onClick={handleClick}>
 									Home
 								</button>
 							</li>
 							<li className="nav-item">
-								<button name="btn-nav-assessment" className="nav-link btn border-0" onClick={handleClick}>
+								<button name="btn-nav-assessment" className={getNavButtonClass("btn-nav-assessment")} onClick={handleClick}>
 									Start Assessment
 								</button>
 							</li>
 							<li className="nav-item">
-								<button name="btn-nav-contact" className="nav-link btn border-0" onClick={handleClick}>
+								<button name="btn-nav-contact" className={getNavButtonClass("btn-nav-contact")} onClick={handleClick}>
 									Contact
 								</button>
 							</li>
