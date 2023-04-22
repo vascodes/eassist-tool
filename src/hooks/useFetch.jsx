@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-function useFetch(data) {
-	const [content] = useState(data);
+function useFetch(data) {		
+	const [content, setContent] = useState(data);
 	
 	function getSubstanceDetailsById(substanceId) {
 		return content?.substances.find(
@@ -18,7 +18,8 @@ function useFetch(data) {
 	}
 
 	return {
-		content,		
+		content,	
+		setContent,	
 		getSubstanceDetailsById,
 		getSubstanceAdviceHTML,
 	};

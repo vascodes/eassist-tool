@@ -5,7 +5,7 @@ import PageNavigation from "../ui/PageNavigation";
 import { getCategorizedSubstances } from "./helper";
 
 import { useContext, useMemo } from "react";
-import { PageContext } from "../contexts/PageContext";
+import { AppContext } from "../../contexts/AppContext";
 
 function AdviceContainer({
 	resultsRef,	
@@ -13,7 +13,7 @@ function AdviceContainer({
 	getSubstanceDetailsById,
 	getSubstanceAdviceHTML,
 }) {
-	const { allPages, setPage } = useContext(PageContext);
+	const { allPages, setPage } = useContext(AppContext);
 
 	const categorizedSubstances = useMemo(() => getCategorizedSubstances(
 		resultsRef.current.scores,

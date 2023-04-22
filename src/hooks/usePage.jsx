@@ -1,6 +1,4 @@
-import { useState, useContext } from "react";
-
-import { PageContext } from "../components/contexts/PageContext";
+import { useState } from "react";
 
 export default function usePage(intialPage) {
 	const [page, setPage] = useState(intialPage);

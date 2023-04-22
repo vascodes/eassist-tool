@@ -1,9 +1,8 @@
 import { useContext } from "react";
-import { PageContext } from "../contexts/PageContext";
-import PageNavigation from "../ui/PageNavigation";
+import { AppContext } from "../../contexts/AppContext";
 
 function Home() {
-	const { allPages, setPage } = useContext(PageContext);
+	const { allPages, setPage } = useContext(AppContext);
 
 	function handleNextButtonClick() {
 		setPage(allPages.userDetails);
@@ -32,18 +31,20 @@ function Home() {
 				</button>
 			</section>
 
-			<section id="about-assessment" className="bg-white py-5">
+			<section id="about-assessment" className="bg-white p-5">
 				<div className="row align-items-center">
 					<div className="col-md text-center">
 						<h3>What is this Assessment about?</h3>
 					</div>
 					<div className="col-md">
-						<div className="info-bubble bg-success text-white p-4 m-4 rounded">
-							This assessment is a modified version of the Alcohol, Smoking and
-							Substance Involvement Screening Test (ASSIST) which was developed by
-							the World Health Organization. It takes approximately 5-10 minutes to
-							complete and helps identify the risks associated with substance use.
-							The personalised feedback helps you explore options for change.
+						<div className="info-bubble bg-success text-white p-4 rounded">
+							<p className="lead">
+								This assessment is a modified version of the Alcohol, Smoking and
+								Substance Involvement Screening Test (ASSIST) which was developed by
+								the World Health Organization. It takes approximately 5-10 minutes to
+								complete and helps identify the risks associated with substance use.
+								The personalised feedback helps you explore options for change.
+							</p>
 						</div>
 					</div>
 				</div>
@@ -51,7 +52,7 @@ function Home() {
 
 			<section id="about-us" className="bg-success p-5">
 				<div className="row align-items-start">
-					<div className="col-md order-2 order-md-1">
+					<div className="col-md order-2 order-md-1 text-center">
 						<img
 							src={`${process.env.PUBLIC_URL}/assets/images/Rajagiri_college_of_social_science.jpg`}
 							alt=""
@@ -80,7 +81,7 @@ function Home() {
 			>
 				<h3>Project Supported By</h3>
 				<div
-					className="logos-row mt-3 mt-md-5 d-flex flex-column flex-md-row justify-content-center align-items-center gap-3 gap-md-5"					
+					className="logos-row mt-3 mt-md-5 d-flex flex-column flex-md-row justify-content-center align-items-center gap-3 gap-md-5"
 				>
 					<img src={`${process.env.PUBLIC_URL}/assets/images/MSJE.jpg`} alt="" className="img-fluid" />
 					<img

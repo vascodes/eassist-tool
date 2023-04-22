@@ -1,15 +1,15 @@
 import { useContext } from "react";
-import { PageContext } from "../contexts/PageContext";
+import { AppContext } from "../../contexts/AppContext";
 
 function NavBar() {
-	const { allPages, setPage } = useContext(PageContext);
+	const { changeLanguage, allPages, setPage } = useContext(AppContext);	
 
 	function handleClick({ target }) {
 		const { name } = target;
-		const section = name.split("-").at(-1);		
+		const section = name.split("-").at(-1);
 
 		switch (section) {
-			case "brand":							
+			case "brand":
 			case "home":
 				setPage(allPages.home);
 				break;
@@ -37,10 +37,10 @@ function NavBar() {
 						Change Language
 					</button>
 					<div className="dropdown-menu" aria-labelledby="languageDropdown">
-						<button className="dropdown-item" href="#">
+						<button className="dropdown-item" onClick={() => changeLanguage("en")}>
 							English
 						</button>
-						<button className="dropdown-item" href="#">
+						<button className="dropdown-item" onClick={() => changeLanguage("ml")}>
 							Malayalam
 						</button>
 					</div>
@@ -82,7 +82,7 @@ function NavBar() {
 					</div>
 				</div>
 			</nav>
-		</header>						
+		</header>
 	);
 }
 

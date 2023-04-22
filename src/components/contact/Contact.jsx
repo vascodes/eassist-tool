@@ -1,4 +1,29 @@
 import CardLayout from "../layouts/CardLayout";
+
+function ContactRow({ rowSpanCount, index, contact }) {
+	return (
+		<>
+			<tr>
+				<th
+					scope="row"
+					rowSpan={rowSpanCount}
+				>
+					{index + 1}
+				</th>
+				<th rowSpan={rowSpanCount}>{contact.name}</th>
+				<td rowSpan={rowSpanCount}>{contact.location}</td>
+			</tr>
+			{contact.contactDetails.map((contactDetail, index) => {
+				return (
+					<tr key={index}>
+						<td>{contactDetail}</td>
+					</tr>
+				);
+			})}
+		</>
+	);
+}
+
 function Contact({ children }) {
 	return (
 		<CardLayout>
@@ -10,35 +35,16 @@ function Contact({ children }) {
 							<th scope="col">#</th>
 							<th scope="col">Name</th>
 							<th scope="col">Location</th>
-							<th scope="col">Contact</th>							
+							<th scope="col">Contact</th>
 						</tr>
 					</thead>
 					<tbody>
 						{children.map((contact, index) => {
 							const rowSpanCount = contact.contactDetails.length + 1;
 							return (
-								<>
-									<tr>
-										<th
-											scope="row"
-											rowSpan={rowSpanCount}
-										>
-											{index + 1}
-										</th>
-										<th rowSpan={rowSpanCount}>{contact.name}</th>
-										<td rowSpan={rowSpanCount}>{contact.location}</td>
-									</tr>
-									{contact.contactDetails.map((contactDetail) => {
-										return (
-											<tr>
-												<td>{contactDetail}</td>												
-											</tr>
-										);
-									})}
-								</>
+								<ContactRow key={index} rowSpanCount={rowSpanCount} index={index} contact={contact} />
 							);
-						})
-					}
+						})}
 					</tbody>
 				</table>
 			</div>

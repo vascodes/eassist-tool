@@ -6,7 +6,7 @@ import PageNavigation from "../ui/PageNavigation";
 import CardLayout from "../layouts/CardLayout";
 
 import { useContext } from "react";
-import { PageContext } from "../contexts/PageContext";
+import { AppContext } from "../../contexts/AppContext";
 
 import * as helper from "./helpers/helper";
 import useHistory from "../../hooks/useHistory";
@@ -14,7 +14,7 @@ import useSubstancesUsedRef from "../../hooks/useSubstancesUsedRef";
 
 function QuestionContainer({ allQuestions, allSubstances, resultsRef }) {
 	// Contexts.
-	const { allPages, setPage } = useContext(PageContext);
+	const { allPages, setPage } = useContext(AppContext);
 
 	// States.
 	const [currentQuestion, setCurrentQuestion] = useState(allQuestions[0]);

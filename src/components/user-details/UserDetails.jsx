@@ -2,13 +2,13 @@ import PageButton from "../ui/PageButton";
 import AlertBox from "../ui/AlertBox";
 import CardLayout from "../layouts/CardLayout";
 import { useContext, useState } from "react";
-import { PageContext } from "../contexts/PageContext";
+import { AppContext } from "../../contexts/AppContext";
 
 import { getIsValidAge } from "./helpers";
 
 // TODO: Save Input data
 function UserDetails() {
-	const { allPages, setPage } = useContext(PageContext);
+	const { allPages, setPage } = useContext(AppContext);
 
 	const [error, setError] = useState(null);
 	const [userDetails, setUserDetails] = useState({

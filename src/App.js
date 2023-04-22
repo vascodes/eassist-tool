@@ -1,6 +1,7 @@
-import { useContext, useEffect, useRef } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 
-import { data } from "../src/data-en";
+import { data as dataEN } from "./data-en";
+import { data as dataML } from "./data-ml";
 
 import Layout from "./components/layouts/Layout";
 import Home from "./components/home/Home";
@@ -11,15 +12,16 @@ import ScoresTable from "./components/score/ScoresTable";
 import ThankYou from "./components/thank-you/ThankYou";
 import Contact from "./components/contact/Contact";
 
-import { PageContext } from "./components/contexts/PageContext";
+import { AppContext } from "./contexts/AppContext";
 import useFetch from "./hooks/useFetch";
 import usePage from "./hooks/usePage";
 
 import { getInitialSubstanceScores, getInitialCategories } from "./utils/helper";
 
 function App() {
-	const { content, getSubstanceDetailsById, getSubstanceAdviceHTML } = useFetch(data);
-	const { page, setPage, allPages } = usePage(useContext(PageContext));
+	const [language, setLanguage] = useState("en");
+	const { content, setContent, getSubstanceDetailsById, getSubstanceAdviceHTML } = useFetch(dataEN);
+	const { page, setPage, allPages } = usePage(useContext(AppContext));
 	const resultsRef = useRef({
 		scores: getInitialSubstanceScores(content?.substances),
 		categorizedSubstances: getInitialCategories(),
@@ -30,67 +32,89 @@ function App() {
 		if (content && !page) {
 			setPage(allPages.home);
 		}
-	}, []);
+	}, [allPages.home, content, page, setPage]);
 
-	let componentToDisplay = null;
-	switch (page) {
-		case allPages.home:
-			componentToDisplay = <Home />;
-			break;
+	function changeLanguage(language) {
+		switch (language) {
+			case "en":
+				setLanguage("en");
+				setContent(dataEN);
+				break;
 
-		case allPages.userDetails:
-			componentToDisplay = <UserDetails />;
-			break;
+			case "ml":
+				setLanguage("ml");
+				setContent(dataML);
+				break;
 
-		case allPages.questions:
-			componentToDisplay = (
-				<QuestionContainer
-					allQuestions={content?.questions}
-					allSubstances={content?.substances}
-					resultsRef={resultsRef}
-				/>
-			);
-			break;
+			default:
+				setLanguage("en");
+				break;
+		}
+	}
 
-		case allPages.advice:
-			componentToDisplay = (
-				<AdviceContainer
-					resultsRef={resultsRef}
-					substanceRiskLevels={content?.substanceRiskLevels}
-					getSubstanceDetailsById={getSubstanceDetailsById}
-					getSubstanceAdviceHTML={getSubstanceAdviceHTML}
-				/>
-			);
-			break;
+	function showPage(page) {
+		let componentToDisplay = null;
+		switch (page) {
+			case allPages.home:
+				componentToDisplay = <Home />;
+				break;
 
-		case allPages.scores:
-			componentToDisplay = (
-				<ScoresTable
-					resultsRef={resultsRef}
-					substanceRiskLevels={content?.substanceRiskLevels}
-					scoreMeaning={content?.scoreMeaning}
-					getSubstanceDetails={getSubstanceDetailsById}
-				/>
-			);
-			break;
+			case allPages.userDetails:
+				componentToDisplay = <UserDetails />;
+				break;
 
-		case allPages.thankYou:
-			componentToDisplay = <ThankYou />;
-			break;
+			case allPages.questions:
+				componentToDisplay = (
+					<QuestionContainer
+						allQuestions={content?.questions}
+						allSubstances={content?.substances}
+						resultsRef={resultsRef}
+					/>
+				);
+				break;
 
-		case allPages.contact:
-			componentToDisplay = <Contact>{content?.contactDetails}</Contact>;
-			break;
+			case allPages.advice:
+				componentToDisplay = (
+					<AdviceContainer
+						resultsRef={resultsRef}
+						substanceRiskLevels={content?.substanceRiskLevels}
+						getSubstanceDetailsById={getSubstanceDetailsById}
+						getSubstanceAdviceHTML={getSubstanceAdviceHTML}
+					/>
+				);
+				break;
 
-		default:
-			componentToDisplay = <h1>Loading</h1>;
-			break;
+			case allPages.scores:
+				componentToDisplay = (
+					<ScoresTable
+						resultsRef={resultsRef}
+						substanceRiskLevels={content?.substanceRiskLevels}
+						scoreMeaning={content?.scoreMeaning}
+						getSubstanceDetails={getSubstanceDetailsById}
+					/>
+				);
+				break;
+
+			case allPages.thankYou:
+				componentToDisplay = <ThankYou />;
+				break;
+
+			case allPages.contact:
+				componentToDisplay = <Contact>{content?.contactDetails}</Contact>;
+				break;
+
+			default:
+				componentToDisplay = <h1>Loading</h1>;
+				break;
+		}
+
+		return componentToDisplay;
 	}
 
 	return (
-		<PageContext.Provider value={{ allPages, setPage }}>
-			<Layout>{componentToDisplay}</Layout>
-		</PageContext.Provider>
+		<AppContext.Provider value={{ language, changeLanguage, allPages, setPage }}>
+			<Layout key={language}>{showPage(page)}</Layout>
+		</AppContext.Provider>
 	);
 }
 

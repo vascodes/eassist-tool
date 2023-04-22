@@ -1,12 +1,12 @@
 import { useContext } from "react";
-import { PageContext } from "../contexts/PageContext";
+import { AppContext } from "../../contexts/AppContext";
 
 import ScoresTableRow from "./ScoresTableRow";
 import CardLayout from "../layouts/CardLayout";
 import PageNavigation from "../ui/PageNavigation";
 
 function ScoresTable({ resultsRef, substanceRiskLevels, scoreMeaning, getSubstanceDetails }) {
-	const { allPages, setPage } = useContext(PageContext);
+	const { allPages, setPage } = useContext(AppContext);
 
 	function handlePrevButtonClick() {
 		setPage(allPages.advice);
