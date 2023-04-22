@@ -7,9 +7,7 @@ function Question({
 	allSelectedAnswers,
 	setAllSelectedAnswers,
 	totalQuestions,
-}) {
-	// console.count("Question");
-
+}) {	
 	const progressBarWidth = Math.floor((question.id / totalQuestions) * 100);
 
 	return (

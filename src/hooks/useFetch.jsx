@@ -1,8 +1,6 @@
 import { useState } from "react";
 
-import { data } from "../data-en";
-
-function useFetch() {
+function useFetch(data) {
 	const [content] = useState(data);
 	
 	function getSubstanceDetailsById(substanceId) {

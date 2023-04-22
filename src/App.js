@@ -1,5 +1,7 @@
 import { useContext, useEffect, useRef } from "react";
 
+import { data } from "../src/data-en";
+
 import Layout from "./components/layouts/Layout";
 import Home from "./components/home/Home";
 import UserDetails from "./components/user-details/UserDetails";
@@ -16,7 +18,7 @@ import usePage from "./hooks/usePage";
 import { getInitialSubstanceScores, getInitialCategories } from "./utils/helper";
 
 function App() {
-	const { content, getSubstanceDetailsById, getSubstanceAdviceHTML } = useFetch();
+	const { content, getSubstanceDetailsById, getSubstanceAdviceHTML } = useFetch(data);
 	const { page, setPage, allPages } = usePage(useContext(PageContext));
 	const resultsRef = useRef({
 		scores: getInitialSubstanceScores(content?.substances),
