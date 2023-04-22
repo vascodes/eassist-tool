@@ -4676,57 +4676,49 @@ export const data = {
 			"id": 1,
 			"name": "Outreach and drop-in centre",
 			"location": "Rajagiri College of Social Sciences, Koonammavu",
-			"phoneNumbers": ["8547502546", "9207297283"],
-			"emails": []
+			"contactDetails": ["8547502546", "9207297283"],			
 		},
 		{
 			"id": 2,
 			"name": "M.M.M",
 			"location": "De-addiction centre, MOSC Medical college hospital, Kolenchery",
-			"phoneNumbers": ["0484 2885499", "7510310404", "7034003331"],
-			"emails": []
+			"contactDetails": ["0484 2885499", "7510310404", "7034003331"],			
 		},
 		{
 			"id": 3,
 			"name": "Nirmal Nikethan",
 			"location": "Mukthi sadan, pukkattupady, Ernakulam",
-			"phoneNumbers": ["914842683000", "914842683001"],
-			"emails": ["mukthi93@gmail.com"]
+			"contactDetails": ["914842683000", "914842683001", "mukthi93@gmail.com"],			
 		},
 		{
 			"id": 4,
 			"name": "Unity Group",
 			"location": "Perumabavoor",
-			"phoneNumbers": ["0484 2596113", "0484 3297121", "938889021"],
-			"emails": []
+			"contactDetails": ["0484 2596113", "0484 3297121", "938889021"],			
 		},
 		{
 			"id": 5,
 			"name": "Vimukthi",
 			"location": "Taluq hospital, Muvattupuzha",
-			"phoneNumbers": ["0485 2832360", "9400069564"],
-			"emails": []
+			"contactDetails": ["0485 2832360", "9400069564"],			
 		},
 		{
 			"id": 6,
 			"name": "Nirmal Nikethan (Only for ladies)",
 			"location": "Mukthi sadan, Njallor, Angamaly",
-			"phoneNumbers": ["0484 2949060"],
-			"emails": []
+			"contactDetails": ["0484 2949060"],			
 		},
 		{
 			"id": 7,
 			"name": "Vimukthi Counselling Centre",
 			"location": "Excise Zonal Headquarters, Kacherippady",
-			"phoneNumbers": ["9188520199"],
-			"emails": []
+			"contactDetails": ["9188520199"],			
 		},
 		{
 			"id": 8,
 			"name": "Nasha mukth helpline number",
 			"location": "",
-			"phoneNumbers": ["1800110031"],
-			"emails": []
+			"contactDetails": ["1800110031"],			
 		},
 	]
 };
