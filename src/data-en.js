@@ -2701,6 +2701,56 @@ export const data = {
 		"moderate": "You are at moderate risk of health and other problems from your current pattern of substance use.",
 		"high": "You are at high risk of experiencing severe problems (health, social, financial, legal, relationship) as a result of your current pattern of use and are likely to be dependent."
 	},
+	"contactDetails": [
+		{
+			"id": 1,
+			"name": "Outreach and drop-in centre",
+			"location": "Rajagiri College of Social Sciences, Koonammavu",
+			"contactDetails": ["8547502546", "9207297283"],
+		},
+		{
+			"id": 2,
+			"name": "M.M.M",
+			"location": "De-addiction centre, MOSC Medical college hospital, Kolenchery",
+			"contactDetails": ["0484 2885499", "7510310404", "7034003331"],
+		},
+		{
+			"id": 3,
+			"name": "Nirmal Nikethan",
+			"location": "Mukthi sadan, pukkattupady, Ernakulam",
+			"contactDetails": ["914842683000", "914842683001", "mukthi93@gmail.com"],
+		},
+		{
+			"id": 4,
+			"name": "Unity Group",
+			"location": "Perumabavoor",
+			"contactDetails": ["0484 2596113", "0484 3297121", "938889021"],
+		},
+		{
+			"id": 5,
+			"name": "Vimukthi",
+			"location": "Taluq hospital, Muvattupuzha",
+			"contactDetails": ["0485 2832360", "9400069564"],
+		},
+		{
+			"id": 6,
+			"name": "Nirmal Nikethan (Only for ladies)",
+			"location": "Mukthi sadan, Njallor, Angamaly",
+			"contactDetails": ["0484 2949060"],
+		},
+		{
+			"id": 7,
+			"name": "Vimukthi Counselling Centre",
+			"location": "Excise Zonal Headquarters, Kacherippady",
+			"contactDetails": ["9188520199"],
+		},
+		{
+			"id": 8,
+			"name": "Nasha mukth helpline number",
+			"location": "",
+			"contactDetails": ["1800110031"],
+		},
+	],
 	"substanceAdvice": {
 		"moderate": {
 			"tobacco": (
@@ -5295,54 +5345,4 @@ export const data = {
 			"other": null,
 		},
 	},
-	"contactDetails": [
-		{
-			"id": 1,
-			"name": "Outreach and drop-in centre",
-			"location": "Rajagiri College of Social Sciences, Koonammavu",
-			"contactDetails": ["8547502546", "9207297283"],
-		},
-		{
-			"id": 2,
-			"name": "M.M.M",
-			"location": "De-addiction centre, MOSC Medical college hospital, Kolenchery",
-			"contactDetails": ["0484 2885499", "7510310404", "7034003331"],
-		},
-		{
-			"id": 3,
-			"name": "Nirmal Nikethan",
-			"location": "Mukthi sadan, pukkattupady, Ernakulam",
-			"contactDetails": ["914842683000", "914842683001", "mukthi93@gmail.com"],
-		},
-		{
-			"id": 4,
-			"name": "Unity Group",
-			"location": "Perumabavoor",
-			"contactDetails": ["0484 2596113", "0484 3297121", "938889021"],
-		},
-		{
-			"id": 5,
-			"name": "Vimukthi",
-			"location": "Taluq hospital, Muvattupuzha",
-			"contactDetails": ["0485 2832360", "9400069564"],
-		},
-		{
-			"id": 6,
-			"name": "Nirmal Nikethan (Only for ladies)",
-			"location": "Mukthi sadan, Njallor, Angamaly",
-			"contactDetails": ["0484 2949060"],
-		},
-		{
-			"id": 7,
-			"name": "Vimukthi Counselling Centre",
-			"location": "Excise Zonal Headquarters, Kacherippady",
-			"contactDetails": ["9188520199"],
-		},
-		{
-			"id": 8,
-			"name": "Nasha mukth helpline number",
-			"location": "",
-			"contactDetails": ["1800110031"],
-		},
-	]
 };

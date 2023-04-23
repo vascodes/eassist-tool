@@ -2472,17 +2472,17 @@ export const data = {
 				"4-26 ഇടത്തരം",
 				"27+ ഉയരം"
 			],
-			"താഴെ": {
+			"lower": {
 				"text": "താഴെ",
 				"min": 0,
 				"max": 3
 			},
-			"ഇടത്തരം": {
+			"moderate": {
 				"text": "ഇടത്തരം",
 				"min": 4,
 				"max": 26
 			},
-			"ഉയരം": {
+			"high": {
 				"text": "ഉയരം",
 				"min": 27,
 				"max": null
@@ -2495,17 +2495,17 @@ export const data = {
 				"11-26 ഇടത്തരം",
 				"27+ ഉയരം"
 			],
-			"താഴെ": {
+			"lower": {
 				"text": "താഴെ",
 				"min": 0,
 				"max": 10
 			},
-			"ഇടത്തരം": {
+			"moderate": {
 				"text": "ഇടത്തരം",
 				"min": 11,
 				"max": 26
 			},
-			"ഉയരം": {
+			"high": {
 				"text": "ഉയരം",
 				"min": 27,
 				"max": null
@@ -2518,17 +2518,17 @@ export const data = {
 				"4-26 ഇടത്തരം",
 				"27+ ഉയരം"
 			],
-			"താഴെ": {
+			"lower": {
 				"text": "താഴെ",
 				"min": 0,
 				"max": 3
 			},
-			"ഇടത്തരം": {
+			"moderate": {
 				"text": "ഇടത്തരം",
 				"min": 4,
 				"max": 26
 			},
-			"ഉയരം": {
+			"high": {
 				"text": "ഉയരം",
 				"min": 27,
 				"max": null
@@ -2541,17 +2541,17 @@ export const data = {
 				"4-26 ഇടത്തരം",
 				"27+ ഉയരം"
 			],
-			"താഴെ": {
+			"lower": {
 				"text": "താഴെ",
 				"min": 0,
 				"max": 3
 			},
-			"ഇടത്തരം": {
+			"moderate": {
 				"text": "ഇടത്തരം",
 				"min": 4,
 				"max": 26
 			},
-			"ഉയരം": {
+			"high": {
 				"text": "ഉയരം",
 				"min": 27,
 				"max": null
@@ -2564,17 +2564,17 @@ export const data = {
 				"4-26 ഇടത്തരം",
 				"27+ ഉയരം"
 			],
-			"താഴെ": {
+			"lower": {
 				"text": "താഴെ",
 				"min": 0,
 				"max": 3
 			},
-			"ഇടത്തരം": {
+			"moderate": {
 				"text": "ഇടത്തരം",
 				"min": 4,
 				"max": 26
 			},
-			"ഉയരം": {
+			"high": {
 				"text": "ഉയരം",
 				"min": 27,
 				"max": null
@@ -2587,17 +2587,17 @@ export const data = {
 				"4-26 ഇടത്തരം",
 				"27+ ഉയരം"
 			],
-			"താഴെ": {
+			"lower": {
 				"text": "താഴെ",
 				"min": 0,
 				"max": 3
 			},
-			"ഇടത്തരം": {
+			"moderate": {
 				"text": "ഇടത്തരം",
 				"min": 4,
 				"max": 26
 			},
-			"ഉയരം": {
+			"high": {
 				"text": "ഉയരം",
 				"min": 27,
 				"max": null
@@ -2610,17 +2610,17 @@ export const data = {
 				"4-26 ഇടത്തരം",
 				"27+ ഉയരം"
 			],
-			"താഴെ": {
+			"lower": {
 				"text": "താഴെ",
 				"min": 0,
 				"max": 3
 			},
-			"ഇടത്തരം": {
+			"moderate": {
 				"text": "ഇടത്തരം",
 				"min": 4,
 				"max": 26
 			},
-			"ഉയരം": {
+			"high": {
 				"text": "ഉയരം",
 				"min": 27,
 				"max": null
@@ -2633,17 +2633,17 @@ export const data = {
 				"4-26 ഇടത്തരം",
 				"27+ ഉയരം"
 			],
-			"താഴെ": {
+			"lower": {
 				"text": "താഴെ",
 				"min": 0,
 				"max": 3
 			},
-			"ഇടത്തരം": {
+			"moderate": {
 				"text": "ഇടത്തരം",
 				"min": 4,
 				"max": 26
 			},
-			"ഉയരം": {
+			"high": {
 				"text": "ഉയരം",
 				"min": 27,
 				"max": null
@@ -2656,17 +2656,17 @@ export const data = {
 				"4-26 ഇടത്തരം",
 				"27+ ഉയരം"
 			],
-			"താഴെ": {
+			"lower": {
 				"text": "താഴെ",
 				"min": 0,
 				"max": 3
 			},
-			"ഇടത്തരം": {
+			"moderate": {
 				"text": "ഇടത്തരം",
 				"min": 4,
 				"max": 26
 			},
-			"ഉയരം": {
+			"high": {
 				"text": "ഉയരം",
 				"min": 27,
 				"max": null
@@ -2679,17 +2679,17 @@ export const data = {
 				"4-26 ഇടത്തരം",
 				"27+ ഉയരം"
 			],
-			"താഴെ": {
+			"lower": {
 				"text": "താഴെ",
 				"min": 0,
 				"max": 3
 			},
-			"ഇടത്തരം": {
+			"moderate": {
 				"text": "ഇടത്തരം",
 				"min": 4,
 				"max": 26
 			},
-			"ഉയരം": {
+			"high": {
 				"text": "ഉയരം",
 				"min": 27,
 				"max": null
@@ -2697,2603 +2697,9 @@ export const data = {
 		}
 	},
 	"scoreMeaning": {
-		"താഴെ": "നിങ്ങളുടെ നിലവിലെ ഉപയോഗ പാറ്റേണിൽ നിന്ന് നിങ്ങൾക്ക് ആരോഗ്യത്തിനും മറ്റ് പ്രശ്നങ്ങൾക്കും സാധ്യത കുറവാണ്.",
-		"ഇടത്തരം": "നിങ്ങളുടെ നിലവിലെ  പദാർത്ഥ ഉപയോഗ പാറ്റേണിൽ നിന്ന് ആരോഗ്യത്തിനും മറ്റ് പ്രശ്നങ്ങൾക്കും മിതമായ അപകടസാധ്യതയുണ്ട്.",
-		"ഉയരം": "നിങ്ങളുടെ നിലവിലെ ഉപയോഗ പാറ്റേണിന്റെ ഫലമായി നിങ്ങൾക്ക് ഗുരുതരമായ പ്രശ്നങ്ങൾ (ആരോഗ്യം, സാമൂഹികം, സാമ്പത്തികം, നിയമപരമായ, ബന്ധം) അനുഭവപ്പെടാനുള്ള ഉയർന്ന അപകടസാധ്യതയുണ്ട്, മാത്രമല്ല ആശ്രയിക്കാൻ സാധ്യതയുണ്ട്."
-	},
-	"substanceAdvice": {
-		"moderate": {
-			"tobacco": (
-				<div>
-					<p>
-						BASED ON YOUR ANSWERS, YOUR SMOKING IS PUTTING YOU AT MODERATE RISK OF
-						HEALTH AND FINANCIAL PROBLEMS
-						<br />
-						There are no health benefits of tobacco use and no safe level of smoking. If
-						you choose to smoke be aware of the many health problems associated with
-						smoking tobacco such as:
-					</p>
-					<ul>
-						<li>Premature ageing, wrinkling of the skin</li>
-						<li>Asthma, respiratory infections, chronic obstructive airways disease</li>
-						<li>High blood pressure</li>
-						<li>Diabetes, and serious complications of diabetes</li>
-						<li>Miscarriage, premature labour and low birthweight babies</li>
-						<li>Kidney disease</li>
-						<li>Heart disease, stroke, vascular disease</li>
-						<li>Cancers</li>
-						<li>
-							Respiratory infections, allergies and asthma in the children of smokers.
-						</li>
-					</ul>
-					<p>
-						If you would like more information about{" "}
-						<a href="https://assistplus.com.au/drug-information/nicotine/">
-							Tobacco click here.
-						</a>
-					</p>
-					<p>
-						Based on your responses it seems that you may have experienced one or more
-						tobacco related problems in the last 3 months.
-					</p>
-					<p>
-						How concerned are you about these problems?
-						<br />
-						If any of these things have happened to you and you are concerned you may
-						want to consider stopping smoking. If you are not sure it can be helpful to
-						list all the good things and the not so good things about your smoking as
-						well as the benefits and costs of stopping. You can find a Cost-Benefit
-						Analysis{" "}
-						<a href="http://smartrecoveryaustralia.com.au/resources/smart-worksheets/">
-							worksheet and other useful tools here
-						</a>
-						<br />
-						By quitting you will find that you will look and feel younger, you will get
-						fitter, your breath, hair and clothes will smell better, your sense of taste
-						and smell will improve, your dental and physical health will improve and you
-						and your family will be at much less risk of serious health problems.
-						<br />A list of the benefits of stopping can be found on the{" "}
-						<a href="http://www.quitnow.gov.au/">Quit Now website</a>
-					</p>
-					<p>If you would like to quit smoking here are some strategies to help you:</p>
-					<ul>
-						<li>Set a target date and stop on that date</li>
-						<li>
-							Tell a friend or family member that you are going to stop so that they
-							can support you.
-						</li>
-						<li>
-							Plan some alternative activities to fill the extra time when you are not
-							smoking.
-						</li>
-						<li>
-							Think about situations where you might be tempted to use and plan to
-							avoid them or plan how you will avoid smoking.
-						</li>
-						<li>
-							Get more help from the{" "}
-							<a href="https://www.health.gov.au/health-topics/smoking-and-tobacco/how-to-quit-smoking?utm_source=quitnow.gov.au&utm_medium=redirect&utm_campaign=digital_transformation">
-								the Quit Now website
-							</a>
-						</li>
-						<li>
-							If you would like more help you can download{" "}
-							<a href="https://www.health.gov.au/resources/apps-and-tools/my-quitbuddy-app">
-								this free Quit Buddy app
-							</a>{" "}
-							and/or talk to a health care professional.
-						</li>
-					</ul>
-					<p>
-						To avoid increasing your risk of smoking related problems in the future you
-						can use My Diary to track how often and how much you smoke and how much you
-						spend.
-						<br />
-						You can come back and complete the Check Up again in 3 months time if you
-						would like to see how you are going.
-					</p>
-				</div>
-			),
-			"alcohol": (
-				<div>
-					<p>
-						YOUR ALCOHOL CONSUMPTION IS PUTTING YOU AT MODERATE RISK OF HEALTH, SOCIAL,
-						FINANCIAL AND LEGAL PROBLEMS
-						<br />
-						Many people use alcohol to socialise and for relaxation and enjoyment.
-						However, alcohol use can be associated with health, social, financial and
-						legal problems such as:
-					</p>
-					<ul>
-						<li>hangovers</li>
-						<li>accidents and injuries</li>
-						<li>unsafe or unwise sex</li>
-						<li>aggressive or violent behaviour</li>
-						<li>relationship problems</li>
-						<li>reduced sexual performance</li>
-						<li>missing work, failing to fulfil obligations</li>
-						<li>memory blackouts</li>
-						<li>financial problems</li>
-						<li>drink driving charges</li>
-					</ul>
-					<p>
-						In the long term alcohol use may be associated with weight gain, anxiety and
-						depression high blood pressure, stroke, heart disease, kidney disease, liver
-						disease, and cancers. If you drink when pregnant or breastfeeding your baby
-						may be at risk of Foetal Alcohol Spectrum Disorders.If you would like more
-						information about
-						<a href="https://assistplus.com.au/drug-information/australian-alcohol-guidelines/">
-							alcohol click here.
-						</a>
-					</p>
-					<p>
-						Based on your responses it seems that you may have experienced one or more
-						alcohol related problems in the last 3 months.
-					</p>
-					<p>
-						How concerned are you about these problems?
-						<br />
-						You may want to consider cutting down your alcohol use? If you are not sure
-						it can be helpful to list all the good things and the not so good things
-						about your drinking as well as the benefits and costs of cutting down. You
-						can find a Cost-Benefit Analysis
-						<a href="http://smartrecoveryaustralia.com.au/resources/smart-worksheets/">
-							worksheet and other useful tools here.
-						</a>
-						<br />
-						You can find some useful tips to
-						<a href="https://www.betterhealth.vic.gov.au/health/ten-tips/10-tips-to-cut-down-on-alcohol">
-							cut down your alcohol use here.
-						</a>
-						<br />
-						If you would like more help to cut down there are services and resources
-						that can help you.
-					</p>
-					<ul>
-						<li>
-							You can call ADIS – the Alcohol and Drug Information Service for advice
-							and referrals:
-							<a href="tel:1800250015">1800 250 015</a>
-						</li>
-						<li>
-							If you are aged between 12 and 25 you can call Headspace for advice and
-							referrals
-						</li>
-						<li>
-							<a href="http://smartrecoveryaustralia.com.au/">SMART Recovery</a> is a
-							free group program assisting people with any problematic behaviours
-						</li>
-					</ul>
-					<p>
-						Do I drink too much? What are the low risk drinking guidelines?
-						<br />
-						Australian experts recommend that to reduce the risk from alcohol-related
-						disease or injury, healthy adults (who are not pregnant or breastfeeding),
-						should drink no more than 10 standard drinks a week and no more than 4
-						standard drinks on any one day. The less you drink, the lower your risk of
-						harm from alcohol.
-						<br />
-						An Australian standard drink is a drink containing 10g of alcohol
-					</p>
-					<p>
-						<img
-							src="https://eassist.assistportal.com.au/assets/images/shared/feedback/alcohol.png"
-							alt=""
-						/>
-					</p>
-					<p>
-						Standard drinks guide and images courtesy of the Australian Government
-						Department of Health.
-					</p>
-					<p>
-						If you are under 18 experts say that not drinking is the safest option.
-						<br />
-						If you are pregnant or breastfeeding it is safest for you and your baby not
-						to drink alcohol.
-						<br />
-						By keeping within these low risk guidelines you are likely to look and feel
-						better, your sleep and moods may improve, you may find improvements in your
-						relationships with family and friends and you will be less likely to
-						experience alcohol related problems.
-						<br />
-						In the long term your risk of weight gain, anxiety and depression, high
-						blood pressure, stroke, heart disease, kidney disease, liver disease, and
-						cancers will be reduced.
-					</p>
-					<p>
-						To avoid increasing your risk of alcohol related problems in the future you
-						can use My Diary to track how often and how much you drink and how much you
-						spend.
-						<br />
-						You can come back and complete the Check Up again in 3 months time if you
-						would like to see how you are going.
-					</p>
-					<p>
-						Make sure you know what to do in a crisis
-						<br />
-						If someone overdoses or has an adverse reaction while drinking alcohol, in
-						Australia
-					</p>
-					<p>
-						<a href="tel:000">Call Triple Zero (000)</a>
-					</p>
-					<p>
-						It is very important that they receive professional help as soon as
-						possible. A quick response can save their life so don’t delay.
-					</p>
-				</div>
-			),
-			"cannabis": (
-				<div>
-					<p>
-						BASED ON YOUR ANSWERS, YOUR CANNABIS USE IS PUTTING YOU AT MODERATE RISK OF
-						HEALTH, SOCIAL, FINANCIAL AND LEGAL PROBLEMS
-						<br />
-						Cannabis use can be associated with a range of health, social, financial and
-						legal problems such as:
-					</p>
-					<ul>
-						<li>Drug driving charges, arrest for possession and supply,</li>
-						<li>Problems with attention and motivation</li>
-						<li>Anxiety, paranoia, panic, depression</li>
-						<li>Decreased memory and problem solving ability</li>
-						<li>Asthma, bronchitis, chronic obstructive airways disease</li>
-						<li>
-							Psychosis in those with a personal or family history of schizophrenia
-						</li>
-						<li>Cancers</li>
-					</ul>
-					<p>
-						Be aware that it is dangerous to drive or use machinery after you have used
-						cannabis because it impairs your perception and coordination.
-						<br />
-						If you would like more information about
-						<a href="https://assistplus.com.au/drug-information/cannabis/">
-							cannabis click here.
-						</a>
-					</p>
-					<p>
-						Based on your responses it seems that you have experienced one or more
-						problems related to your cannabis use.
-					</p>
-					<p>
-						How concerned are you about these problems?
-						<br />
-						You may want to consider cutting down or stopping your cannabis use. If you
-						are not sure it can be helpful to list all the good things and the not so
-						good things about your cannabis use as well as the benefits and costs of
-						cutting down or stopping. You can find a Cost-Benefit Analysis
-						<a href="http://smartrecoveryaustralia.com.au/resources/smart-worksheets/">
-							worksheet and other useful tools here
-						</a>
-						<br />
-						By not using, or keeping your cannabis use very low, you will find that your
-						attention, motivation, memory and problem solving will improve, you will
-						feel calmer and less anxious and your physical and mental health will
-						improve.
-					</p>
-					<p>
-						If you would like to cut down or stop using cannabis here are some
-						strategies to help you.
-						<br />
-						If your goal is to cut down:
-					</p>
-					<ul>
-						<li>Plan how often and how much you are going to use</li>
-						<li>Never buy more than you plan to use in one session</li>
-						<li>Avoid having a stash that might tempt you to use more</li>
-					</ul>
-					<p>If your goal is to stop:</p>
-					<ul>
-						<li>Set a target date and stop on that date</li>
-						<li>
-							Tell a friend or family member that you are going to stop so that they
-							can support you.
-						</li>
-						<li>
-							Plan some alternative activities to fill the extra time when you are not
-							using.
-						</li>
-						<li>
-							Think about situations where you might be tempted to use and plan to
-							avoid them or plan how you will avoid using cannabis
-						</li>
-						<li>
-							Keep a record of the times when you had a strong urge to use cannabis.
-							This will help you recognise high risk situations and plan to avoid or
-							manage them. You can download an
-							<a href="https://smartrecoveryaustralia.com.au/resources/smart-worksheets/">
-								Urge Log here.
-							</a>
-						</li>
-					</ul>
-					<p>
-						If you would like more help to cut down there are services and resources
-						that can help you.
-					</p>
-					<ul>
-						<li>
-							You can call ADIS – the Alcohol and Drug Information Service for advice
-							and referrals:
-							<a href="tel:1800250015">1800250015</a>
-						</li>
-						<li>
-							If you are aged between 12 and 25 you can call Headspace for advice and
-							referrals
-						</li>
-						<li>
-							<a href="http://smartrecoveryaustralia.com.au/">SMART Recovery</a> is a
-							free group program assisting people with any problematic behaviours
-						</li>
-					</ul>
-					<p>
-						To avoid increasing your risk of cannabis related problems in the future you
-						can use My Diary to track how often and how much you use and how much you
-						spend.
-						<br />
-						You can come back and complete the Check Up again in 3 months time if you
-						would like to see how you are going.
-					</p>
-				</div>
-			),
-			"cocaine": (
-				<div>
-					<p>
-						BASED ON YOUR ANSWERS, YOUR COCAINE USE IS PUTTING YOU AT MODERATE RISK OF
-						HEALTH, SOCIAL, FINANCIAL AND LEGAL PROBLEMS
-						<br />
-						There is no safe level of cocaine use. It is important to be very careful
-						when taking any type of drug or combination of drugs.
-						<br />
-						Cocaine use can be associated with a range of health, social, financial and
-						legal problems including:
-					</p>
-					<ul>
-						<li>Heart racing, difficulty sleeping, headaches, weight loss</li>
-						<li>Numbness, tingling, clammy skin</li>
-						<li>Accidents and injury</li>
-						<li>Financial problems, arrests for drug driving, possession and supply</li>
-						<li>Irrational thoughts</li>
-						<li>Mood swings – anxiety, depression, mania</li>
-						<li>Aggression and paranoia</li>
-						<li>Intense cravings and stress</li>
-						<li>Psychosis after using high doses</li>
-						<li>Sudden death from heart problems</li>
-					</ul>
-					<p>
-						If you would like more information about
-						<a href="https://assistplus.com.au/drug-information/cocaine/">
-							cocaine click here.
-						</a>
-					</p>
-					<p>
-						Based on your responses it seems that would have experienced one or more
-						problems related to your cocaine use.
-					</p>
-					<p>
-						How concerned are you about these problems?
-						<br />
-						You may want to consider cutting down or stopping your cocaine use. If you
-						are not sure it can be helpful to list all the good things and the not so
-						good things about your cocaine use as well as the benefits and costs of
-						cutting down or stopping. You can find a Cost-Benefit Analysis
-						<a href="http://smartrecoveryaustralia.com.au/resources/smart-worksheets/">
-							worksheet and other useful tools here
-						</a>
-						<br />
-						By not using, or keeping your cocaine use very low, you will find that you
-						will eat and sleep better, your physical and mental health will improve and
-						you will be less likely to experience accidents and injuries, anxiety, mood
-						swings, and aggression.
-					</p>
-					<p>
-						If you would like to cut down or stop using cocaine here are some strategies
-						to help you.
-						<br />
-						If your goal is to cut down:
-					</p>
-					<ul>
-						<li>Plan how often and how much you are going to use</li>
-						<li>Never buy more than you plan to use in one session</li>
-						<li>Avoid having a stash that might tempt you to use more</li>
-					</ul>
-					<p>If your goal is to stop:</p>
-					<ul>
-						<li>Set a target date and stop on that date</li>
-						<li>
-							Tell a friend or family member that you are going to stop so that they
-							can support you
-						</li>
-						<li>
-							Plan some alternative activities to fill the extra time when you are not
-							using
-						</li>
-						<li>
-							Think about situations where you might be tempted to use and plan to
-							avoid them or plan how you will avoid using cocaine
-						</li>
-						<li>
-							Keep a record of the times when you had a strong urge to use. This will
-							help you recognise high risk situations and plan to avoid or manage
-							them. You can download an
-							<a href="https://smartrecoveryaustralia.com.au/resources/smart-worksheets/">
-								Urge Log here.
-							</a>
-							.
-						</li>
-					</ul>
-					<p>
-						If you would like more help to cut down there are services and resources
-						that can help you.
-					</p>
-					<ul>
-						<li>
-							You can call ADIS – the Alcohol and Drug Information Service for advice
-							and referrals:
-							<a href="tel:1800250015">1800250015</a>
-						</li>
-						<li>
-							If you are aged between 12 and 25 you can call Headspace for advice and
-							referrals
-						</li>
-						<li>
-							<a href="http://smartrecoveryaustralia.com.au/">SMART Recovery</a> is a
-							free group program assisting people with any problematic behaviours
-						</li>
-					</ul>
-					<p>
-						To avoid increasing your risk of cocaine related problems in the future you
-						can use My Diary to track how often and how much you use and how much you
-						spend.
-						<br />
-						You can come back and complete the Check Up again in 3 months time if you
-						would like to see how you are going.
-					</p>
-					<p>
-						Injecting
-						<br />
-						If you inject cocaine you increase your risk of becoming dependent and
-						experiencing psychosis. You may also damage your skin and veins and get
-						infections, abscesses, and ulcers. If you share injecting equipment you are
-						at risk of blood borne virus infections like Hepatitis B &amp; C and HIV. It
-						is always safer not to inject.
-						<br />
-						If you choose to inject
-					</p>
-					<ul>
-						<li>ALWAYS use clean equipment and a new needle and syringe.</li>
-						<li>Do not share any equipment.</li>
-						<li>
-							Always clean the preparation area, your hands and the injecting site.
-						</li>
-						<li>Inject slowly and in a different site each time.</li>
-						<li>Dispose of the used needle and syringe in a sharps container.</li>
-					</ul>
-					<p>
-						If you have ever injected we recommend that you see a health care
-						professional to be tested for blood borne viruses.
-					</p>
-					<p>
-						Make sure you know what to do in a crisis
-						<br />
-						If someone overdoses or has an adverse reaction while using cocaine, in
-						Australia
-					</p>
-					<p>
-						<a href="tel:000">Call Triple Zero (000)</a>
-					</p>
-					<p>
-						It is very important that they receive professional help as soon as
-						possible. A quick response can save their life so don’t delay.
-					</p>
-				</div>
-			),
-			"amphetamine": (
-				<div>
-					<p>
-						BASED ON YOUR ANSWERS, YOUR USE OF AMPHETAMINESIS PUTTING YOU AT MODERATE
-						RISK OF HEALTH, SOCIAL, FINANCIAL AND LEGAL PROBLEMS
-						<br />
-						There is no safe level of amphetamine use. There are a variety of
-						Amphetamine Type Stimulants that includes methamphetamine and ecstasy. It is
-						important to be very careful when taking any type of drug or combination of
-						drugs. Also be aware that drugs sold as ecstasy may not contain any MDMA.
-						They can be a mix of other substances including amphetamine, methamphetamine
-						and paramethoxyamphetamine (PMA).
-						<br />
-						Methamphetamine use can be associated with a range of health, social,
-						financial and legal problems including:
-					</p>
-					<ul>
-						<li>Difficulty sleeping, loss of appetite, weight loss, dehydration</li>
-						<li>Jaw clenching, headaches, muscle pain</li>
-						<li>
-							Mood swings, - anxiety, depression, agitation, mania, panic, paranoia
-						</li>
-						<li>Tremors, irregular heartbeat, shortness of breath</li>
-						<li>Aggressive and violent behaviour</li>
-						<li>Drug driving charges, arrests for possession or supply</li>
-						<li>Psychosis after repeated use of high doses</li>
-						<li>Permanent damage to brain cells,</li>
-						<li>Stroke or heart attack</li>
-						<li>
-							Liver damage, brain haemorrhage, and sudden death in rare circumstances.
-						</li>
-					</ul>
-					<p>
-						Ecstasy use can be associated with a range of health, social, financial and
-						legal problems including:
-					</p>
-					<ul>
-						<li>Drug driving charges, arrests for possession or supply</li>
-						<li>Reduced energy, colds, flu and infections</li>
-						<li>Loss of appetite, nausea, vomiting</li>
-						<li>Jaw clenching and teeth grinding</li>
-						<li>Muscle aches and stiffness</li>
-						<li>Increased blood pressure and heart rate</li>
-						<li>Anxiety, depression, paranoia</li>
-						<li>Increased body temperature and sweating</li>
-						<li>Damage to brain cells and memory problems</li>
-						<li>Convulsions, heart attack and brain haemorrhage</li>
-					</ul>
-					<p>
-						If you would like more information about
-						<a href="https://assistplus.com.au/drug-information/amphetamine/">
-							methamphetamine
-						</a>{" "}
-						or
-						<a href="https://assistplus.com.au/drug-information/ecstasy/">
-							Ecstasy click here.
-						</a>
-					</p>
-					<p>
-						Based on your answers itseems that you may have experienced one or more
-						problems related to your Amphetamine Type Stimulant use in the last 3
-						months.
-					</p>
-					<p>
-						How concerned are you about these problems?
-						<br />
-						If any of these things have happened to you and you are concerned you may
-						want to consider cutting down or stopping your Amphetamine Type Stimulant
-						use. If you are not sure it can be helpful to list all the good things and
-						the not so good things about your Amphetamine Type Stimulant use as well as
-						the benefits and costs of cutting down or stopping. You can find a
-						Cost-Benefit Analysis
-						<a href="http://smartrecoveryaustralia.com.au/resources/smart-worksheets/">
-							worksheet and other useful tools here
-						</a>
-						<br />
-						By not using or keeping your methamphetamine use very low you will find that
-						you will eat and sleep better, your physical and mental health will improve,
-						and you will be less likely to experience mood swings, anxiety, and
-						aggressive behaviour.
-						<br />
-						By not using ecstasy, or keeping your use very low, you will find that you
-						will have more energy, your memory will improve, you will eat and sleep
-						better, your physical and mental health will improve and you will be less
-						likely to get infections and feel anxious or depressed.
-						<br />
-						If you would like to cut down or stop using AmphetamineType Stimulants,here
-						are some strategies to help you.
-					</p>
-					<p>If your goal is to cut down:</p>
-					<ul>
-						<li>Plan how often and how much you are going to use</li>
-						<li>Never buy more than you plan to use in one session</li>
-						<li>Avoid having a stash that might tempt you to use more</li>
-					</ul>
-					<p>If your goal is to stop:</p>
-					<ul>
-						<li>Set a target date and stop on that date</li>
-						<li>
-							Tell a friend or family member that you are going to stop so that they
-							can support you.
-						</li>
-						<li>
-							Plan some alternative activities to fill the extra time when you are not
-							using.
-						</li>
-						<li>
-							Think about situations where you might be tempted to use and plan to
-							avoid them or plan how you will avoid using Amphetamine Type Stimulants.
-						</li>
-						<li>
-							Keep a record of the times when you had a strong urge to use Amphetamine
-							Type Stimulants. This will help you recognise high risk situations and
-							plan to avoid or manage them. You can download an
-							<a href="https://smartrecoveryaustralia.com.au/resources/smart-%20worksheets/">
-								Urge Log here.
-							</a>
-						</li>
-					</ul>
-					<p>
-						If you would like more help to cut down there are services and resources
-						that can help you.
-					</p>
-					<ul>
-						<li>
-							You can call ADIS – the Alcohol and Drug Information Service for advice
-							and referrals:
-							<a href="tel:1800250015">1800250015</a>
-						</li>
-						<li>
-							If you are aged between 12 and 25 you can call
-							<a href="https://headspace.org.au/headspace-centres/">Headspace</a> for
-							advice and referrals
-						</li>
-						<li>
-							<a href="http://smartrecoveryaustralia.com.au/">SMART Recovery</a> is a
-							free group program assisting people with any problematic behaviours
-						</li>
-					</ul>
-					<p>
-						To avoid increasing your risk of Amphetamine Type Stimulant related problems
-						in the future you can use My Diary in the{" "}
-						<a href="https://assistplus.com.au">ASSIST Checkup App</a> to track how
-						often and how much you use and how much you spend.
-						<br />
-						You can come back and complete the Check Up again in 3 months time if you
-						would like to see how you are going.
-					</p>
-					<p>Injecting</p>
-					<p>
-						If you inject methamphetamine you increase your risk of becoming dependent
-						and experiencing psychosis. You may also damage your skin and veins and get
-						infections, abscesses, and ulcers. If you share injecting equipment you are
-						at risk of blood borne virus infections like Hepatitis B &amp; C and HIV. It
-						is always safer not to inject.
-						<br />
-						If you choose to inject:
-					</p>
-					<ul>
-						<li>ALWAYS use clean equipment and a new needle and syringe.</li>
-						<li>Do not share any equipment.</li>
-						<li>
-							Always clean the preparation area, your hands and the injecting site.
-						</li>
-						<li>Inject slowly and in a different site each time</li>
-						<li>Dispose of the used needle and syringe in a sharps container.</li>
-					</ul>
-					<p>
-						If you have ever injected methamphetamine we recommend that you see a health
-						care professional to be tested for blood borne viruses.
-					</p>
-					<p>
-						Make sure you know what to do in a crisis
-						<br />
-						If someone overdoses or has an adverse reaction while using methamphetamine,
-						in Australia
-					</p>
-					<p>
-						<a href="tel:000">Call Triple Zero (000)</a>
-					</p>
-					<p>
-						It is very important that they receive professional help as soon as
-						possible. A quick response can save their life so don’t delay.
-					</p>
-				</div>
-			),
-			"inhalants": (
-				<div>
-					<p>
-						BASED ON YOUR ANSWERS, YOUR USE OF INHALANTS IS PUTTING YOU AT MODERATE RISK
-						OF HEALTH, SOCIAL, FINANCIAL AND LEGAL PROBLEMS
-						<br />
-						There is no safe level of inhalant use. It is important to be very careful
-						when taking any type of drug or combination of drugs.
-						<br />
-						Inhalant use can be associated with a range of health, social, financial and
-						legal problems including:
-					</p>
-					<ul>
-						<li>Dizziness and hallucinations</li>
-						<li>Drowsiness, disorientation, blurred vision</li>
-						<li>Coordination difficulties, slowed reactions</li>
-						<li>Flu-like symptoms, sinusitis, nosebleeds</li>
-						<li>Indigestion, stomach ulcers</li>
-						<li>Accidents and injury</li>
-						<li>Memory loss, confusion, delirium, seizures (fits), coma</li>
-						<li>Damage to your brain, heart, lungs, liver, and kidneys</li>
-						<li>Death from heart failure</li>
-					</ul>
-					<p>
-						If you would like more information about
-						<a href="https://assistplus.com.au/drug-information/inhalants/">
-							inhalants click here
-						</a>
-					</p>
-					<p>
-						Based on your responses it seems that you may have experienced one or more
-						Inhalants related problems in the last 3 months.
-					</p>
-					<p>
-						How concerned are you about these problems?
-						<br />
-						If any of these things have happened to you and you are concerned you may
-						want to consider cutting down or stopping your inhalants use. If you are not
-						sure it can be helpful to list all the good things and the not so good
-						things about your inhalants use as well as the benefits and costs of cutting
-						down or stopping. You can find a Cost-Benefit Analysis
-						<a href="http://smartrecoveryaustralia.com.au/resources/smart-worksheets/">
-							worksheet and other useful tools here.
-						</a>
-						<br />
-						By not using, or keeping your inhalant use very low, you will find that your
-						memory, coordination and reaction times will improve, your physical and
-						mental health will improve and you will be less likely to experience
-						accidents and injuries.
-					</p>
-					<p>
-						If you would like to cut down or stop using inhalants here are some
-						strategies to help you.
-						<br />
-						If your goal is to stop:
-					</p>
-					<ul>
-						<li>Set a target date and stop on that date</li>
-						<li>
-							Tell a friend or family member that you are going to stop so that they
-							can support you.
-						</li>
-						<li>
-							Plan some alternative activities to fill the extra time when you are not
-							using.
-						</li>
-						<li>
-							Think about situations where you might be tempted to use and plan to
-							avoid them or plan how you will avoid using inhalants
-						</li>
-						<li>
-							Keep a record of the times when you had a strong urge to use inhalants.
-							This will help you recognise high risk situations and plan to avoid or
-							manage them. You can download an
-							<a href="https://smartrecoveryaustralia.com.au/resources/smart-worksheets/">
-								Urge Log here.
-							</a>
-						</li>
-					</ul>
-					<p>
-						If you would like more help to cut down there are services and resources
-						that can help you.
-					</p>
-					<ul>
-						<li>
-							You can call ADIS – the Alcohol and Drug Information Service for advice
-							and referrals:
-							<a href="tel:1800250015">1800250015</a>
-						</li>
-						<li>
-							If you are aged between 12 and 25 you can call Headspace for advice and
-							referrals
-						</li>
-						<li>
-							<a href="http://smartrecoveryaustralia.com.au/">SMART Recovery</a> is a
-							free group program assisting people with any problematic behaviours
-						</li>
-					</ul>
-					<p>
-						To avoid increasing your risk of inhalants related problems in the future
-						you can use My Diary to track how often and how much you use and how much
-						you spend.
-						<br />
-						You can come back and complete the Check Up again in 3 months time if you
-						would like to see how you are going.
-					</p>
-					<p>
-						Make sure you know what to do in a crisis
-						<br />
-						If someone overdoses or has an adverse reaction while using inhalants, in
-						Australia
-					</p>
-					<p>
-						<a href="tel:000">Call Triple Zero (000)</a>
-					</p>
-					<p>
-						It is very important that they receive professional help as soon as
-						possible. A quick response can save their life so don’t delay.
-					</p>
-				</div>
-			),
-			"sedatives": (
-				<div>
-					<p>
-						BASED ON YOUR ANSWERS, YOUR USE OF SEDATIVE MEDICATION IS PUTTING YOU AT
-						MODERATE RISK OF HEALTH, SOCIAL, FINANCIAL AND LEGAL PROBLEMS
-						<br />
-						While Prescription Medications are very useful when taken as directed by a
-						doctor, non-medical use can be very harmful. Be aware that prescription
-						medication use can be associated with a range of health, social, financial
-						and legal problems.
-						<br />
-						Benzodiazepines
-					</p>
-					<ul>
-						<li>Drowsiness, dizziness, confusion, falls</li>
-						<li>Concentration and memory problems</li>
-						<li>Headaches</li>
-						<li>Sleeping problems</li>
-						<li>Anxiety and depression</li>
-						<li>Tolerance and dependence after a short period of use</li>
-						<li>Withdrawal symptoms</li>
-						<li>
-							Overdose and death if used with alcohol, opioids or other depressant
-							drugs.
-						</li>
-					</ul>
-					<p>
-						If you would like more information about
-						<a href="https://assistplus.com.au/drug-information/sedatives-sleeping-pills/">
-							sedative medication click here.
-						</a>
-					</p>
-					<p>
-						Based on your responses it seems that you may have experienced one or more
-						sedative medication related problems in the last 3 months.
-					</p>
-					<p>
-						How concerned are you about these problems?
-						<br />
-						You may want to consider cutting down or stopping your sedative use. If you
-						are not sure it can be helpful to list all the good things and the not so
-						good things about your sedative use as well as the benefits and costs of
-						cutting down or stopping. You can find a Cost-Benefit Analysis
-						<a href="http://smartrecoveryaustralia.com.au/resources/smart-worksheets/">
-							worksheet and other useful tools here
-						</a>
-						<br />
-						By not using, or by keeping your prescription medication use very low, you
-						will find that your appetite, concentration, memory and alertness will
-						improve, you will sleep better and you will be at lower risk of falls,
-						anxiety, and overdose.
-					</p>
-					<p>
-						If you would like to cut down or stop using prescription medications here
-						are some strategies to help you.
-						<br />
-						If your goal is to cut down:
-					</p>
-					<ul>
-						<li>Plan how often and how much you are going to use</li>
-						<li>Never buy more than you plan to use in one session</li>
-						<li>Avoid having a stash that might tempt you to use more</li>
-					</ul>
-					<p>If your goal is to stop:</p>
-					<ul>
-						<li>Set a target date and stop on that date</li>
-						<li>
-							Tell a friend or family member that you are going to stop so that they
-							can support you.
-						</li>
-						<li>
-							Plan some alternative activities to fill the extra time when you are not
-							using.
-						</li>
-						<li>
-							Think about situations where you might be tempted to use and plan to
-							avoid them or plan how you will avoid using opioids
-						</li>
-						<li>
-							Keep a record of the times when you had a strong urge to use opioids.
-							This will help you recognise high risk situations and plan to avoid or
-							manage them. You can download an
-							<a href="https://smartrecoveryaustralia.com.au/resources/smart-worksheets/">
-								Urge Log here.
-							</a>
-						</li>
-					</ul>
-					<p>
-						If you would like more help to cut down there are services and resources
-						that can help you.
-					</p>
-					<ul>
-						<li>
-							You can call ADIS – the Alcohol and Drug Information Service for advice
-							and referrals:
-							<a href="tel:1800250015">1800250015</a>
-						</li>
-						<li>
-							If you are aged between 12 and 25 you can call Headspace for advice and
-							referrals
-						</li>
-						<li>
-							<a href="http://smartrecoveryaustralia.com.au/">SMART Recovery</a> is a
-							free group program assisting people with any problematic behaviours
-						</li>
-					</ul>
-					<p>
-						To avoid increasing your risk of prescription medication related problems in
-						the future you can use My Diary to track how often and how much you use and
-						how much you spend.
-						<br />
-						You can come back and complete the Check Up again in 3 months time if you
-						would like to see how you are going.
-					</p>
-					<p>
-						Injecting
-						<br />
-						If you inject sedative medication you increase your risk of becoming
-						dependent. You may also damage your skin and veins and get infections,
-						abscesses, and ulcers. If you share injecting equipment you are at risk of
-						blood borne virus infections like Hepatitis B &amp; C and HIV. It is always
-						safer not to inject.
-						<br />
-						If you choose to inject
-					</p>
-					<ul>
-						<li>ALWAYS use clean equipment and a new needle and syringe.</li>
-						<li>Do not share any equipment.</li>
-						<li>
-							Always clean the preparation area, your hands and the injecting site.
-						</li>
-						<li>Inject slowly and in a different site each time</li>
-						<li>Dispose of the used needle and syringe in a sharps container.</li>
-					</ul>
-					<p>
-						If you have ever injected sedative medications we recommend that you see a
-						health care professional to be tested for blood borne viruses.
-					</p>
-					<p>
-						Make sure you know what to do in a crisis
-						<br />
-						If someone overdoses or has an adverse reaction while using sedatives, in
-						Australia
-					</p>
-					<p>
-						<a href="tel:000">Call Triple Zero (000)</a>
-					</p>
-					<p>
-						It is very important that they receive professional help as soon as
-						possible. A quick response can save their life so don’t delay.
-					</p>
-				</div>
-			),
-			"hallucinogens": (
-				<div>
-					<p>
-						BASED ON YOUR ANSWERS, HALLUCINOGENS ARE PUTTING YOU AT MODERATE RISK OF
-						HARM TO YOUR HEALTH AND SOCIAL SITUATION.
-					</p>
-					<p>
-						You are at risk of experiencing sleeping difficulties, nausea, vomiting,
-						increased blood pressure, mood swings, anxiety, panic attacks, paranoia,
-						flashbacks and increased effects of mental illnesses such as schizophrenia.
-					</p>
-					<p>
-						The effects of any drug vary from person to person. The effect is the result
-						of three interacting factors:
-					</p>
-					<ul>
-						<li>The drug itself</li>
-						<li>The individual user</li>
-						<li>The environment in which drug use occurs</li>
-					</ul>
-					<p>
-						While the effect that a drug has on a person is determined by many factors,
-						the primary factors that influence a drug’s effect are the type of drug and
-						the quantity used. It is important to remember that any illicit drug use can
-						put you at risk of health, social, financial and legal problems.
-					</p>
-					<p>
-						Illegal drugs are not subject to quality controls and the active ingredient
-						is not consistent. You can never be sure what is actually in it and how it
-						will affect you. Even ‘one off’ use can lead to serious harms. Federal and
-						state laws provide penalties for possessing, using, producing, selling or
-						driving under the influence of illicit drugs. Penalties can include fines,
-						disqualification from driving, rehabilitation orders and imprisonment. Think
-						about how any of these consequences could impact your life.
-					</p>
-					<p>
-						To avoid the risks and harms associated with drugs, the best option is to
-						not use them. This can be difficult for some people who may have become
-						dependent on them and feel symptoms of withdrawal if they stop or reduce
-						their use.
-					</p>
-					<p>
-						Help is available. You may like to start by finding out more about
-						<a href="https://assistplus.com.au/drug-information/hallucinogens/">
-							hallucinogens and their effects here.
-						</a>
-					</p>
-					<p>
-						You are also encouraged to talk to a health professional or local drug and
-						alcohol service if you would like more information or support in quitting
-						your use.
-					</p>
-					<p>
-						Make sure you know what to do in a crisis
-						<br />
-						If someone overdoses or has an adverse reaction while using hallucinogens,
-						in Australia
-					</p>
-					<p>
-						<a href="tel:000">Call Triple Zero (000)</a>
-					</p>
-					<p>
-						It is very important that they receive professional help as soon as
-						possible. A quick response can save their life so don’t delay.
-					</p>
-				</div>
-			),
-			"opioids": (
-				<div>
-					<p>
-						BASED ON YOUR ANSWERS, YOUR OPIOID USE IS PUTTING YOU AT MODERATE RISK OF
-						HEALTH, SOCIAL, FINANCIAL AND LEGAL PROBLEMS
-						<br />
-						While opioids are very useful medications for pain, non-medical use can be
-						very harmful. Be aware that opioid/heroin use can be associated with a range
-						of health, social, financial and legal problems including:
-					</p>
-					<ul>
-						<li>Difficulty concentrating and remembering things</li>
-						<li>Difficulty urinating; constipation</li>
-						<li>Dry mouth, tooth decay</li>
-						<li>Nausea, loss of appetite</li>
-						<li>Slow breathing and heart rate, irregular heartbeat</li>
-						<li>Reduced sexual desire and sexual performance</li>
-						<li>Irregular periods and difficulty having children</li>
-						<li>Relationship difficulties</li>
-						<li>Financial and work problems, legal problems</li>
-						<li>Overdose and death from respiratory failure</li>
-						<li>Opioid dependence</li>
-					</ul>
-					<p>
-						The effects of mixing opioids/heroin with alcohol, prescription or over the
-						counter medications, and/or other illicit drugs are often unpredictable. In
-						particular, mixing opioids with other depressant drugs such as alcohol or
-						sedatives increases the depressant effects and can result in respiratory
-						depression, coma and death.
-						<br />
-						If you would like more information about specific
-						<a href="https://assistplus.com.au/drug-information/opioids/">
-							opioids click here.
-						</a>
-					</p>
-					<p>
-						Based on your responses it seems that you may have experienced one or more
-						opioid related problems in the last 3 months.
-					</p>
-					<p>
-						How concerned are you about these problems?
-						<br />
-						You may want to consider cutting down or stopping your opioid/heroin use? If
-						you are not sure it can be helpful to list all the good things and the not
-						so good things about your opioid use as well as the benefits and costs of
-						cutting down or stopping. You can find a Cost-Benefit Analysis
-						<a href="http://smartrecoveryaustralia.com.au/resources/smart-worksheets/">
-							worksheet and other useful tools here
-						</a>
-						<br />
-						By not using, or by keeping your opioid/heroin use very low, you will find
-						that your appetite, concentration, memory and alertness will improve, your
-						dental and physical health will improve, your sexual functioning will
-						improve and you will be at lower risk of overdose.
-					</p>
-					<p>
-						If you would like to cut down or stop using opioids/heroin here are some
-						strategies to help you.
-						<br />
-						If your goal is to cut down:
-					</p>
-					<ul>
-						<li>Plan how often and how much you are going to use</li>
-						<li>Never buy more than you plan to use in one session</li>
-						<li>Avoid having a stash that might tempt you to use more</li>
-					</ul>
-					<p>If your goal is to stop:</p>
-					<ul>
-						<li>Set a target date and stop on that date</li>
-						<li>
-							Tell a friend or family member that you are going to stop so that they
-							can support you.
-						</li>
-						<li>
-							Plan some alternative activities to fill the extra time when you are not
-							using.
-						</li>
-						<li>
-							Think about situations where you might be tempted to use and plan to
-							avoid them or plan how you will avoid using opioids/heroin
-						</li>
-						<li>
-							Keep a record of the times when you had a strong urge to use
-							opioids/heroin. This will help you recognise high risk situations and
-							plan to avoid or manage them. You can download an
-							<a href="https://smartrecoveryaustralia.com.au/resources/smart-%20worksheets/">
-								Urge Log here.
-							</a>
-						</li>
-					</ul>
-					<p>
-						If you would like more help to cut down there are services and resources
-						that can help you.
-					</p>
-					<ul>
-						<li>
-							You can call ADIS – the Alcohol and Drug Information Service for advice
-							and referrals:
-							<a href="tel:1800250015">1800250015</a>
-						</li>
-						<li>
-							If you are aged between 12 and 25 you can call Headspace for advice and
-							referrals
-						</li>
-						<li>
-							<a href="http://smartrecoveryaustralia.com.au/">SMART Recovery</a> is a
-							free group program assisting people with any problematic behaviours
-						</li>
-					</ul>
-					<p>
-						To avoid increasing your risk of opioid related problems in the future you
-						can use My Diary to track how often and how much you use and how much you
-						spend.
-						<br />
-						You can come back and complete the Check Up again in 3 months time if you
-						would like to see how you are going.
-					</p>
-					<p>
-						Injecting
-						<br />
-						If you inject opioids/heroin you increase your risk of becoming dependent.
-						You may also damage your skin and veins and get infections, abscesses, and
-						ulcers. If you share injecting equipment you are at risk of blood borne
-						virus infections like Hepatitis B &amp; C and HIV. It is always safer not to
-						inject.
-						<br />
-						If you choose to inject
-					</p>
-					<ul>
-						<li>ALWAYS use clean equipment and a new needle and syringe.</li>
-						<li>Do not share any equipment.</li>
-						<li>
-							Always clean the preparation area, your hands and the injecting site.
-						</li>
-						<li>Inject slowly and in a different site each time</li>
-						<li>Dispose of the used needle and syringe in a sharps container.</li>
-					</ul>
-					<p>
-						If you have ever injected opioids/heroin we recommend that you see a health
-						care professional to be tested for blood borne viruses.
-					</p>
-					<p>
-						Make sure you know what to do in a crisis
-						<br />
-						If someone overdoses or has an adverse reaction while using opioids/heroin,
-						in Australia
-					</p>
-					<p>
-						<a href="tel:000">Call Triple Zero (000)</a>
-					</p>
-					<p>
-						It is very important that they receive professional help as soon as
-						possible. A quick response can save their life so don’t delay.
-					</p>
-				</div>
-			),
-			"other": null,
-		},
-		"referral": {
-			"tobacco": (
-				<div>
-					<p>
-						YOUR SMOKING IS PUTTING YOU AT <strong>HIGH RISK</strong> OF EXPERIENCING
-						HEALTH, SOCIAL AND FINANCIAL PROBLEMS.
-						<br />
-						There are no health benefits of tobacco use and no safe level of smoking. If
-						you choose to smoke be aware of the many health problems associated with
-						smoking tobacco such as:
-					</p>
-					<ul>
-						<li>Premature ageing, wrinkling of the skin</li>
-						<li>Asthma, respiratory infections, chronic obstructive airways disease</li>
-						<li>High blood pressure</li>
-						<li>Diabetes, and serious complications of diabetes</li>
-						<li>Miscarriage, premature labour and low birthweight babies</li>
-						<li>Kidney disease</li>
-						<li>Heart disease, stroke, vascular disease</li>
-						<li>Cancers</li>
-						<li>
-							Respiratory infections, allergies and asthma in the children of smokers.
-						</li>
-					</ul>
-					<p>
-						If you would like more information about{" "}
-						<a href="https://assistplus.com.au/drug-information/nicotine/">
-							Tobacco click here.
-						</a>
-					</p>
-					<p>
-						Based on your responses it is likely that you are experiencing a number of
-						problems related to your smoking.
-					</p>
-					<p>
-						How concerned are you about these problems?
-						<br />
-						The best way to reduce your risk is to stop smoking.
-						<br />
-						If you are not sure what you want to do it can be helpful to list all the
-						good things and the not so good things about smoking use as well as the
-						benefits and costs of stopping. You can find a Cost- Benefit Analysis{" "}
-						<a href="http://smartrecoveryaustralia.com.au/resources/smart-worksheets/">
-							worksheet and other useful tools here
-						</a>
-						<br />
-						By quitting you will find that you will look and feel younger, you will get
-						fitter, your breath, hair and clothes will smell better, your sense of taste
-						and smell will improve, your dental and physical health will improve and you
-						and your family will be at much less risk of serious health problems.
-						<br />A list of the benefits of stopping can be found on the{" "}
-						<a href="http://www.quitnow.gov.au/">Quit Now website</a>
-					</p>
-					<p>If you would like to stop smoking here are some strategies to help you.</p>
-					<ul>
-						<li>Set a target date and stop on that date</li>
-						<li>
-							Tell a friend or family member that you are going to stop so that they
-							can support you.
-						</li>
-						<li>
-							Plan some alternative activities to fill the extra time when you are not
-							using.
-						</li>
-						<li>
-							Think about situations where you might be tempted to use and plan to
-							avoid them or plan how you will avoid using Tobacco
-						</li>
-						<li>
-							Keep a record of the times when you had a strong urge to use Tobacco.
-							This will help you recognise high risk situations and plan to avoid or
-							manage them. You can download an{" "}
-							<a href="https://smartrecoveryaustralia.com.au/resources/smart-worksheets/">
-								Urge Log here.
-							</a>
-						</li>
-						<li>
-							Get more help from the{" "}
-							<a href="https://www.health.gov.au/health-topics/smoking-and-tobacco/how-to-quit-smoking?utm_source=quitnow.gov.au&utm_medium=redirect&utm_campaign=digital_transformation">
-								Quit Now website
-							</a>
-						</li>
-						<li>
-							If you would like more help you can download{" "}
-							<a href="https://www.health.gov.au/resources/apps-and-tools/my-quitbuddy-app">
-								this free Quit Buddy app
-							</a>{" "}
-							and/or talk to a health care professional.
-						</li>
-					</ul>
-					<p>Still not sure if you need to quit smoking? Answer these few questions:</p>
-					<ul>
-						<li>
-							Do you experience physical withdrawal symptoms such as cravings for a
-							cigarette, Irritability, anxiety and depression, restless sleep, trouble
-							concentrating, headaches, coughing and sore throat, aches and pains,
-							upset stomach and bowels when you haven’t had any Tobacco?
-						</li>
-						<li>
-							Have you been unable to reduce or stop using Tobacco even though your
-							health or financial problems have continued or got worse? Have you been
-							unable to reduce or stop using Tobacco even though your health or
-							financial problems have continued or got worse?
-						</li>
-						<li>
-							Do you have health or psychological problems that may be made worse by
-							using Tobacco?
-						</li>
-					</ul>
-					<p>
-						If you answered yes to any of these questions we strongly recommend that you
-						see a healthcare professional for further assessment and assistance.
-						<br />
-						There are other services and resources that can help you.
-					</p>
-					<ul>
-						<li>
-							You can call the Quitline on <a href="tel:137848">137848</a>
-						</li>
-						<li>
-							<a href="http://smartrecoveryaustralia.com.au/">SMART Recovery</a> is a
-							free group program assisting people with any problematic behaviours
-						</li>
-					</ul>
-					<p>
-						To avoid increasing your risk of tobacco related problems in the future you
-						can use My Diary to track how often and how much you use and how much you
-						spend.
-						<br />
-						You can come back and complete the Check Up again in 3 months time if you
-						would like to see how you are going.
-					</p>
-				</div>
-			),
-			"alcohol": (
-				<div>
-					<p>
-						YOU ARE AT <strong>HIGH RISK</strong> OF EXPERIENCING HEALTH, SOCIAL,
-						FINANCIAL, LEGAL AND RELATIONSHIP PROBLEMS BASED ON YOUR CURRENT PATTERN OF
-						ALCOHOL USE
-						<br />
-						Alcohol use can be associated with health, social, financial and legal
-						problems such as:
-					</p>
-					<ul>
-						<li>Accidents and injury</li>
-						<li>Financial and work problems</li>
-						<li>Aggressive and violent behaviour</li>
-						<li>Drink driving charges</li>
-						<li>Relationship problems</li>
-						<li>Premature ageing</li>
-						<li>Reduced sexual performance</li>
-						<li>Difficulty remembering things and solving problems</li>
-						<li>High blood pressure</li>
-						<li>Anxiety and depression</li>
-						<li>Digestive problems, ulcers</li>
-						<li>For pregnant women, risk of Foetal Alcohol Spectrum Disorder.</li>
-					</ul>
-					<p>
-						In the long term alcohol use may be associated with, muscle and nerve
-						damage, permanent brain injury, stroke, heart disease, kidney disease,
-						pancreatitis, liver disease, and cancers.
-					</p>
-					<p>
-						The best way to reduce your risk is to cut down or stop drinking alcohol.
-						People in the high risk range often show signs of dependence on alcohol,
-						meaning if they stop or significantly reduce their alcohol intake they show
-						physical and psychological signs of alcohol withdrawal. It is strongly
-						advised that you seek medical advice when planning to reduce or stop your
-						alcohol use. If you would like more information about
-						<a href="https://assistplus.com.au/drug-information/australian-alcohol-guidelines/">
-							alcohol click here.
-						</a>
-					</p>
-					<p>
-						Based on your responses it seems that you have experienced one or more
-						problems related to your alcohol use.
-					</p>
-					<p>
-						How concerned are you about these problems? If you are unsure, answer the
-						following questions:
-					</p>
-					<ul>
-						<li>Do you think you need help to cut down or stop drinking alcohol?</li>
-						<li>
-							Do you experience physical withdrawal symptoms such as anxiety, nausea,
-							or tremor when you haven’t had any alcohol?
-						</li>
-						<li>
-							Have you been unable to reduce or stop drinking alcohol even though your
-							health, family, work, financial or legal problems have continued or got
-							worse?
-						</li>
-						<li>
-							Do you have health or psychological problems that may be made worse by
-							drinking alcohol?
-						</li>
-					</ul>
-					<p>
-						If you answered yes to any of these questions we strongly recommend that you
-						see a health care professional for further assessment and assistance.
-						<br />
-						There are other services and resources that can help you:
-					</p>
-					<ul>
-						<li>
-							You can call ADIS – the Alcohol and Drug Information Service for advice
-							and referrals:
-							<a href="tel:1800250015">1800 250 015</a>
-						</li>
-						<li>
-							If you are aged between 12 and 25 you can call Headspace for advice and
-							referrals
-						</li>
-						<li>
-							<a href="http://smartrecoveryaustralia.com.au/">SMART Recovery</a> is a
-							free group program assisting people with any problematic behaviours.
-						</li>
-					</ul>
-					<p>
-						What are the low risk drinking guidelines?
-						<br />
-						Australian experts recommend that to reduce the risk from alcohol-related
-						disease or injury, healthy adults (who are not pregnant or breastfeeding),
-						should drink no more than 10 standard drinks a week 2 standard drinks per
-						day and no more than 4 standard drinks on any one day. The less you drink,
-						the lower your risk of harm from alcohol.
-						<br />
-						An Australian standard drink is a drink containing 10g of alcohol
-					</p>
-					<p>
-						<img
-							src="https://eassist.assistportal.com.au/assets/images/shared/feedback/alcohol.png"
-							alt=""
-						/>
-					</p>
-					<p>
-						Standard drinks guide and images courtesy of the Australian Government
-						Department of Health.
-					</p>
-					<p>
-						If you are under 18 experts say that not drinking is the safest option.
-						<br />
-						If you are pregnant or breastfeeding it is safest for you and your baby not
-						to drink alcohol.
-						<br />
-						By keeping within these low risk guidelines you are likely to look and feel
-						better, your sleep and moods may improve, you may find improvements in your
-						relationships with family and friends and you will be less likely to
-						experience alcohol related problems.
-						<br />
-						In the long term your risk of weight gain, anxiety and depression, high
-						blood pressure, stroke, heart disease, kidney disease, liver disease, and
-						cancers will be reduced.
-					</p>
-					<p>
-						To help reduce your risk of alcohol related problems in the future you can
-						use My Diary to track how often and how much you drink, and how much you
-						spend.
-						<br />
-						You can come back and complete the Check Up again in 3 months time if you
-						would like to see how you are going.
-					</p>
-					<p>
-						Make sure you know what to do in a crisis
-						<br />
-						If someone overdoses or has an adverse reaction while drinking alcohol, in
-						Australia
-					</p>
-					<p>
-						<a href="tel:000">Call Triple Zero (000)</a>
-					</p>
-					<p>
-						It is very important that they receive professional help as soon as
-						possible. A quick response can save their life so don’t delay.
-					</p>
-				</div>
-			),
-			"cannabis": (
-				<div>
-					<p>
-						YOU ARE AT <strong>HIGH RISK</strong> OF HEALTH, SOCIAL, FINANCIAL AND LEGAL
-						PROBLEMS BASED ON YOUR CURRENT PATTERN OF CANNABIS USE.
-						<br />
-						Cannabis use can be associated with a range of health, social, financial and
-						legal problems such as:
-					</p>
-					<ul>
-						<li>Drug driving charges, arrest for possession and supply,</li>
-						<li>Problems with attention and motivation</li>
-						<li>Anxiety, paranoia, panic, depression</li>
-						<li>Decreased memory and problem solving ability</li>
-						<li>Asthma, bronchitis, chronic obstructive airways disease</li>
-						<li>
-							Psychosis in those with a personal or family history of schizophrenia
-						</li>
-						<li>Cancers</li>
-					</ul>
-					<p>
-						Be aware that it is dangerous to drive or use machinery after you have used
-						cannabis because it impairs your perception and coordination.
-						<br />
-						If you would like more information about
-						<a href="https://assistplus.com.au/drug-information/cannabis/">
-							cannabis click here.
-						</a>
-					</p>
-					<p>
-						Based on your responses it seems that you have experienced one or more
-						problems related to your cannabis use.
-					</p>
-					<p>
-						How concerned are you about these problems?
-						<br />
-						The best way to reduce your risk is to cut down or stop using cannabis.
-						<br />
-						If you are not sure what you want to do it can be helpful to list all the
-						good things and the not so good things about your cannabis use as well as
-						the benefits and costs of cutting down or stopping. You can find a
-						Cost-Benefit Analysis
-						<a href="http://smartrecoveryaustralia.com.au/resources/smart-worksheets/">
-							worksheet and other useful tools here
-						</a>
-						<br />
-						By not using, or keeping your cannabis use very low, you will find that your
-						attention, motivation, memory and problem solving will improve, you will
-						feel calmer and less anxious and your physical and mental health will
-						improve.
-					</p>
-					<p>
-						If you would like to cut down or stop using cannabis here are some
-						strategies to help you.
-						<br />
-						If your goal is to cut down:
-					</p>
-					<ul>
-						<li>Plan how often and how much you are going to use</li>
-						<li>Never buy more than you plan to use in one session</li>
-						<li>Avoid having a stash that might tempt you to use more</li>
-					</ul>
-					<p>If your goal is to stop:</p>
-					<ul>
-						<li>Set a target date and stop on that date</li>
-						<li>
-							Tell a friend or family member that you are going to stop so that they
-							can support you.
-						</li>
-						<li>
-							Plan some alternative activities to fill the extra time when you are not
-							using.
-						</li>
-						<li>
-							Think about situations where you might be tempted to use and plan to
-							avoid them or plan how you will avoid using cannabis
-						</li>
-						<li>
-							Keep a record of the times when you had a strong urge to use cannabis.
-							This will help you recognise high risk situations and plan to avoid or
-							manage them. You can download an
-							<a href="https://smartrecoveryaustralia.com.au/resources/smart-worksheets/">
-								Urge Log here.
-							</a>
-						</li>
-					</ul>
-					<p>
-						Do you think you need help to cut down or stop using cannabis? Answer the
-						following questions to find out more:
-					</p>
-					<ul>
-						<li>
-							Do you experience physical withdrawal symptoms such as sleep
-							difficulties, mood swings, irritability, anxiety, physical restlessness,
-							nausea, reduced appetite, or depression when you haven’t had any
-							cannabis?
-						</li>
-						<li>
-							Have you been unable to reduce or stop using cannabis even though your
-							health, family, work, financial or legal problems have continued or got
-							worse?
-						</li>
-						<li>
-							Do you have health or psychological problems that may be made worse by
-							using cannabis?
-						</li>
-					</ul>
-					<p>
-						If you answered yes to any of these questions we strongly recommend that you
-						see a healthcare professional for further assessment and assistance.
-						<br />
-						There are other services and resources that can help you.
-					</p>
-					<ul>
-						<li>
-							You can call ADIS – the Alcohol and Drug Information Service for advice
-							and referrals:
-							<a href="tel:1800250015">1800250015</a>
-						</li>
-						<li>
-							If you are aged between 12 and 25 you can call Headspace for advice and
-							referrals
-						</li>
-						<li>
-							<a href="http://smartrecoveryaustralia.com.au/">SMART Recovery</a> is a
-							free group program assisting people with any problematic behaviours
-						</li>
-					</ul>
-					<p>
-						To avoid increasing your risk of cannabis related problems in the future you
-						can use My Diary to track how often and how much you use and how much you
-						spend.
-						<br />
-						You can come back and complete the Check Up again in 3 months time if you
-						would like to see how you are going.
-					</p>
-				</div>
-			),
-			"cocaine": (
-				<div>
-					<p>
-						YOU ARE AT <strong>HIGH RISK</strong> OF EXPERIENCING HEALTH, SOCIAL,
-						FINANCIAL, LEGAL AND RELATIONSHIP PROBLEMS BASED ON YOUR CURRENT PATTERN OF
-						COCAINE USE.
-						<br />
-						There is no safe level of cocaine use. It is important to be very careful
-						when taking any type of drug or combination of drugs.
-						<br />
-						Cocaine use can be associated with a range of health, social, financial and
-						legal problems including:
-					</p>
-					<ul>
-						<li>Heart racing, difficulty sleeping, headaches, weight loss</li>
-						<li>Numbness, tingling, clammy skin</li>
-						<li>Accidents and injury</li>
-						<li>Financial problems, arrests for drug driving, possession and supply</li>
-						<li>Irrational thoughts</li>
-						<li>Mood swings – anxiety, depression, mania</li>
-						<li>Aggression and paranoia</li>
-						<li>Intense cravings and stress</li>
-						<li>Psychosis after using high doses</li>
-						<li>Sudden death from heart problems</li>
-					</ul>
-					<p>
-						If you would like more information about
-						<a href="https://assistplus.com.au/drug-information/cocaine/">
-							cocaine click here.
-						</a>
-					</p>
-					<p>
-						Based on your responses it seems that would have experienced one or more
-						problems related to your cocaine use.
-					</p>
-					<p>
-						How concerned are you about these problems?
-						<br />
-						The best way to reduce your risk is to cut down or stop cocaine use.
-						<br />
-						If you are not sure what you want to do it can be helpful to list all the
-						good things and the not so good things about your cocaine use as well as the
-						benefits and costs of cutting down or stopping. You can find a Cost-Benefit
-						Analysis
-						<a href="http://smartrecoveryaustralia.com.au/resources/smart-worksheets/">
-							worksheet and other useful tools here
-						</a>
-						<br />
-						By not using, or keeping your cocaine use very low, you will find that you
-						will eat and sleep better, your physical and mental health will improve and
-						you will be less likely to experience accidents and injuries, anxiety, mood
-						swings, and aggression.
-					</p>
-					<p>
-						If you would like to cut down or stop using cocaine here are some strategies
-						to help you.
-						<br />
-						If your goal is to cut down:
-					</p>
-					<ul>
-						<li>Plan how often and how much you are going to use</li>
-						<li>Never buy more than you plan to use in one session</li>
-						<li>Avoid having a stash that might tempt you to use more</li>
-					</ul>
-					<p>If your goal is to stop:</p>
-					<ul>
-						<li>Set a target date and stop on that date</li>
-						<li>
-							Tell a friend or family member that you are going to stop so that they
-							can support you
-						</li>
-						<li>
-							Plan some alternative activities to fill the extra time when you are not
-							using
-						</li>
-						<li>
-							Think about situations where you might be tempted to use and plan to
-							avoid them or plan how you will avoid using cocaine
-						</li>
-						<li>
-							Keep a record of the times when you had a strong urge to use. This will
-							help you recognise high risk situations and plan to avoid or manage
-							them. You can download an
-							<a href="https://smartrecoveryaustralia.com.au/resources/smart-worksheets/">
-								Urge Log here.
-							</a>
-						</li>
-					</ul>
-					<p>
-						Do you think you need help to cut down or stop using cocaine? Answer the
-						following questions to find out more:
-					</p>
-					<ul>
-						<li>
-							Do you experience physical withdrawal symptoms such a agitation,
-							depression or anxiety, restless sleep, extreme cocaine cravings, lack of
-							energy, anxiety, angry outbursts and an inability to feel pleasure when
-							you haven’t had any cocaine?
-						</li>
-						<li>
-							Have you been unable to reduce or stop using cocaine even though your
-							health, family, work, financial or legal problems have continued or got
-							worse?
-						</li>
-						<li>
-							Do you have health or psychological problems that may be made worse by
-							using cocaine?
-						</li>
-					</ul>
-					<p>
-						If you answered yes to any of these questions we strongly recommend that you
-						see a healthcare professional for further assessment and assistance.
-						<br />
-						There are other services and resources that can help you.
-					</p>
-					<ul>
-						<li>
-							You can call ADIS – the Alcohol and Drug Information Service for advice
-							and referrals:
-							<a href="tel:1800250015">1800250015</a>
-						</li>
-						<li>
-							If you are aged between 12 and 25 you can call Headspace for advice and
-							referrals
-						</li>
-						<li>
-							<a href="http://smartrecoveryaustralia.com.au/">SMART Recovery</a>is a
-							free group program assisting people with any problematic behaviours
-						</li>
-					</ul>
-					<p>
-						To help reduce your risk of cocaine related problems in the future you can
-						use My Diary to track how often and how much you use and how much you spend.
-						<br />
-						You can come back and complete the Check Up again in 3 months time if you
-						would like to see how you are going.
-					</p>
-					<p>
-						Injecting
-						<br />
-						If you inject cocaine you increase your risk of becoming dependent and
-						experiencing psychosis. You may also damage your skin and veins and get
-						infections, abscesses, and ulcers. If you share injecting equipment you are
-						at risk of blood borne virus infections like Hepatitis B &amp; C and HIV. It
-						is always safer not to inject.
-						<br />
-						If you choose to inject
-					</p>
-					<ul>
-						<li>ALWAYS use clean equipment and a new needle and syringe.</li>
-						<li>Do not share any equipment.</li>
-						<li>
-							Always clean the preparation area, your hands and the injecting site.
-						</li>
-						<li>Inject slowly and in a different site each time.</li>
-						<li>Dispose of the used needle and syringe in a sharps container.</li>
-					</ul>
-					<p>
-						If you have ever injected we recommend that you see a health care
-						professional to be tested for blood borne viruses.
-					</p>
-					<p>
-						Make sure you know what to do in a crisis
-						<br />
-						If someone overdoses or has an adverse reaction while using cocaine, in
-						Australia
-					</p>
-					<p>
-						<a href="tel:000">Call Triple Zero (000)</a>
-					</p>
-					<p>
-						It is very important that they receive professional help as soon as
-						possible. A quick response can save their life so don’t delay.
-					</p>
-				</div>
-			),
-			"amphetamine": (
-				<div>
-					<p>
-						YOU ARE AT HIGH RISK OF EXPERIENCING HEATH, SOCIAL, FINANCIAL, LEGAL AND
-						RELATIONSHIP PROBLEMS BASED ON YOUR CURRENT PATTERN OF USE.
-						<br />
-						There is no safe level of methamphetamine use. There are a variety of
-						Amphetamine Type Stimulants that includes methamphetamine and ecstasy. It is
-						important to be very careful when taking any type of drug or combination of
-						drugs. Also be aware that drugs sold as ecstasy may not contain any MDMA.
-						They can be a mix of other substances including amphetamine, methamphetamine
-						and paramethoxyamphetamine (PMA).
-						<br />
-						Methamphetamine use can be associated with a range of health, social,
-						financial and legal problems including:
-					</p>
-					<ul>
-						<li>Difficulty sleeping, loss of appetite, weight loss, dehydration</li>
-						<li>Jaw clenching, headaches, muscle pain</li>
-						<li>
-							Mood swings, - anxiety, depression, agitation, mania, panic, paranoia
-						</li>
-						<li>Tremors, irregular heartbeat, shortness of breath</li>
-						<li>Aggressive and violent behaviour</li>
-						<li>Drug driving charges, arrests for possession or supply</li>
-						<li>Psychosis after repeated use of high doses</li>
-						<li>Permanent damage to brain cells</li>
-						<li>Stroke or heart attack</li>
-						<li>
-							Liver damage, brain haemorrhage, and sudden death in rare circumstances
-						</li>
-					</ul>
-					<p>
-						Ecstasy use can be associated with a range of health, social, financial and
-						legal problems including:
-					</p>
-					<ul>
-						<li>Drug driving charges, arrests for possession or supply</li>
-						<li>Reduced energy, colds, flu and infections</li>
-						<li>Loss of appetite, nausea, vomiting</li>
-						<li>Jaw clenching and teeth grinding</li>
-						<li>Muscle aches and stiffness</li>
-						<li>Increased blood pressure and heart rate</li>
-						<li>Anxiety, depression, paranoia</li>
-						<li>Increased body temperature and sweating</li>
-						<li>Damage to brain cells and memory problems</li>
-						<li>Convulsions, heart attack and brain haemorrhage</li>
-					</ul>
-					<p>
-						If you would like more information about
-						<a href="https://assistplus.com.au/drug-information/amphetamine/">
-							methamphetamine
-						</a>{" "}
-						or
-						<a href="https://assistplus.com.au/drug-information/ecstasy/">
-							Ecstasy click here.
-						</a>
-					</p>
-					<p>
-						Based on your responses it seems that you have experienced one or more
-						problems related to your Amphetamine Type Stimulant use.
-					</p>
-					<p>
-						How concerned are you about your Amphetamine Type Stimulant use?
-						<br />
-						The best way to reduce your risk is to cut down or stop using Amphetamine
-						Type Stimulants.
-						<br />
-						If you are not sure what you want to do it can be helpful to list all the
-						good things and the not so good things about your AmphetamineType
-						Stimulantuse as well as the benefits and costs of cutting down or stopping.
-						<br />
-						You can find a Cost-Benefit Analysis
-						<a href="http://smartrecoveryaustralia.com.au/resources/smart-worksheets/">
-							worksheet and other useful tools here.
-						</a>
-						<br />
-						By not using or keeping your methamphetamine use very low you will find that
-						you will eat and sleep better, your physical and mental health will improve,
-						and you will be less likely to experience mood swings, anxiety, and
-						aggressive behaviour.
-					</p>
-					<p>
-						By not using ecstasy, or keeping your use very low, youwill find that you
-						will have more energy, your memory will improve, you will eat and sleep
-						better, your physical and mental health will improve and you will be less
-						likely to get infections and feel anxious or depressed.
-					</p>
-					<p>
-						If you would like to cut down or stop using AmphetamineType Stimulants,here
-						are some strategies to help you.
-						<br />
-						If your goal is to cut down:
-					</p>
-					<ul>
-						<li>Plan how often and how much you are going to use</li>
-						<li>Never buy more than you plan to use in one session</li>
-						<li>Avoid having a stash that might tempt you to use more</li>
-					</ul>
-					<p>If your goal is to stop:</p>
-					<ul>
-						<li>Set a target date and stop on that date</li>
-						<li>
-							Tell a friend or family member that you are going to stop so that they
-							can support you.
-						</li>
-						<li>
-							Plan some alternative activities to fill the extra time when you are not
-							using.
-						</li>
-						<li>
-							Think about situations where you might be tempted to use and plan to
-							avoid them or plan how you will avoid using methamphetamine
-						</li>
-						<li>
-							Keep a record of the times when you had a strong urge to use
-							methamphetamine. This will help you recognise high risk situations and
-							plan to avoid or manage them. You can download an
-							<a href="https://smartrecoveryaustralia.com.au/resources/smart-worksheets/">
-								Urge Log here.
-							</a>
-						</li>
-					</ul>
-					<p>
-						Do you think you need help to cut down or stop using methamphetamine? Answer
-						the following questions:
-					</p>
-					<ul>
-						<li>
-							Do you experience physical withdrawal symptoms such as cravings, aches
-							and pains exhaustion, confusion and irritability, restless sleep and
-							nightmares, anxiety, depression and paranoia when you haven’t had any
-							methamphetamine?
-						</li>
-						<li>
-							Have you been unable to reduce or stop using methamphetamine even though
-							your health, family, work, financial or legal problems have continued or
-							got worse?
-						</li>
-						<li>
-							Do you have health or psychological problems that may be made worse by
-							using methamphetamine?
-						</li>
-					</ul>
-					<p>
-						Do you think you need help to cut down or stop using ecstasy? Answer the
-						following questions:
-					</p>
-					<ul>
-						<li>
-							Do you experience physical withdrawal symptoms such as aches and pains,
-							loss of concentration, sleepiness or insomnia, anxiety, agitation,
-							restlessness, or depression when you haven’t had any ecstasy?
-						</li>
-						<li>
-							Have you been unable to reduce or stop using ecstasy even though your
-							health, family, work, financial or legal problems have continued or got
-							worse?
-						</li>
-						<li>
-							Do you have health or psychological problems that may be made worse by
-							using ecstasy?
-						</li>
-					</ul>
-					<p>
-						If you answered yes to any of these questions we strongly recommend that you
-						see a health care professional for further assessment and assistance. There
-						are other services and resources that can help you.
-					</p>
-					<ul>
-						<li>
-							You can call ADIS – the Alcohol and Drug Information Service for advice
-							and referrals:
-							<a href="tel:1800250015">1800250015</a>
-						</li>
-						<li>
-							If you are aged between 12 and 25 you can call
-							<a href="https://headspace.org.au/headspace-centres/">Headspace</a> for
-							advice and referrals
-						</li>
-						<li>
-							<a href="http://smartrecoveryaustralia.com.au/">SMART Recovery</a> is a
-							free group program assisting people with any problematic behaviours
-						</li>
-					</ul>
-					<p>
-						To avoid increasing your risk of Amphetamine Type Stimulant related problems
-						in the future you can use My Diary in the{" "}
-						<a href="https://assistplus.com.au">ASSIST Checkup App</a> to track how
-						often and how much you use and how much you spend.
-						<br />
-						You can come back and complete the Check Up again in 3 months time if you
-						would like to see how you are going.
-					</p>
-					<p>Injecting</p>
-					<p>
-						If you inject methamphetamine you increase your risk of becoming dependent
-						and experiencing psychosis. You may also damage your skin and veins and get
-						infections, abscesses, and ulcers. If you share injecting equipment you are
-						at risk of blood borne virus infections like Hepatitis B &amp; C and HIV. It
-						is always safer not to inject.
-						<br />
-						If you choose to inject:
-					</p>
-					<ul>
-						<li>ALWAYS use clean equipment and a new needle and syringe.</li>
-						<li>Do not share any equipment.</li>
-						<li>
-							Always clean the preparation area, your hands and the injecting site.
-						</li>
-						<li>Inject slowly and in a different site each time</li>
-						<li>Dispose of the used needle and syringe in a sharps container.</li>
-					</ul>
-					<p>
-						If you have ever injected methamphetamine we recommend that you see a health
-						care professional to be tested for blood borne viruses.
-					</p>
-					<p>
-						Make sure you know what to do in a crisis
-						<br />
-						If someone overdoses or has an adverse reaction while using methamphetamine,
-						in Australia
-					</p>
-					<p>
-						<a href="tel:000">Call Triple Zero (000)</a>
-					</p>
-					<p>
-						It is very important that they receive professional help as soon as
-						possible. A quick response can save their life so don’t delay.
-					</p>
-				</div>
-			),
-			"inhalants": (
-				<div>
-					<p>
-						YOU ARE AT <strong>HIGH RISK</strong> OF EXPERIENCING HEALTH, SOCIAL,
-						FINANCIAL, LEGAL AND RELATIONSHIP PROBLEMS BASED ON YOUR CURRENT PATTERN OF
-						INHALANT USE.
-						<br />
-						There is no safe level of inhalant use. It is important to be very careful
-						when taking any type of drug or combination of drugs.
-						<br />
-						Inhalant use can be associated with a range of health, social, financial and
-						legal problems including:
-					</p>
-					<ul>
-						<li>Dizziness and hallucinations</li>
-						<li>Drowsiness, disorientation, blurred vision</li>
-						<li>Coordination difficulties, slowed reactions</li>
-						<li>Flu-like symptoms, sinusitis, nosebleeds</li>
-						<li>Indigestion, stomach ulcers</li>
-						<li>Accidents and injury</li>
-						<li>Memory loss, confusion, delirium, seizures (fits), coma</li>
-						<li>Damage to your brain, heart, lungs, liver, and kidneys</li>
-						<li>Death from heart failure</li>
-					</ul>
-					<p>
-						If you would like more information about
-						<a href="https://assistplus.com.au/drug-information/inhalants/">
-							inhalants click here
-						</a>
-					</p>
-					<p>
-						Based on your responses it seems that you have experienced one or more
-						inhalant related problems.
-					</p>
-					<p>
-						How concerned are you about these problems?
-						<br />
-						The best way to reduce your risk is to cut down or stop using inhalants.
-						<br />
-						If you are not sure what you want to do it can be helpful to list all the
-						good things and the not so good things about your inhalant use as well as
-						the benefits and costs of cutting down or stopping. You can find a
-						Cost-Benefit Analysis
-						<a href="http://smartrecoveryaustralia.com.au/resources/smart-worksheets/">
-							worksheet and other useful tools here
-						</a>
-						<br />
-						By not using, or keeping your inhalant use very low, you will find that your
-						memory, coordination and reaction times will improve, your physical and
-						mental health will improve and you will be less likely to experience
-						accidents and injuries.
-					</p>
-					<p>
-						If you would like to cut down or stop using inhalants here are some
-						strategies to help you.
-						<br />
-						If your goal is to stop:
-					</p>
-					<ul>
-						<li>Set a target date and stop on that date</li>
-						<li>
-							Tell a friend or family member that you are going to stop so that they
-							can support you.
-						</li>
-						<li>
-							Plan some alternative activities to fill the extra time when you are not
-							using.
-						</li>
-						<li>
-							Think about situations where you might be tempted to use and plan to
-							avoid them or plan how you will avoid using inhalants
-						</li>
-						<li>
-							Keep a record of the times when you had a strong urge to use inhalants.
-							This will help you recognise high risk situations and plan to avoid or
-							manage them. You can download an
-							<a href="https://smartrecoveryaustralia.com.au/resources/smart-worksheets/">
-								Urge Log here.
-							</a>
-						</li>
-					</ul>
-					<p>Do you think you need help to cut down or stop using inhalants?</p>
-					<ul>
-						<li>
-							Do you experience physical withdrawal symptoms such as hangover,
-							headache, nausea and stomach pain, tiredness, shakiness, tremors, cramps
-							hallucinations and visual disorders, such as seeing spots when you
-							haven’t had any inhalants?
-						</li>
-						<li>
-							Have you been unable to reduce or stop using inhalants even though your
-							health, family, work, financial or legal problems have continued or got
-							worse?
-						</li>
-						<li>
-							Do you have health or psychological problems that may be made worse by
-							using inhalants?
-						</li>
-					</ul>
-					<p>
-						If you answered yes to any of these questions we strongly recommend that you
-						see a healthcare professional for further assessment and assistance.
-						<br />
-						There are other services and resources that can help you.
-					</p>
-					<ul>
-						<li>
-							You can call ADIS – the Alcohol and Drug Information Service for advice
-							and referrals:
-							<a href="tel:1800250015">1800250015</a>
-						</li>
-						<li>
-							If you are aged between 12 and 25 you can call Headspace for advice and
-							referrals
-						</li>
-						<li>
-							<a href="http://smartrecoveryaustralia.com.au/">SMART Recovery</a> is a
-							free group program assisting people with any problematic behaviours
-						</li>
-					</ul>
-					<p>
-						To avoid increasing your risk of inhalant related problems in the future you
-						can use My Diary to track how often and how much you use and how much you
-						spend.
-						<br />
-						You can come back and complete the Check Up again in 3 months time if you
-						would like to see how you are going.
-					</p>
-					<p>
-						Make sure you know what to do in a crisis
-						<br />
-						If someone overdoses or has an adverse reaction while using inhalants, in
-						Australia
-					</p>
-					<p>
-						<a href="tel:000">Call Triple Zero (000)</a>
-					</p>
-					<p>
-						It is very important that they receive professional help as soon as
-						possible. A quick response can save their life so don’t delay.
-					</p>
-				</div>
-			),
-			"sedatives": (
-				<div>
-					<p>
-						YOU ARE AT <strong>HIGH RISK</strong> OF EXPERIENCING HEALTH, SOCIAL,
-						FINANCIAL, LEGAL AND RELATIONSHIP PROBLEMS BASED ON YOUR CURRENT PATTERN OF
-						SEDATIVE USE.
-						<br />
-						Be aware that sedative medication use can be associated with a range of
-						health, social, financial and legal problems.
-					</p>
-					<ul>
-						<li>Drowsiness</li>
-						<li>Difficulty concentrating and remembering things</li>
-						<li>Nausea and loss of appetite</li>
-						<li>Sleeping problems</li>
-						<li>Headaches</li>
-						<li>Double or blurred vision</li>
-						<li>Jitteriness and excitability</li>
-						<li>Impaired coordination, dizziness and tremor</li>
-						<li>Mood swings and aggression</li>
-						<li>Risk of overdose</li>
-						<li>Loss of consciousness, coma, death</li>
-					</ul>
-					<p>
-						If you would like to learn more information specific about
-						<a href="https://assistplus.com.au/drug-information/sedatives-sleeping-pills/">
-							sedative medication click here.
-						</a>
-					</p>
-					<p>
-						Based on your responses it seems that you have experienced one or more
-						problems related to your sedatives use.
-					</p>
-					<p>
-						How concerned are you about these problems?
-						<br />
-						The best way to reduce your risk is to cut down or stop misusing sedative
-						medication.
-						<br />
-						Within months of cutting down or quitting using sedatives normal sleep
-						patterns return.
-						<br />
-						Also:
-					</p>
-					<ul>
-						<li>Your appetite will return to normal</li>
-						<li>
-							Will no longer have unsteady gait, slurred speech and poor coordination
-							skills
-						</li>
-						<li>
-							You will no longer suffer from double or blurred vision or jitteriness
-						</li>
-						<li>
-							You will improve your mood, your concentration and your ability to
-							remember things
-						</li>
-						<li>You are no longer at risk of early death through overdose</li>
-					</ul>
-					<p>
-						If you are not sure what you want to do it can be helpful to list all the
-						good things and the not so good things about your opioid use as well as the
-						benefits and costs of cutting down or stopping. You can find a Cost-Benefit
-						Analysis
-						<a href="http://smartrecoveryaustralia.com.au/resources/smart-worksheets/">
-							worksheet and other useful tools here
-						</a>
-						<br />
-						By not using, or by keeping your prescription medication use very low, you
-						will find that your appetite, concentration, memory and alertness will
-						improve, you will sleep better and you will be at lower risk of falls,
-						anxiety, and overdose.
-					</p>
-					<p>
-						If you would like to cut down or stop misusing prescription medications here
-						are some strategies to help you.
-						<br />
-						If your goal is to cut down:
-					</p>
-					<ul>
-						<li>Plan how often and how much you are going to use</li>
-						<li>Never buy more than you plan to use in one session</li>
-						<li>Avoid having a stash that might tempt you to use more</li>
-					</ul>
-					<p>If your goal is to stop:</p>
-					<ul>
-						<li>Set a target date and stop on that date</li>
-						<li>
-							Tell a friend or family member that you are going to stop so that they
-							can support you.
-						</li>
-						<li>
-							Plan some alternative activities to fill the extra time when you are not
-							using.
-						</li>
-						<li>
-							Think about situations where you might be tempted to use and plan to
-							avoid them or plan how you will avoid using sedative mediciation
-						</li>
-						<li>
-							Keep a record of the times when you had a strong urge to use sedative
-							mediciation. This will help you recognise high risk situations and plan
-							to avoid or manage them. You can download an
-							<a href="https://smartrecoveryaustralia.com.au/resources/smart-worksheets/">
-								Urge Log here.
-							</a>
-						</li>
-					</ul>
-					<p>
-						Do you think you need help to cut down or stop using sedative medication?
-						Answer these questions to find out:
-					</p>
-					<ul>
-						<li>
-							Do you experience physical withdrawal symptoms such as restlessness and
-							irritability, depression and crying, headaches, aching or twitching
-							muscles, dizziness and tremors, convulsions, hallucinations, diarrhoea,
-							restless sleep, bizarre dreams when you haven’t had any sedative
-							medication?
-						</li>
-						<li>
-							Have you been unable to reduce or stop using sedative medication even
-							though your health, family, work, financial or legal problems have
-							continued or got worse?
-						</li>
-						<li>
-							Do you have health or psychological problems that may be made worse by
-							using sedative medication?
-						</li>
-					</ul>
-					<p>
-						If you answered yes to any of these questions we strongly recommend that you
-						see a healthcare professional for further assessment and assistance.
-						<br />
-						There are other services and resources that can help you.
-					</p>
-					<ul>
-						<li>
-							You can call ADIS – the Alcohol and Drug Information Service for advice
-							and referrals:
-							<a href="tel:1800250015">1800250015</a>
-						</li>
-						<li>
-							If you are aged between 12 and 25 you can call Headspace for advice and
-							referrals
-						</li>
-						<li>
-							<a href="http://smartrecoveryaustralia.com.au/">SMART Recovery</a> is a
-							free group program assisting people with any problematic behaviours
-						</li>
-					</ul>
-					<p>
-						To avoid increasing your risk of prescription medication related problems in
-						the future you can use My Diary to track how often and how much you use and
-						how much you spend.
-						<br />
-						You can come back and complete the Check Up again in 3 months time if you
-						would like to see how you are going.
-					</p>
-					<p>
-						Injecting
-						<br />
-						If you inject sedative medication you increase your risk of becoming
-						dependent. You may also damage your skin and veins and get infections,
-						abscesses, and ulcers. If you share injecting equipment you are at risk of
-						blood borne virus infections like Hepatitis B &amp; C and HIV. It is always
-						safer not to inject.
-						<br />
-						If you choose to inject
-					</p>
-					<ul>
-						<li>ALWAYS use clean equipment and a new needle and syringe.</li>
-						<li>Do not share any equipment.</li>
-						<li>
-							Always clean the preparation area, your hands and the injecting site.
-						</li>
-						<li>Inject slowly and in a different site each time</li>
-						<li>Dispose of the used needle and syringe in a sharps container.</li>
-					</ul>
-					<p>
-						If you have ever injected we recommend that you see a healthcare
-						professional to be tested for blood borne viruses.
-					</p>
-					<p>
-						Make sure you know what to do in a crisis
-						<br />
-						If someone overdoses or has an adverse reaction while using sedative
-						medication, in Australia
-					</p>
-					<p>
-						<a href="tel:000">Call Triple Zero (000)</a>
-					</p>
-					<p>
-						It is very important that they receive professional help as soon as
-						possible. A quick response can save their life so don’t delay.
-					</p>
-				</div>
-			),
-			"hallucinogens": (
-				<div>
-					<p>
-						YOU ARE AT <strong>HIGH RISK</strong> OF EXPERIENCING HEALTH, SOCIAL,
-						FINANCIAL, LEGAL AND RELATIONSHIP PROBLEMS BASED ON YOUR CURRENT
-						HALLUCINOGEN USE.
-					</p>
-					<p>
-						You are at risk of experiencing sleeping difficulties, nausea, vomiting,
-						increased blood pressure, mood swings, anxiety, panic attacks, paranoia,
-						flashbacks and increased effects of mental illnesses such as schizophrenia.
-					</p>
-					<p>
-						The effects of any drug vary from person to person. The effect is the result
-						of three interacting factors:
-					</p>
-					<ul>
-						<li>The drug itself</li>
-						<li>The individual user</li>
-						<li>The environment in which drug use occurs</li>
-					</ul>
-					<p>
-						While the effect that a drug has on a person is determined by many factors,
-						the primary factors that influence a drug’s effect are the type of drug and
-						the quantity used. It is important to remember that any illicit drug use can
-						put you at risk of health, social, financial and legal problems. These risks
-						also apply to prescription medication when taken for reasons other than
-						prescribed.
-					</p>
-					<p>
-						Illegal drugs are not subject to quality controls and the active ingredient
-						is not consistent. You can never be sure what is actually in it and how it
-						will affect you. Even ‘one off’ use can lead to serious harms. Federal and
-						state laws provide penalties for possessing, using, producing, selling or
-						driving under the influence of illicit drugs. Penalties can include fines,
-						disqualification from driving, rehabilitation orders and imprisonment. Think
-						about how any of these consequences could impact your life.
-					</p>
-					<p>
-						To avoid the risks and harms associated with drugs, the best option is to
-						not use them. This can be difficult for some people who may have become
-						dependent on them and feel symptoms of withdrawal if they stop or reduce
-						their use.
-					</p>
-					<p>
-						Help is available. You may like to start by finding out more about
-						hallucinogens and their effects{" "}
-						<a href="https://assistplus.com.au/drug-information/hallucinogens/">
-							click here./
-						</a>
-					</p>
-					<p>
-						You are also encouraged to talk to a health professional or local drug and
-						alcohol service if you would like more information or support in quitting
-						your use.
-					</p>
-					<p>
-						Make sure you know what to do in a crisis
-						<br />
-						If someone overdoses or has an adverse reaction while using a hallucinogen,
-						in Australia
-					</p>
-					<p>
-						<a href="tel:000">Call Triple Zero (000)</a>
-					</p>
-					<p>
-						It is very important that they receive professional help as soon as
-						possible. A quick response can save their life so don’t delay.
-					</p>
-				</div>
-			),
-			"opioids": (
-				<div>
-					<p>
-						YOU ARE AT <strong>HIGH RISK</strong> OF EXPERIENCING HEALTH, SOCIAL,
-						FINANCIAL, LEGAL AND RELATIONSHIP PROBLEMS BASED ON YOUR CURRENT PATTERN OF
-						OPIOID USE.
-						<br />
-						While opioids are very useful medications for pain, non-medical use can be
-						very harmful. Be aware that opioid use can be associated with a range of
-						health, social, financial and legal problems including:
-					</p>
-					<ul>
-						<li>Difficulty concentrating and remembering things</li>
-						<li>Difficulty urinating; constipation</li>
-						<li>Dry mouth, tooth decay</li>
-						<li>Nausea, loss of appetite</li>
-						<li>Slow breathing and heart rate, irregular heartbeat</li>
-						<li>Reduced sexual desire and sexual performance</li>
-						<li>Irregular periods and difficulty having children</li>
-						<li>Relationship difficulties</li>
-						<li>Financial and work problems, legal problems</li>
-						<li>Overdose and death from respiratory failure</li>
-						<li>Opioid dependence</li>
-					</ul>
-					<p>
-						The effects of mixing opioids/heroin with alcohol, prescription or over the
-						counter medications, and/or other illicit drugs are often unpredictable. In
-						particular, mixing opioids with other depressant drugs such as alcohol or
-						sedatives increases the depressant effects and can result in respiratory
-						depression, coma and death.
-						<br />
-						If you would like more information about specific
-						<a href="https://assistplus.com.au/drug-information/opioids/">
-							opioids click here.
-						</a>
-					</p>
-					<p>
-						Based on your responses it seems that you have experienced one or more
-						inhalant related problems.
-					</p>
-					<p>
-						How concerned are you about these problems?
-						<br />
-						The best way to reduce your risk is to cut down or stop using
-						opioids/heroin.
-						<br />
-						If you are not sure what you want to do it can be helpful to list all the
-						good things and the not so good things about your opioid use as well as the
-						benefits and costs of cutting down or stopping. You can find a Cost-Benefit
-						Analysis
-						<a href="http://smartrecoveryaustralia.com.au/resources/smart-worksheets/">
-							worksheet and other useful tools here
-						</a>
-						<br />
-						By not using, or by keeping your opioid/heroin use very low, you will find
-						that your appetite, concentration, memory and alertness will improve, your
-						dental and physical health will improve, your sexual functioning will
-						improve and you will be at lower risk of overdose.
-					</p>
-					<p>
-						If you would like to cut down or stop using opioids/heroin here are some
-						strategies to help you.
-						<br />
-						If your goal is to cut down:
-					</p>
-					<ul>
-						<li>Plan how often and how much you are going to use</li>
-						<li>Never buy more than you plan to use in one session</li>
-						<li>Avoid having a stash that might tempt you to use more</li>
-					</ul>
-					<p>If your goal is to stop:</p>
-					<ul>
-						<li>Set a target date and stop on that date</li>
-						<li>
-							Tell a friend or family member that you are going to stop so that they
-							can support you.
-						</li>
-						<li>
-							Plan some alternative activities to fill the extra time when you are not
-							using.
-						</li>
-						<li>
-							Think about situations where you might be tempted to use and plan to
-							avoid them or plan how you will avoid using opioids/heroin
-						</li>
-						<li>
-							Keep a record of the times when you had a strong urge to use
-							opioids/heroin. This will help you recognise high risk situations and
-							plan to avoid or manage them. You can download an
-							<a href="https://smartrecoveryaustralia.com.au/resources/smart-%20worksheets/">
-								Urge Log here.
-							</a>
-						</li>
-					</ul>
-					<p>
-						Do you think you need help to cut down or stop using opioids/heroin? Answer
-						the following questions:
-					</p>
-					<ul>
-						<li>
-							Do you experience physical withdrawal symptoms such as restlessness and
-							irritability, depression and crying, diarrhoea, restless sleep and
-							yawning, stomach and leg cramps, vomiting and no appetite, goosebumps,
-							runny nose fast heartbeat when you haven’t had any opioids/heroin?
-						</li>
-						<li>
-							Have you been unable to reduce or stop using opioids/heroin even though
-							your health, family, work, financial or legal problems have continued or
-							got worse?
-						</li>
-						<li>
-							Do you have health or psychological problems that may be made worse by
-							using opioids/heroin?
-						</li>
-					</ul>
-					<p>
-						If you answered yes to any of these questions we strongly recommend that you
-						see a healthcare professional for further assessment and assistance.
-						<br />
-						There are other services and resources that can help you.
-					</p>
-					<ul>
-						<li>
-							You can call ADIS – the Alcohol and Drug Information Service for advice
-							and referrals:
-							<a href="tel:1800250015">1800250015</a>
-						</li>
-						<li>
-							If you are aged between 12 and 25 you can call Headspace for advice and
-							referrals
-						</li>
-						<li>
-							<a href="http://smartrecoveryaustralia.com.au/">SMART Recovery</a> is a
-							free group program assisting people with any problematic behaviours
-						</li>
-					</ul>
-					<p>
-						To avoid increasing your risk of opioid related problems in the future you
-						can use My Diary to track how often and how much you use and how much you
-						spend.
-						<br />
-						You can come back and complete the Check Up again in 3 months time if you
-						would like to see how you are going.
-					</p>
-					<p>
-						Injecting
-						<br />
-						If you inject opioids/heroin you increase your risk of becoming dependent.
-						You may also damage your skin and veins and get infections, abscesses, and
-						ulcers. If you share injecting equipment you are at risk of blood borne
-						virus infections like Hepatitis B &amp; C and HIV. It is always safer not to
-						inject.
-						<br />
-						If you choose to inject
-					</p>
-					<ul>
-						<li>ALWAYS use clean equipment and a new needle and syringe.</li>
-						<li>Do not share any equipment.</li>
-						<li>
-							Always clean the preparation area, your hands and the injecting site.
-						</li>
-						<li>Inject slowly and in a different site each time</li>
-						<li>Dispose of the used needle and syringe in a sharps container.</li>
-					</ul>
-					<p>
-						If you have ever injected opioids/heroin we recommend that you see a health
-						care professional to be tested for blood borne viruses.
-					</p>
-					<p>
-						Make sure you know what to do in a crisis
-						<br />
-						If someone overdoses or has an adverse reaction while using opioids/heroin,
-						in Australia
-					</p>
-					<p>
-						<a href="tel:000">Call Triple Zero (000)</a>
-					</p>
-					<p>
-						It is very important that they receive professional help as soon as
-						possible. A quick response can save their life so don’t delay.
-					</p>
-				</div>
-			),
-			"other": null,
-		},
+		"lower": "നിങ്ങളുടെ നിലവിലെ ഉപയോഗ പാറ്റേണിൽ നിന്ന് നിങ്ങൾക്ക് ആരോഗ്യത്തിനും മറ്റ് പ്രശ്നങ്ങൾക്കും സാധ്യത കുറവാണ്.",
+		"moderate": "നിങ്ങളുടെ നിലവിലെ  പദാർത്ഥ ഉപയോഗ പാറ്റേണിൽ നിന്ന് ആരോഗ്യത്തിനും മറ്റ് പ്രശ്നങ്ങൾക്കും മിതമായ അപകടസാധ്യതയുണ്ട്.",
+		"high": "നിങ്ങളുടെ നിലവിലെ ഉപയോഗ പാറ്റേണിന്റെ ഫലമായി നിങ്ങൾക്ക് ഗുരുതരമായ പ്രശ്നങ്ങൾ (ആരോഗ്യം, സാമൂഹികം, സാമ്പത്തികം, നിയമപരമായ, ബന്ധം) അനുഭവപ്പെടാനുള്ള ഉയർന്ന അപകടസാധ്യതയുണ്ട്, മാത്രമല്ല ആശ്രയിക്കാൻ സാധ്യതയുണ്ട്."
 	},
 	"contactDetails": [
 		{
@@ -5344,5 +2750,2419 @@ export const data = {
 			"location": "",
 			"contactDetails": ["1800110031"],
 		},
-	]
+	],
+	"substanceAdvice": {
+		"moderate": {
+			"tobacco": (
+				<div>
+					<p>
+					നിങ്ങളുടെ ഉത്തരങ്ങളെ അടിസ്ഥാനമാക്കി, നിങ്ങളുടെ പുകവലി നിങ്ങളെ മിതമായ അപകടത്തിലാക്കുന്നു
+						ആരോഗ്യവും സാമ്പത്തികവുമായ പ്രശ്നങ്ങൾ
+						<br />
+						പുകയില ഉപയോഗത്തിന് ആരോഗ്യപരമായ ഗുണങ്ങളൊന്നുമില്ല, സുരക്ഷിതമായ പുകവലിയും ഇല്ല. എങ്കിൽ
+						നിങ്ങൾ പുകവലിക്കാൻ തിരഞ്ഞെടുക്കുന്ന നിരവധി ആരോഗ്യപ്രശ്നങ്ങളെക്കുറിച്ച് അറിഞ്ഞിരിക്കുക:
+					</p>
+					<ul>
+						<li>അകാല വാർദ്ധക്യം, ചർമ്മത്തിൽ ചുളിവുകൾ</li>
+						<li>ആസ്ത്മ, ശ്വാസകോശ സംബന്ധമായ അണുബാധകൾ, വിട്ടുമാറാത്ത ശ്വാസകോശ സംബന്ധമായ അസുഖം</li>
+						<li>ഉയർന്ന രക്തസമ്മർദ്ദം</li>
+						<li>പ്രമേഹം, പ്രമേഹത്തിന്റെ ഗുരുതരമായ സങ്കീർണതകൾ</li>
+						<li>ഗർഭം അലസൽ, മാസം തികയാതെയുള്ള പ്രസവം, ഭാരക്കുറവുള്ള കുഞ്ഞുങ്ങൾ</li>
+						<li>വൃക്കരോഗം</li>
+						<li>ഹൃദ്രോഗം, ഹൃദയാഘാതം, രക്തക്കുഴലുകൾ</li>
+						<li>ക്യാൻസറുകൾ</li>
+						<li>
+						പുകവലിക്കാരുടെ കുട്ടികളിൽ ശ്വാസകോശ സംബന്ധമായ അണുബാധകൾ, അലർജികൾ, ആസ്ത്മ.
+						</li>
+					</ul>
+					<p>
+						കൂടുതൽ വിവരങ്ങൾ നിങ്ങൾക്ക് വേണമെങ്കിൽ{" "}
+						<a href="https://assistplus.com.au/drug-information/nicotine/">
+							പുകയില ഇവിടെ ക്ലിക്ക് ചെയ്യുക.
+						</a>
+					</p>
+					<p>
+					നിങ്ങളുടെ പ്രതികരണങ്ങളെ അടിസ്ഥാനമാക്കി, കഴിഞ്ഞ 3 മാസത്തിനുള്ളിൽ നിങ്ങൾക്ക് ഒന്നോ അതിലധികമോ പുകയില സംബന്ധമായ പ്രശ്നങ്ങൾ അനുഭവപ്പെട്ടിട്ടുണ്ടാകാമെന്ന് തോന്നുന്നു.
+					</p>
+					<p>
+					ഈ പ്രശ്‌നങ്ങളെക്കുറിച്ച് നിങ്ങൾക്ക് എത്രമാത്രം ആശങ്കയുണ്ട്?
+						<br />
+						ഇവയിലേതെങ്കിലും നിങ്ങൾക്ക് സംഭവിക്കുകയും നിങ്ങൾക്ക് ആശങ്കയുണ്ടെങ്കിൽ, പുകവലി ഉപേക്ഷിക്കുന്നത് പരിഗണിക്കാൻ നിങ്ങൾ ആഗ്രഹിച്ചേക്കാം. നിങ്ങൾക്ക് ഉറപ്പില്ലെങ്കിൽ ഇത് സഹായിക്കുന്നു
+						നിങ്ങളുടെ പുകവലിയെക്കുറിച്ച് നല്ലതും അല്ലാത്തതുമായ എല്ലാ കാര്യങ്ങളും പട്ടികപ്പെടുത്തുക
+						അതുപോലെ നിർത്തുന്നതിന്റെ നേട്ടങ്ങളും ചെലവുകളും. നിങ്ങൾക്ക് ഒരു ചെലവ്-ആനുകൂല്യ വിശകലനം കണ്ടെത്താം{" "}
+						<a href="http://smartrecoveryaustralia.com.au/resources/smart-worksheets/">
+						വർക്ക്ഷീറ്റും മറ്റ് ഉപയോഗപ്രദമായ ഉപകരണങ്ങളും ഇവിടെയുണ്ട്
+						</a>
+						<br />
+						ഉപേക്ഷിക്കുന്നതിലൂടെ, നിങ്ങൾക്ക് ചെറുപ്പവും തോന്നലും അനുഭവപ്പെടും, നിങ്ങൾ ശാരീരികക്ഷമത കൈവരിക്കും, നിങ്ങളുടെ ശ്വാസം, മുടി, വസ്ത്രങ്ങൾ എന്നിവ നന്നായി മണക്കും, നിങ്ങളുടെ രുചിയും ഗന്ധവും മെച്ചപ്പെടും, നിങ്ങളുടെ ദന്ത-ശാരീരിക ആരോഗ്യം മെച്ചപ്പെടും, നിങ്ങളും നിങ്ങളുടെ കുടുംബവും മെച്ചപ്പെടും. ഗുരുതരമായ ആരോഗ്യപ്രശ്നങ്ങൾക്കുള്ള സാധ്യത വളരെ കുറവാണ്.
+						<br />നിർത്തുന്നതിന്റെ പ്രയോജനങ്ങളുടെ ഒരു ലിസ്റ്റ് ഇതിൽ കാണാം{" "}
+						<a href="http://www.quitnow.gov.au/">ക്വിറ്റ് നൗ വെബ്സൈറ്റ്</a>
+					</p>
+					<p>നിങ്ങൾ പുകവലി ഉപേക്ഷിക്കാൻ ആഗ്രഹിക്കുന്നുവെങ്കിൽ, നിങ്ങളെ സഹായിക്കുന്ന ചില തന്ത്രങ്ങൾ ഇതാ:</p>
+					<ul>
+						<li>ഒരു ലക്ഷ്യ തീയതി സജ്ജീകരിച്ച് ആ തീയതിയിൽ നിർത്തുക</li>
+						<li>
+						നിങ്ങൾ നിർത്താൻ പോകുകയാണെന്ന് ഒരു സുഹൃത്തിനോടോ കുടുംബാംഗത്തോടോ പറയുക, അതുവഴി അവർക്ക് നിങ്ങളെ പിന്തുണയ്ക്കാൻ കഴിയും.
+						</li>
+						<li>
+						നിങ്ങൾ ഇല്ലാത്ത സമയങ്ങളിൽ അധിക സമയം നിറയ്ക്കാൻ ചില ബദൽ പ്രവർത്തനങ്ങൾ ആസൂത്രണം ചെയ്യുക പുകവലി.
+						</li>
+						<li>
+						നിങ്ങൾ ഉപയോഗിക്കാൻ പ്രലോഭിപ്പിച്ചേക്കാവുന്ന സാഹചര്യങ്ങളെക്കുറിച്ച് ചിന്തിക്കുക, അവ ഒഴിവാക്കാൻ ആസൂത്രണം ചെയ്യുക അല്ലെങ്കിൽ പുകവലി എങ്ങനെ ഒഴിവാക്കുമെന്ന് ആസൂത്രണം ചെയ്യുക.
+						</li>
+						<li>
+						കൂടുതൽ സഹായം നേടുക{" "}
+							<a href="https://www.health.gov.au/health-topics/smoking-and-tobacco/how-to-quit-smoking?utm_source=quitnow.gov.au&utm_medium=redirect&utm_campaign=digital_transformation">
+							ക്വിറ്റ് നൗ വെബ്സൈറ്റ്
+							</a>
+						</li>
+						<li>
+						നിങ്ങൾക്ക് കൂടുതൽ സഹായം വേണമെങ്കിൽ ഡൗൺലോഡ് ചെയ്യാം{" "}
+							<a href="https://www.health.gov.au/resources/apps-and-tools/my-quitbuddy-app">
+							ഈ സൗജന്യ ക്വിറ്റ് ബഡ്ഡി ആപ്പ്
+							</a>{" "}
+							കൂടാതെ/അല്ലെങ്കിൽ ഒരു ഹെൽത്ത് കെയർ പ്രൊഫഷണലുമായി സംസാരിക്കുക.
+						</li>
+					</ul>
+					<p>
+					ഭാവിയിൽ പുകവലിയുമായി ബന്ധപ്പെട്ട പ്രശ്‌നങ്ങൾ ഉണ്ടാകാനുള്ള സാധ്യത വർദ്ധിപ്പിക്കുന്നത് ഒഴിവാക്കാൻ നിങ്ങൾ എത്ര തവണ, എത്രത്തോളം പുകവലിക്കുന്നു, എത്രമാത്രം ചെലവഴിക്കുന്നു എന്നിവ ട്രാക്ക് ചെയ്യാൻ എന്റെ ഡയറി ഉപയോഗിക്കാം.
+						<br />
+						നിങ്ങൾ എങ്ങനെയാണ് പോകുന്നതെന്ന് കാണാൻ താൽപ്പര്യമുണ്ടെങ്കിൽ, നിങ്ങൾക്ക് തിരികെ വന്ന് 3 മാസത്തിനുള്ളിൽ വീണ്ടും ചെക്ക് അപ്പ് പൂർത്തിയാക്കാം.
+					</p>
+				</div>
+			),
+			"alcohol": (
+				<div>
+					<p>
+					നിങ്ങളുടെ മദ്യ ഉപഭോഗം നിങ്ങളെ ആരോഗ്യം, സാമൂഹികം, സാമ്പത്തികം, നിയമപരമായ പ്രശ്നങ്ങൾ എന്നിവയിൽ മിതമായ അപകടത്തിലാക്കുന്നു
+						<br />
+						പലരും ഇടപഴകാനും വിശ്രമിക്കാനും ആസ്വദിക്കാനും മദ്യം ഉപയോഗിക്കുന്നു. എന്നിരുന്നാലും, മദ്യപാനം ആരോഗ്യം, സാമൂഹികം, സാമ്പത്തികം എന്നിവയുമായി ബന്ധപ്പെട്ടിരിക്കുന്നു തുടങ്ങിയ നിയമ പ്രശ്നങ്ങൾ:
+					</p>
+					<ul>
+						<li>ഹാംഗ് ഓവറുകൾ</li>
+						<li>അപകടങ്ങളും പരിക്കുകളും</li>
+						<li>സുരക്ഷിതമല്ലാത്ത അല്ലെങ്കിൽ വിവേകശൂന്യമായ ലൈംഗികത</li>
+						<li>ആക്രമണാത്മക അല്ലെങ്കിൽ അക്രമാസക്തമായ പെരുമാറ്റം</li>
+						<li>ബന്ധം പ്രശ്നങ്ങൾ</li>
+						<li>ലൈംഗിക പ്രകടനം കുറച്ചു</li>
+						<li>ജോലി നഷ്ടപ്പെടുന്നു, ബാധ്യതകൾ നിറവേറ്റുന്നതിൽ പരാജയപ്പെടുന്നു</li>
+						<li>മെമ്മറി ബ്ലാക്ക്ഔട്ടുകൾ</li>
+						<li>സാമ്പത്തിക പ്രശ്നങ്ങൾ</li>
+						<li>മദ്യപിച്ച് ഡ്രൈവിംഗ് ചാർജുകൾ</li>
+					</ul>
+					<p>
+					ദീർഘകാല മദ്യപാനം ശരീരഭാരം, ഉത്കണ്ഠ, വിഷാദം എന്നിവയുമായി ബന്ധപ്പെട്ടിരിക്കാം ഉയർന്ന രക്തസമ്മർദ്ദം, സ്ട്രോക്ക്, ഹൃദ്രോഗം, വൃക്കരോഗം, കരൾരോഗം, ക്യാൻസറുകൾ. ഗർഭാവസ്ഥയിലോ മുലയൂട്ടുന്ന സമയത്തോ നിങ്ങൾ മദ്യപിക്കുകയാണെങ്കിൽ, ഗര്ഭപിണ്ഡത്തിന്റെ ആൽക്കഹോൾ സ്പെക്ട്രം ഡിസോർഡറുകൾ ഉണ്ടാകാനുള്ള സാധ്യത കൂടുതലാണ്.സംബന്ധിച്ച വിവരങ്ങൾ
+						<a href="https://assistplus.com.au/drug-information/australian-alcohol-guidelines/">
+						മദ്യം ഇവിടെ ക്ലിക്ക് ചെയ്യുക.
+						</a>
+					</p>
+					<p>
+					നിങ്ങളുടെ പ്രതികരണങ്ങളെ അടിസ്ഥാനമാക്കി, കഴിഞ്ഞ 3 മാസത്തിനുള്ളിൽ ഒന്നോ അതിലധികമോ മദ്യപാനവുമായി ബന്ധപ്പെട്ട പ്രശ്‌നങ്ങൾ നിങ്ങൾ അനുഭവിച്ചിട്ടുണ്ടാകാമെന്ന് തോന്നുന്നു.
+					</p>
+					<p>
+					ഈ പ്രശ്‌നങ്ങളെക്കുറിച്ച് നിങ്ങൾക്ക് എത്രമാത്രം ആശങ്കയുണ്ട്?
+						<br />
+						നിങ്ങളുടെ മദ്യത്തിന്റെ ഉപയോഗം കുറയ്ക്കുന്നത് പരിഗണിക്കാൻ നിങ്ങൾ ആഗ്രഹിച്ചേക്കാം? നിങ്ങൾക്ക് ഉറപ്പില്ലെങ്കിൽ
+	നിങ്ങളുടെ മദ്യപാനത്തെക്കുറിച്ചുള്ള എല്ലാ നല്ല കാര്യങ്ങളും അത്ര നല്ലതല്ലാത്ത കാര്യങ്ങളും കുറയ്ക്കുന്നതിന്റെ ഗുണങ്ങളും ചെലവുകളും പട്ടികപ്പെടുത്തുന്നത് സഹായകമാകും. നിങ്ങൾക്ക് ഒരു കോസ്റ്റ്-ബെനിഫിറ്റ് അനാലിസിസ് കണ്ടെത്താം
+						<a href="http://smartrecoveryaustralia.com.au/resources/smart-worksheets/">
+						വർക്ക്ഷീറ്റും മറ്റ് ഉപയോഗപ്രദമായ ഉപകരണങ്ങളും ഇവിടെയുണ്ട്.
+						</a>
+						<br />
+						ഉപയോഗപ്രദമായ ചില നുറുങ്ങുകൾ നിങ്ങൾക്ക് കണ്ടെത്താം
+						<a href="https://www.betterhealth.vic.gov.au/health/ten-tips/10-tips-to-cut-down-on-alcohol">
+						ഇവിടെ നിങ്ങളുടെ മദ്യപാനം കുറയ്ക്കുക.
+						</a>
+						<br />
+						വെട്ടിക്കുറയ്ക്കാൻ നിങ്ങൾക്ക് കൂടുതൽ സഹായം വേണമെങ്കിൽ നിങ്ങളെ സഹായിക്കാൻ കഴിയുന്ന സേവനങ്ങളും ഉറവിടങ്ങളും ഉണ്ട്.
+					</p>
+					<ul>
+						<li>
+						നിങ്ങൾക്ക് ADIS-നെ വിളിക്കാം - ആൽക്കഹോൾ ആൻഡ് ഡ്രഗ് ഇൻഫർമേഷൻ സർവീസ് ഉപദേശങ്ങൾക്കും റഫറലുകൾക്കും:
+							<a href="tel:1800250015">1800 250 015</a>
+						</li>
+						<li>
+						നിങ്ങൾക്ക് 12 നും 25 നും ഇടയിൽ പ്രായമുണ്ടെങ്കിൽ, നിങ്ങൾക്ക് ഉപദേശങ്ങൾക്കും റഫറലുകൾക്കുമായി ഹെഡ്‌സ്‌പേസിനെ വിളിക്കാം
+						</li>
+						<li>
+							<a href="http://smartrecoveryaustralia.com.au/">സ്മാർട്ട്റി ക്കവറി</a> പ്രശ്‌നകരമായ പെരുമാറ്റങ്ങളുള്ള ആളുകളെ സഹായിക്കുന്ന ഒരു സ്വതന്ത്ര ഗ്രൂപ്പ് പ്രോഗ്രാം ആണ്
+						</li>
+					</ul>
+					<p>
+					ഞാൻ അമിതമായി കുടിക്കുന്നുണ്ടോ? കുറഞ്ഞ അപകടസാധ്യതയുള്ള മദ്യപാന മാർഗ്ഗനിർദ്ദേശങ്ങൾ എന്തൊക്കെയാണ്?
+						<br />
+						ആരോഗ്യമുള്ള മുതിർന്നവർ (ഗർഭിണികളോ മുലയൂട്ടുന്നവരോ അല്ലാത്തവർ) മദ്യപാനവുമായി ബന്ധപ്പെട്ട രോഗങ്ങളിൽ നിന്നോ പരിക്കിൽ നിന്നോ ഉള്ള സാധ്യത കുറയ്ക്കാൻ ഓസ്‌ട്രേലിയൻ വിദഗ്ധർ ശുപാർശ ചെയ്യുന്നു.
+	ആഴ്ചയിൽ 10 സ്റ്റാൻഡേർഡ് പാനീയങ്ങളിൽ കൂടുതൽ കുടിക്കരുത്, ഏതെങ്കിലും ഒരു ദിവസം 4 സ്റ്റാൻഡേർഡ് പാനീയങ്ങളിൽ കൂടരുത്. നിങ്ങൾ എത്രത്തോളം കുടിക്കുന്നുവോ അത്രത്തോളം മദ്യപാനത്തിൽ നിന്നുള്ള നിങ്ങളുടെ അപകടസാധ്യത കുറയുന്നു.
+						<br />
+						10 ഗ്രാം ആൽക്കഹോൾ അടങ്ങിയ പാനീയമാണ് ഓസ്‌ട്രേലിയൻ സ്റ്റാൻഡേർഡ് ഡ്രിങ്ക്
+					</p>
+					<p>
+						<img
+							src="https://eassist.assistportal.com.au/assets/images/shared/feedback/alcohol.png"
+							alt=""
+						/>
+					</p>
+					<p>
+					സ്റ്റാൻഡേർഡ് ഡ്രിങ്ക്‌സ് ഗൈഡും ചിത്രങ്ങളും ഓസ്‌ട്രേലിയൻ ഗവൺമെന്റിന്റെ കടപ്പാട്
+					</p>
+					<p>
+					ആരോഗ്യ വകുപ്പ്.
+	നിങ്ങൾ 18 വയസ്സിന് താഴെയുള്ള ആളാണെങ്കിൽ, മദ്യപിക്കാതിരിക്കുന്നതാണ് ഏറ്റവും സുരക്ഷിതമായ ഓപ്ഷൻ എന്ന് വിദഗ്ധർ പറയുന്നു.
+						<br />
+						നിങ്ങൾ ഗർഭിണിയോ മുലയൂട്ടുകയോ ആണെങ്കിൽ നിങ്ങൾക്കും നിങ്ങളുടെ കുഞ്ഞിനും മദ്യം കഴിക്കാതിരിക്കുന്നതാണ് ഏറ്റവും സുരക്ഷിതം.
+						ഈ കുറഞ്ഞ അപകടസാധ്യതയുള്ള മാർഗ്ഗനിർദ്ദേശങ്ങൾ പാലിക്കുന്നതിലൂടെ, നിങ്ങൾക്ക് മികച്ചതായി തോന്നാനും തോന്നാനും സാധ്യതയുണ്ട്, നിങ്ങളുടെ ഉറക്കവും മാനസികാവസ്ഥയും മെച്ചപ്പെട്ടേക്കാം, കുടുംബാംഗങ്ങളുമായും സുഹൃത്തുക്കളുമായും ഉള്ള നിങ്ങളുടെ ബന്ധത്തിൽ നിങ്ങൾക്ക് മെച്ചപ്പെടുത്തലുകൾ കണ്ടെത്താം, കൂടാതെ നിങ്ങൾക്ക് മദ്യവുമായി ബന്ധപ്പെട്ട പ്രശ്നങ്ങൾ അനുഭവപ്പെടാനുള്ള സാധ്യത കുറവായിരിക്കും
+						<br />
+						ദീർഘകാലാടിസ്ഥാനത്തിൽ നിങ്ങളുടെ ശരീരഭാരം, ഉത്കണ്ഠ, വിഷാദം എന്നിവയ്ക്കുള്ള സാധ്യത കൂടുതലാണ് രക്തസമ്മർദ്ദം, പക്ഷാഘാതം, ഹൃദ്രോഗം, വൃക്കരോഗം, കരൾ രോഗങ്ങൾ, കാൻസർ എന്നിവ കുറയും.
+					</p>
+					<p>
+					ഭാവിയിൽ മദ്യപാനവുമായി ബന്ധപ്പെട്ട പ്രശ്നങ്ങൾ ഉണ്ടാകാനുള്ള സാധ്യത വർദ്ധിപ്പിക്കുന്നത് ഒഴിവാക്കാൻ
+	 നിങ്ങൾ എത്ര തവണ, എത്രമാത്രം കുടിക്കുന്നു, എത്രമാത്രം ചെലവഴിക്കുന്നു എന്നിവ ട്രാക്ക് ചെയ്യാൻ എന്റെ ഡയറി ഉപയോഗിക്കാം.
+						<br />
+						നിങ്ങൾ എങ്ങനെയാണ് പോകുന്നതെന്ന് കാണാൻ താൽപ്പര്യമുണ്ടെങ്കിൽ, നിങ്ങൾക്ക് തിരികെ വന്ന് 3 മാസത്തിനുള്ളിൽ വീണ്ടും ചെക്ക് അപ്പ് പൂർത്തിയാക്കാം.
+					</p>
+					<p>
+					ഒരു പ്രതിസന്ധി ഘട്ടത്തിൽ എന്തുചെയ്യണമെന്ന് നിങ്ങൾക്കറിയാമെന്ന് ഉറപ്പാക്കുക
+						<br />
+						ഓസ്‌ട്രേലിയയിൽ ആരെങ്കിലും അമിതമായി കഴിക്കുകയോ മദ്യം കഴിക്കുമ്പോൾ പ്രതികൂല പ്രതികരണം ഉണ്ടാകുകയോ ചെയ്താൽ
+	
+					</p>
+					<p>
+						<a href="tel:000">ട്രിപ്പിൾ സീറോ എന്ന് വിളിക്കുക (000)</a>
+					</p>
+					<p>
+					അവർക്ക് ഉടൻ തന്നെ പ്രൊഫഷണൽ സഹായം ലഭിക്കേണ്ടത് വളരെ പ്രധാനമാണ് സാധ്യമാണ്. പെട്ടെന്നുള്ള പ്രതികരണം അവരുടെ ജീവൻ രക്ഷിക്കും, അതിനാൽ വൈകരുത്.
+					</p>
+				</div>
+			),
+			"cannabis": (
+				<div>
+					<p>
+						
+	നിങ്ങളുടെ ഉത്തരങ്ങളെ അടിസ്ഥാനമാക്കി, നിങ്ങളുടെ കഞ്ചാവ് ഉപയോഗം നിങ്ങളെ ആരോഗ്യം, സാമൂഹികം, സാമ്പത്തികം, നിയമപരമായ പ്രശ്നങ്ങൾ എന്നിവയിൽ മിതമായ അപകടത്തിലാക്കുന്നു
+						<br />
+						കഞ്ചാവ് ഉപയോഗം ആരോഗ്യം, സാമൂഹികം, സാമ്പത്തികം, എന്നിവയുമായി ബന്ധപ്പെട്ടിരിക്കുന്നു
+	ഇനിപ്പറയുന്നതുപോലുള്ള നിയമപരമായ പ്രശ്നങ്ങൾ:
+					</p>
+					<ul>
+						<li>മയക്കുമരുന്ന് ഡ്രൈവിംഗ് കുറ്റങ്ങൾ, കൈവശം വെച്ചതിനും വിതരണം ചെയ്തതിനും അറസ്റ്റ്,</li>
+						<li>ശ്രദ്ധയും പ്രചോദനവും ഉള്ള പ്രശ്നങ്ങൾ</li>
+						<li>ഉത്കണ്ഠ, ഭ്രാന്ത്, പരിഭ്രാന്തി, വിഷാദം</li>
+						<li>ഓർമശക്തിയും പ്രശ്‌നപരിഹാര ശേഷിയും കുറയുന്നു</li>
+						<li>ആസ്ത്മ, ബ്രോങ്കൈറ്റിസ്, ക്രോണിക് ഒബ്സ്ട്രക്റ്റീവ് എയർവേസ് രോഗം</li>
+						<li>
+						സ്കീസോഫ്രീനിയയുടെ വ്യക്തിപരമോ കുടുംബപരമോ ആയ ചരിത്രമുള്ളവരിൽ സൈക്കോസിസ്
+						</li>
+						<li>ക്യാൻസറുകൾ</li>
+					</ul>
+					<p>
+					വാഹനമോടിക്കുന്നതോ യന്ത്രസാമഗ്രികൾ ഉപയോഗിച്ച ശേഷം ഉപയോഗിക്കുന്നതോ അപകടകരമാണെന്ന കാര്യം ശ്രദ്ധിക്കുക കഞ്ചാവ് കാരണം അത് നിങ്ങളുടെ ധാരണയെയും ഏകോപനത്തെയും തടസ്സപ്പെടുത്തുന്നു.
+						<br />
+						കൂടുതൽ വിവരങ്ങൾ നിങ്ങൾക്ക് വേണമെങ്കിൽ
+						<a href="https://assistplus.com.au/drug-information/cannabis/">
+						കഞ്ചാവ് ഇവിടെ ക്ലിക്ക് ചെയ്യുക.
+						</a>
+					</p>
+					<p>
+					നിങ്ങളുടെ പ്രതികരണങ്ങളെ അടിസ്ഥാനമാക്കി, നിങ്ങളുടെ കഞ്ചാവ് ഉപയോഗവുമായി ബന്ധപ്പെട്ട് നിങ്ങൾക്ക് ഒന്നോ അതിലധികമോ പ്രശ്നങ്ങൾ അനുഭവപ്പെട്ടതായി തോന്നുന്നു.
+					</p>
+					<p>
+					ഈ പ്രശ്‌നങ്ങളെക്കുറിച്ച് നിങ്ങൾക്ക് എത്രമാത്രം ആശങ്കയുണ്ട്?
+						<br />
+						നിങ്ങളുടെ കഞ്ചാവ് ഉപയോഗം കുറയ്ക്കുന്നതോ നിർത്തുന്നതോ പരിഗണിക്കാൻ നിങ്ങൾ ആഗ്രഹിച്ചേക്കാം. നിങ്ങൾക്ക് ഉറപ്പില്ലെങ്കിൽ, നിങ്ങളുടെ കഞ്ചാവ് ഉപയോഗത്തെക്കുറിച്ചുള്ള എല്ലാ നല്ല കാര്യങ്ങളും അത്ര നല്ലതല്ലാത്ത കാര്യങ്ങളും വെട്ടിക്കുറയ്ക്കുകയോ നിർത്തുകയോ ചെയ്യുന്നതിന്റെ നേട്ടങ്ങളും ചെലവുകളും പട്ടികപ്പെടുത്തുന്നത് സഹായകരമാകുമെന്ന് നിങ്ങൾക്ക് ഉറപ്പില്ലെങ്കിൽ. നിങ്ങൾക്ക് ഒരു കോസ്റ്റ്-ബെനിഫിറ്റ് അനാലിസിസ് കണ്ടെത്താം
+						<a href="http://smartrecoveryaustralia.com.au/resources/smart-worksheets/">
+						വർക്ക്ഷീറ്റും മറ്റ് ഉപയോഗപ്രദമായ ഉപകരണങ്ങളും ഇവിടെയുണ്ട്
+						</a>
+						<br />
+						കഞ്ചാവ് ഉപയോഗിക്കാതിരിക്കുകയോ അല്ലെങ്കിൽ നിങ്ങളുടെ കഞ്ചാവ് ഉപയോഗം വളരെ കുറച്ച് സൂക്ഷിക്കുകയോ ചെയ്യുന്നതിലൂടെ, നിങ്ങളുടെ ശ്രദ്ധ, പ്രചോദനം, മെമ്മറി, പ്രശ്‌നപരിഹാരം എന്നിവ മെച്ചപ്പെടുമെന്നും നിങ്ങൾക്ക് ശാന്തതയും ഉത്കണ്ഠയും കുറയുകയും നിങ്ങളുടെ ശാരീരികവും മാനസികവുമായ ആരോഗ്യം മെച്ചപ്പെടുകയും ചെയ്യും.
+					</p>
+					<p>
+					നിങ്ങൾക്ക് കഞ്ചാവ് ഉപയോഗിക്കുന്നത് കുറയ്ക്കാനോ നിർത്താനോ താൽപ്പര്യമുണ്ടെങ്കിൽ, നിങ്ങളെ സഹായിക്കുന്നതിനുള്ള ചില തന്ത്രങ്ങൾ ഇതാ.
+						<br />
+						വെട്ടിക്കുറയ്ക്കുക എന്നതാണ് നിങ്ങളുടെ ലക്ഷ്യമെങ്കിൽ:
+					</p>
+					<ul>
+						<li>നിങ്ങൾ എത്ര തവണ, എത്ര തവണ ഉപയോഗിക്കുമെന്ന് പ്ലാൻ ചെയ്യുക</li>
+						<li>ഒരു സെഷനിൽ നിങ്ങൾ ഉപയോഗിക്കാൻ ഉദ്ദേശിക്കുന്നതിനേക്കാൾ കൂടുതൽ വാങ്ങരുത്</li>
+						<li>കൂടുതൽ ഉപയോഗിക്കാൻ നിങ്ങളെ പ്രേരിപ്പിക്കുന്ന ഒരു ശേഖരം ഒഴിവാക്കുക</li>
+					</ul>
+					<p>നിർത്തുക എന്നതാണ് നിങ്ങളുടെ ലക്ഷ്യമെങ്കിൽ:</p>
+					<ul>
+						<li>ഒരു ലക്ഷ്യ തീയതി സജ്ജീകരിച്ച് ആ തീയതിയിൽ നിർത്തുക</li>
+						<li>
+						നിങ്ങൾ നിർത്താൻ പോകുകയാണെന്ന് ഒരു സുഹൃത്തിനോടോ കുടുംബാംഗത്തോടോ പറയുക, അതുവഴി അവർക്ക് നിങ്ങളെ പിന്തുണയ്ക്കാൻ കഴിയും.
+						</li>
+						<li>
+						നിങ്ങൾ ഇല്ലാത്ത സമയങ്ങളിൽ അധിക സമയം നിറയ്ക്കാൻ ചില ബദൽ പ്രവർത്തനങ്ങൾ ആസൂത്രണം ചെയ്യുക
+						ഉപയോഗിക്കുന്നത്.
+						</li>
+						<li>
+						നിങ്ങൾ ഉപയോഗിക്കാൻ പ്രലോഭിപ്പിച്ചേക്കാവുന്ന സാഹചര്യങ്ങളെക്കുറിച്ച് ചിന്തിക്കുക, അവ ഒഴിവാക്കാൻ ആസൂത്രണം ചെയ്യുക അല്ലെങ്കിൽ കഞ്ചാവ് ഉപയോഗിക്കുന്നത് എങ്ങനെ ഒഴിവാക്കണമെന്ന് ആസൂത്രണം ചെയ്യുക
+						</li>
+						<li>
+						നിങ്ങൾക്ക് കഞ്ചാവ് ഉപയോഗിക്കാനുള്ള ശക്തമായ ആഗ്രഹം ഉണ്ടായിരുന്ന സമയങ്ങളുടെ റെക്കോർഡ് സൂക്ഷിക്കുക.
+						ഉയർന്ന അപകടസാധ്യതയുള്ള സാഹചര്യങ്ങൾ തിരിച്ചറിയാനും അവ ഒഴിവാക്കാൻ അല്ലെങ്കിൽ നിയന്ത്രിക്കാനും ഇത് നിങ്ങളെ സഹായിക്കും. നിങ്ങൾക്ക് ഒരു ഡൗൺലോഡ് ചെയ്യാം
+							<a href="https://smartrecoveryaustralia.com.au/resources/smart-worksheets/">
+							ഇവിടെ ലോഗിൻ ചെയ്യാൻ ആവശ്യപ്പെടുക.
+							</a>
+						</li>
+					</ul>
+					<p>
+					വെട്ടിക്കുറയ്ക്കാൻ നിങ്ങൾക്ക് കൂടുതൽ സഹായം വേണമെങ്കിൽ നിങ്ങളെ സഹായിക്കാൻ കഴിയുന്ന സേവനങ്ങളും ഉറവിടങ്ങളും ഉണ്ട്.
+					</p>
+					<ul>
+						<li>
+						നിങ്ങൾക്ക് ADIS-നെ വിളിക്കാം - ആൽക്കഹോൾ ആൻഡ് ഡ്രഗ് ഇൻഫർമേഷൻ സർവീസ് ഉപദേശങ്ങൾക്കും റഫറലുകൾക്കും:
+							<a href="tel:1800250015">1800250015</a>
+						</li>
+						<li>
+						നിങ്ങൾക്ക് 12 നും 25 നും ഇടയിൽ പ്രായമുണ്ടെങ്കിൽ, നിങ്ങൾക്ക് ഉപദേശങ്ങൾക്കും റഫറലുകൾക്കുമായി ഹെഡ്‌സ്‌പേസിനെ വിളിക്കാം
+						</li>
+						<li>
+							<a href="http://smartrecoveryaustralia.com.au/">സ്മാർട്ട്റി ക്കവറി</a> പ്രശ്‌നകരമായ പെരുമാറ്റങ്ങളുള്ള ആളുകളെ സഹായിക്കുന്ന ഒരു സ്വതന്ത്ര ഗ്രൂപ്പ് പ്രോഗ്രാം ആണ്
+						</li>
+					</ul>
+					<p>
+					ഭാവിയിൽ നിങ്ങൾക്ക് കഞ്ചാവുമായി ബന്ധപ്പെട്ട പ്രശ്നങ്ങൾ ഉണ്ടാകാനുള്ള സാധ്യത വർദ്ധിപ്പിക്കുന്നത് ഒഴിവാക്കാൻ
+	നിങ്ങൾ എത്ര തവണ, എത്രത്തോളം ഉപയോഗിക്കുന്നു, എത്രമാത്രം ചെലവഴിക്കുന്നു എന്നിവ ട്രാക്ക് ചെയ്യാൻ എന്റെ ഡയറി ഉപയോഗിക്കാം.
+						<br />
+						നിങ്ങൾ എങ്ങനെയാണ് പോകുന്നതെന്ന് കാണാൻ താൽപ്പര്യമുണ്ടെങ്കിൽ, നിങ്ങൾക്ക് തിരികെ വന്ന് 3 മാസത്തിനുള്ളിൽ വീണ്ടും ചെക്ക് അപ്പ് പൂർത്തിയാക്കാം.
+					</p>
+				</div>
+			),
+			"cocaine": (
+				<div>
+					<p>
+					നിങ്ങളുടെ ഉത്തരങ്ങളെ അടിസ്ഥാനമാക്കി, നിങ്ങളുടെ കൊക്കെയിൻ ഉപയോഗം നിങ്ങളെ ആരോഗ്യം, സാമൂഹികം, സാമ്പത്തികം, നിയമപരമായ പ്രശ്നങ്ങൾ എന്നിവയിൽ മിതമായ അപകടത്തിലാക്കുന്നു
+						<br />
+						കൊക്കെയ്ൻ ഉപയോഗത്തിൽ സുരക്ഷിതമായ നിലയില്ല. ഏതെങ്കിലും തരത്തിലുള്ള മരുന്ന് കഴിക്കുമ്പോൾ അല്ലെങ്കിൽ മരുന്നുകളുടെ കോമ്പിനേഷൻ എടുക്കുമ്പോൾ വളരെ ശ്രദ്ധിക്കേണ്ടത് പ്രധാനമാണ്.
+						<br />
+						കൊക്കെയ്ൻ ഉപയോഗം ആരോഗ്യം, സാമൂഹികം, സാമ്പത്തികം എന്നിവയുമായി ബന്ധപ്പെട്ടിരിക്കുന്നു
+	ഉൾപ്പെടെയുള്ള നിയമ പ്രശ്നങ്ങൾ:
+					</p>
+					<ul>
+						<li>ഹൃദയമിടിപ്പ്, ഉറങ്ങാൻ ബുദ്ധിമുട്ട്, തലവേദന, ശരീരഭാരം കുറയ്ക്കൽ</li>
+						<li>മരവിപ്പ്, ഇക്കിളി, നനഞ്ഞ ചർമ്മം</li>
+						<li>അപകടങ്ങളും പരിക്കുകളും</li>
+						<li>സാമ്പത്തിക പ്രശ്നങ്ങൾ, മയക്കുമരുന്ന് ഡ്രൈവിംഗ്, കൈവശം വയ്ക്കൽ, വിതരണം എന്നിവയ്ക്കുള്ള അറസ്റ്റുകൾ</li>
+						<li>യുക്തിരഹിതമായ ചിന്തകൾ</li>
+						<li>മൂഡ് സ്വിംഗ്സ് - ഉത്കണ്ഠ, വിഷാദം, മാനിയ</li>
+						<li>ആക്രമണവും ഭ്രാന്തും</li>
+						<li>തീവ്രമായ ആസക്തിയും സമ്മർദ്ദവും</li>
+						<li>ഉയർന്ന ഡോസുകൾ ഉപയോഗിച്ചതിന് ശേഷമുള്ള സൈക്കോസിസ്</li>
+						<li>ഹൃദയസംബന്ധമായ പ്രശ്നങ്ങൾ മൂലം പെട്ടെന്നുള്ള മരണം</li>
+					</ul>
+					<p>
+					കൂടുതൽ വിവരങ്ങൾ നിങ്ങൾക്ക് വേണമെങ്കിൽ
+						<a href="https://assistplus.com.au/drug-information/cocaine/">
+						കൊക്കെയ്ൻ ഇവിടെ ക്ലിക്ക് ചെയ്യുക.
+						</a>
+					</p>
+					<p>
+					നിങ്ങളുടെ പ്രതികരണങ്ങളെ അടിസ്ഥാനമാക്കി, നിങ്ങളുടെ കൊക്കെയ്ൻ ഉപയോഗവുമായി ബന്ധപ്പെട്ട് ഒന്നോ അതിലധികമോ പ്രശ്നങ്ങൾ അനുഭവിച്ചിട്ടുണ്ടാകുമെന്ന് തോന്നുന്നു.
+					</p>
+					<p>
+					ഈ പ്രശ്‌നങ്ങളെക്കുറിച്ച് നിങ്ങൾക്ക് എത്രമാത്രം ആശങ്കയുണ്ട്?
+						<br />
+						നിങ്ങളുടെ കൊക്കെയ്ൻ ഉപയോഗം കുറയ്ക്കുന്നതിനോ നിർത്തുന്നതിനോ നിങ്ങൾ പരിഗണിക്കണം. നിങ്ങൾക്ക് ഉറപ്പില്ലെങ്കിൽ, നിങ്ങളുടെ കൊക്കെയ്ൻ ഉപയോഗത്തെക്കുറിച്ചുള്ള എല്ലാ നല്ല കാര്യങ്ങളും അത്ര നല്ലതല്ലാത്ത കാര്യങ്ങളും അതുപോലെ വെട്ടിക്കുറയ്ക്കുകയോ നിർത്തുകയോ ചെയ്യുന്നതിന്റെ നേട്ടങ്ങളും ചെലവുകളും പട്ടികപ്പെടുത്തുന്നത് സഹായകമാകും. നിങ്ങൾക്ക് ഒരു കോസ്റ്റ്-ബെനിഫിറ്റ് അനാലിസിസ് കണ്ടെത്താം
+						<a href="http://smartrecoveryaustralia.com.au/resources/smart-worksheets/">
+						വർക്ക്ഷീറ്റും മറ്റ് ഉപയോഗപ്രദമായ ഉപകരണങ്ങളും ഇവിടെയുണ്ട്
+						</a>
+						<br />
+						കൊക്കെയ്ൻ ഉപയോഗിക്കാതിരിക്കുകയോ അല്ലെങ്കിൽ നിങ്ങളുടെ കൊക്കെയ്ൻ ഉപയോഗം വളരെ കുറയ്ക്കുകയോ ചെയ്യുന്നതിലൂടെ, നിങ്ങൾ നന്നായി ഭക്ഷണം കഴിക്കുകയും ഉറങ്ങുകയും ചെയ്യുമെന്ന് നിങ്ങൾ കണ്ടെത്തും, നിങ്ങളുടെ ശാരീരികവും മാനസികവുമായ ആരോഗ്യം മെച്ചപ്പെടുകയും അപകടങ്ങളും പരിക്കുകളും, ഉത്കണ്ഠ, മാനസികാവസ്ഥ, ആക്രമണം എന്നിവ അനുഭവപ്പെടാനുള്ള സാധ്യത കുറയുകയും ചെയ്യും.
+					</p>
+					<p>
+					കൊക്കെയ്ൻ ഉപയോഗിക്കുന്നത് കുറയ്ക്കാനോ നിർത്താനോ നിങ്ങൾ ആഗ്രഹിക്കുന്നുവെങ്കിൽ ഇതാ ചില തന്ത്രങ്ങൾ
+	നിങ്ങളെ സഹായിക്കാന്.
+						<br />
+						വെട്ടിക്കുറയ്ക്കുക എന്നതാണ് നിങ്ങളുടെ ലക്ഷ്യമെങ്കിൽ:
+					</p>
+					<ul>
+						<li>നിങ്ങൾ എത്ര തവണ, എത്ര തവണ ഉപയോഗിക്കുമെന്ന് പ്ലാൻ ചെയ്യുക</li>
+						<li>ഒരു സെഷനിൽ നിങ്ങൾ ഉപയോഗിക്കാൻ ഉദ്ദേശിക്കുന്നതിനേക്കാൾ കൂടുതൽ വാങ്ങരുത്</li>
+						<li>കൂടുതൽ ഉപയോഗിക്കാൻ നിങ്ങളെ പ്രേരിപ്പിക്കുന്ന ഒരു ശേഖരം ഒഴിവാക്കുക</li>
+					</ul>
+					<p>നിർത്തുക എന്നതാണ് നിങ്ങളുടെ ലക്ഷ്യമെങ്കിൽ:</p>
+					<ul>
+						<li>ഒരു ലക്ഷ്യ തീയതി സജ്ജീകരിച്ച് ആ തീയതിയിൽ നിർത്തുക</li>
+						<li>
+						നിങ്ങൾ നിർത്താൻ പോകുകയാണെന്ന് ഒരു സുഹൃത്തിനോടോ കുടുംബാംഗത്തോടോ പറയുക, അതുവഴി അവർക്ക് നിങ്ങളെ പിന്തുണയ്ക്കാൻ കഴിയും
+						</li>
+						<li>
+						നിങ്ങൾ ഇല്ലാത്ത സമയങ്ങളിൽ അധിക സമയം നിറയ്ക്കാൻ ചില ബദൽ പ്രവർത്തനങ്ങൾ ആസൂത്രണം ചെയ്യുക ഉപയോഗിക്കുന്നത്
+						</li>
+						<li>
+						ഉപയോഗിക്കാനും ആസൂത്രണം ചെയ്യാനും നിങ്ങൾ പ്രലോഭിപ്പിച്ചേക്കാവുന്ന സാഹചര്യങ്ങളെക്കുറിച്ച് ചിന്തിക്കുക
+	അവ ഒഴിവാക്കുക അല്ലെങ്കിൽ കൊക്കെയ്ൻ ഉപയോഗിക്കുന്നത് എങ്ങനെ ഒഴിവാക്കണമെന്ന് ആസൂത്രണം ചെയ്യുക
+						</li>
+						<li>
+						നിങ്ങൾക്ക് ഉപയോഗിക്കാൻ ശക്തമായ ആഗ്രഹം ഉണ്ടായിരുന്ന സമയങ്ങളുടെ റെക്കോർഡ് സൂക്ഷിക്കുക. ഉയർന്ന അപകടസാധ്യതയുള്ള സാഹചര്യങ്ങൾ തിരിച്ചറിയാനും ഒഴിവാക്കാൻ അല്ലെങ്കിൽ നിയന്ത്രിക്കാനും ഇത് നിങ്ങളെ സഹായിക്കും
+	അവരെ. നിങ്ങൾക്ക് ഒരു ഡൗൺലോഡ് ചെയ്യാം
+							<a href="https://smartrecoveryaustralia.com.au/resources/smart-worksheets/">
+							ഇവിടെ ലോഗിൻ ചെയ്യാൻ ആവശ്യപ്പെടുക.
+							</a>
+							.
+						</li>
+					</ul>
+					<p>
+					വെട്ടിക്കുറയ്ക്കാൻ നിങ്ങൾക്ക് കൂടുതൽ സഹായം വേണമെങ്കിൽ നിങ്ങളെ സഹായിക്കാൻ കഴിയുന്ന സേവനങ്ങളും ഉറവിടങ്ങളും ഉണ്ട്.
+					</p>
+					<ul>
+						<li>
+						നിങ്ങൾക്ക് ADIS-നെ വിളിക്കാം - ആൽക്കഹോൾ ആൻഡ് ഡ്രഗ് ഇൻഫർമേഷൻ സർവീസ് ഉപദേശങ്ങൾക്കും റഫറലുകൾക്കും:
+							<a href="tel:1800250015">1800250015</a>
+						</li>
+						<li>
+						നിങ്ങൾക്ക് 12-നും 25-നും ഇടയിൽ പ്രായമുണ്ടെങ്കിൽ, നിങ്ങൾക്ക് ഹെഡ്‌സ്‌പേസിനെ വിളിക്കാം റഫറലുകൾ
+						</li>
+						<li>
+							<a href="http://smartrecoveryaustralia.com.au/">സ്മാർട്ട്റി ക്കവറി</a>പ്രശ്‌നകരമായ പെരുമാറ്റങ്ങളുള്ള ആളുകളെ സഹായിക്കുന്ന ഒരു സ്വതന്ത്ര ഗ്രൂപ്പ് പ്രോഗ്രാം ആണ്
+						</li>
+					</ul>
+					<p>
+					ഭാവിയിൽ നിങ്ങൾക്ക് കൊക്കെയ്ൻ സംബന്ധമായ പ്രശ്നങ്ങൾ ഉണ്ടാകാനുള്ള സാധ്യത വർദ്ധിപ്പിക്കുന്നത് ഒഴിവാക്കാൻ നിങ്ങൾ എത്ര തവണ, എത്രത്തോളം ഉപയോഗിക്കുന്നു, എത്രമാത്രം ചെലവഴിക്കുന്നു എന്നിവ ട്രാക്ക് ചെയ്യാൻ എന്റെ ഡയറി ഉപയോഗിക്കാം.
+						<br />
+						നിങ്ങൾ എങ്ങനെയാണ് പോകുന്നതെന്ന് കാണാൻ താൽപ്പര്യമുണ്ടെങ്കിൽ, നിങ്ങൾക്ക് തിരികെ വന്ന് 3 മാസത്തിനുള്ളിൽ വീണ്ടും ചെക്ക് അപ്പ് പൂർത്തിയാക്കാം.
+					</p>
+					<p>
+					കുത്തിവയ്ക്കുന്നത്
+						<br />
+						നിങ്ങൾ കൊക്കെയ്ൻ കുത്തിവയ്ക്കുകയാണെങ്കിൽ, നിങ്ങൾ ആശ്രിതരാകാനുള്ള സാധ്യത വർദ്ധിപ്പിക്കും
+	 സൈക്കോസിസ് അനുഭവിക്കുന്നു. നിങ്ങളുടെ ചർമ്മത്തിനും സിരകൾക്കും കേടുപാടുകൾ വരുത്തുകയും നിങ്ങൾക്ക് ലഭിക്കുകയും ചെയ്യാം
+	അണുബാധകൾ, കുരുക്കൾ, അൾസർ. നിങ്ങൾ കുത്തിവയ്പ്പ് ഉപകരണങ്ങൾ പങ്കിടുകയാണെങ്കിൽ, ഹെപ്പറ്റൈറ്റിസ് ബി പോലുള്ള രക്തത്തിലൂടെ പകരുന്ന വൈറസ് അണുബാധകൾ ഉണ്ടാകാനുള്ള സാധ്യതയുണ്ട്. സി, എച്ച്.ഐ.വി. കുത്തിവയ്ക്കാതിരിക്കുന്നതാണ് എപ്പോഴും സുരക്ഷിതം.
+						<br />
+						നിങ്ങൾ കുത്തിവയ്ക്കാൻ തിരഞ്ഞെടുക്കുകയാണെങ്കിൽ
+					</p>
+					<ul>
+						<li>എപ്പോഴും വൃത്തിയുള്ള ഉപകരണങ്ങളും പുതിയ സൂചിയും സിറിഞ്ചും ഉപയോഗിക്കുക.</li>
+						<li>ഒരു ഉപകരണവും പങ്കിടരുത്.</li>
+						<li>
+						തയ്യാറെടുപ്പ് സ്ഥലവും കൈകളും കുത്തിവയ്പ്പ് നടത്തുന്ന സ്ഥലവും എപ്പോഴും വൃത്തിയാക്കുക.
+						</li>
+						<li>ഓരോ തവണയും സാവധാനം മറ്റൊരു സൈറ്റിൽ കുത്തിവയ്ക്കുക.</li>
+						<li>ഉപയോഗിച്ച സൂചിയും സിറിഞ്ചും മൂർച്ചയുള്ള പാത്രത്തിൽ കളയുക.</li>
+					</ul>
+					<p>
+					നിങ്ങൾ എപ്പോഴെങ്കിലും കുത്തിവച്ചിട്ടുണ്ടെങ്കിൽ, രക്തത്തിലൂടെ പകരുന്ന വൈറസുകൾക്കായി പരിശോധിക്കാൻ ഒരു ഹെൽത്ത് കെയർ പ്രൊഫഷണലിനെ കാണാൻ ഞങ്ങൾ ശുപാർശ ചെയ്യുന്നു.
+					</p>
+					<p>
+					ഒരു പ്രതിസന്ധി ഘട്ടത്തിൽ എന്തുചെയ്യണമെന്ന് നിങ്ങൾക്കറിയാമെന്ന് ഉറപ്പാക്കുക
+						<br />
+						കൊക്കെയ്ൻ ഉപയോഗിക്കുമ്പോൾ ആരെങ്കിലും അമിതമായി കഴിക്കുകയോ പ്രതികൂല പ്രതികരണം ഉണ്ടാകുകയോ ചെയ്താൽ, ഇൻ ഓസ്ട്രേലിയ
+					</p>
+					<p>
+						<a href="tel:000">ട്രിപ്പിൾ സീറോ എന്ന് വിളിക്കുക (000)</a>
+					</p>
+					<p>
+					അവർക്ക് എത്രയും വേഗം പ്രൊഫഷണൽ സഹായം ലഭിക്കേണ്ടത് വളരെ പ്രധാനമാണ്. പെട്ടെന്നുള്ള പ്രതികരണം അവരുടെ ജീവൻ രക്ഷിക്കും, അതിനാൽ വൈകരുത്.
+					</p>
+				</div>
+			),
+			"amphetamine": (
+				<div>
+					<p>
+					നിങ്ങളുടെ ഉത്തരങ്ങളെ അടിസ്ഥാനമാക്കി, നിങ്ങളുടെ ആംഫെറ്റാമിനൈസിസിന്റെ ഉപയോഗം നിങ്ങളെ മിതമായ നിലയിലാക്കുന്നു
+	ആരോഗ്യം, സാമൂഹികം, സാമ്പത്തികം, നിയമപരമായ പ്രശ്നങ്ങൾ എന്നിവയുടെ അപകടസാധ്യത
+						<br />
+						ആംഫെറ്റാമൈൻ ഉപയോഗത്തിന് സുരക്ഷിതമായ തലമില്ല. പലതരം ഉണ്ട് മെത്താംഫെറ്റാമൈനും എക്സ്റ്റസിയും ഉൾപ്പെടുന്ന ആംഫെറ്റാമൈൻ തരം ഉത്തേജകങ്ങൾ. ഏതെങ്കിലും തരത്തിലുള്ള മരുന്ന് കഴിക്കുമ്പോൾ അല്ലെങ്കിൽ മരുന്നുകളുടെ കോമ്പിനേഷൻ എടുക്കുമ്പോൾ വളരെ ശ്രദ്ധിക്കേണ്ടത് പ്രധാനമാണ്. എക്‌സ്‌റ്റസിയായി വിൽക്കുന്ന മരുന്നുകളിൽ എംഡിഎംഎ അടങ്ങിയിട്ടില്ലെന്ന കാര്യം ശ്രദ്ധിക്കുക. അവ ആംഫെറ്റാമൈൻ, മെത്താംഫെറ്റാമൈൻ, പാരാമെത്തോക്‌യാംഫെറ്റാമൈൻ (പിഎംഎ) എന്നിവയുൾപ്പെടെയുള്ള മറ്റ് വസ്തുക്കളുടെ മിശ്രിതമാകാം.
+						<br />
+						മെത്താംഫെറ്റാമൈൻ ഉപയോഗം ആരോഗ്യം, സാമൂഹികം, സാമ്പത്തികം, നിയമപരമായ പ്രശ്നങ്ങൾ എന്നിവയുമായി ബന്ധപ്പെട്ടിരിക്കുന്നു:
+					</p>
+					<ul>
+						<li>ഉറങ്ങാൻ ബുദ്ധിമുട്ട്, വിശപ്പില്ലായ്മ, ശരീരഭാരം കുറയ്ക്കൽ, നിർജ്ജലീകരണം</li>
+						<li>താടിയെല്ല് ഞെരുക്കം, തലവേദന, പേശി വേദന</li>
+						<li>
+						മൂഡ് ചാഞ്ചാട്ടം, - ഉത്കണ്ഠ, വിഷാദം, പ്രക്ഷോഭം, ഉന്മാദം, പരിഭ്രാന്തി, ഭ്രാന്ത്
+						</li>
+						<li>വിറയൽ, ക്രമരഹിതമായ ഹൃദയമിടിപ്പ്, ശ്വാസതടസ്സം</li>
+						<li>ആക്രമണാത്മകവും അക്രമാസക്തവുമായ പെരുമാറ്റം</li>
+						<li>മയക്കുമരുന്ന് ഡ്രൈവിംഗ് ചാർജുകൾ, കൈവശം വെച്ചതിനോ വിതരണം ചെയ്തതിനോ ഉള്ള അറസ്റ്റുകൾ</li>
+						<li>ഉയർന്ന ഡോസുകളുടെ ആവർത്തിച്ചുള്ള ഉപയോഗത്തിന് ശേഷമുള്ള സൈക്കോസിസ്</li>
+						<li>മസ്തിഷ്ക കോശങ്ങൾക്ക് സ്ഥിരമായ കേടുപാടുകൾ,</li>
+						<li>ഹൃദയാഘാതം അല്ലെങ്കിൽ ഹൃദയാഘാതം</li>
+						<li>
+						കരൾ ക്ഷതം, മസ്തിഷ്ക രക്തസ്രാവം, അപൂർവ സന്ദർഭങ്ങളിൽ പെട്ടെന്നുള്ള മരണം.
+						</li>
+					</ul>
+					<p>
+					എക്‌സ്റ്റസി ഉപയോഗം ആരോഗ്യം, സാമൂഹികം, സാമ്പത്തികം, നിയമപരമായ പ്രശ്‌നങ്ങൾ എന്നിവയുമായി ബന്ധപ്പെട്ടിരിക്കുന്നു:
+					</p>
+					<ul>
+						<li>മയക്കുമരുന്ന് ഡ്രൈവിംഗ് ചാർജുകൾ, കൈവശം വെച്ചതിനോ വിതരണം ചെയ്തതിനോ ഉള്ള അറസ്റ്റുകൾ</li>
+						<li>ഊർജ്ജം, ജലദോഷം, പനി, അണുബാധ എന്നിവ കുറയുന്നു</li>
+						<li>വിശപ്പില്ലായ്മ, ഓക്കാനം, ഛർദ്ദി</li>
+						<li>താടിയെല്ല് ഞെരിച്ച് പല്ല് പൊടിക്കുന്നു</li>
+						<li>പേശി വേദനയും കാഠിന്യവും</li>
+						<li>വർദ്ധിച്ച രക്തസമ്മർദ്ദവും ഹൃദയമിടിപ്പും</li>
+						<li>ഉത്കണ്ഠ, വിഷാദം, ഭ്രാന്ത്</li>
+						<li>ശരീര താപനിലയും വിയർപ്പും വർദ്ധിച്ചു</li>
+						<li>മസ്തിഷ്ക കോശങ്ങൾക്ക് കേടുപാടുകൾ, മെമ്മറി പ്രശ്നങ്ങൾ</li>
+						<li>ഹൃദയാഘാതം, ഹൃദയാഘാതം, മസ്തിഷ്ക രക്തസ്രാവം</li>
+					</ul>
+					<p>
+					കൂടുതൽ വിവരങ്ങൾ നിങ്ങൾക്ക് വേണമെങ്കിൽ
+						<a href="https://assistplus.com.au/drug-information/amphetamine/">
+						മെത്താംഫെറ്റാമൈൻ
+						</a>{" "}
+						അഥവാ
+						<a href="https://assistplus.com.au/drug-information/ecstasy/">
+						എക്സ്റ്റസി ഇവിടെ ക്ലിക്ക് ചെയ്യുക.
+						</a>
+					</p>
+					<p>
+					നിങ്ങളുടെ ഉത്തരങ്ങളെ അടിസ്ഥാനമാക്കി, കഴിഞ്ഞ 3 മാസത്തിനുള്ളിൽ നിങ്ങളുടെ ആംഫെറ്റാമൈൻ തരം ഉത്തേജക മരുന്നുകളുടെ ഉപയോഗവുമായി ബന്ധപ്പെട്ട് ഒന്നോ അതിലധികമോ പ്രശ്നങ്ങൾ നിങ്ങൾ അനുഭവിച്ചിട്ടുണ്ടെന്ന് തോന്നുന്നു.
+					</p>
+					<p>
+					ഈ പ്രശ്‌നങ്ങളെക്കുറിച്ച് നിങ്ങൾക്ക് എത്രമാത്രം ആശങ്കയുണ്ട്?
+						<br />
+						ഇവയിലേതെങ്കിലും നിങ്ങൾക്ക് സംഭവിക്കുകയും നിങ്ങൾക്ക് ആശങ്കയുണ്ടെങ്കിൽ, നിങ്ങളുടെ ആംഫെറ്റാമൈൻ തരം ഉത്തേജക മരുന്ന് വെട്ടിക്കുറയ്ക്കുകയോ നിർത്തുകയോ ചെയ്യുന്നത് പരിഗണിക്കാം ഉപയോഗിക്കുക. നിങ്ങൾക്ക് ഉറപ്പില്ലെങ്കിൽ, നിങ്ങളുടെ ആംഫെറ്റാമൈൻ തരം ഉത്തേജക ഉപയോഗത്തെക്കുറിച്ചുള്ള എല്ലാ നല്ല കാര്യങ്ങളും അത്ര നല്ലതല്ലാത്ത കാര്യങ്ങളും ലിസ്റ്റുചെയ്യുന്നത് സഹായകമാകും.വെട്ടിക്കുറയ്ക്കുകയോ നിർത്തുകയോ ചെയ്യുന്നതിന്റെ നേട്ടങ്ങളും ചെലവുകളും. നിങ്ങൾക്ക് ഒരു കോസ്റ്റ്-ബെനിഫിറ്റ് അനാലിസിസ് കണ്ടെത്താം.
+						<a href="http://smartrecoveryaustralia.com.au/resources/smart-worksheets/">
+						വർക്ക്ഷീറ്റും മറ്റ് ഉപയോഗപ്രദമായ ഉപകരണങ്ങളും ഇവിടെയുണ്ട്
+						</a>
+						<br />
+						നിങ്ങളുടെ മെത്താംഫെറ്റാമിൻ ഉപയോഗം വളരെ കുറച്ച് ഉപയോഗിക്കാതിരിക്കുകയോ നിലനിർത്തുകയോ ചെയ്യുന്നതിലൂടെ നിങ്ങൾ അത് കണ്ടെത്തും നിങ്ങൾ നന്നായി ഭക്ഷണം കഴിക്കുകയും ഉറങ്ങുകയും ചെയ്യും, നിങ്ങളുടെ ശാരീരികവും മാനസികവുമായ ആരോഗ്യം മെച്ചപ്പെടും, കൂടാതെ നിങ്ങൾക്ക് മാനസികാവസ്ഥ, ഉത്കണ്ഠ എന്നിവ അനുഭവപ്പെടാനുള്ള സാധ്യത കുറയും.ആക്രമണാത്മക പെരുമാറ്റം.
+						<br />
+						എക്സ്റ്റസി ഉപയോഗിക്കാതിരിക്കുകയോ അല്ലെങ്കിൽ നിങ്ങളുടെ ഉപയോഗം വളരെ കുറവായിരിക്കുകയോ ചെയ്യുന്നതിലൂടെ, നിങ്ങൾക്ക് കൂടുതൽ ഊർജ്ജം ലഭിക്കുമെന്നും, നിങ്ങളുടെ മെമ്മറി മെച്ചപ്പെടും, നിങ്ങൾ നന്നായി ഭക്ഷണം കഴിക്കുകയും ഉറങ്ങുകയും ചെയ്യും, നിങ്ങളുടെ ശാരീരികവും മാനസികവുമായ ആരോഗ്യം മെച്ചപ്പെടുകയും നിങ്ങൾക്ക് അണുബാധകൾ ഉണ്ടാകാനുള്ള സാധ്യത കുറയുകയും ചെയ്യും. ഉത്കണ്ഠയോ വിഷാദമോ അനുഭവപ്പെടുക.
+						<br />
+						ആംഫെറ്റാമൈൻ ടൈപ്പ് സ്റ്റിമുലന്റുകൾ ഉപയോഗിക്കുന്നത് കുറയ്ക്കാനോ നിർത്താനോ നിങ്ങൾ ആഗ്രഹിക്കുന്നുവെങ്കിൽ, നിങ്ങളെ സഹായിക്കുന്നതിനുള്ള ചില തന്ത്രങ്ങൾ ഇതാ.
+					</p>
+					<p>നിങ്ങളുടെ ലക്ഷ്യം വെട്ടിക്കുറയ്ക്കുകയാണെങ്കിൽ:</p>
+					<ul>
+						<li>നിങ്ങൾ എത്ര തവണ, എത്ര തവണ ഉപയോഗിക്കുമെന്ന് പ്ലാൻ ചെയ്യുക</li>
+						<li>ഒരു സെഷനിൽ നിങ്ങൾ ഉപയോഗിക്കാൻ ഉദ്ദേശിക്കുന്നതിനേക്കാൾ കൂടുതൽ വാങ്ങരുത്</li>
+						<li>കൂടുതൽ ഉപയോഗിക്കാൻ നിങ്ങളെ പ്രേരിപ്പിക്കുന്ന ഒരു ശേഖരം ഒഴിവാക്കുക</li>
+					</ul>
+					<p>നിർത്തുക എന്നതാണ് നിങ്ങളുടെ ലക്ഷ്യമെങ്കിൽ:</p>
+					<ul>
+						<li>ഒരു ലക്ഷ്യ തീയതി സജ്ജീകരിച്ച് ആ തീയതിയിൽ നിർത്തുക</li>
+						<li>
+						നിങ്ങൾ നിർത്താൻ പോകുകയാണെന്ന് ഒരു സുഹൃത്തിനോടോ കുടുംബാംഗത്തോടോ പറയുക, അതുവഴി അവർക്ക് നിങ്ങളെ പിന്തുണയ്ക്കാൻ കഴിയും.
+						</li>
+						<li>
+						നിങ്ങൾ ഇല്ലാത്ത സമയങ്ങളിൽ അധിക സമയം നിറയ്ക്കാൻ ചില ബദൽ പ്രവർത്തനങ്ങൾ ആസൂത്രണം ചെയ്യുക -ഉപയോഗിക്കുന്നത്.
+						</li>
+						<li>
+						നിങ്ങൾ ഉപയോഗിക്കാൻ പ്രലോഭിപ്പിച്ചേക്കാവുന്ന സാഹചര്യങ്ങളെക്കുറിച്ച് ചിന്തിക്കുകയും അവ ഒഴിവാക്കാൻ ആസൂത്രണം ചെയ്യുകയും ചെയ്യുക അല്ലെങ്കിൽ ആംഫെറ്റാമൈൻ തരം ഉത്തേജകങ്ങൾ ഉപയോഗിക്കുന്നത് എങ്ങനെ ഒഴിവാക്കണമെന്ന് ആസൂത്രണം ചെയ്യുക.
+						</li>
+						<li>
+						ആംഫെറ്റാമൈൻ തരം ഉത്തേജകങ്ങൾ ഉപയോഗിക്കാൻ നിങ്ങൾക്ക് ശക്തമായ ആഗ്രഹം ഉണ്ടായിരുന്ന സമയങ്ങളുടെ റെക്കോർഡ് സൂക്ഷിക്കുക. ഉയർന്ന അപകടസാധ്യതയുള്ള സാഹചര്യങ്ങൾ തിരിച്ചറിയാനും അവ ഒഴിവാക്കാൻ അല്ലെങ്കിൽ നിയന്ത്രിക്കാനും ഇത് നിങ്ങളെ സഹായിക്കും. നിങ്ങൾക്ക് ഒരു ഡൗൺലോഡ് ചെയ്യാം
+							<a href="https://smartrecoveryaustralia.com.au/resources/smart-%20worksheets/">
+							ഇവിടെ ലോഗിൻ ചെയ്യാൻ ആവശ്യപ്പെടുക.
+							</a>
+						</li>
+					</ul>
+					<p>
+					വെട്ടിക്കുറയ്ക്കാൻ നിങ്ങൾക്ക് കൂടുതൽ സഹായം വേണമെങ്കിൽ നിങ്ങളെ സഹായിക്കാൻ കഴിയുന്ന സേവനങ്ങളും ഉറവിടങ്ങളും ഉണ്ട്.
+					</p>
+					<ul>
+						<li>
+						നിങ്ങൾക്ക് ADIS-നെ വിളിക്കാം - ആൽക്കഹോൾ ആൻഡ് ഡ്രഗ് ഇൻഫർമേഷൻ സർവീസ് ഉപദേശങ്ങൾക്കും റഫറലുകൾക്കും:
+							<a href="tel:1800250015">1800250015</a>
+						</li>
+						<li>
+						നിങ്ങൾക്ക് 12 നും 25 നും ഇടയിൽ പ്രായമുണ്ടെങ്കിൽ നിങ്ങൾക്ക് വിളിക്കാം
+							<a href="https://headspace.org.au/headspace-centres/">ഹെഡ്സ്പേസ്</a> ഉപദേശത്തിനും റഫറലുകൾക്കും
+						</li>
+						<li>
+							<a href="http://smartrecoveryaustralia.com.au/">സ്മാർട്ട്റി ക്കവറി</a> പ്രശ്‌നകരമായ പെരുമാറ്റങ്ങളുള്ള ആളുകളെ സഹായിക്കുന്ന ഒരു സ്വതന്ത്ര ഗ്രൂപ്പ് പ്രോഗ്രാം ആണ്
+						</li>
+					</ul>
+					<p>
+					ആംഫെറ്റാമൈൻ തരം ഉത്തേജക സംബന്ധമായ പ്രശ്നങ്ങൾ ഉണ്ടാകാനുള്ള സാധ്യത വർദ്ധിപ്പിക്കുന്നത് ഒഴിവാക്കാൻ
+	ഭാവിയിൽ നിങ്ങൾക്ക് എന്റെ ഡയറി ഉപയോഗിക്കാം{" "}
+						<a href="https://assistplus.com.au">അസിസ്റ്റ് ചെക്കപ്പ് ആപ്പ്</a> നിങ്ങൾ എത്ര തവണ, എത്രത്തോളം ഉപയോഗിക്കുന്നു, എത്രമാത്രം ചെലവഴിക്കുന്നു എന്നിവ ട്രാക്ക് ചെയ്യാൻ.
+						<br />
+						നിങ്ങൾ എങ്ങനെയാണ് പോകുന്നതെന്ന് കാണാൻ താൽപ്പര്യമുണ്ടെങ്കിൽ, നിങ്ങൾക്ക് തിരികെ വന്ന് 3 മാസത്തിനുള്ളിൽ വീണ്ടും ചെക്ക് അപ്പ് പൂർത്തിയാക്കാം.
+					</p>
+					<p>കുത്തിവയ്ക്കുന്നത്</p>
+					<p>
+					നിങ്ങൾ മെത്താംഫെറ്റാമൈൻ കുത്തിവയ്ക്കുകയാണെങ്കിൽ, നിങ്ങൾ ആശ്രിതരാകാനും സൈക്കോസിസ് അനുഭവിക്കാനും ഉള്ള സാധ്യത വർദ്ധിപ്പിക്കുന്നു. നിങ്ങളുടെ ചർമ്മത്തിനും സിരകൾക്കും കേടുപാടുകൾ വരുത്തുകയും അണുബാധകൾ, കുരുക്കൾ, അൾസർ എന്നിവ ഉണ്ടാകുകയും ചെയ്യാം. നിങ്ങൾ കുത്തിവയ്പ്പ് ഉപകരണങ്ങൾ പങ്കിടുകയാണെങ്കിൽ, ഹെപ്പറ്റൈറ്റിസ് ബി പോലുള്ള രക്തത്തിലൂടെ പകരുന്ന വൈറസ് അണുബാധകൾ ഉണ്ടാകാനുള്ള സാധ്യതയുണ്ട്. സി, എച്ച്.ഐ.വി. കുത്തിവയ്ക്കാതിരിക്കുന്നതാണ് എപ്പോഴും സുരക്ഷിതം.
+						<br />
+						നിങ്ങൾ കുത്തിവയ്ക്കാൻ തിരഞ്ഞെടുക്കുകയാണെങ്കിൽ:
+					</p>
+					<ul>
+						<li>എപ്പോഴും വൃത്തിയുള്ള ഉപകരണങ്ങളും പുതിയ സൂചിയും സിറിഞ്ചും ഉപയോഗിക്കുക.</li>
+						<li>ഒരു ഉപകരണവും പങ്കിടരുത്.</li>
+						<li>
+						തയ്യാറെടുപ്പ് സ്ഥലവും കൈകളും കുത്തിവയ്പ്പ് നടത്തുന്ന സ്ഥലവും എപ്പോഴും വൃത്തിയാക്കുക.
+						</li>
+						<li>ഓരോ തവണയും സാവധാനം മറ്റൊരു സൈറ്റിൽ കുത്തിവയ്ക്കുക</li>
+						<li>ഉപയോഗിച്ച സൂചിയും സിറിഞ്ചും മൂർച്ചയുള്ള പാത്രത്തിൽ കളയുക.</li>
+					</ul>
+					<p>
+					നിങ്ങൾ എപ്പോഴെങ്കിലും മെത്താംഫെറ്റാമൈൻ കുത്തിവച്ചിട്ടുണ്ടെങ്കിൽ, രക്തത്തിലൂടെ പകരുന്ന വൈറസുകൾക്കായി ഒരു ഹെൽത്ത് കെയർ പ്രൊഫഷണലിനെ കാണാൻ ഞങ്ങൾ ശുപാർശ ചെയ്യുന്നു.
+					</p>
+					<p>
+					ഒരു പ്രതിസന്ധി ഘട്ടത്തിൽ എന്തുചെയ്യണമെന്ന് നിങ്ങൾക്കറിയാമെന്ന് ഉറപ്പാക്കുക
+						<br />
+						മെത്താംഫെറ്റാമൈൻ ഉപയോഗിക്കുമ്പോൾ ആരെങ്കിലും അമിതമായി കഴിക്കുകയോ പ്രതികൂല പ്രതികരണം ഉണ്ടാകുകയോ ചെയ്താൽ, ഓസ്‌ട്രേലിയയിൽ
+					</p>
+					<p>
+						<a href="tel:000">ട്രിപ്പിൾ സീറോ എന്ന് വിളിക്കുക (000)</a>
+					</p>
+					<p>
+					അവർക്ക് എത്രയും വേഗം പ്രൊഫഷണൽ സഹായം ലഭിക്കേണ്ടത് വളരെ പ്രധാനമാണ്. പെട്ടെന്നുള്ള പ്രതികരണം അവരുടെ ജീവൻ രക്ഷിക്കും, അതിനാൽ വൈകരുത്.
+					</p>
+				</div>
+			),
+			"inhalants": (
+				<div>
+					<p>
+					നിങ്ങളുടെ ഉത്തരങ്ങളെ അടിസ്ഥാനമാക്കി, ഇൻഹലന്റുകളുടെ ഉപയോഗം നിങ്ങളെ മിതമായ അപകടത്തിലാക്കുന്നു ആരോഗ്യം, സാമൂഹികം, സാമ്പത്തികം, നിയമപരമായ പ്രശ്നങ്ങൾ
+						<br />
+						ഇൻഹാലന്റ് ഉപയോഗത്തിന് സുരക്ഷിതമായ തലമില്ല. ഏതെങ്കിലും തരത്തിലുള്ള മരുന്ന് കഴിക്കുമ്പോൾ അല്ലെങ്കിൽ മരുന്നുകളുടെ കോമ്പിനേഷൻ എടുക്കുമ്പോൾ വളരെ ശ്രദ്ധിക്കേണ്ടത് പ്രധാനമാണ്.
+						<br />
+						ഇൻഹാലന്റ് ഉപയോഗം ആരോഗ്യം, സാമൂഹികം, സാമ്പത്തികം, നിയമപരമായ പ്രശ്നങ്ങൾ എന്നിവയുമായി ബന്ധപ്പെട്ടിരിക്കുന്നു:
+					</p>
+					<ul>
+						<li>തലകറക്കവും ഭ്രമാത്മകതയും</li>
+						<li>മയക്കം, ദിശ തെറ്റി, കാഴ്ച മങ്ങൽ</li>
+						<li>ഏകോപന ബുദ്ധിമുട്ടുകൾ, മന്ദഗതിയിലുള്ള പ്രതികരണങ്ങൾ</li>
+						<li>ഫ്ലൂ പോലുള്ള ലക്ഷണങ്ങൾ, സൈനസൈറ്റിസ്, മൂക്കിൽ നിന്ന് രക്തസ്രാവം</li>
+						<li>ദഹനക്കേട്, വയറ്റിലെ അൾസർ</li>
+						<li>അപകടങ്ങളും പരിക്കുകളും</li>
+						<li>ഓർമ്മക്കുറവ്, ആശയക്കുഴപ്പം, ഭ്രമം, അപസ്മാരം (ഫിറ്റ്സ്), കോമ</li>
+						<li>നിങ്ങളുടെ മസ്തിഷ്കം, ഹൃദയം, ശ്വാസകോശം, കരൾ, വൃക്കകൾ എന്നിവയ്ക്ക് ക്ഷതം</li>
+						<li>ഹൃദയസ്തംഭനത്തിൽ നിന്നുള്ള മരണം</li>
+					</ul>
+					<p>
+					കൂടുതൽ വിവരങ്ങൾ നിങ്ങൾക്ക് വേണമെങ്കിൽ
+						<a href="https://assistplus.com.au/drug-information/inhalants/">
+						ഇൻഹെലന്റുകൾ ഇവിടെ ക്ലിക്ക് ചെയ്യുക
+						</a>
+					</p>
+					<p>
+					നിങ്ങളുടെ പ്രതികരണങ്ങളെ അടിസ്ഥാനമാക്കി, നിങ്ങൾക്ക് ഒന്നോ അതിലധികമോ അനുഭവങ്ങൾ ഉണ്ടായിട്ടുണ്ടെന്ന് തോന്നുന്നു
+					കഴിഞ്ഞ 3 മാസങ്ങളിൽ ഇൻഹെലന്റുമായി ബന്ധപ്പെട്ട പ്രശ്നങ്ങൾ.
+					</p>
+					<p>
+					ഈ പ്രശ്നങ്ങളെക്കുറിച്ച് നിങ്ങൾക്ക് എത്രമാത്രം ആശങ്കയുണ്ട്?
+						<br />
+						ഇവയിലേതെങ്കിലും നിങ്ങൾക്ക് സംഭവിക്കുകയും നിങ്ങൾക്ക് ആശങ്കയുണ്ടെങ്കിൽ നിങ്ങളുടെ ഇൻഹെലന്റുകളുടെ ഉപയോഗം കുറയ്ക്കുകയോ നിർത്തുകയോ ചെയ്യണമെന്ന് നിങ്ങൾ ആഗ്രഹിച്ചേക്കാം. നിങ്ങൾക്ക് ഉറപ്പില്ലെങ്കിൽ എല്ലാ നല്ല കാര്യങ്ങളും അത്ര നല്ലതല്ലാത്തവ പട്ടികപ്പെടുത്തുന്നത് സഹായകമാകും നിങ്ങളുടെ ഇൻഹാലന്റുകളുടെ ഉപയോഗത്തെക്കുറിച്ചുള്ള കാര്യങ്ങളും മുറിക്കുന്നതിന്റെ ഗുണങ്ങളും ചെലവുകളും താഴേക്ക് അല്ലെങ്കിൽ നിർത്തുന്നു. നിങ്ങൾക്ക് ഒരു കോസ്റ്റ്-ബെനിഫിറ്റ് അനാലിസിസ് കണ്ടെത്താം
+						<a href="http://smartrecoveryaustralia.com.au/resources/smart-worksheets/">
+						വർക്ക്ഷീറ്റും മറ്റ് ഉപയോഗപ്രദമായ ഉപകരണങ്ങളും ഇവിടെയുണ്ട്.
+						</a>
+						<br />
+						ഉപയോഗിക്കാതിരിക്കുകയോ അല്ലെങ്കിൽ നിങ്ങളുടെ ഇൻഹെലന്റ് ഉപയോഗം വളരെ കുറവായി നിലനിർത്തുകയോ ചെയ്യുന്നതിലൂടെ, നിങ്ങൾ അത് കണ്ടെത്തും മെമ്മറി, ഏകോപനം, പ്രതികരണ സമയം എന്നിവ മെച്ചപ്പെടും, നിങ്ങളുടെ ശാരീരികവും മാനസികവുമായ ആരോഗ്യം മെച്ചപ്പെടും, നിങ്ങൾക്ക് അനുഭവിക്കാനുള്ള സാധ്യത കുറയും അപകടങ്ങളും പരിക്കുകളും.
+					</p>
+					<p>
+					ഇൻഹാലന്റുകളുടെ ഉപയോഗം കുറയ്ക്കാനോ നിർത്താനോ നിങ്ങൾ ആഗ്രഹിക്കുന്നുവെങ്കിൽ നിങ്ങളെ സഹായിക്കുന്നതിനുള്ള ചില തന്ത്രങ്ങൾ ഇതാ.
+						<br />
+						നിർത്തുക എന്നതാണ് നിങ്ങളുടെ ലക്ഷ്യമെങ്കിൽ:
+					</p>
+					<ul>
+						<li>ഒരു ലക്ഷ്യ തീയതി സജ്ജീകരിച്ച് ആ തീയതിയിൽ നിർത്തുക</li>
+						<li>
+						നിങ്ങൾ നിർത്താൻ പോകുകയാണെന്ന് ഒരു സുഹൃത്തിനോടോ കുടുംബാംഗത്തോടോ പറയുക, അതുവഴി അവർക്ക് നിങ്ങളെ പിന്തുണയ്ക്കാൻ കഴിയും.
+						</li>
+						<li>
+						നിങ്ങൾ ഉപയോഗിക്കാത്ത അധിക സമയം പൂരിപ്പിക്കുന്നതിന് ചില ബദൽ പ്രവർത്തനങ്ങൾ ആസൂത്രണം ചെയ്യുക.
+						</li>
+						<li>
+						ഉപയോഗിക്കാനും ആസൂത്രണം ചെയ്യാനും നിങ്ങൾ പ്രലോഭിപ്പിച്ചേക്കാവുന്ന സാഹചര്യങ്ങളെക്കുറിച്ച് ചിന്തിക്കുക അവ ഒഴിവാക്കുക അല്ലെങ്കിൽ ഇൻഹാലന്റുകൾ ഉപയോഗിക്കുന്നത് എങ്ങനെ ഒഴിവാക്കണമെന്ന് ആസൂത്രണം ചെയ്യുക
+						</li>
+						<li>
+						ഇൻഹാലന്റുകൾ ഉപയോഗിക്കാനുള്ള ശക്തമായ പ്രേരണ ഉണ്ടായിരുന്ന സമയങ്ങളുടെ റെക്കോർഡ് സൂക്ഷിക്കുക. ഉയർന്ന അപകടസാധ്യതയുള്ള സാഹചര്യങ്ങൾ തിരിച്ചറിയാനും അവ ഒഴിവാക്കാനോ നിയന്ത്രിക്കാനോ ആസൂത്രണം ചെയ്യാനും ഇത് നിങ്ങളെ സഹായിക്കും. നിങ്ങൾക്ക് ഒരു ഡൗൺലോഡ് ചെയ്യാം
+							<a href="https://smartrecoveryaustralia.com.au/resources/smart-worksheets/">
+							ഇവിടെ ലോഗിൻ ചെയ്യാൻ ആവശ്യപ്പെടുക.
+							</a>
+						</li>
+					</ul>
+					<p>
+					വെട്ടിക്കുറയ്ക്കാൻ നിങ്ങൾക്ക് കൂടുതൽ സഹായം വേണമെങ്കിൽ നിങ്ങളെ സഹായിക്കാൻ കഴിയുന്ന സേവനങ്ങളും ഉറവിടങ്ങളും ഉണ്ട്.
+					</p>
+					<ul>
+						<li>
+						നിങ്ങൾക്ക് ADIS-നെ വിളിക്കാം - ആൽക്കഹോൾ ആൻഡ് ഡ്രഗ് ഇൻഫർമേഷൻ സർവീസ് ഉപദേശങ്ങൾക്കും റഫറലുകൾക്കും:
+							<a href="tel:1800250015">1800250015</a>
+						</li>
+						<li>
+						നിങ്ങൾക്ക് 12-നും 25-നും ഇടയിൽ പ്രായമുണ്ടെങ്കിൽ, നിങ്ങൾക്ക് ഹെഡ്‌സ്‌പേസിനെ വിളിക്കാം റഫറലുകൾ
+						</li>
+						<li>
+							<a href="http://smartrecoveryaustralia.com.au/">സ്മാർട്ട്റി ക്കവറി</a> പ്രശ്‌നകരമായ പെരുമാറ്റങ്ങളുള്ള ആളുകളെ സഹായിക്കുന്ന ഒരു സ്വതന്ത്ര ഗ്രൂപ്പ് പ്രോഗ്രാം ആണ്
+						</li>
+					</ul>
+					<p>
+					ഭാവിയിൽ ഇൻഹാലന്റുമായി ബന്ധപ്പെട്ട പ്രശ്‌നങ്ങൾ ഉണ്ടാകാനുള്ള സാധ്യത വർദ്ധിപ്പിക്കുന്നത് ഒഴിവാക്കാൻ, നിങ്ങൾ എത്ര തവണ, എത്രത്തോളം ഉപയോഗിക്കുന്നു, എത്രമാത്രം ചെലവഴിക്കുന്നു എന്നിവ ട്രാക്ക് ചെയ്യാൻ നിങ്ങൾക്ക് എന്റെ ഡയറി ഉപയോഗിക്കാം.
+						<br />
+						നിങ്ങൾ എങ്ങനെയാണ് പോകുന്നതെന്ന് കാണാൻ താൽപ്പര്യമുണ്ടെങ്കിൽ, നിങ്ങൾക്ക് തിരികെ വന്ന് 3 മാസത്തിനുള്ളിൽ വീണ്ടും ചെക്ക് അപ്പ് പൂർത്തിയാക്കാം.
+					</p>
+					<p>
+					ഒരു പ്രതിസന്ധി ഘട്ടത്തിൽ എന്തുചെയ്യണമെന്ന് നിങ്ങൾക്കറിയാമെന്ന് ഉറപ്പാക്കുക
+						<br />
+						ഇൻഹാലന്റുകൾ ഉപയോഗിക്കുമ്പോൾ ആരെങ്കിലും അമിതമായി കഴിക്കുകയോ പ്രതികൂല പ്രതികരണം ഉണ്ടാകുകയോ ചെയ്താൽ, ഓസ്‌ട്രേലിയയിൽ
+					</p>
+					<p>
+						<a href="tel:000">ട്രിപ്പിൾ സീറോ എന്ന് വിളിക്കുക (000)</a>
+					</p>
+					<p>
+					അവർക്ക് എത്രയും വേഗം പ്രൊഫഷണൽ സഹായം ലഭിക്കേണ്ടത് വളരെ പ്രധാനമാണ്. പെട്ടെന്നുള്ള പ്രതികരണം അവരുടെ ജീവൻ രക്ഷിക്കും, അതിനാൽ വൈകരുത്.
+					</p>
+				</div>
+			),
+			"sedatives": (
+				<div>
+					<p>
+					നിങ്ങളുടെ ഉത്തരങ്ങളെ അടിസ്ഥാനമാക്കി, നിങ്ങളുടെ സെഡേറ്റീവ് മരുന്നുകളുടെ ഉപയോഗം നിങ്ങളെ ആരോഗ്യം, സാമൂഹികം, സാമ്പത്തികം, നിയമപരമായ പ്രശ്നങ്ങൾ എന്നിവയിൽ മിതമായ അപകടത്തിലാക്കുന്നു
+						<br />
+						ഒരു ഡോക്ടർ നിർദ്ദേശിച്ച പ്രകാരം കഴിക്കുമ്പോൾ കുറിപ്പടി മരുന്നുകൾ വളരെ ഉപയോഗപ്രദമാണെങ്കിലും, നോൺ-മെഡിക്കൽ ഉപയോഗം വളരെ ദോഷകരമാണ്. കുറിപ്പടി മരുന്നുകളുടെ ഉപയോഗം ആരോഗ്യം, സാമൂഹികം, സാമ്പത്തികം, നിയമപരമായ പ്രശ്നങ്ങൾ എന്നിവയുമായി ബന്ധപ്പെട്ടിരിക്കുമെന്ന് അറിഞ്ഞിരിക്കുക.
+						<br />
+						ബെൻസോഡിയാസെപൈൻസ്
+					</p>
+					<ul>
+						<li>മയക്കം, തലകറക്കം, ആശയക്കുഴപ്പം, വീഴുന്നു</li>
+						<li>ഏകാഗ്രത, മെമ്മറി പ്രശ്നങ്ങൾ</li>
+						<li>തലവേദന</li>
+						<li>ഉറക്ക പ്രശ്നങ്ങൾ</li>
+						<li>ഉത്കണ്ഠയും വിഷാദവും</li>
+						<li>ഒരു ചെറിയ കാലയളവിലെ ഉപയോഗത്തിന് ശേഷം സഹിഷ്ണുതയും ആശ്രിതത്വവും</li>
+						<li>പിന്മാറല് ലക്ഷണങ്ങള്</li>
+						<li>
+						മദ്യം, ഒപിയോയിഡുകൾ അല്ലെങ്കിൽ മറ്റ് ഡിപ്രസന്റ് മരുന്നുകൾ എന്നിവയ്‌ക്കൊപ്പം ഉപയോഗിച്ചാൽ അമിതമായ അളവും മരണവും.
+						</li>
+					</ul>
+					<p>
+					കൂടുതൽ വിവരങ്ങൾ നിങ്ങൾക്ക് വേണമെങ്കിൽ
+						<a href="https://assistplus.com.au/drug-information/sedatives-sleeping-pills/">
+						സെഡേറ്റീവ് മരുന്ന് ഇവിടെ ക്ലിക്ക് ചെയ്യുക.
+						</a>
+					</p>
+					<p>
+					നിങ്ങളുടെ പ്രതികരണങ്ങളെ അടിസ്ഥാനമാക്കി, കഴിഞ്ഞ 3 മാസത്തിനുള്ളിൽ നിങ്ങൾക്ക് ഒന്നോ അതിലധികമോ സെഡേറ്റീവ് മരുന്നുകളുമായി ബന്ധപ്പെട്ട പ്രശ്നങ്ങൾ അനുഭവപ്പെട്ടിട്ടുണ്ടെന്ന് തോന്നുന്നു.
+					</p>
+					<p>
+					ഈ പ്രശ്‌നങ്ങളെക്കുറിച്ച് നിങ്ങൾക്ക് എത്രമാത്രം ആശങ്കയുണ്ട്?
+						<br />
+						നിങ്ങളുടെ സെഡേറ്റീവ് ഉപയോഗം കുറയ്ക്കുന്നതോ നിർത്തുന്നതോ പരിഗണിക്കാൻ നിങ്ങൾ ആഗ്രഹിച്ചേക്കാം. നിങ്ങൾക്ക് ഉറപ്പില്ലെങ്കിൽ, നിങ്ങളുടെ സെഡേറ്റീവ് ഉപയോഗത്തെക്കുറിച്ചുള്ള എല്ലാ നല്ല കാര്യങ്ങളും അത്ര നല്ലതല്ലാത്ത കാര്യങ്ങളും അതുപോലെ വെട്ടിക്കുറയ്ക്കുകയോ നിർത്തുകയോ ചെയ്യുന്നതിന്റെ ഗുണങ്ങളും ചെലവുകളും പട്ടികപ്പെടുത്തുന്നത് സഹായകരമാകും. നിങ്ങൾക്ക് ഒരു കോസ്റ്റ്-ബെനിഫിറ്റ് അനാലിസിസ് കണ്ടെത്താം
+						<a href="http://smartrecoveryaustralia.com.au/resources/smart-worksheets/">
+						വർക്ക്ഷീറ്റും മറ്റ് ഉപയോഗപ്രദമായ ഉപകരണങ്ങളും ഇവിടെയുണ്ട്
+						</a>
+						<br />
+						ഉപയോഗിക്കാതിരിക്കുന്നതിലൂടെയോ അല്ലെങ്കിൽ നിങ്ങളുടെ കുറിപ്പടി മരുന്നുകളുടെ ഉപയോഗം വളരെ കുറവായിരിക്കുന്നതിലൂടെയോ, നിങ്ങളുടെ വിശപ്പ്, ഏകാഗ്രത, മെമ്മറി, ഉണർവ് എന്നിവ മെച്ചപ്പെടുമെന്നും നിങ്ങൾ നന്നായി ഉറങ്ങുമെന്നും വീഴ്ച, ഉത്കണ്ഠ, അമിത അളവ് എന്നിവയ്ക്കുള്ള സാധ്യത കുറയുമെന്നും നിങ്ങൾ കണ്ടെത്തും.
+					</p>
+					<p>
+					കുറിപ്പടി മരുന്നുകൾ ഉപയോഗിക്കുന്നത് കുറയ്ക്കാനോ നിർത്താനോ നിങ്ങൾ ആഗ്രഹിക്കുന്നുവെങ്കിൽ നിങ്ങളെ സഹായിക്കുന്നതിനുള്ള ചില തന്ത്രങ്ങൾ ഇതാ.
+						<br />
+						വെട്ടിക്കുറയ്ക്കുക എന്നതാണ് നിങ്ങളുടെ ലക്ഷ്യമെങ്കിൽ:
+					</p>
+					<ul>
+						<li>നിങ്ങൾ എത്ര തവണ, എത്ര തവണ ഉപയോഗിക്കുമെന്ന് പ്ലാൻ ചെയ്യുക</li>
+						<li>ഒരു സെഷനിൽ നിങ്ങൾ ഉപയോഗിക്കാൻ ഉദ്ദേശിക്കുന്നതിനേക്കാൾ കൂടുതൽ വാങ്ങരുത്</li>
+						<li>കൂടുതൽ ഉപയോഗിക്കാൻ നിങ്ങളെ പ്രേരിപ്പിക്കുന്ന ഒരു ശേഖരം ഒഴിവാക്കുക</li>
+					</ul>
+					<p>നിർത്തുക എന്നതാണ് നിങ്ങളുടെ ലക്ഷ്യമെങ്കിൽ:</p>
+					<ul>
+						<li>ഒരു ലക്ഷ്യ തീയതി സജ്ജീകരിച്ച് ആ തീയതിയിൽ നിർത്തുക</li>
+						<li>
+						നിങ്ങൾ നിർത്താൻ പോകുകയാണെന്ന് ഒരു സുഹൃത്തിനോടോ കുടുംബാംഗത്തോടോ പറയുക, അതുവഴി അവർക്ക് നിങ്ങളെ പിന്തുണയ്ക്കാൻ കഴിയും.
+						</li>
+						<li>
+						നിങ്ങൾ ഉപയോഗിക്കാത്ത അധിക സമയം പൂരിപ്പിക്കുന്നതിന് ചില ബദൽ പ്രവർത്തനങ്ങൾ ആസൂത്രണം ചെയ്യുക.
+						</li>
+						<li>
+						നിങ്ങൾ ഉപയോഗിക്കാൻ പ്രലോഭിപ്പിച്ചേക്കാവുന്ന സാഹചര്യങ്ങളെക്കുറിച്ച് ചിന്തിക്കുക, അവ ഒഴിവാക്കാൻ ആസൂത്രണം ചെയ്യുക അല്ലെങ്കിൽ ഒപിയോയിഡുകൾ ഉപയോഗിക്കുന്നത് എങ്ങനെ ഒഴിവാക്കണമെന്ന് ആസൂത്രണം ചെയ്യുക
+						</li>
+						<li>
+						ഒപിയോയിഡുകൾ ഉപയോഗിക്കാനുള്ള ശക്തമായ ആഗ്രഹം നിങ്ങൾക്ക് ഉണ്ടായിരുന്ന സമയങ്ങളുടെ ഒരു റെക്കോർഡ് സൂക്ഷിക്കുക. ഉയർന്ന അപകടസാധ്യതയുള്ള സാഹചര്യങ്ങൾ തിരിച്ചറിയാനും അവ ഒഴിവാക്കാനോ നിയന്ത്രിക്കാനോ ആസൂത്രണം ചെയ്യാനും ഇത് നിങ്ങളെ സഹായിക്കും. നിങ്ങൾക്ക് ഒരു ഡൗൺലോഡ് ചെയ്യാം
+							<a href="https://smartrecoveryaustralia.com.au/resources/smart-worksheets/">
+							ഇവിടെ ലോഗിൻ ചെയ്യാൻ ആവശ്യപ്പെടുക.
+							</a>
+						</li>
+					</ul>
+					<p>
+					വെട്ടിക്കുറയ്ക്കാൻ നിങ്ങൾക്ക് കൂടുതൽ സഹായം വേണമെങ്കിൽ സേവനങ്ങളും വിഭവങ്ങളുമുണ്ട്
+						അത് നിങ്ങളെ സഹായിക്കും.
+					</p>
+					<ul>
+						<li>
+						നിങ്ങൾക്ക് ADIS-നെ വിളിക്കാം - ആൽക്കഹോൾ ആൻഡ് ഡ്രഗ് ഇൻഫർമേഷൻ സർവീസ്
+							കൂടാതെ റഫറലുകൾ:
+							<a href="tel:1800250015">1800250015</a>
+						</li>
+						<li>
+						നിങ്ങൾക്ക് 12-നും 25-നും ഇടയിൽ പ്രായമുണ്ടെങ്കിൽ, നിങ്ങൾക്ക് ഹെഡ്‌സ്‌പേസിനെ വിളിക്കാം
+							റഫറലുകൾ
+						</li>
+						<li>
+							<a href="http://smartrecoveryaustralia.com.au/">സ്മാർട്ട് റിക്കവറി </a> ഏതെങ്കിലും പ്രശ്‌നകരമായ സ്വഭാവമുള്ള ആളുകളെ സഹായിക്കുന്ന സ്വതന്ത്ര ഗ്രൂപ്പ് പ്രോഗ്രാമാണ്
+						</li>
+					</ul>
+					<p>
+					കുറിപ്പടി മരുന്നുമായി ബന്ധപ്പെട്ട പ്രശ്നങ്ങൾ ഉണ്ടാകാനുള്ള സാധ്യത വർദ്ധിപ്പിക്കുന്നത് ഒഴിവാക്കാൻ
+						ഭാവിയിൽ, നിങ്ങൾ എത്ര തവണ, എത്രത്തോളം ഉപയോഗിക്കുന്നു എന്നതും ട്രാക്ക് ചെയ്യാൻ നിങ്ങൾക്ക് എന്റെ ഡയറി ഉപയോഗിക്കാം
+						നിങ്ങൾ എത്ര ചെലവഴിക്കുന്നു.
+						<br />
+						എങ്കിൽ നിങ്ങൾക്ക് തിരികെ വന്ന് 3 മാസത്തിനുള്ളിൽ വീണ്ടും ചെക്ക് അപ്പ് പൂർത്തിയാക്കാം
+						നിങ്ങൾ എങ്ങനെ പോകുന്നു എന്ന് കാണാൻ ആഗ്രഹിക്കുന്നു.
+					</p>
+					<p>
+						കുത്തിവയ്ക്കുന്നത്
+						<br />
+						നിങ്ങൾ സെഡേറ്റീവ് മരുന്ന് കുത്തിവയ്ക്കുകയാണെങ്കിൽ, നിങ്ങൾ ആകാനുള്ള സാധ്യത വർദ്ധിപ്പിക്കുന്നു
+						ആശ്രിത. നിങ്ങളുടെ ചർമ്മത്തിനും സിരകൾക്കും കേടുപാടുകൾ വരുത്തുകയും അണുബാധകൾ ഉണ്ടാകുകയും ചെയ്യാം.
+						കുരു, അൾസർ. നിങ്ങൾ കുത്തിവയ്ക്കുന്നത് ഉപകരണങ്ങൾ പങ്കിടുകയാണെങ്കിൽ നിങ്ങൾക്ക് അപകടസാധ്യതയുണ്ട്
+						ഹെപ്പറ്റൈറ്റിസ് ബി പോലുള്ള രക്തത്തിലൂടെ പകരുന്ന വൈറസ് അണുബാധകൾ
+						<br />
+						നിങ്ങൾ കുത്തിവയ്ക്കാൻ തിരഞ്ഞെടുക്കുകയാണെങ്കിൽ
+					</p>
+					<ul>
+						<li>എപ്പോഴും വൃത്തിയുള്ള ഉപകരണങ്ങളും പുതിയ സൂചിയും സിറിഞ്ചും ഉപയോഗിക്കുക.</li>
+						<li>ഒരു ഉപകരണവും പങ്കിടരുത്.</li>
+						<li>
+							തയ്യാറാക്കുന്ന സ്ഥലവും കൈകളും കുത്തിവയ്ക്കുന്ന സ്ഥലവും എപ്പോഴും വൃത്തിയാക്കുക.
+						</li>
+						<li>ഓരോ തവണയും സാവധാനം മറ്റൊരു സൈറ്റിൽ കുത്തിവയ്ക്കുക</li>
+						<li>ഉപയോഗിച്ച സൂചിയും സിറിഞ്ചും മൂർച്ചയുള്ള പാത്രത്തിൽ കളയുക.</li>
+					</ul>
+					<p>
+						നിങ്ങൾ എപ്പോഴെങ്കിലും സെഡേറ്റീവ് മരുന്നുകൾ കുത്തിവച്ചിട്ടുണ്ടെങ്കിൽ, എ
+						ഹെൽത്ത് കെയർ പ്രൊഫഷണലുകൾ രക്തത്തിലൂടെ പകരുന്ന വൈറസുകൾക്കായി പരിശോധിക്കണം.
+					</p>
+					<p>
+						ഒരു പ്രതിസന്ധി ഘട്ടത്തിൽ എന്തുചെയ്യണമെന്ന് നിങ്ങൾക്കറിയാമെന്ന് ഉറപ്പാക്കുക
+						<br />
+						മയക്കമരുന്ന് ഉപയോഗിക്കുമ്പോൾ ആരെങ്കിലും അമിതമായി കഴിക്കുകയോ പ്രതികൂല പ്രതികരണം ഉണ്ടാകുകയോ ചെയ്താൽ, ഇൻ
+						ഓസ്ട്രേലിയ
+					</p>
+					<p>
+						<a href="tel:000">ട്രിപ്പിൾ സീറോ എന്ന് വിളിക്കുക(000)</a>
+					</p>
+					<p>
+						അവർക്ക് ഉടൻ തന്നെ പ്രൊഫഷണൽ സഹായം ലഭിക്കേണ്ടത് വളരെ പ്രധാനമാണ്
+						സാധ്യമാണ്. പെട്ടെന്നുള്ള പ്രതികരണം അവരുടെ ജീവൻ രക്ഷിക്കും, അതിനാൽ വൈകരുത്.
+					</p>
+				</div>
+			),
+			"hallucinogens": (
+				<div>
+					<p>
+					   നിങ്ങളുടെ ഉത്തരങ്ങളെ അടിസ്ഥാനമാക്കി, ഹാലുസിനോജനുകൾ നിങ്ങളെ മിതമായ അപകടത്തിലാക്കുന്നു
+						നിങ്ങളുടെ ആരോഗ്യത്തിനും സാമൂഹിക സാഹചര്യത്തിനും ഹാനികരം.
+					</p>
+					<p>
+						നിങ്ങൾക്ക് ഉറങ്ങാൻ ബുദ്ധിമുട്ട്, ഓക്കാനം, ഛർദ്ദി എന്നിവ അനുഭവപ്പെടാനുള്ള സാധ്യതയുണ്ട്
+						വർദ്ധിച്ച രക്തസമ്മർദ്ദം, മാനസികാവസ്ഥ, ഉത്കണ്ഠ, പരിഭ്രാന്തി, ഭ്രാന്ത്,
+						സ്കീസോഫ്രീനിയ പോലുള്ള മാനസിക രോഗങ്ങളുടെ ഫ്ലാഷ്ബാക്കുകളും വർധിച്ച പ്രത്യാഘാതങ്ങളും.
+					</p>
+					<p>
+						ഏതൊരു മരുന്നിന്റെയും ഫലങ്ങൾ ഓരോ വ്യക്തിക്കും വ്യത്യസ്തമാണ്. ഫലമാണ് ഫലം
+						മൂന്ന് സംവേദന ഘടകങ്ങൾ:
+					</p>
+					<ul>
+						<li>മരുന്ന് തന്നെ</li>
+						<li>വ്യക്തിഗത ഉപയോക്താവ്</li>
+						<li>മയക്കുമരുന്ന് ഉപയോഗം സംഭവിക്കുന്ന പരിസ്ഥിതി</li>
+					</ul>
+					<p>
+						ഒരു മയക്കുമരുന്നിന് ഒരു വ്യക്തിയിൽ ചെലുത്തുന്ന സ്വാധീനം പല ഘടകങ്ങളാൽ നിർണ്ണയിക്കപ്പെടുമ്പോൾ,
+						മരുന്നിന്റെ ഫലത്തെ സ്വാധീനിക്കുന്ന പ്രാഥമിക ഘടകങ്ങൾ മരുന്നിന്റെ തരവും
+						ഉപയോഗിച്ച അളവ്. ഏതെങ്കിലും നിയമവിരുദ്ധമായ മയക്കുമരുന്ന് ഉപയോഗത്തിന് കഴിയുമെന്ന് ഓർത്തിരിക്കേണ്ടത് പ്രധാനമാണ്
+						ആരോഗ്യം, സാമൂഹികം, സാമ്പത്തികം, നിയമപരമായ പ്രശ്നങ്ങൾ എന്നിവ നിങ്ങളെ അപകടത്തിലാക്കുന്നു.
+					</p>
+					<p>
+						നിയമവിരുദ്ധമായ മരുന്നുകൾ ഗുണനിലവാര നിയന്ത്രണങ്ങൾക്കും സജീവ ഘടകത്തിനും വിധേയമല്ല
+						സ്ഥിരതയുള്ളതല്ല. യഥാർത്ഥത്തിൽ എന്താണ് അതിൽ ഉള്ളതെന്നും അത് എങ്ങനെയാണെന്നും നിങ്ങൾക്ക് ഒരിക്കലും ഉറപ്പിക്കാൻ കഴിയില്ല
+						നിങ്ങളെ ബാധിക്കും. ‘വൺ ഓഫ്’ ഉപയോഗം പോലും ഗുരുതരമായ ദോഷങ്ങൾക്ക് ഇടയാക്കും. ഫെഡറൽ ഒപ്പം
+						സംസ്ഥാന നിയമങ്ങൾ കൈവശം വയ്ക്കുന്നതിനും ഉപയോഗിക്കുന്നതിനും ഉൽപ്പാദിപ്പിക്കുന്നതിനും വിൽക്കുന്നതിനും അല്ലെങ്കിൽ
+						നിരോധിത മയക്കുമരുന്ന് ഉപയോഗിച്ചുള്ള ഡ്രൈവിംഗ്.പിഴകളിൽ പിഴയും ഉൾപ്പെടാം,
+						വാഹനമോടിക്കുന്നതിൽ നിന്നുള്ള അയോഗ്യത, പുനരധിവാസ ഉത്തരവുകൾ, തടവ്. ചിന്തിക്കുക
+						ഈ പരിണതഫലങ്ങളിൽ ഏതെങ്കിലും നിങ്ങളുടെ ജീവിതത്തെ എങ്ങനെ ബാധിക്കുമെന്നതിനെക്കുറിച്ച്.
+					</p>
+					<p>
+						മയക്കുമരുന്നുമായി ബന്ധപ്പെട്ട അപകടസാധ്യതകളും ദോഷങ്ങളും ഒഴിവാക്കാൻ, ഏറ്റവും മികച്ച ഓപ്ഷൻ
+						അവ ഉപയോഗിക്കരുത്. മാറിയേക്കാവുന്ന ചില ആളുകൾക്ക് ഇത് ബുദ്ധിമുട്ടായിരിക്കും
+						അവരെ ആശ്രയിക്കുകയും അവ നിർത്തുകയോ കുറയ്ക്കുകയോ ചെയ്താൽ പിൻവലിക്കലിന്റെ ലക്ഷണങ്ങൾ അനുഭവപ്പെടുന്നു
+						അവരുടെ ഉപയോഗം.
+					</p>
+					<p>
+						സഹായം ലഭ്യമാണ്. ഇതിനെക്കുറിച്ച് കൂടുതൽ കണ്ടെത്തുന്നതിലൂടെ ആരംഭിക്കാൻ നിങ്ങൾ ആഗ്രഹിച്ചേക്കാം
+						<a href="https://assistplus.com.au/drug-information/hallucinogens/">
+							ഹാലുസിനോജനുകളും അവയുടെ ഫലങ്ങളും ഇവിടെയുണ്ട്.
+						</a>
+					</p>
+					<p>
+						ഒരു ആരോഗ്യ വിദഗ്ധനോടോ പ്രാദേശിക മരുന്നോടോ സംസാരിക്കാനും നിങ്ങളെ പ്രോത്സാഹിപ്പിക്കുന്നു
+						നിങ്ങൾക്ക് കൂടുതൽ വിവരങ്ങളോ ഉപേക്ഷിക്കാനുള്ള പിന്തുണയോ വേണമെങ്കിൽ മദ്യ സേവനം
+						നിങ്ങളുടെ ഉപയോഗം.
+					</p>
+					<p>
+						ഒരു പ്രതിസന്ധി ഘട്ടത്തിൽ എന്തുചെയ്യണമെന്ന് നിങ്ങൾക്കറിയാമെന്ന് ഉറപ്പാക്കുക
+						<br />
+						ഹാലുസിനോജനുകൾ ഉപയോഗിക്കുമ്പോൾ ആരെങ്കിലും അമിതമായി കഴിക്കുകയോ പ്രതികൂല പ്രതികരണം ഉണ്ടാകുകയോ ചെയ്താൽ,
+						ഓസ്ട്രേലിയയിൽ
+					</p>
+					<p>
+						<a href="tel:000">ട്രിപ്പിൾ സീറോ എന്ന് വിളിക്കുക(000)</a>
+					</p>
+					<p>
+						അവർക്ക് ഉടൻ തന്നെ പ്രൊഫഷണൽ സഹായം ലഭിക്കേണ്ടത് വളരെ പ്രധാനമാണ്
+						സാധ്യമാണ്. പെട്ടെന്നുള്ള പ്രതികരണം അവരുടെ ജീവൻ രക്ഷിക്കും, അതിനാൽ വൈകരുത്.
+					</p>
+				</div>
+			),
+			"opioids": (
+				<div>
+					<p>
+						നിങ്ങളുടെ ഉത്തരങ്ങളെ അടിസ്ഥാനമാക്കി, നിങ്ങളുടെ ഒപിയോയിഡ് ഉപയോഗം നിങ്ങളെ മിതമായ അപകടത്തിലാക്കുന്നു
+						ആരോഗ്യം, സാമൂഹികം, സാമ്പത്തികം, നിയമപരമായ പ്രശ്നങ്ങൾ
+						<br />
+						വേദനയ്ക്ക് ഒപിയോയിഡുകൾ വളരെ ഉപയോഗപ്രദമായ മരുന്നുകളാണെങ്കിലും, നോൺ-മെഡിക്കൽ ഉപയോഗം ആകാം
+						വളരെ ദോഷകരമാണ്. ഒപിയോയിഡ്/ഹെറോയിൻ ഉപയോഗം ഒരു ശ്രേണിയുമായി ബന്ധപ്പെട്ടിരിക്കുമെന്ന് അറിഞ്ഞിരിക്കുക
+						ആരോഗ്യം, സാമൂഹികം, സാമ്പത്തികം, നിയമപരമായ പ്രശ്നങ്ങൾ എന്നിവ ഉൾപ്പെടെ:
+					</p>
+					<ul>
+						<li>ശ്രദ്ധ കേന്ദ്രീകരിക്കാനും കാര്യങ്ങൾ ഓർമ്മിക്കാനും ബുദ്ധിമുട്ട്</li>
+						<li>മൂത്രമൊഴിക്കാനുള്ള ബുദ്ധിമുട്ട്; മലബന്ധം</li>
+						<li>വരണ്ട വായ, ദന്തക്ഷയം</li>
+						<li>ഓക്കാനം, വിശപ്പ് കുറവ്</li>
+						<li>മന്ദഗതിയിലുള്ള ശ്വസനവും ഹൃദയമിടിപ്പും, ക്രമരഹിതമായ ഹൃദയമിടിപ്പ്</li>
+						<li>ലൈംഗികാഭിലാഷവും ലൈംഗിക പ്രകടനവും കുറയുന്നു</li>
+						<li>ക്രമരഹിതമായ ആർത്തവവും കുട്ടികളുണ്ടാകാനുള്ള ബുദ്ധിമുട്ടും</li>
+						<li>ബന്ധത്തിലെ ബുദ്ധിമുട്ടുകൾ</li>
+						<li>സാമ്പത്തിക, തൊഴിൽ പ്രശ്നങ്ങൾ, നിയമപരമായ പ്രശ്നങ്ങൾ</li>
+						<li>അമിത അളവും ശ്വാസതടസ്സം മൂലമുള്ള മരണവും</li>
+						<li>ഒപിയോയിഡ് ആശ്രിതത്വം</li>
+					</ul>
+					<p>
+						ഒപിയോയിഡുകൾ/ഹെറോയിൻ മദ്യം, കുറിപ്പടി അല്ലെങ്കിൽ അധികമായി കലർത്തുന്നതിന്റെ ഫലങ്ങൾ
+						കൌണ്ടർ മരുന്നുകൾ, കൂടാതെ/അല്ലെങ്കിൽ മറ്റ് നിയമവിരുദ്ധ മരുന്നുകൾ എന്നിവ പലപ്പോഴും പ്രവചനാതീതമാണ്. ഇൻ
+						പ്രത്യേകിച്ച്, മദ്യം പോലെയുള്ള മറ്റ് വിഷാദ മരുന്നുകളുമായി ഒപിയോയിഡുകൾ കലർത്തുന്നത്
+						സെഡേറ്റീവ്സ് വിഷാദരോഗം വർദ്ധിപ്പിക്കുകയും ശ്വാസോച്ഛ്വാസം ഉണ്ടാക്കുകയും ചെയ്യും
+						വിഷാദം, കോമ, മരണം.
+						<br />
+						നിങ്ങൾക്ക് പ്രത്യേകമായി കൂടുതൽ വിവരങ്ങൾ വേണമെങ്കിൽ
+						<a href="https://assistplus.com.au/drug-information/opioids/">
+							ഒപിയോയിഡുകൾ ഇവിടെ ക്ലിക്ക് ചെയ്യുക.
+						</a>
+					</p>
+					<p>
+						നിങ്ങളുടെ പ്രതികരണങ്ങളെ അടിസ്ഥാനമാക്കി, നിങ്ങൾക്ക് ഒന്നോ അതിലധികമോ അനുഭവങ്ങൾ ഉണ്ടായിട്ടുണ്ടെന്ന് തോന്നുന്നു
+						കഴിഞ്ഞ 3 മാസത്തെ ഒപിയോയിഡ് സംബന്ധമായ പ്രശ്നങ്ങൾ.
+					</p>
+					<p>
+						ഈ പ്രശ്‌നങ്ങളെക്കുറിച്ച് നിങ്ങൾക്ക് എത്രമാത്രം ആശങ്കയുണ്ട്?
+						<br />
+						നിങ്ങളുടെ ഒപിയോയിഡ്/ഹെറോയിൻ ഉപയോഗം കുറയ്ക്കുന്നതിനോ നിർത്തുന്നതിനോ നിങ്ങൾ പരിഗണിക്കേണ്ടതുണ്ടോ? എങ്കിൽ
+						എല്ലാ നല്ല കാര്യങ്ങളും ലിസ്റ്റുചെയ്യുന്നത് സഹായകരമാകുമെന്ന് നിങ്ങൾക്ക് ഉറപ്പില്ല
+						നിങ്ങളുടെ ഒപിയോയിഡ് ഉപയോഗത്തെക്കുറിച്ചും അതിന്റെ നേട്ടങ്ങളെയും ചെലവുകളെയും കുറിച്ച് വളരെ നല്ല കാര്യങ്ങൾ
+						വെട്ടിമുറിക്കുക അല്ലെങ്കിൽ നിർത്തുക. നിങ്ങൾക്ക് ഒരു കോസ്റ്റ്-ബെനിഫിറ്റ് അനാലിസിസ് കണ്ടെത്താം
+						<a href="http://smartrecoveryaustralia.com.au/resources/smart-worksheets/">
+							വർക്ക്ഷീറ്റും മറ്റ് ഉപയോഗപ്രദമായ ഉപകരണങ്ങളും ഇവിടെയുണ്ട്
+						</a>
+						<br />
+						ഉപയോഗിക്കാതിരിക്കുന്നതിലൂടെയോ നിങ്ങളുടെ ഒപിയോയിഡ്/ഹെറോയിൻ ഉപയോഗം വളരെ കുറവായി നിലനിർത്തുന്നതിലൂടെയോ നിങ്ങൾ കണ്ടെത്തും
+						നിങ്ങളുടെ വിശപ്പ്, ഏകാഗ്രത, ഓർമ്മശക്തി, ജാഗ്രത എന്നിവ മെച്ചപ്പെടും
+						ദന്ത, ശാരീരിക ആരോഗ്യം മെച്ചപ്പെടും, നിങ്ങളുടെ ലൈംഗിക പ്രവർത്തനം മെച്ചപ്പെടുത്തും
+						മെച്ചപ്പെടുത്തുക, നിങ്ങൾക്ക് അമിതമായി കഴിക്കാനുള്ള സാധ്യത കുറവാണ്.
+					</p>
+					<p>
+					   ഒപിയോയിഡുകൾ/ഹെറോയിൻ ഉപയോഗിക്കുന്നത് കുറയ്ക്കാനോ നിർത്താനോ നിങ്ങൾ ആഗ്രഹിക്കുന്നുവെങ്കിൽ ചിലത് ഇവിടെയുണ്ട്
+						നിങ്ങളെ സഹായിക്കുന്നതിനുള്ള തന്ത്രങ്ങൾ.
+						<br />
+						വെട്ടിക്കുറയ്ക്കുക എന്നതാണ് നിങ്ങളുടെ ലക്ഷ്യമെങ്കിൽ:
+					</p>
+					<ul>
+						<li>നിങ്ങൾ എത്ര തവണ, എത്ര തവണ ഉപയോഗിക്കുമെന്ന് പ്ലാൻ ചെയ്യുക</li>
+						<li>ഒരു സെഷനിൽ നിങ്ങൾ ഉപയോഗിക്കാൻ ഉദ്ദേശിക്കുന്നതിനേക്കാൾ കൂടുതൽ വാങ്ങരുത്</li>
+						<li>കൂടുതൽ ഉപയോഗിക്കാൻ നിങ്ങളെ പ്രേരിപ്പിക്കുന്ന ഒരു ശേഖരം ഒഴിവാക്കുക</li>
+					</ul>
+					<p>നിർത്തുക എന്നതാണ് നിങ്ങളുടെ ലക്ഷ്യമെങ്കിൽ:</p>
+					<ul>
+						<li>ഒരു ലക്ഷ്യ തീയതി സജ്ജീകരിച്ച് ആ തീയതിയിൽ നിർത്തുക</li>
+						<li>
+							നിങ്ങൾ നിർത്താൻ പോകുകയാണെന്ന് ഒരു സുഹൃത്തിനോടോ കുടുംബാംഗത്തോടോ പറയുക
+							നിങ്ങളെ പിന്തുണയ്ക്കാൻ കഴിയും.
+						</li>
+						<li>
+							നിങ്ങൾ ഇല്ലാത്ത സമയങ്ങളിൽ അധിക സമയം നിറയ്ക്കാൻ ചില ബദൽ പ്രവർത്തനങ്ങൾ ആസൂത്രണം ചെയ്യുക
+							ഉപയോഗിക്കുന്നത്.
+						</li>
+						<li>
+							ഉപയോഗിക്കാനും ആസൂത്രണം ചെയ്യാനും നിങ്ങൾ പ്രലോഭിപ്പിച്ചേക്കാവുന്ന സാഹചര്യങ്ങളെക്കുറിച്ച് ചിന്തിക്കുക
+							അവ ഒഴിവാക്കുക അല്ലെങ്കിൽ ഒപിയോയിഡുകൾ/ഹെറോയിൻ ഉപയോഗിക്കുന്നത് എങ്ങനെ ഒഴിവാക്കണമെന്ന് ആസൂത്രണം ചെയ്യുക
+						</li>
+						<li>
+							നിങ്ങൾക്ക് ഉപയോഗിക്കാൻ ശക്തമായ ആഗ്രഹം ഉണ്ടായിരുന്ന സമയങ്ങളുടെ റെക്കോർഡ് സൂക്ഷിക്കുക
+							ഒപിയോയിഡുകൾ/ഹെറോയിൻ. ഉയർന്ന അപകടസാധ്യതയുള്ള സാഹചര്യങ്ങൾ തിരിച്ചറിയാനും ഇത് നിങ്ങളെ സഹായിക്കും
+							അവ ഒഴിവാക്കാനോ നിയന്ത്രിക്കാനോ ആസൂത്രണം ചെയ്യുക. നിങ്ങൾക്ക് ഒരു ഡൗൺലോഡ് ചെയ്യാം
+							<a href="https://smartrecoveryaustralia.com.au/resources/smart-%20worksheets/">
+								ഇവിടെ ലോഗിൻ ചെയ്യാൻ ആവശ്യപ്പെടുക.
+							</a>
+						</li>
+					</ul>
+					<p>
+						വെട്ടിക്കുറയ്ക്കാൻ നിങ്ങൾക്ക് കൂടുതൽ സഹായം വേണമെങ്കിൽ സേവനങ്ങളും വിഭവങ്ങളുമുണ്ട്
+						അത് നിങ്ങളെ സഹായിക്കും.
+					</p>
+					<ul>
+						<li>
+							നിങ്ങൾക്ക് ADIS-നെ വിളിക്കാം - ആൽക്കഹോൾ ആൻഡ് ഡ്രഗ് ഇൻഫർമേഷൻ സർവീസ്
+							കൂടാതെ റഫറലുകൾ:
+							<a href="tel:1800250015">1800250015</a>
+						</li>
+						<li>
+							നിങ്ങൾക്ക് 12-നും 25-നും ഇടയിൽ പ്രായമുണ്ടെങ്കിൽ, നിങ്ങൾക്ക് ഹെഡ്‌സ്‌പേസിനെ വിളിക്കാം
+							റഫറലുകൾ
+						</li>
+						<li>
+							<a href="http://smartrecoveryaustralia.com.au/">സ്മാർട്ട് റിക്കവറി</a> ഏതെങ്കിലും പ്രശ്‌നകരമായ സ്വഭാവമുള്ള ആളുകളെ സഹായിക്കുന്ന സ്വതന്ത്ര ഗ്രൂപ്പ് പ്രോഗ്രാമാണ്
+						</li>
+					</ul>
+					<p>
+						ഭാവിയിൽ നിങ്ങൾ ഒപിയോയിഡ് സംബന്ധമായ പ്രശ്നങ്ങൾ ഉണ്ടാകാനുള്ള സാധ്യത വർദ്ധിപ്പിക്കുന്നത് ഒഴിവാക്കാൻ
+						നിങ്ങൾ എത്ര തവണ, എത്രത്തോളം ഉപയോഗിക്കുന്നു, എത്രത്തോളം എന്നിവ ട്രാക്ക് ചെയ്യാൻ എന്റെ ഡയറി ഉപയോഗിക്കാം
+						ചെലവഴിക്കുക.
+						<br />
+						എങ്കിൽ നിങ്ങൾക്ക് തിരികെ വന്ന് 3 മാസത്തിനുള്ളിൽ വീണ്ടും ചെക്ക് അപ്പ് പൂർത്തിയാക്കാം
+						നിങ്ങൾ എങ്ങനെ പോകുന്നു എന്ന് കാണാൻ ആഗ്രഹിക്കുന്നു.
+					</p>
+					<p>
+						കുത്തിവയ്ക്കുന്നത്
+						<br />
+					   നിങ്ങൾ ഒപിയോയിഡുകൾ / ഹെറോയിൻ കുത്തിവയ്ക്കുകയാണെങ്കിൽ, നിങ്ങൾ ആശ്രിതനാകാനുള്ള സാധ്യത വർദ്ധിപ്പിക്കുന്നു.
+						നിങ്ങളുടെ ചർമ്മത്തിനും സിരകൾക്കും കേടുപാടുകൾ വരുത്തുകയും അണുബാധകൾ, കുരുക്കൾ എന്നിവയും ഉണ്ടാകുകയും ചെയ്യാം
+						അൾസർ. നിങ്ങൾ കുത്തിവയ്ക്കുന്ന ഉപകരണങ്ങൾ പങ്കുവെച്ചാൽ നിങ്ങൾക്ക് രക്തം പകരാനുള്ള സാധ്യതയുണ്ട്
+						ഹെപ്പറ്റൈറ്റിസ് ബി പോലുള്ള വൈറസ് അണുബാധകൾ
+						<br />
+						നിങ്ങൾ കുത്തിവയ്ക്കാൻ തിരഞ്ഞെടുക്കുകയാണെങ്കിൽ
+					</p>
+					<ul>
+						<li>എപ്പോഴും വൃത്തിയുള്ള ഉപകരണങ്ങളും പുതിയ സൂചിയും സിറിഞ്ചും ഉപയോഗിക്കുക.</li>
+						<li>ഒരു ഉപകരണവും പങ്കിടരുത്.</li>
+						<li>
+							തയ്യാറാക്കുന്ന സ്ഥലവും കൈകളും കുത്തിവയ്ക്കുന്ന സ്ഥലവും എപ്പോഴും വൃത്തിയാക്കുക.
+						</li>
+						<li>ഓരോ തവണയും സാവധാനം മറ്റൊരു സൈറ്റിൽ കുത്തിവയ്ക്കുക</li>
+						<li>ഉപയോഗിച്ച സൂചിയും സിറിഞ്ചും മൂർച്ചയുള്ള പാത്രത്തിൽ കളയുക.</li>
+					</ul>
+					<p>
+						നിങ്ങൾ എപ്പോഴെങ്കിലും ഒപിയോയിഡുകൾ/ഹെറോയിൻ കുത്തിവച്ചിട്ടുണ്ടെങ്കിൽ ആരോഗ്യസ്ഥിതി കാണണമെന്ന് ഞങ്ങൾ ശുപാർശ ചെയ്യുന്നു
+						രക്തത്തിൽ പകരുന്ന വൈറസുകൾക്കായി കെയർ പ്രൊഫഷണലുകൾ പരിശോധിക്കണം.
+					</p>
+					<p>
+						ഒരു പ്രതിസന്ധി ഘട്ടത്തിൽ എന്തുചെയ്യണമെന്ന് നിങ്ങൾക്കറിയാമെന്ന് ഉറപ്പാക്കുക
+						<br />
+						ഒപിയോയിഡുകൾ/ഹെറോയിൻ ഉപയോഗിക്കുമ്പോൾ ആരെങ്കിലും അമിതമായി കഴിക്കുകയോ പ്രതികൂല പ്രതികരണം ഉണ്ടാകുകയോ ചെയ്താൽ,
+						ഓസ്ട്രേലിയയിൽ
+					</p>
+					<p>
+						<a href="tel:000">ട്രിപ്പിൾ സീറോ എന്ന് വിളിക്കുക(000)</a>
+					</p>
+					<p>
+						അവർക്ക് ഉടൻ തന്നെ പ്രൊഫഷണൽ സഹായം ലഭിക്കേണ്ടത് വളരെ പ്രധാനമാണ്
+						സാധ്യമാണ്. പെട്ടെന്നുള്ള പ്രതികരണം അവരുടെ ജീവൻ രക്ഷിക്കും, അതിനാൽ വൈകരുത്.
+					</p>
+				</div>
+			),
+			"other": null,
+		},
+		"referral": {
+			"tobacco": (
+				<div>
+					<p>
+						നിങ്ങളുടെ പുകവലി നിങ്ങളെ അനുഭവത്തിന്റെ <strong>ഉയർന്ന അപകടസാധ്യതയിൽ</strong> എത്തിക്കുന്നു
+						ആരോഗ്യം, സാമൂഹികവും സാമ്പത്തികവുമായ പ്രശ്നങ്ങൾ.
+						<br />
+						പുകയില ഉപയോഗത്തിന് ആരോഗ്യപരമായ ഗുണങ്ങളൊന്നുമില്ല, സുരക്ഷിതമായ പുകവലിയും ഇല്ല. എങ്കിൽ
+						നിങ്ങൾ പുകവലിക്കാൻ തിരഞ്ഞെടുക്കുന്ന നിരവധി ആരോഗ്യപ്രശ്നങ്ങളെക്കുറിച്ച് അറിഞ്ഞിരിക്കുക
+						ഇനിപ്പറയുന്നതുപോലുള്ള പുകയില പുകവലി:
+					</p>
+					<ul>
+						<li>അകാല വാർദ്ധക്യം, ചർമ്മത്തിലെ ചുളിവുകൾ</li>
+						<li>ആസ്തമ, ശ്വാസകോശ സംബന്ധമായ അണുബാധകൾ, വിട്ടുമാറാത്ത ശ്വാസകോശ സംബന്ധമായ അസുഖം</li>
+						<li>ഉയർന്ന രക്തസമ്മർദ്ദം</li>
+						<li>പ്രമേഹം, പ്രമേഹത്തിന്റെ ഗുരുതരമായ സങ്കീർണതകൾ</li>
+						<li>ഗർഭം അലസൽ, മാസം തികയാതെയുള്ള പ്രസവം, ഭാരക്കുറവുള്ള കുഞ്ഞുങ്ങൾ</li>
+						<li>വൃക്ക രോഗം</li>
+						<li>ഹൃദ്രോഗം, പക്ഷാഘാതം, രക്തക്കുഴൽ രോഗം</li>
+						<li>കാൻസർ</li>
+						<li>
+							പുകവലിക്കാരുടെ കുട്ടികളിൽ ശ്വാസകോശ സംബന്ധമായ അണുബാധകൾ, അലർജികൾ, ആസ്ത്മ.
+						</li>
+					</ul>
+					<p>
+						കൂടുതൽ വിവരങ്ങൾ നിങ്ങൾക്ക് വേണമെങ്കിൽ{" "}
+						<a href="https://assistplus.com.au/drug-information/nicotine/">
+							പുകയില ഇവിടെ ക്ലിക്ക് ചെയ്യുക.
+						</a>
+					</p>
+					<p>
+						നിങ്ങളുടെ പ്രതികരണങ്ങളെ അടിസ്ഥാനമാക്കി, നിങ്ങൾ പലതും അനുഭവിക്കുന്നുണ്ടാകാം
+						നിങ്ങളുടെ പുകവലിയുമായി ബന്ധപ്പെട്ട പ്രശ്നങ്ങൾ.
+					</p>
+					<p>
+						ഈ പ്രശ്‌നങ്ങളെക്കുറിച്ച് നിങ്ങൾക്ക് എത്രമാത്രം ആശങ്കയുണ്ട്?
+						<br />
+						നിങ്ങളുടെ അപകടസാധ്യത കുറയ്ക്കുന്നതിനുള്ള ഏറ്റവും നല്ല മാർഗം പുകവലി നിർത്തുക എന്നതാണ്.
+						<br />
+						നിങ്ങൾ എന്താണ് ചെയ്യാൻ ആഗ്രഹിക്കുന്നതെന്ന് നിങ്ങൾക്ക് ഉറപ്പില്ലെങ്കിൽ എല്ലാം ലിസ്റ്റ് ചെയ്യുന്നത് സഹായകമാകും
+						നല്ല കാര്യങ്ങളും പുകവലി ഉപയോഗത്തെക്കുറിച്ചും അത്ര നല്ലതല്ല
+						ആനുകൂല്യങ്ങളും നിർത്തുന്നതിനുള്ള ചെലവുകളും. നിങ്ങൾക്ക് ഒരു കോസ്റ്റ്-ബെനിഫിറ്റ് അനാലിസിസ് കണ്ടെത്താം{" "}
+						<a href="http://smartrecoveryaustralia.com.au/resources/smart-worksheets/">
+							വർക്ക്ഷീറ്റും മറ്റ് ഉപയോഗപ്രദമായ ഉപകരണങ്ങളും ഇവിടെയുണ്ട്
+						</a>
+						<br />
+						ഉപേക്ഷിക്കുന്നതിലൂടെ, നിങ്ങൾ ചെറുപ്പമായി കാണപ്പെടുമെന്ന് നിങ്ങൾ കണ്ടെത്തും, നിങ്ങൾക്ക് ലഭിക്കും
+						ഫിറ്റർ, നിങ്ങളുടെ ശ്വാസം, മുടി, വസ്ത്രങ്ങൾ എന്നിവ നന്നായി മണക്കും, നിങ്ങളുടെ രുചിബോധം
+						മണം മെച്ചപ്പെടും, നിങ്ങളുടെ ദന്ത, ശാരീരിക ആരോഗ്യം മെച്ചപ്പെടും
+						നിങ്ങളുടെ കുടുംബത്തിന് ഗുരുതരമായ ആരോഗ്യപ്രശ്നങ്ങൾ ഉണ്ടാകാനുള്ള സാധ്യത വളരെ കുറവായിരിക്കും.
+						<br />നിർത്തുന്നതിന്റെ പ്രയോജനങ്ങളുടെ ഒരു ലിസ്റ്റ് ഇതിൽ കാണാം{" "}
+						<a href="http://www.quitnow.gov.au/">ക്വിറ്റ് നൗ വെബ്സൈറ്റ്</a>
+					</p>
+					<p>പുകവലി നിർത്താൻ നിങ്ങൾ ആഗ്രഹിക്കുന്നുവെങ്കിൽ, നിങ്ങളെ സഹായിക്കുന്ന ചില തന്ത്രങ്ങൾ ഇതാ.</p>
+					<ul>
+						<li>ഒരു ലക്ഷ്യ തീയതി സജ്ജീകരിച്ച് ആ തീയതിയിൽ നിർത്തുക</li>
+						<li>
+							നിങ്ങൾ നിർത്താൻ പോകുകയാണെന്ന് ഒരു സുഹൃത്തിനോടോ കുടുംബാംഗത്തോടോ പറയുക
+							നിങ്ങളെ പിന്തുണയ്ക്കാൻ കഴിയും.
+						</li>
+						<li>
+							നിങ്ങൾ ഇല്ലാത്ത സമയങ്ങളിൽ അധിക സമയം നിറയ്ക്കാൻ ചില ബദൽ പ്രവർത്തനങ്ങൾ ആസൂത്രണം ചെയ്യുക
+							ഉപയോഗിക്കുന്നത്.
+						</li>
+						<li>
+							ഉപയോഗിക്കാനും ആസൂത്രണം ചെയ്യാനും നിങ്ങൾ പ്രലോഭിപ്പിച്ചേക്കാവുന്ന സാഹചര്യങ്ങളെക്കുറിച്ച് ചിന്തിക്കുക
+							അവ ഒഴിവാക്കുക അല്ലെങ്കിൽ പുകയില ഉപയോഗിക്കുന്നത് എങ്ങനെ ഒഴിവാക്കണമെന്ന് ആസൂത്രണം ചെയ്യുക
+						</li>
+						<li>
+							നിങ്ങൾക്ക് പുകയില ഉപയോഗിക്കാനുള്ള ശക്തമായ ആഗ്രഹം ഉണ്ടായിരുന്ന സമയങ്ങളുടെ ഒരു റെക്കോർഡ് സൂക്ഷിക്കുക.
+							ഉയർന്ന അപകടസാധ്യതയുള്ള സാഹചര്യങ്ങൾ തിരിച്ചറിയാനും ഒഴിവാക്കാനും ആസൂത്രണം ചെയ്യാനും ഇത് നിങ്ങളെ സഹായിക്കും
+							അവരെ കൈകാര്യം ചെയ്യുക. നിങ്ങൾക്ക് ഒരു ഡൗൺലോഡ് ചെയ്യാം{" "}
+							<a href="https://smartrecoveryaustralia.com.au/resources/smart-worksheets/">
+								ഇവിടെ ലോഗിൻ ചെയ്യാൻ ആവശ്യപ്പെടുക.
+							</a>
+						</li>
+						<li>
+							കൂടുതൽ സഹായം നേടുക{" "}
+							<a href="https://www.health.gov.au/health-topics/smoking-and-tobacco/how-to-quit-smoking?utm_source=quitnow.gov.au&utm_medium=redirect&utm_campaign=digital_transformation">
+								ക്വിറ്റ് നൗ വെബ്സൈറ്റ്
+							</a>
+						</li>
+						<li>
+						   നിങ്ങൾക്ക് കൂടുതൽ സഹായം വേണമെങ്കിൽ ഡൗൺലോഡ് ചെയ്യാം{" "}
+							<a href="https://www.health.gov.au/resources/apps-and-tools/my-quitbuddy-app">
+								ഈ സൗജന്യ ക്വിറ്റ് ബഡ്ഡി ആപ്പ്
+							</a>{" "}
+							കൂടാതെ/അല്ലെങ്കിൽ ഒരു ഹെൽത്ത് കെയർ പ്രൊഫഷണലുമായി സംസാരിക്കുക.
+						</li>
+					</ul>
+					<p>നിങ്ങൾക്ക് പുകവലി ഉപേക്ഷിക്കേണ്ടതുണ്ടോ എന്ന് ഇപ്പോഴും ഉറപ്പില്ലേ? ഈ കുറച്ച് ചോദ്യങ്ങൾക്ക് ഉത്തരം നൽകുക:</p>
+					<ul>
+						<li>
+							ആസക്തി പോലുള്ള ശാരീരിക പിൻവലിക്കൽ ലക്ഷണങ്ങൾ നിങ്ങൾക്ക് അനുഭവപ്പെടുന്നുണ്ടോ?
+							സിഗരറ്റ്, ക്ഷോഭം, ഉത്കണ്ഠയും വിഷാദവും, വിശ്രമമില്ലാത്ത ഉറക്കം, കുഴപ്പം
+							ഏകാഗ്രത, തലവേദന, ചുമയും തൊണ്ടവേദനയും, വേദനയും വേദനയും,
+							നിങ്ങൾക്ക് പുകയില ഇല്ലെങ്കിൽ വയറിനും കുടലിനും അസ്വസ്ഥതയുണ്ടോ?
+						</li>
+						<li>
+							നിങ്ങളുടേതാണെങ്കിലും പുകയില ഉപയോഗം കുറയ്ക്കാനോ നിർത്താനോ നിങ്ങൾക്ക് കഴിയുന്നില്ലേ?
+							ആരോഗ്യ പ്രശ്‌നങ്ങളോ സാമ്പത്തിക പ്രശ്‌നങ്ങളോ തുടരുകയാണോ അതോ മോശമായിരിക്കുകയാണോ? നിങ്ങൾ പോയിട്ടുണ്ടോ
+							നിങ്ങളുടെ ആരോഗ്യം അല്ലെങ്കിൽ പുകയില ഉപയോഗം കുറയ്ക്കാനോ നിർത്താനോ കഴിയില്ല
+							സാമ്പത്തിക പ്രശ്നങ്ങൾ തുടരുകയാണോ അതോ കൂടുതൽ വഷളായിട്ടുണ്ടോ?
+						</li>
+						<li>
+						   നിങ്ങൾക്ക് ആരോഗ്യപരമോ മാനസികമോ ആയ പ്രശ്‌നങ്ങൾ ഉണ്ടോ, അത് മോശമാക്കിയേക്കാം
+							പുകയില ഉപയോഗിക്കുന്നുണ്ടോ?
+						</li>
+					</ul>
+					<p>
+						ഈ ചോദ്യങ്ങളിൽ ഏതെങ്കിലുമൊന്നിന് നിങ്ങൾ അതെ എന്ന് ഉത്തരം നൽകിയെങ്കിൽ, ഞങ്ങൾ നിങ്ങളോട് ശക്തമായി ശുപാർശ ചെയ്യുന്നു
+						കൂടുതൽ വിലയിരുത്തലിനും സഹായത്തിനുമായി ഒരു ഹെൽത്ത് കെയർ പ്രൊഫഷണലിനെ കാണുക.
+						<br />
+						നിങ്ങളെ സഹായിക്കുന്ന മറ്റ് സേവനങ്ങളും ഉറവിടങ്ങളും ഉണ്ട്.
+					</p>
+					<ul>
+						<li>
+						   നിങ്ങൾക്ക് ക്വിറ്റ്‌ലൈനിൽ വിളിക്കാം <a href="tel:137848">137848</a>
+						</li>
+						<li>
+							<a href="http://smartrecoveryaustralia.com.au/">സ്മാർട്ട് റിക്കവറി</a> ഏതെങ്കിലും പ്രശ്‌നകരമായ സ്വഭാവമുള്ള ആളുകളെ സഹായിക്കുന്ന സ്വതന്ത്ര ഗ്രൂപ്പ് പ്രോഗ്രാമാണ്
+						</li>
+					</ul>
+					<p>
+						ഭാവിയിൽ നിങ്ങൾക്ക് പുകയിലയുമായി ബന്ധപ്പെട്ട പ്രശ്നങ്ങൾ ഉണ്ടാകാനുള്ള സാധ്യത വർദ്ധിപ്പിക്കുന്നത് ഒഴിവാക്കാൻ
+						നിങ്ങൾ എത്ര തവണ, എത്രത്തോളം ഉപയോഗിക്കുന്നു, എത്രത്തോളം എന്നിവ ട്രാക്ക് ചെയ്യാൻ എന്റെ ഡയറി ഉപയോഗിക്കാം
+						ചെലവഴിക്കുക.
+						<br />
+						എങ്കിൽ നിങ്ങൾക്ക് തിരികെ വന്ന് 3 മാസത്തിനുള്ളിൽ വീണ്ടും ചെക്ക് അപ്പ് പൂർത്തിയാക്കാം
+						നിങ്ങൾ എങ്ങനെ പോകുന്നു എന്ന് കാണാൻ ആഗ്രഹിക്കുന്നു.
+					</p>
+				</div>
+			),
+			"alcohol": (
+				<div>
+					<p>
+						നിങ്ങൾ ആരോഗ്യം, സാമൂഹികം, അനുഭവിക്കുന്നതിൽ <strong>ഉയർന്ന അപകടസാധ്യതയിലാണ്</strong>
+						നിങ്ങളുടെ നിലവിലെ പാറ്റേണിനെ അടിസ്ഥാനമാക്കിയുള്ള സാമ്പത്തികവും നിയമപരവും ബന്ധപരവുമായ പ്രശ്നങ്ങൾ
+						മദ്യം ഉപയോഗം
+						<br />
+					   മദ്യത്തിന്റെ ഉപയോഗം ആരോഗ്യം, സാമൂഹികം, സാമ്പത്തികം, നിയമപരം എന്നിവയുമായി ബന്ധപ്പെട്ടിരിക്കുന്നു
+						ഇതുപോലുള്ള പ്രശ്നങ്ങൾ:
+					</p>
+					<ul>
+						<li>അപകടങ്ങളും പരിക്കുകളും</li>
+						<li>സാമ്പത്തിക, ജോലി പ്രശ്നങ്ങൾ</li>
+						<li>ആക്രമണാത്മകവും അക്രമാസക്തവുമായ പെരുമാറ്റം</li>
+						<li>ഡ്രിങ്ക് ഡ്രൈവിംഗ് ചാർജുകൾ</li>
+						<li>ബന്ധങ്ങളിലെ പ്രശ്നങ്ങൾ</li>
+						<li>അകാല വാർദ്ധക്യം</li>
+						<li>ലൈംഗിക പ്രകടനം കുറയുന്നു</li>
+						<li>കാര്യങ്ങൾ ഓർത്തെടുക്കാനും പ്രശ്നങ്ങൾ പരിഹരിക്കാനും ബുദ്ധിമുട്ട്</li>
+						<li>ഉയർന്ന രക്തസമ്മർദ്ദം</li>
+						<li>ഉത്കണ്ഠയും വിഷാദവും</li>
+						<li>ദഹന പ്രശ്നങ്ങൾ, അൾസർ</li>
+						<li>ഗർഭിണികൾക്ക്, ഗര്ഭപിണ്ഡത്തിന്റെ ആൽക്കഹോൾ സ്പെക്ട്രം ഡിസോർഡർ ഉണ്ടാകാനുള്ള സാധ്യത.</li>
+					</ul>
+					<p>
+						ദീർഘകാലാടിസ്ഥാനത്തിൽ മദ്യപാനം പേശികളോടും നാഡികളോടും ബന്ധപ്പെട്ടിരിക്കാം
+						ക്ഷതം, സ്ഥിരമായ മസ്തിഷ്ക ക്ഷതം, പക്ഷാഘാതം, ഹൃദ്രോഗം, വൃക്കരോഗം,
+						പാൻക്രിയാറ്റിസ്, കരൾ രോഗം, ക്യാൻസറുകൾ.
+					</p>
+					<p>
+					   നിങ്ങളുടെ അപകടസാധ്യത കുറയ്ക്കുന്നതിനുള്ള ഏറ്റവും നല്ല മാർഗം മദ്യപാനം കുറയ്ക്കുകയോ നിർത്തുകയോ ചെയ്യുക എന്നതാണ്.
+						ഉയർന്ന അപകടസാധ്യതയുള്ള ശ്രേണിയിലുള്ള ആളുകൾ പലപ്പോഴും മദ്യത്തെ ആശ്രയിക്കുന്നതിന്റെ ലക്ഷണങ്ങൾ കാണിക്കുന്നു,
+						അവർ കാണിക്കുന്ന മദ്യപാനം നിർത്തുകയോ ഗണ്യമായി കുറയ്ക്കുകയോ ചെയ്താൽ എന്നാണ് അർത്ഥമാക്കുന്നത്
+						മദ്യം പിൻവലിക്കുന്നതിന്റെ ശാരീരികവും മാനസികവുമായ അടയാളങ്ങൾ. അത് ശക്തമാണ്
+						കുറയ്ക്കാനോ നിർത്താനോ ആസൂത്രണം ചെയ്യുമ്പോൾ നിങ്ങൾ വൈദ്യോപദേശം തേടണമെന്ന് ഉപദേശിച്ചു
+						മദ്യം ഉപയോഗം.കൂടുതൽ വിവരങ്ങൾ നിങ്ങൾക്ക് വേണമെങ്കിൽ
+						<a href="https://assistplus.com.au/drug-information/australian-alcohol-guidelines/">
+							മദ്യം ഇവിടെ ക്ലിക്ക് ചെയ്യുക.
+						</a>
+					</p>
+					<p>
+						നിങ്ങളുടെ പ്രതികരണങ്ങളെ അടിസ്ഥാനമാക്കി, നിങ്ങൾ ഒന്നോ അതിലധികമോ അനുഭവിച്ചതായി തോന്നുന്നു
+						നിങ്ങളുടെ മദ്യപാനവുമായി ബന്ധപ്പെട്ട പ്രശ്നങ്ങൾ.
+					</p>
+					<p>
+						ഈ പ്രശ്‌നങ്ങളെക്കുറിച്ച് നിങ്ങൾക്ക് എത്രമാത്രം ആശങ്കയുണ്ട്? നിങ്ങൾക്ക് ഉറപ്പില്ലെങ്കിൽ, ഉത്തരം നൽകുക
+						ഇനിപ്പറയുന്ന ചോദ്യങ്ങൾ:
+					</p>
+					<ul>
+						<li>മദ്യപാനം കുറയ്ക്കുന്നതിനോ നിർത്തുന്നതിനോ സഹായം ആവശ്യമാണെന്ന് നിങ്ങൾ കരുതുന്നുണ്ടോ?</li>
+						<li>
+							ഉത്കണ്ഠ, ഓക്കാനം, തുടങ്ങിയ ശാരീരിക പിൻവലിക്കൽ ലക്ഷണങ്ങൾ നിങ്ങൾക്ക് അനുഭവപ്പെടുന്നുണ്ടോ?
+							അതോ മദ്യം കഴിക്കാത്തപ്പോൾ വിറയലുണ്ടോ?
+						</li>
+						<li>
+							നിങ്ങളുടെ മദ്യപാനം കുറയ്ക്കാനോ നിർത്താനോ നിങ്ങൾക്ക് കഴിഞ്ഞിട്ടില്ലേ?
+							ആരോഗ്യം, കുടുംബം, ജോലി, സാമ്പത്തികമോ നിയമപരമോ ആയ പ്രശ്‌നങ്ങൾ തുടരുകയോ ലഭിക്കുകയോ ചെയ്തു
+							മോശമായത്?
+						</li>
+						<li>
+							നിങ്ങൾക്ക് ആരോഗ്യപരമോ മാനസികമോ ആയ പ്രശ്‌നങ്ങൾ ഉണ്ടോ, അത് മോശമാക്കിയേക്കാം
+							മദ്യപാനം?
+						</li>
+					</ul>
+					<p>
+						ഈ ചോദ്യങ്ങളിൽ ഏതെങ്കിലുമൊന്നിന് നിങ്ങൾ അതെ എന്ന് ഉത്തരം നൽകിയെങ്കിൽ, ഞങ്ങൾ നിങ്ങളോട് ശക്തമായി ശുപാർശ ചെയ്യുന്നു
+						കൂടുതൽ വിലയിരുത്തലിനും സഹായത്തിനുമായി ഒരു ഹെൽത്ത് കെയർ പ്രൊഫഷണലിനെ കാണുക.
+						<br/> 
+						അവിടെ നിങ്ങളെ സഹായിക്കുന്ന മറ്റ് സേവനങ്ങളും ഉറവിടങ്ങളും ഇവയാണ്:
+					</p>
+					<ul>
+						<li>
+							നിങ്ങൾക്ക് ADIS-നെ വിളിക്കാം - ആൽക്കഹോൾ ആൻഡ് ഡ്രഗ് ഇൻഫർമേഷൻ സർവീസ്
+							കൂടാതെ റഫറലുകൾ:
+							<a href="tel:1800250015">1800 250 015</a>
+						</li>
+						<li>
+							നിങ്ങൾക്ക് 12-നും 25-നും ഇടയിൽ പ്രായമുണ്ടെങ്കിൽ, നിങ്ങൾക്ക് ഹെഡ്‌സ്‌പേസിനെ വിളിക്കാം
+							റഫറലുകൾ
+						</li>
+						<li>
+							<a href="http://smartrecoveryaustralia.com.au/">സ്മാർട്ട് റിക്കവറി</a> ഏതെങ്കിലും പ്രശ്‌നകരമായ സ്വഭാവമുള്ള ആളുകളെ സഹായിക്കുന്ന സ്വതന്ത്ര ഗ്രൂപ്പ് പ്രോഗ്രാമാണ്.
+						</li>
+					</ul>
+					<p>
+					കുറഞ്ഞ അപകടസാധ്യതയുള്ള മദ്യപാന മാർഗ്ഗനിർദ്ദേശങ്ങൾ എന്തൊക്കെയാണ്?
+						<br />
+						മദ്യപാനവുമായി ബന്ധപ്പെട്ട അപകടസാധ്യത കുറയ്ക്കാൻ ഓസ്‌ട്രേലിയൻ വിദഗ്ധർ ശുപാർശ ചെയ്യുന്നു
+						രോഗം അല്ലെങ്കിൽ പരിക്ക്, ആരോഗ്യമുള്ള മുതിർന്നവർ (ഗർഭിണികളോ മുലയൂട്ടുന്നവരോ അല്ലാത്തവർ),
+						ആഴ്ചയിൽ 10 സ്റ്റാൻഡേർഡ് പാനീയങ്ങളിൽ കൂടുതൽ കുടിക്കാൻ പാടില്ല 2 സാധാരണ പാനീയങ്ങൾ
+						ദിവസം കൂടാതെ ഏതെങ്കിലും ഒരു ദിവസം 4 സാധാരണ പാനീയങ്ങളിൽ കൂടുതൽ പാടില്ല. നിങ്ങൾ കുടിക്കുന്നത് കുറയും,
+						മദ്യത്തിൽ നിന്നുള്ള നിങ്ങളുടെ അപകടസാധ്യത കുറയുന്നു.
+						<br />
+						10 ഗ്രാം ആൽക്കഹോൾ അടങ്ങിയ പാനീയമാണ് ഓസ്‌ട്രേലിയൻ സ്റ്റാൻഡേർഡ് ഡ്രിങ്ക്
+					</p>
+					<p>
+						<img
+							src="https://eassist.assistportal.com.au/assets/images/shared/feedback/alcohol.png"
+							alt=""
+						/>
+					</p>
+					<p>
+						സ്റ്റാൻഡേർഡ് ഡ്രിങ്ക്‌സ് ഗൈഡും ചിത്രങ്ങളും ഓസ്‌ട്രേലിയൻ ഗവൺമെന്റിന്റെ കടപ്പാട്
+						ആരോഗ്യ വകുപ്പ്.
+					</p>
+					<p>
+						നിങ്ങൾ 18 വയസ്സിന് താഴെയുള്ള ആളാണെങ്കിൽ, മദ്യപിക്കാതിരിക്കുന്നതാണ് ഏറ്റവും സുരക്ഷിതമായ ഓപ്ഷൻ എന്ന് വിദഗ്ധർ പറയുന്നു.
+						<br />
+						നിങ്ങൾ ഗർഭിണിയോ മുലയൂട്ടുകയോ ആണെങ്കിൽ അത് നിങ്ങൾക്കും നിങ്ങളുടെ കുഞ്ഞിനും സുരക്ഷിതമല്ല
+						മദ്യം കുടിക്കാൻ.
+						<br />
+						ഈ കുറഞ്ഞ അപകടസാധ്യതയുള്ള മാർഗ്ഗനിർദ്ദേശങ്ങൾ പാലിക്കുന്നതിലൂടെ നിങ്ങൾക്ക് കാണാനും അനുഭവിക്കാനും സാധ്യതയുണ്ട്
+						നല്ലത്, നിങ്ങളുടെ ഉറക്കവും മാനസികാവസ്ഥയും മെച്ചപ്പെട്ടേക്കാം, നിങ്ങൾക്ക് മെച്ചപ്പെടുത്തലുകൾ കണ്ടെത്താം
+						കുടുംബാംഗങ്ങളുമായും സുഹൃത്തുക്കളുമായും ഉള്ള ബന്ധം, നിങ്ങൾ അതിനുള്ള സാധ്യത കുറവായിരിക്കും
+						മദ്യവുമായി ബന്ധപ്പെട്ട പ്രശ്നങ്ങൾ അനുഭവിക്കുക.
+						<br />
+						ദീർഘകാലാടിസ്ഥാനത്തിൽ നിങ്ങളുടെ ശരീരഭാരം, ഉത്കണ്ഠ, വിഷാദം എന്നിവയ്ക്കുള്ള സാധ്യത കൂടുതലാണ്
+						രക്തസമ്മർദ്ദം, സ്ട്രോക്ക്, ഹൃദ്രോഗം, വൃക്ക രോഗം, കരൾ രോഗം, കൂടാതെ
+						അർബുദങ്ങൾ കുറയും.
+					</p>
+					<p>
+					   ഭാവിയിൽ മദ്യപാനവുമായി ബന്ധപ്പെട്ട പ്രശ്‌നങ്ങളുടെ സാധ്യത കുറയ്ക്കാൻ സഹായിക്കുന്നതിന് നിങ്ങൾക്ക് കഴിയും
+						നിങ്ങൾ എത്ര തവണ, എത്രമാത്രം കുടിക്കുന്നു, എത്രമാത്രം കുടിക്കുന്നു എന്നിവ ട്രാക്ക് ചെയ്യാൻ എന്റെ ഡയറി ഉപയോഗിക്കുക
+						ചെലവഴിക്കുക.
+						<br />
+						എങ്കിൽ നിങ്ങൾക്ക് തിരികെ വന്ന് 3 മാസത്തിനുള്ളിൽ വീണ്ടും ചെക്ക് അപ്പ് പൂർത്തിയാക്കാം
+						നിങ്ങൾ എങ്ങനെ പോകുന്നു എന്ന് കാണാൻ ആഗ്രഹിക്കുന്നു.
+					</p>
+					<p>
+						ഒരു പ്രതിസന്ധി ഘട്ടത്തിൽ എന്തുചെയ്യണമെന്ന് നിങ്ങൾക്കറിയാമെന്ന് ഉറപ്പാക്കുക
+						<br />
+						ആരെങ്കിലും അമിതമായി കഴിക്കുകയോ മദ്യം കഴിക്കുമ്പോൾ പ്രതികൂല പ്രതികരണം ഉണ്ടാകുകയോ ചെയ്താൽ, ഇൻ
+						ഓസ്ട്രേലിയ
+					</p>
+					<p>
+						<a href="tel:000">ട്രിപ്പിൾ സീറോ എന്ന് വിളിക്കുക(000)</a>
+					</p>
+					<p>
+						അവർക്ക് ഉടൻ തന്നെ പ്രൊഫഷണൽ സഹായം ലഭിക്കേണ്ടത് വളരെ പ്രധാനമാണ്
+						സാധ്യമാണ്. പെട്ടെന്നുള്ള പ്രതികരണം അവരുടെ ജീവൻ രക്ഷിക്കും, അതിനാൽ വൈകരുത്.
+					</p>
+				</div>
+			),
+			"cannabis": (
+				<div>
+					<p>
+						നിങ്ങൾ ആരോഗ്യം, സാമൂഹികം, സാമ്പത്തികം, നിയമപരം എന്നിവയിൽ <strong>ഉയർന്ന അപകടസാധ്യതയിലാണ്</strong>
+						നിങ്ങളുടെ കഞ്ചാവ് ഉപയോഗത്തിന്റെ നിലവിലെ പാറ്റേണിനെ അടിസ്ഥാനമാക്കിയുള്ള പ്രശ്നങ്ങൾ.
+						<br />
+						കഞ്ചാവ് ഉപയോഗം ആരോഗ്യം, സാമൂഹികം, സാമ്പത്തികം, എന്നിവയുമായി ബന്ധപ്പെട്ടിരിക്കുന്നു
+						ഇനിപ്പറയുന്നതുപോലുള്ള നിയമപരമായ പ്രശ്നങ്ങൾ:
+					</p>
+					<ul>
+						<li>മയക്കുമരുന്ന് ഡ്രൈവിംഗ് കുറ്റങ്ങൾ, കൈവശം വെച്ചതിനും വിതരണം ചെയ്തതിനും അറസ്റ്റ്,</li>
+						<li>ശ്രദ്ധയിലും പ്രചോദനത്തിലും ഉള്ള പ്രശ്നങ്ങൾ</li>
+						<li>ഉത്കണ്ഠ, ഭ്രാന്ത്, പരിഭ്രാന്തി, വിഷാദം</li>
+						<li>ഓർമ്മക്കുറവും പ്രശ്‌നപരിഹാര ശേഷിയും</li>
+						<li>ആസ്ത്മ, ബ്രോങ്കൈറ്റിസ്, വിട്ടുമാറാത്ത ശ്വാസകോശ സംബന്ധമായ അസുഖം</li>
+						<li>
+							സ്കീസോഫ്രീനിയയുടെ വ്യക്തിപരമോ കുടുംബപരമോ ആയ ചരിത്രമുള്ളവരിൽ സൈക്കോസിസ്
+						</li>
+						<li>കാൻസർ</li>
+					</ul>
+					<p>
+						വാഹനമോടിക്കുന്നതോ യന്ത്രസാമഗ്രികൾ ഉപയോഗിച്ച ശേഷം ഉപയോഗിക്കുന്നതോ അപകടകരമാണെന്ന കാര്യം ശ്രദ്ധിക്കുക
+						കഞ്ചാവ് കാരണം അത് നിങ്ങളുടെ ധാരണയെയും ഏകോപനത്തെയും തടസ്സപ്പെടുത്തുന്നു.
+						<br />
+						കൂടുതൽ വിവരങ്ങൾ നിങ്ങൾക്ക് വേണമെങ്കിൽ
+						<a href="https://assistplus.com.au/drug-information/cannabis/">
+							കഞ്ചാവ് ഇവിടെ ക്ലിക്ക് ചെയ്യുക.
+						</a>
+					</p>
+					<p>
+						നിങ്ങളുടെ പ്രതികരണങ്ങളെ അടിസ്ഥാനമാക്കി, നിങ്ങൾ ഒന്നോ അതിലധികമോ അനുഭവിച്ചതായി തോന്നുന്നു
+						നിങ്ങളുടെ കഞ്ചാവ് ഉപയോഗവുമായി ബന്ധപ്പെട്ട പ്രശ്നങ്ങൾ.
+					</p>
+					<p>
+						ഈ പ്രശ്‌നങ്ങളെക്കുറിച്ച് നിങ്ങൾക്ക് എത്രമാത്രം ആശങ്കയുണ്ട്?
+						<br />
+						നിങ്ങളുടെ അപകടസാധ്യത കുറയ്ക്കുന്നതിനുള്ള ഏറ്റവും നല്ല മാർഗം കഞ്ചാവ് ഉപയോഗിക്കുന്നത് കുറയ്ക്കുകയോ നിർത്തുകയോ ചെയ്യുക എന്നതാണ്.
+						<br />
+						നിങ്ങൾ എന്താണ് ചെയ്യാൻ ആഗ്രഹിക്കുന്നതെന്ന് നിങ്ങൾക്ക് ഉറപ്പില്ലെങ്കിൽ എല്ലാം ലിസ്റ്റ് ചെയ്യുന്നത് സഹായകമാകും
+						നല്ല കാര്യങ്ങളും നിങ്ങളുടെ കഞ്ചാവ് ഉപയോഗത്തെക്കുറിച്ചും അത്ര നല്ലതല്ല
+						വെട്ടിക്കുറയ്ക്കുകയോ നിർത്തുകയോ ചെയ്യുന്നതിന്റെ നേട്ടങ്ങളും ചെലവുകളും. നിങ്ങൾക്ക് ഒരു കണ്ടെത്താം
+						ധന ലാഭ വിശകലനം
+						<a href="http://smartrecoveryaustralia.com.au/resources/smart-worksheets/">
+							വർക്ക്ഷീറ്റും മറ്റ് ഉപയോഗപ്രദമായ ഉപകരണങ്ങളും ഇവിടെയുണ്ട്
+						</a>
+						<br />
+						ഉപയോഗിക്കാതിരിക്കുകയോ അല്ലെങ്കിൽ നിങ്ങളുടെ കഞ്ചാവ് ഉപയോഗം വളരെ കുറച്ച് സൂക്ഷിക്കുകയോ ചെയ്യുന്നതിലൂടെ, നിങ്ങളുടേത് അത് കണ്ടെത്തും
+						ശ്രദ്ധ, പ്രചോദനം, മെമ്മറി, പ്രശ്നം പരിഹരിക്കൽ എന്നിവ മെച്ചപ്പെടും
+						ശാന്തതയും ഉത്കണ്ഠയും കുറയും, നിങ്ങളുടെ ശാരീരികവും മാനസികവുമായ ആരോഗ്യം ഉണ്ടാകും
+						മെച്ചപ്പെടുത്തുക.
+					</p>
+					<p>
+						നിങ്ങൾക്ക് കഞ്ചാവ് ഉപയോഗിക്കുന്നത് കുറയ്ക്കാനോ നിർത്താനോ താൽപ്പര്യമുണ്ടെങ്കിൽ ചിലത് ഇതാ
+						നിങ്ങളെ സഹായിക്കുന്നതിനുള്ള തന്ത്രങ്ങൾ.
+						<br />
+						വെട്ടിക്കുറയ്ക്കുക എന്നതാണ് നിങ്ങളുടെ ലക്ഷ്യമെങ്കിൽ:
+					</p>
+					<ul>
+						<li>നിങ്ങൾ എത്ര തവണ, എത്ര തവണ ഉപയോഗിക്കുമെന്ന് പ്ലാൻ ചെയ്യുക</li>
+						<li>ഒരു സെഷനിൽ നിങ്ങൾ ഉപയോഗിക്കാൻ ഉദ്ദേശിക്കുന്നതിനേക്കാൾ കൂടുതൽ വാങ്ങരുത്</li>
+						<li>കൂടുതൽ ഉപയോഗിക്കാൻ നിങ്ങളെ പ്രേരിപ്പിക്കുന്ന ഒരു ശേഖരം ഒഴിവാക്കുക</li>
+					</ul>
+					<p>നിർത്തുക എന്നതാണ് നിങ്ങളുടെ ലക്ഷ്യമെങ്കിൽ:</p>
+					<ul>
+						<li>ഒരു ലക്ഷ്യ തീയതി സജ്ജീകരിച്ച് ആ തീയതിയിൽ നിർത്തുക</li>
+						<li>
+							നിങ്ങൾ നിർത്താൻ പോകുകയാണെന്ന് ഒരു സുഹൃത്തിനോടോ കുടുംബാംഗത്തോടോ പറയുക
+							നിങ്ങളെ പിന്തുണയ്ക്കാൻ കഴിയും.
+						</li>
+						<li>
+							നിങ്ങൾ ഇല്ലാത്ത സമയങ്ങളിൽ അധിക സമയം നിറയ്ക്കാൻ ചില ബദൽ പ്രവർത്തനങ്ങൾ ആസൂത്രണം ചെയ്യുക
+							ഉപയോഗിക്കുന്നത്.
+						</li>
+						<li>
+						ഉപയോഗിക്കാനും ആസൂത്രണം ചെയ്യാനും നിങ്ങൾ പ്രലോഭിപ്പിച്ചേക്കാവുന്ന സാഹചര്യങ്ങളെക്കുറിച്ച് ചിന്തിക്കുക
+							അവ ഒഴിവാക്കുക അല്ലെങ്കിൽ കഞ്ചാവ് ഉപയോഗിക്കുന്നത് എങ്ങനെ ഒഴിവാക്കണമെന്ന് ആസൂത്രണം ചെയ്യുക
+						</li>
+						<li>
+							നിങ്ങൾക്ക് കഞ്ചാവ് ഉപയോഗിക്കാനുള്ള ശക്തമായ ആഗ്രഹം ഉണ്ടായിരുന്ന സമയങ്ങളുടെ റെക്കോർഡ് സൂക്ഷിക്കുക.
+							ഉയർന്ന അപകടസാധ്യതയുള്ള സാഹചര്യങ്ങൾ തിരിച്ചറിയാനും ഒഴിവാക്കാനും ആസൂത്രണം ചെയ്യാനും ഇത് നിങ്ങളെ സഹായിക്കും
+							അവരെ കൈകാര്യം ചെയ്യുക. നിങ്ങൾക്ക് ഒരു ഡൗൺലോഡ് ചെയ്യാം
+							<a href="https://smartrecoveryaustralia.com.au/resources/smart-worksheets/">
+								ഇവിടെ ലോഗിൻ ചെയ്യാൻ ആവശ്യപ്പെടുക.
+							</a>
+						</li>
+					</ul>
+					<p>
+					കഞ്ചാവ് കുറയ്ക്കുന്നതിനോ നിർത്തുന്നതിനോ സഹായം ആവശ്യമാണെന്ന് നിങ്ങൾ കരുതുന്നുണ്ടോ? ഉത്തരം നൽകുക
+						കൂടുതലറിയാൻ ഇനിപ്പറയുന്ന ചോദ്യങ്ങൾ:
+					</p>
+					<ul>
+						<li>
+							ഉറക്കം പോലുള്ള ശാരീരിക പിൻവലിക്കൽ ലക്ഷണങ്ങൾ നിങ്ങൾക്ക് അനുഭവപ്പെടുന്നുണ്ടോ?
+							ബുദ്ധിമുട്ടുകൾ, മാനസികാവസ്ഥ, ക്ഷോഭം, ഉത്കണ്ഠ, ശാരീരിക അസ്വസ്ഥത,
+							നിങ്ങൾക്ക് ഒന്നുമില്ലാത്തപ്പോൾ ഓക്കാനം, വിശപ്പ് കുറയുക അല്ലെങ്കിൽ വിഷാദം
+							കഞ്ചാവ്?
+						</li>
+						<li>
+							നിങ്ങളാണെങ്കിലും കഞ്ചാവിന്റെ ഉപയോഗം കുറയ്ക്കാനോ നിർത്താനോ നിങ്ങൾക്ക് കഴിഞ്ഞിട്ടില്ലേ?
+							ആരോഗ്യം, കുടുംബം, ജോലി, സാമ്പത്തികമോ നിയമപരമോ ആയ പ്രശ്‌നങ്ങൾ തുടരുകയോ ലഭിക്കുകയോ ചെയ്തു
+							മോശമായത്?
+						</li>
+						<li>
+							നിങ്ങൾക്ക് ആരോഗ്യപരമോ മാനസികമോ ആയ പ്രശ്‌നങ്ങൾ ഉണ്ടോ, അത് മോശമാക്കിയേക്കാം
+							കഞ്ചാവ് ഉപയോഗിക്കുന്നുണ്ടോ?
+						</li>
+					</ul>
+					<p>
+						ഈ ചോദ്യങ്ങളിൽ ഏതെങ്കിലുമൊന്നിന് നിങ്ങൾ അതെ എന്ന് ഉത്തരം നൽകിയെങ്കിൽ, ഞങ്ങൾ നിങ്ങളോട് ശക്തമായി ശുപാർശ ചെയ്യുന്നു
+						കൂടുതൽ വിലയിരുത്തലിനും സഹായത്തിനുമായി ഒരു ഹെൽത്ത് കെയർ പ്രൊഫഷണലിനെ കാണുക.
+						<br />
+						നിങ്ങളെ സഹായിക്കുന്ന മറ്റ് സേവനങ്ങളും ഉറവിടങ്ങളും ഉണ്ട്.
+					</p>
+					<ul>
+						<li>
+							നിങ്ങൾക്ക് ADIS-നെ വിളിക്കാം - ആൽക്കഹോൾ ആൻഡ് ഡ്രഗ് ഇൻഫർമേഷൻ സർവീസ്
+							കൂടാതെ റഫറലുകൾ:
+							<a href="tel:1800250015">1800250015</a>
+						</li>
+						<li>
+							നിങ്ങൾക്ക് 12-നും 25-നും ഇടയിൽ പ്രായമുണ്ടെങ്കിൽ, നിങ്ങൾക്ക് ഹെഡ്‌സ്‌പേസിനെ വിളിക്കാം
+							റഫറലുകൾ
+						</li>
+						<li>
+							<a href="http://smartrecoveryaustralia.com.au/">സ്മാർട്ട് റിക്കവറി</a> ഏതെങ്കിലും പ്രശ്‌നകരമായ സ്വഭാവമുള്ള ആളുകളെ സഹായിക്കുന്ന സ്വതന്ത്ര ഗ്രൂപ്പ് പ്രോഗ്രാമാണ്
+						</li>
+					</ul>
+					<p>
+						ഭാവിയിൽ നിങ്ങൾക്ക് കഞ്ചാവുമായി ബന്ധപ്പെട്ട പ്രശ്നങ്ങൾ ഉണ്ടാകാനുള്ള സാധ്യത വർദ്ധിപ്പിക്കുന്നത് ഒഴിവാക്കാൻ
+						നിങ്ങൾ എത്ര തവണ, എത്രത്തോളം ഉപയോഗിക്കുന്നു, എത്രത്തോളം എന്നിവ ട്രാക്ക് ചെയ്യാൻ എന്റെ ഡയറി ഉപയോഗിക്കാം
+						ചെലവഴിക്കുക.
+						<br />
+						എങ്കിൽ നിങ്ങൾക്ക് തിരികെ വന്ന് 3 മാസത്തിനുള്ളിൽ വീണ്ടും ചെക്ക് അപ്പ് പൂർത്തിയാക്കാം
+						നിങ്ങൾ എങ്ങനെ പോകുന്നു എന്ന് കാണാൻ ആഗ്രഹിക്കുന്നു.
+					</p>
+				</div>
+			),
+			"cocaine": (
+				<div>
+					<p>
+						നിങ്ങൾ ആരോഗ്യം, സാമൂഹികം, അനുഭവിക്കുന്നതിൽ <strong>ഉയർന്ന അപകടസാധ്യതയിലാണ്</strong>
+						നിങ്ങളുടെ നിലവിലെ പാറ്റേണിനെ അടിസ്ഥാനമാക്കിയുള്ള സാമ്പത്തികവും നിയമപരവും ബന്ധപരവുമായ പ്രശ്നങ്ങൾ
+						കൊക്കെയിൻ ഉപയോഗം.
+						<br />
+						കൊക്കെയ്ൻ ഉപയോഗത്തിൽ സുരക്ഷിതമായ നിലയില്ല. വളരെ ശ്രദ്ധിക്കേണ്ടത് പ്രധാനമാണ്
+						ഏതെങ്കിലും തരത്തിലുള്ള മരുന്ന് അല്ലെങ്കിൽ മരുന്നുകളുടെ സംയോജനം കഴിക്കുമ്പോൾ.
+						<br />
+						കൊക്കെയ്ൻ ഉപയോഗം ആരോഗ്യം, സാമൂഹികം, സാമ്പത്തികം എന്നിവയുമായി ബന്ധപ്പെട്ടിരിക്കുന്നു
+						ഉൾപ്പെടെയുള്ള നിയമ പ്രശ്നങ്ങൾ:
+					</p>
+					<ul>
+					<li>ഹൃദയമിടിപ്പ്, ഉറങ്ങാൻ ബുദ്ധിമുട്ട്, തലവേദന, ഭാരം കുറയൽ</li>
+						<li>നിർവൃതി, ഇക്കിളി, ഇറുകിയ ചർമ്മം</li>
+						<li>അപകടങ്ങളും പരിക്കുകളും</li>
+						<li>സാമ്പത്തിക പ്രശ്നങ്ങൾ, മയക്കുമരുന്ന് ഡ്രൈവിംഗ്, കൈവശം വയ്ക്കൽ, വിതരണം എന്നിവയ്ക്കുള്ള അറസ്റ്റുകൾ</li>
+						<li>യുക്തിരഹിതമായ ചിന്തകൾ</li>
+						<li>മൂഡ് സ്വിംഗ്സ് - ഉത്കണ്ഠ, വിഷാദം, ഉന്മാദാവസ്ഥ</li>
+						<li>ആക്രമണവും ഭ്രാന്തും</li>
+						<li>തീവ്രമായ ആസക്തിയും സമ്മർദ്ദവും</li>
+						<li>ഉയർന്ന ഡോസുകൾ ഉപയോഗിച്ചതിന് ശേഷമുള്ള സൈക്കോസിസ്</li>
+						<li>ഹൃദയപ്രശ്നങ്ങളിൽ നിന്നുള്ള പെട്ടെന്നുള്ള മരണം</li>
+					</ul>
+					<p>
+						കൂടുതൽ വിവരങ്ങൾ നിങ്ങൾക്ക് വേണമെങ്കിൽ
+						<a href="https://assistplus.com.au/drug-information/cocaine/">
+							കൊക്കെയ്ൻ ഇവിടെ ക്ലിക്ക് ചെയ്യുക.
+						</a>
+					</p>
+					<p>
+						നിങ്ങളുടെ പ്രതികരണങ്ങളെ അടിസ്ഥാനമാക്കി, അത് ഒന്നോ അതിലധികമോ അനുഭവിച്ചിട്ടുണ്ടാകുമെന്ന് തോന്നുന്നു
+						നിങ്ങളുടെ കൊക്കെയ്ൻ ഉപയോഗവുമായി ബന്ധപ്പെട്ട പ്രശ്നങ്ങൾ.
+					</p>
+					<p>
+						ഈ പ്രശ്‌നങ്ങളെക്കുറിച്ച് നിങ്ങൾക്ക് എത്രമാത്രം ആശങ്കയുണ്ട്?
+						<br />
+						നിങ്ങളുടെ അപകടസാധ്യത കുറയ്ക്കുന്നതിനുള്ള ഏറ്റവും നല്ല മാർഗം കൊക്കെയ്ൻ ഉപയോഗം കുറയ്ക്കുകയോ നിർത്തുകയോ ചെയ്യുക എന്നതാണ്.
+						<br />
+						നിങ്ങൾ എന്താണ് ചെയ്യാൻ ആഗ്രഹിക്കുന്നതെന്ന് നിങ്ങൾക്ക് ഉറപ്പില്ലെങ്കിൽ എല്ലാം ലിസ്റ്റ് ചെയ്യുന്നത് സഹായകമാകും
+						നല്ല കാര്യങ്ങളും നിങ്ങളുടെ കൊക്കെയ്ൻ ഉപയോഗത്തെക്കുറിച്ചും അത്ര നല്ലതല്ല
+						വെട്ടിക്കുറയ്ക്കാനോ നിർത്താനോ ഉള്ള ആനുകൂല്യങ്ങളും ചെലവുകളും. നിങ്ങൾക്ക് ഒരു കോസ്റ്റ്-ബെനിഫിറ്റ് കണ്ടെത്താം
+						വിശകലനം
+						<a href="http://smartrecoveryaustralia.com.au/resources/smart-worksheets/">
+							വർക്ക്ഷീറ്റും മറ്റ് ഉപയോഗപ്രദമായ ഉപകരണങ്ങളും ഇവിടെയുണ്ട്
+						</a>
+						<br />
+						നിങ്ങളുടെ കൊക്കെയ്ൻ ഉപയോഗം വളരെ കുറവായിരിക്കുകയോ ഉപയോഗിക്കാതിരിക്കുകയോ ചെയ്യുന്നതിലൂടെ, നിങ്ങൾ അത് കണ്ടെത്തും
+						നന്നായി കഴിക്കുകയും ഉറങ്ങുകയും ചെയ്യും, നിങ്ങളുടെ ശാരീരികവും മാനസികവുമായ ആരോഗ്യം മെച്ചപ്പെടും
+						നിങ്ങൾക്ക് അപകടങ്ങളും പരിക്കുകളും, ഉത്കണ്ഠ, മാനസികാവസ്ഥ എന്നിവ അനുഭവപ്പെടാനുള്ള സാധ്യത കുറവാണ്
+						ചാഞ്ചാട്ടം, ആക്രമണം.
+					</p>
+					<p>
+						കൊക്കെയ്ൻ ഉപയോഗിക്കുന്നത് കുറയ്ക്കാനോ നിർത്താനോ നിങ്ങൾ ആഗ്രഹിക്കുന്നുവെങ്കിൽ ഇതാ ചില തന്ത്രങ്ങൾ
+						നിങ്ങളെ സഹായിക്കാന്.
+						<br />
+						വെട്ടിക്കുറയ്ക്കുക എന്നതാണ് നിങ്ങളുടെ ലക്ഷ്യമെങ്കിൽ:
+					</p>
+					<ul>
+						<li>നിങ്ങൾ എത്ര തവണ, എത്ര തവണ ഉപയോഗിക്കുമെന്ന് പ്ലാൻ ചെയ്യുക</li>
+						<li>ഒരു സെഷനിൽ നിങ്ങൾ ഉപയോഗിക്കാൻ ഉദ്ദേശിക്കുന്നതിനേക്കാൾ കൂടുതൽ വാങ്ങരുത്</li>
+						<li>കൂടുതൽ ഉപയോഗിക്കാൻ നിങ്ങളെ പ്രേരിപ്പിക്കുന്ന ഒരു ശേഖരം ഒഴിവാക്കുക</li>
+					</ul>
+					<p>നിർത്തുക എന്നതാണ് നിങ്ങളുടെ ലക്ഷ്യമെങ്കിൽ:</p>
+					<ul>
+						<li>ഒരു ലക്ഷ്യ തീയതി സജ്ജീകരിച്ച് ആ തീയതിയിൽ നിർത്തുക</li>
+						<li>
+							നിങ്ങൾ നിർത്താൻ പോകുകയാണെന്ന് ഒരു സുഹൃത്തിനോടോ കുടുംബാംഗത്തോടോ പറയുക
+							നിങ്ങളെ പിന്തുണയ്ക്കാൻ കഴിയും
+						</li>
+						<li>
+							നിങ്ങൾ ഇല്ലാത്ത സമയങ്ങളിൽ അധിക സമയം നിറയ്ക്കാൻ ചില ബദൽ പ്രവർത്തനങ്ങൾ ആസൂത്രണം ചെയ്യുക
+							ഉപയോഗിക്കുന്നത്
+						</li>
+						<li>
+							ഉപയോഗിക്കാനും ആസൂത്രണം ചെയ്യാനും നിങ്ങൾ പ്രലോഭിപ്പിച്ചേക്കാവുന്ന സാഹചര്യങ്ങളെക്കുറിച്ച് ചിന്തിക്കുക
+							അവ ഒഴിവാക്കുക അല്ലെങ്കിൽ കൊക്കെയ്ൻ ഉപയോഗിക്കുന്നത് എങ്ങനെ ഒഴിവാക്കണമെന്ന് ആസൂത്രണം ചെയ്യുക
+						</li>
+						<li>
+							നിങ്ങൾക്ക് ഉപയോഗിക്കാൻ ശക്തമായ ആഗ്രഹം ഉണ്ടായിരുന്ന സമയങ്ങളുടെ റെക്കോർഡ് സൂക്ഷിക്കുക. ഇത് ചെയ്യും
+							ഉയർന്ന അപകടസാധ്യതയുള്ള സാഹചര്യങ്ങൾ തിരിച്ചറിയാനും ഒഴിവാക്കാനോ നിയന്ത്രിക്കാനോ ആസൂത്രണം ചെയ്യാൻ നിങ്ങളെ സഹായിക്കുന്നു
+							അവരെ. നിങ്ങൾക്ക് ഒരു ഡൗൺലോഡ് ചെയ്യാം
+							<a href="https://smartrecoveryaustralia.com.au/resources/smart-worksheets/">
+								ഇവിടെ ലോഗിൻ ചെയ്യാൻ ആവശ്യപ്പെടുക.
+							</a>
+						</li>
+					</ul>
+					<p>
+						കൊക്കെയ്ൻ ഉപയോഗിക്കുന്നത് കുറയ്ക്കുന്നതിനോ നിർത്തുന്നതിനോ സഹായം ആവശ്യമാണെന്ന് നിങ്ങൾ കരുതുന്നുണ്ടോ? ഉത്തരം നൽകുക
+						കൂടുതലറിയാൻ ഇനിപ്പറയുന്ന ചോദ്യങ്ങൾ:
+					</p>
+					<ul>
+						<li>
+							നിങ്ങൾക്ക് ശാരീരിക പിൻവലിക്കൽ ലക്ഷണങ്ങൾ അനുഭവപ്പെടുന്നുണ്ടോ, അത്തരം ഒരു പ്രക്ഷോഭം,
+							വിഷാദം അല്ലെങ്കിൽ ഉത്കണ്ഠ, വിശ്രമമില്ലാത്ത ഉറക്കം, കടുത്ത കൊക്കെയ്ൻ ആസക്തി, അഭാവം
+							ഊർജ്ജം, ഉത്കണ്ഠ, കോപം പൊട്ടിത്തെറി, സന്തോഷം അനുഭവിക്കാനുള്ള കഴിവില്ലായ്മ
+							നിങ്ങൾക്ക് കൊക്കെയ്ൻ ഇല്ലേ?
+						</li>
+						<li>
+							നിങ്ങളുടേതാണെങ്കിലും കൊക്കെയ്ൻ ഉപയോഗിക്കുന്നത് കുറയ്ക്കാനോ നിർത്താനോ നിങ്ങൾക്ക് കഴിഞ്ഞിട്ടില്ലേ?
+							ആരോഗ്യം, കുടുംബം, ജോലി, സാമ്പത്തികമോ നിയമപരമോ ആയ പ്രശ്‌നങ്ങൾ തുടരുകയോ ലഭിക്കുകയോ ചെയ്തു
+							മോശമായത്?
+						</li>
+						<li>
+							നിങ്ങൾക്ക് ആരോഗ്യപരമോ മാനസികമോ ആയ പ്രശ്‌നങ്ങൾ ഉണ്ടോ, അത് മോശമാക്കിയേക്കാം
+							കൊക്കെയ്ൻ ഉപയോഗിക്കുന്നുണ്ടോ?
+						</li>
+					</ul>
+					<p>
+						ഈ ചോദ്യങ്ങളിൽ ഏതെങ്കിലുമൊന്നിന് നിങ്ങൾ അതെ എന്ന് ഉത്തരം നൽകിയെങ്കിൽ, ഞങ്ങൾ നിങ്ങളോട് ശക്തമായി ശുപാർശ ചെയ്യുന്നു
+						കൂടുതൽ വിലയിരുത്തലിനും സഹായത്തിനുമായി ഒരു ഹെൽത്ത് കെയർ പ്രൊഫഷണലിനെ കാണുക.
+						<br />
+						നിങ്ങളെ സഹായിക്കുന്ന മറ്റ് സേവനങ്ങളും ഉറവിടങ്ങളും ഉണ്ട്.
+					</p>
+					<ul>
+						<li>
+							നിങ്ങൾക്ക് ADIS-നെ വിളിക്കാം - ആൽക്കഹോൾ ആൻഡ് ഡ്രഗ് ഇൻഫർമേഷൻ സർവീസ്
+							കൂടാതെ റഫറലുകൾ:
+							<a href="tel:1800250015">1800250015</a>
+						</li>
+						<li>
+							നിങ്ങൾക്ക് 12-നും 25-നും ഇടയിൽ പ്രായമുണ്ടെങ്കിൽ, നിങ്ങൾക്ക് ഹെഡ്‌സ്‌പേസിനെ വിളിക്കാം
+							റഫറലുകൾ
+						</li>
+						<li>
+							<a href="http://smartrecoveryaustralia.com.au/">സ്മാർട്ട് റിക്കവറി</a>ഏതെങ്കിലും പ്രശ്‌നകരമായ സ്വഭാവമുള്ള ആളുകളെ സഹായിക്കുന്ന സ്വതന്ത്ര ഗ്രൂപ്പ് പ്രോഗ്രാമാണ്
+						</li>
+					</ul>
+					<p>
+					ഭാവിയിൽ കൊക്കെയ്ൻ സംബന്ധമായ പ്രശ്‌നങ്ങൾ ഉണ്ടാകാനുള്ള നിങ്ങളുടെ സാധ്യത കുറയ്ക്കാൻ സഹായിക്കുന്നതിന് നിങ്ങൾക്ക് കഴിയും
+						നിങ്ങൾ എത്ര തവണ, എത്രത്തോളം ഉപയോഗിക്കുന്നു, എത്രമാത്രം ചെലവഴിക്കുന്നു എന്നിവ ട്രാക്ക് ചെയ്യാൻ എന്റെ ഡയറി ഉപയോഗിക്കുക.
+						<br />
+						എങ്കിൽ നിങ്ങൾക്ക് തിരികെ വന്ന് 3 മാസത്തിനുള്ളിൽ വീണ്ടും ചെക്ക് അപ്പ് പൂർത്തിയാക്കാം
+						നിങ്ങൾ എങ്ങനെ പോകുന്നു എന്ന് കാണാൻ ആഗ്രഹിക്കുന്നു.
+					</p>
+					<p>
+						കുത്തിവയ്ക്കുന്നത്
+						<br />
+						നിങ്ങൾ കൊക്കെയ്ൻ കുത്തിവയ്ക്കുകയാണെങ്കിൽ, നിങ്ങൾ ആശ്രിതരാകാനുള്ള സാധ്യത വർദ്ധിപ്പിക്കും
+						സൈക്കോസിസ് അനുഭവിക്കുന്നു. നിങ്ങളുടെ ചർമ്മത്തിനും സിരകൾക്കും കേടുപാടുകൾ വരുത്തുകയും നിങ്ങൾക്ക് ലഭിക്കുകയും ചെയ്യാം
+						അണുബാധകൾ, കുരുക്കൾ, അൾസർ. നിങ്ങൾ ഉപകരണങ്ങൾ കുത്തിവയ്ക്കുന്നത് നിങ്ങൾ പങ്കിടുകയാണെങ്കിൽ
+						ഹെപ്പറ്റൈറ്റിസ് ബി പോലുള്ള രക്തത്തിലൂടെ പകരുന്ന വൈറസ് അണുബാധയുടെ അപകടസാധ്യത.
+						<br />
+						നിങ്ങൾ കുത്തിവയ്ക്കാൻ തിരഞ്ഞെടുക്കുകയാണെങ്കിൽ
+					</p>
+					<ul>
+						<li>എപ്പോഴും വൃത്തിയുള്ള ഉപകരണങ്ങളും പുതിയ സൂചിയും സിറിഞ്ചും ഉപയോഗിക്കുക.</li>
+						<li>ഒരു ഉപകരണവും പങ്കിടരുത്.</li>
+						<li>
+							തയ്യാറാക്കുന്ന സ്ഥലവും കൈകളും കുത്തിവയ്ക്കുന്ന സ്ഥലവും എപ്പോഴും വൃത്തിയാക്കുക.
+						</li>
+						<li>ഓരോ തവണയും സാവധാനം മറ്റൊരു സൈറ്റിൽ കുത്തിവയ്ക്കുക.</li>
+						<li>ഉപയോഗിച്ച സൂചിയും സിറിഞ്ചും മൂർച്ചയുള്ള പാത്രത്തിൽ കളയുക.</li>
+					</ul>
+					<p>
+						നിങ്ങൾ എപ്പോഴെങ്കിലും കുത്തിവച്ചിട്ടുണ്ടെങ്കിൽ, നിങ്ങൾ ഒരു ആരോഗ്യപരിചരണം കാണാൻ ഞങ്ങൾ ശുപാർശ ചെയ്യുന്നു
+						രക്തത്തിലൂടെ പകരുന്ന വൈറസുകൾക്കായി ഒരു പ്രൊഫഷണൽ പരിശോധന നടത്തണം.
+					</p>
+					<p>
+						ഒരു പ്രതിസന്ധി ഘട്ടത്തിൽ എന്തുചെയ്യണമെന്ന് നിങ്ങൾക്കറിയാമെന്ന് ഉറപ്പാക്കുക
+						<br />
+						കൊക്കെയ്ൻ ഉപയോഗിക്കുമ്പോൾ ആരെങ്കിലും അമിതമായി കഴിക്കുകയോ പ്രതികൂല പ്രതികരണം ഉണ്ടാകുകയോ ചെയ്താൽ, ഇൻ
+						ഓസ്ട്രേലിയ
+					</p>
+					<p>
+						<a href="tel:000">ട്രിപ്പിൾ സീറോ എന്ന് വിളിക്കുക(000)</a>
+					</p>
+					<p>
+						അവർക്ക് ഉടൻ തന്നെ പ്രൊഫഷണൽ സഹായം ലഭിക്കേണ്ടത് വളരെ പ്രധാനമാണ്
+						സാധ്യമാണ്. പെട്ടെന്നുള്ള പ്രതികരണം അവരുടെ ജീവൻ രക്ഷിക്കും, അതിനാൽ വൈകരുത്.
+					</p>
+				</div>
+			),
+			"amphetamine": (
+				<div>
+					<p>
+						നിങ്ങൾക്ക് ആരോഗ്യം, സാമൂഹികം, സാമ്പത്തികം, നിയമപരം, എന്നിവ അനുഭവിക്കാനുള്ള ഉയർന്ന അപകടസാധ്യതയുണ്ട്
+						നിങ്ങളുടെ നിലവിലെ ഉപയോഗ രീതിയെ അടിസ്ഥാനമാക്കിയുള്ള ബന്ധ പ്രശ്നങ്ങൾ.
+						<br />
+						മെത്താംഫെറ്റാമൈൻ ഉപയോഗത്തിന് സുരക്ഷിതമായ തലമില്ല. പലതരം ഉണ്ട്
+						മെത്താംഫെറ്റാമൈനും എക്സ്റ്റസിയും ഉൾപ്പെടുന്ന ആംഫെറ്റാമൈൻ തരം ഉത്തേജകങ്ങൾ. അത്
+						ഏതെങ്കിലും തരത്തിലുള്ള മരുന്നോ സംയോജനമോ കഴിക്കുമ്പോൾ വളരെ ശ്രദ്ധിക്കേണ്ടത് പ്രധാനമാണ്
+						മയക്കുമരുന്ന്.എക്‌സ്‌റ്റസിയായി വിൽക്കുന്ന മരുന്നുകളിൽ എംഡിഎംഎ അടങ്ങിയിട്ടില്ലെന്നതും ശ്രദ്ധിക്കുക.
+						അവ ആംഫെറ്റാമൈൻ, മെത്താംഫെറ്റാമൈൻ എന്നിവയുൾപ്പെടെയുള്ള മറ്റ് വസ്തുക്കളുടെ മിശ്രിതമാകാം
+						കൂടാതെ പാരാമെത്തോക്സിയാംഫെറ്റാമൈൻ (പിഎംഎ).
+						<br />
+						മെത്താംഫെറ്റാമൈൻ ഉപയോഗം ആരോഗ്യ, സാമൂഹിക,
+						സാമ്പത്തികവും നിയമപരവുമായ പ്രശ്നങ്ങൾ ഉൾപ്പെടെ:
+					</p>
+					<ul>
+						<li>ഉറങ്ങാൻ ബുദ്ധിമുട്ട്, വിശപ്പില്ലായ്മ, ഭാരക്കുറവ്, നിർജ്ജലീകരണം</li>
+						<li>താടിയെല്ല് ഞെരുക്കൽ, തലവേദന, പേശി വേദന</li>
+						<li>
+							മൂഡ് ചാഞ്ചാട്ടം, - ഉത്കണ്ഠ, വിഷാദം, പ്രക്ഷോഭം, ഉന്മാദം, പരിഭ്രാന്തി, ഭ്രാന്ത്
+						</li>
+						<li>വിറയൽ, ക്രമരഹിതമായ ഹൃദയമിടിപ്പ്, ശ്വാസതടസ്സം</li>
+						<li>ആക്രമണാത്മകവും അക്രമാസക്തവുമായ പെരുമാറ്റം</li>
+						<li>മയക്കുമരുന്ന് ഡ്രൈവിംഗ് കുറ്റങ്ങൾ, കൈവശം വയ്ക്കുന്നതിനോ വിതരണം ചെയ്തതിനോ ഉള്ള അറസ്റ്റുകൾ</li>
+						<li>ഉയർന്ന ഡോസുകളുടെ ആവർത്തിച്ചുള്ള ഉപയോഗത്തിന് ശേഷമുള്ള സൈക്കോസിസ്</li>
+						<li>മസ്തിഷ്ക കോശങ്ങൾക്ക് സ്ഥിരമായ ക്ഷതം</li>
+						<li>സ്ട്രോക്ക് അല്ലെങ്കിൽ ഹൃദയാഘാതം</li>
+						<li>
+							കരൾ ക്ഷതം, മസ്തിഷ്ക രക്തസ്രാവം, അപൂർവ സന്ദർഭങ്ങളിൽ പെട്ടെന്നുള്ള മരണം
+						</li>
+					</ul>
+					<p>
+						എക്‌സ്‌റ്റസി ഉപയോഗം ആരോഗ്യം, സാമൂഹികം, സാമ്പത്തികം എന്നിവയുമായി ബന്ധപ്പെട്ടിരിക്കുന്നു
+						ഉൾപ്പെടെയുള്ള നിയമ പ്രശ്നങ്ങൾ:
+					</p>
+					<ul>
+						<li>മയക്കുമരുന്ന് ഡ്രൈവിംഗ് കുറ്റങ്ങൾ, കൈവശം വയ്ക്കുന്നതിനോ വിതരണം ചെയ്തതിനോ ഉള്ള അറസ്റ്റുകൾ</li>
+						<li>ഊർജ്ജം കുറയുന്നു, ജലദോഷം, പനി, അണുബാധകൾ</li>
+						<li>വിശപ്പ്, ഓക്കാനം, ഛർദ്ദി</li>
+						<li>താടിയെല്ല് ഞെരുക്കലും പല്ല് പൊടിക്കലും</li>
+						<li>പേശി വേദനയും കാഠിന്യവും</li>
+						<li>വർദ്ധിച്ച രക്തസമ്മർദ്ദവും ഹൃദയമിടിപ്പും</li>
+						<li>ഉത്കണ്ഠ, വിഷാദം, ഭ്രാന്ത്</li>
+						<li>ശരീര ഊഷ്മാവ് വർദ്ധനയും വിയർപ്പും</li>
+						<li>മസ്തിഷ്ക കോശങ്ങൾക്ക് കേടുപാടുകൾ, മെമ്മറി പ്രശ്നങ്ങൾ</li>
+						<li>മർദ്ദം, ഹൃദയാഘാതം, മസ്തിഷ്ക രക്തസ്രാവം</li>
+					</ul>
+					<p>
+						കൂടുതൽ വിവരങ്ങൾ നിങ്ങൾക്ക് വേണമെങ്കിൽ
+						<a href="https://assistplus.com.au/drug-information/amphetamine/">
+							മെത്താംഫെറ്റാമൈൻ
+						</a>{" "}
+						അഥവാ
+						<a href="https://assistplus.com.au/drug-information/ecstasy/">
+							എക്സ്റ്റസി ഇവിടെ ക്ലിക്ക് ചെയ്യുക.
+						</a>
+					</p>
+					<p>
+						നിങ്ങളുടെ പ്രതികരണങ്ങളെ അടിസ്ഥാനമാക്കി, നിങ്ങൾ ഒന്നോ അതിലധികമോ അനുഭവിച്ചതായി തോന്നുന്നു
+						നിങ്ങളുടെ ആംഫെറ്റാമൈൻ തരം ഉത്തേജക ഉപയോഗവുമായി ബന്ധപ്പെട്ട പ്രശ്നങ്ങൾ.
+					</p>
+					<p>
+						നിങ്ങളുടെ ആംഫെറ്റാമൈൻ തരം ഉത്തേജക ഉപയോഗത്തെക്കുറിച്ച് നിങ്ങൾക്ക് എത്രത്തോളം ആശങ്കയുണ്ട്?
+						<br />
+						നിങ്ങളുടെ അപകടസാധ്യത കുറയ്ക്കുന്നതിനുള്ള ഏറ്റവും നല്ല മാർഗം ആംഫെറ്റാമൈൻ ഉപയോഗിക്കുന്നത് കുറയ്ക്കുകയോ നിർത്തുകയോ ചെയ്യുക എന്നതാണ്
+						തരം ഉത്തേജകങ്ങൾ.
+						<br />
+						നിങ്ങൾ എന്താണ് ചെയ്യാൻ ആഗ്രഹിക്കുന്നതെന്ന് നിങ്ങൾക്ക് ഉറപ്പില്ലെങ്കിൽ എല്ലാം ലിസ്റ്റ് ചെയ്യുന്നത് സഹായകമാകും
+						നിങ്ങളുടെ ആംഫെറ്റാമൈൻ തരത്തെക്കുറിച്ചുള്ള നല്ല കാര്യങ്ങളും അത്ര നല്ലതല്ലാത്ത കാര്യങ്ങളും
+						ഉത്തേജകവും അതുപോലെ വെട്ടിക്കുറയ്ക്കുകയോ നിർത്തുകയോ ചെയ്യുന്നതിന്റെ നേട്ടങ്ങളും ചെലവുകളും.
+						<br />
+						നിങ്ങൾക്ക് ഒരു കോസ്റ്റ്-ബെനിഫിറ്റ് അനാലിസിസ് കണ്ടെത്താം
+						<a href="http://smartrecoveryaustralia.com.au/resources/smart-worksheets/">
+							വർക്ക്ഷീറ്റും മറ്റ് ഉപയോഗപ്രദമായ ഉപകരണങ്ങളും ഇവിടെയുണ്ട്.
+						</a>
+						<br />
+						നിങ്ങളുടെ മെത്താംഫെറ്റാമിൻ ഉപയോഗം വളരെ കുറച്ച് ഉപയോഗിക്കാതിരിക്കുകയോ നിലനിർത്തുകയോ ചെയ്യുന്നതിലൂടെ നിങ്ങൾ അത് കണ്ടെത്തും
+						നിങ്ങൾ നന്നായി കഴിക്കുകയും ഉറങ്ങുകയും ചെയ്യും, നിങ്ങളുടെ ശാരീരികവും മാനസികവുമായ ആരോഗ്യം മെച്ചപ്പെടും,
+						നിങ്ങൾക്ക് മാനസികാവസ്ഥ, ഉത്കണ്ഠ, കൂടാതെ അനുഭവപ്പെടാനുള്ള സാധ്യത കുറവായിരിക്കും
+						ആക്രമണാത്മക പെരുമാറ്റം.
+					</p>
+					<p>
+						എക്‌സ്‌റ്റസി ഉപയോഗിക്കാതിരിക്കുകയോ അല്ലെങ്കിൽ നിങ്ങളുടെ ഉപയോഗം വളരെ കുറവായിരിക്കുകയോ ചെയ്‌താൽ, നിങ്ങൾ അത് കണ്ടെത്തും
+						കൂടുതൽ ഊർജം ഉണ്ടാകും, നിങ്ങളുടെ ഓർമ്മ മെച്ചപ്പെടും, നിങ്ങൾ ഭക്ഷണം കഴിക്കുകയും ഉറങ്ങുകയും ചെയ്യും
+						നല്ലത്, നിങ്ങളുടെ ശാരീരികവും മാനസികവുമായ ആരോഗ്യം മെച്ചപ്പെടുകയും നിങ്ങൾ കുറയുകയും ചെയ്യും
+						അണുബാധ ഉണ്ടാകാനും ഉത്കണ്ഠയോ വിഷാദമോ അനുഭവപ്പെടാനും സാധ്യതയുണ്ട്.
+					</p>
+					<p>
+						ആംഫെറ്റാമൈൻ തരം ഉത്തേജകങ്ങൾ ഉപയോഗിക്കുന്നത് കുറയ്ക്കാനോ നിർത്താനോ നിങ്ങൾ ആഗ്രഹിക്കുന്നുവെങ്കിൽ, ഇവിടെ
+						നിങ്ങളെ സഹായിക്കാനുള്ള ചില തന്ത്രങ്ങളാണ്.
+						<br />
+						വെട്ടിക്കുറയ്ക്കുക എന്നതാണ് നിങ്ങളുടെ ലക്ഷ്യമെങ്കിൽ:
+					</p>
+					<ul>
+						<li>നിങ്ങൾ എത്ര തവണ, എത്ര തവണ ഉപയോഗിക്കുമെന്ന് പ്ലാൻ ചെയ്യുക</li>
+						<li>ഒരു സെഷനിൽ നിങ്ങൾ ഉപയോഗിക്കാൻ ഉദ്ദേശിക്കുന്നതിനേക്കാൾ കൂടുതൽ വാങ്ങരുത്</li>
+						<li>കൂടുതൽ ഉപയോഗിക്കാൻ നിങ്ങളെ പ്രേരിപ്പിക്കുന്ന ഒരു ശേഖരം ഒഴിവാക്കുക</li>
+					</ul>
+					<p>നിർത്തുക എന്നതാണ് നിങ്ങളുടെ ലക്ഷ്യമെങ്കിൽ:</p>
+					<ul>
+						<li>ഒരു ലക്ഷ്യ തീയതി സജ്ജീകരിച്ച് ആ തീയതിയിൽ നിർത്തുക</li>
+						<li>
+							നിങ്ങൾ നിർത്താൻ പോകുകയാണെന്ന് ഒരു സുഹൃത്തിനോടോ കുടുംബാംഗത്തോടോ പറയുക
+							നിങ്ങളെ പിന്തുണയ്ക്കാൻ കഴിയും.
+						</li>
+						<li>
+							നിങ്ങൾ ഇല്ലാത്ത സമയങ്ങളിൽ അധിക സമയം നിറയ്ക്കാൻ ചില ബദൽ പ്രവർത്തനങ്ങൾ ആസൂത്രണം ചെയ്യുക
+							ഉപയോഗിക്കുന്നത്.
+						</li>
+						<li>
+							ഉപയോഗിക്കാനും ആസൂത്രണം ചെയ്യാനും നിങ്ങൾ പ്രലോഭിപ്പിച്ചേക്കാവുന്ന സാഹചര്യങ്ങളെക്കുറിച്ച് ചിന്തിക്കുക
+							അവ ഒഴിവാക്കുക അല്ലെങ്കിൽ മെത്താംഫെറ്റാമൈൻ ഉപയോഗിക്കുന്നത് എങ്ങനെ ഒഴിവാക്കണമെന്ന് ആസൂത്രണം ചെയ്യുക
+						</li>
+						<li>
+							നിങ്ങൾക്ക് ഉപയോഗിക്കാൻ ശക്തമായ ആഗ്രഹം ഉണ്ടായിരുന്ന സമയങ്ങളുടെ റെക്കോർഡ് സൂക്ഷിക്കുക
+							മെത്താംഫെറ്റാമൈൻ. ഉയർന്ന അപകടസാധ്യതയുള്ള സാഹചര്യങ്ങൾ തിരിച്ചറിയാനും ഇത് നിങ്ങളെ സഹായിക്കും
+							അവ ഒഴിവാക്കാനോ നിയന്ത്രിക്കാനോ ആസൂത്രണം ചെയ്യുക. നിങ്ങൾക്ക് ഒരു ഡൗൺലോഡ് ചെയ്യാം
+							<a href="https://smartrecoveryaustralia.com.au/resources/smart-worksheets/">
+								ഇവിടെ ലോഗിൻ ചെയ്യാൻ ആവശ്യപ്പെടുക.
+							</a>
+						</li>
+					</ul>
+					<p>
+						മെത്താംഫെറ്റാമൈൻ ഉപയോഗിക്കുന്നത് കുറയ്ക്കുന്നതിനോ നിർത്തുന്നതിനോ നിങ്ങൾക്ക് സഹായം ആവശ്യമാണെന്ന് നിങ്ങൾ കരുതുന്നുണ്ടോ? ഉത്തരം
+						ഇനിപ്പറയുന്ന ചോദ്യങ്ങൾ:
+					</p>
+					<ul>
+						<li>
+							ആസക്തി, വേദന തുടങ്ങിയ ശാരീരിക പിൻവലിക്കൽ ലക്ഷണങ്ങൾ നിങ്ങൾക്ക് അനുഭവപ്പെടുന്നുണ്ടോ?
+							കൂടാതെ വേദന ക്ഷീണം, ആശയക്കുഴപ്പവും ക്ഷോഭവും, വിശ്രമമില്ലാത്ത ഉറക്കവും
+							പേടിസ്വപ്നങ്ങൾ, ഉത്കണ്ഠ, വിഷാദം, ഭ്രാന്ത് എന്നിവയൊന്നും ഉണ്ടാകാത്തപ്പോൾ
+							മെത്താംഫെറ്റാമിൻ?
+						</li>
+						<li>
+							മെത്താംഫെറ്റാമൈൻ ഉപയോഗിക്കുന്നത് കുറയ്ക്കാനോ നിർത്താനോ നിങ്ങൾക്ക് കഴിഞ്ഞിട്ടില്ലേ?
+							നിങ്ങളുടെ ആരോഗ്യം, കുടുംബം, ജോലി, സാമ്പത്തിക അല്ലെങ്കിൽ നിയമപരമായ പ്രശ്നങ്ങൾ തുടരുന്നു അല്ലെങ്കിൽ
+							മോശമായി?
+						</li>
+						<li>
+							നിങ്ങൾക്ക് ആരോഗ്യപരമോ മാനസികമോ ആയ പ്രശ്‌നങ്ങൾ ഉണ്ടോ, അത് മോശമാക്കിയേക്കാം
+							മെത്താംഫെറ്റാമൈൻ ഉപയോഗിക്കുന്നുണ്ടോ?
+						</li>
+					</ul>
+					<p>
+						എക്സ്റ്റസി ഉപയോഗം കുറയ്ക്കുന്നതിനോ നിർത്തുന്നതിനോ നിങ്ങൾക്ക് സഹായം ആവശ്യമാണെന്ന് നിങ്ങൾ കരുതുന്നുണ്ടോ? ഉത്തരം നൽകുക
+						ഇനിപ്പറയുന്ന ചോദ്യങ്ങൾ:
+					</p>
+					<ul>
+						<li>
+							വേദനയും വേദനയും പോലുള്ള ശാരീരിക പിൻവലിക്കൽ ലക്ഷണങ്ങൾ നിങ്ങൾക്ക് അനുഭവപ്പെടുന്നുണ്ടോ,
+							ഏകാഗ്രത നഷ്ടപ്പെടൽ, മയക്കം അല്ലെങ്കിൽ ഉറക്കമില്ലായ്മ, ഉത്കണ്ഠ, പ്രക്ഷോഭം,
+							അസ്വസ്ഥത, അല്ലെങ്കിൽ നിങ്ങൾക്ക് ഒരു ഉല്ലാസവും ഇല്ലാതിരിക്കുമ്പോൾ വിഷാദം?
+						</li>
+						<li>
+							നിങ്ങളുടേതാണെങ്കിലും എക്സ്റ്റസി ഉപയോഗിക്കുന്നത് കുറയ്ക്കാനോ നിർത്താനോ നിങ്ങൾക്ക് കഴിഞ്ഞിട്ടില്ലേ?
+							ആരോഗ്യം, കുടുംബം, ജോലി, സാമ്പത്തികമോ നിയമപരമോ ആയ പ്രശ്‌നങ്ങൾ തുടരുകയോ ലഭിക്കുകയോ ചെയ്തു
+							മോശമായത്?
+						</li>
+						<li>
+							നിങ്ങൾക്ക് ആരോഗ്യപരമോ മാനസികമോ ആയ പ്രശ്‌നങ്ങൾ ഉണ്ടോ, അത് മോശമാക്കിയേക്കാം
+							എക്സ്റ്റസി ഉപയോഗിക്കുന്നുണ്ടോ?
+						</li>
+					</ul>
+					<p>
+						ഈ ചോദ്യങ്ങളിൽ ഏതെങ്കിലുമൊന്നിന് നിങ്ങൾ അതെ എന്ന് ഉത്തരം നൽകിയെങ്കിൽ, ഞങ്ങൾ നിങ്ങളോട് ശക്തമായി ശുപാർശ ചെയ്യുന്നു
+						കൂടുതൽ വിലയിരുത്തലിനും സഹായത്തിനുമായി ഒരു ഹെൽത്ത് കെയർ പ്രൊഫഷണലിനെ കാണുക. അവിടെ
+						നിങ്ങളെ സഹായിക്കുന്ന മറ്റ് സേവനങ്ങളും ഉറവിടങ്ങളും ഇവയാണ്:
+					</p>
+					<ul>
+						<li>
+							നിങ്ങൾക്ക് ADIS-നെ വിളിക്കാം - ആൽക്കഹോൾ ആൻഡ് ഡ്രഗ് ഇൻഫർമേഷൻ സർവീസ്
+							കൂടാതെ റഫറലുകൾ:
+							<a href="tel:1800250015">1800250015</a>
+						</li>
+						<li>
+							നിങ്ങൾക്ക് 12 നും 25 നും ഇടയിൽ പ്രായമുണ്ടെങ്കിൽ നിങ്ങൾക്ക് വിളിക്കാം
+							ഇതിനായി <a href="https://headspace.org.au/headspace-centres/">ഹെഡ്‌സ്‌പെയ്‌സ്</a>
+							ഉപദേശവും റഫറലുകളും
+						</li>
+						<li>
+							<a href="http://smartrecoveryaustralia.com.au/">സ്മാർട്ട് റിക്കവറി</a> ഏതെങ്കിലും പ്രശ്‌നകരമായ സ്വഭാവമുള്ള ആളുകളെ സഹായിക്കുന്ന സ്വതന്ത്ര ഗ്രൂപ്പ് പ്രോഗ്രാമാണ്
+						</li>
+					</ul>
+					<p>
+						ആംഫെറ്റാമൈൻ തരം ഉത്തേജക സംബന്ധമായ പ്രശ്നങ്ങൾ ഉണ്ടാകാനുള്ള സാധ്യത വർദ്ധിപ്പിക്കുന്നത് ഒഴിവാക്കാൻ
+						ഭാവിയിൽ നിങ്ങൾക്ക് {" "} എന്നതിൽ എന്റെ ഡയറി ഉപയോഗിക്കാം
+						എങ്ങനെയെന്ന് ട്രാക്ക് ചെയ്യുന്നതിന് <a href="https://assistplus.com.au">ASSIST ചെക്കപ്പ് ആപ്പ്</a>
+						പലപ്പോഴും, നിങ്ങൾ എത്രമാത്രം ഉപയോഗിക്കുന്നു, എത്രമാത്രം ചെലവഴിക്കുന്നു.
+						<br />
+						എങ്കിൽ നിങ്ങൾക്ക് തിരികെ വന്ന് 3 മാസത്തിനുള്ളിൽ വീണ്ടും ചെക്ക് അപ്പ് പൂർത്തിയാക്കാം
+						നിങ്ങൾ എങ്ങനെ പോകുന്നു എന്ന് കാണാൻ ആഗ്രഹിക്കുന്നു.
+					</p>
+					<p>കുത്തിവയ്ക്കുന്നത്</p>
+					<p>
+						നിങ്ങൾ മെത്താംഫെറ്റാമൈൻ കുത്തിവയ്ക്കുകയാണെങ്കിൽ, നിങ്ങൾ ആശ്രിതനാകാനുള്ള സാധ്യത വർദ്ധിപ്പിക്കുന്നു
+						മാനസികരോഗം അനുഭവിക്കുന്നു. നിങ്ങളുടെ ചർമ്മത്തിനും സിരകൾക്കും കേടുപാടുകൾ വരുത്തുകയും നിങ്ങൾക്ക് ലഭിക്കുകയും ചെയ്യാം
+						അണുബാധകൾ, കുരുക്കൾ, അൾസർ. നിങ്ങൾ ഉപകരണങ്ങൾ കുത്തിവയ്ക്കുന്നത് നിങ്ങൾ പങ്കിടുകയാണെങ്കിൽ
+						ഹെപ്പറ്റൈറ്റിസ് ബി പോലുള്ള രക്തത്തിലൂടെ പകരുന്ന വൈറസ് അണുബാധയുടെ അപകടസാധ്യത
+						<br />
+						നിങ്ങൾ കുത്തിവയ്ക്കാൻ തിരഞ്ഞെടുക്കുകയാണെങ്കിൽ:
+					</p>
+					<ul>
+						<li>എപ്പോഴും വൃത്തിയുള്ള ഉപകരണങ്ങളും പുതിയ സൂചിയും സിറിഞ്ചും ഉപയോഗിക്കുക.</li>
+						<li>ഒരു ഉപകരണവും പങ്കിടരുത്.</li>
+						<li>
+							തയ്യാറാക്കുന്ന സ്ഥലവും കൈകളും കുത്തിവയ്ക്കുന്ന സ്ഥലവും എപ്പോഴും വൃത്തിയാക്കുക.
+						</li>
+						<li>ഓരോ തവണയും സാവധാനം മറ്റൊരു സൈറ്റിൽ കുത്തിവയ്ക്കുക</li>
+						<li>ഉപയോഗിച്ച സൂചിയും സിറിഞ്ചും മൂർച്ചയുള്ള പാത്രത്തിൽ കളയുക.</li>
+					</ul>
+					<p>
+						നിങ്ങൾ എപ്പോഴെങ്കിലും മെത്താംഫെറ്റാമൈൻ കുത്തിവച്ചിട്ടുണ്ടെങ്കിൽ, നിങ്ങൾ ആരോഗ്യസ്ഥിതി കാണണമെന്ന് ഞങ്ങൾ ശുപാർശ ചെയ്യുന്നു
+						രക്തത്തിൽ പകരുന്ന വൈറസുകൾക്കായി കെയർ പ്രൊഫഷണലുകൾ പരിശോധിക്കണം.
+					</p>
+					<p>
+						ഒരു പ്രതിസന്ധി ഘട്ടത്തിൽ എന്തുചെയ്യണമെന്ന് നിങ്ങൾക്കറിയാമെന്ന് ഉറപ്പാക്കുക
+						<br />
+						മെത്താംഫെറ്റാമൈൻ ഉപയോഗിക്കുമ്പോൾ ആരെങ്കിലും അമിതമായി കഴിക്കുകയോ പ്രതികൂല പ്രതികരണം ഉണ്ടാകുകയോ ചെയ്താൽ,
+						ഓസ്ട്രേലിയയിൽ
+					</p>
+					<p>
+						<a href="tel:000">ട്രിപ്പിൾ സീറോ എന്ന് വിളിക്കുക(000)</a>
+					</p>
+					<p>
+						അവർക്ക് ഉടൻ തന്നെ പ്രൊഫഷണൽ സഹായം ലഭിക്കേണ്ടത് വളരെ പ്രധാനമാണ്
+						സാധ്യമാണ്. പെട്ടെന്നുള്ള പ്രതികരണം അവരുടെ ജീവൻ രക്ഷിക്കും, അതിനാൽ വൈകരുത്.
+					</p>
+				</div>
+			),
+			"inhalants": (
+				<div>
+					<p>
+						നിങ്ങൾ ആരോഗ്യം, സാമൂഹികം, അനുഭവിക്കുന്നതിൽ <strong>ഉയർന്ന അപകടസാധ്യതയിലാണ്</strong>
+						നിങ്ങളുടെ നിലവിലെ പാറ്റേണിനെ അടിസ്ഥാനമാക്കിയുള്ള സാമ്പത്തികവും നിയമപരവും ബന്ധപരവുമായ പ്രശ്നങ്ങൾ
+						ഇൻഹാലന്റ് ഉപയോഗം.
+						<br />
+						ഇൻഹാലന്റ് ഉപയോഗത്തിന് സുരക്ഷിതമായ തലമില്ല. വളരെ ശ്രദ്ധിക്കേണ്ടത് പ്രധാനമാണ്
+						ഏതെങ്കിലും തരത്തിലുള്ള മരുന്ന് അല്ലെങ്കിൽ മരുന്നുകളുടെ സംയോജനം കഴിക്കുമ്പോൾ.
+						<br />
+						ഇൻഹാലന്റ് ഉപയോഗം ആരോഗ്യം, സാമൂഹികം, സാമ്പത്തികം, എന്നിവയുമായി ബന്ധപ്പെട്ടിരിക്കുന്നു
+						ഉൾപ്പെടെയുള്ള നിയമ പ്രശ്നങ്ങൾ:
+					</p>
+					<ul>
+						<li>തലകറക്കവും ഭ്രമാത്മകതയും</li>
+						<li>മയക്കം, ദിശ തെറ്റി, മങ്ങിയ കാഴ്ച</li>
+						<li>ഏകീകരണ ബുദ്ധിമുട്ടുകൾ, മന്ദഗതിയിലുള്ള പ്രതികരണങ്ങൾ</li>
+						<li>പനി പോലുള്ള ലക്ഷണങ്ങൾ, സൈനസൈറ്റിസ്, മൂക്കിൽ നിന്ന് രക്തസ്രാവം</li>
+						<li> ദഹനക്കേട്, വയറ്റിലെ അൾസർ</li>
+						<li>അപകടങ്ങളും പരിക്കുകളും</li>
+						<li>ഓർമ്മക്കുറവ്, ആശയക്കുഴപ്പം, ഭ്രമം, അപസ്മാരം (ഫിറ്റ്സ്), കോമ</li>
+						<li>നിങ്ങളുടെ മസ്തിഷ്കം, ഹൃദയം, ശ്വാസകോശം, കരൾ, വൃക്കകൾ എന്നിവയ്ക്ക് കേടുപാടുകൾ സംഭവിക്കുന്നു</li>
+						<li>ഹൃദയസ്തംഭനത്തിൽ നിന്നുള്ള മരണം</li>
+					</ul>
+					<p>
+						കൂടുതൽ വിവരങ്ങൾ നിങ്ങൾക്ക് വേണമെങ്കിൽ
+						<a href="https://assistplus.com.au/drug-information/inhalants/">
+							ഇൻഹാലന്റുകൾ ഇവിടെ ക്ലിക്ക് ചെയ്യുക
+						</a>
+					</p>
+					<p>
+						നിങ്ങളുടെ പ്രതികരണങ്ങളെ അടിസ്ഥാനമാക്കി, നിങ്ങൾ ഒന്നോ അതിലധികമോ അനുഭവിച്ചതായി തോന്നുന്നു
+						ഇൻഹാലന്റുമായി ബന്ധപ്പെട്ട പ്രശ്നങ്ങൾ.
+					</p>
+					<p>
+						ഈ പ്രശ്‌നങ്ങളെക്കുറിച്ച് നിങ്ങൾക്ക് എത്രമാത്രം ആശങ്കയുണ്ട്?
+						<br />
+						നിങ്ങളുടെ അപകടസാധ്യത കുറയ്ക്കുന്നതിനുള്ള ഏറ്റവും നല്ല മാർഗം ഇൻഹാലന്റുകളുടെ ഉപയോഗം കുറയ്ക്കുകയോ നിർത്തുകയോ ചെയ്യുക എന്നതാണ്.
+						<br />
+						നിങ്ങൾ എന്താണ് ചെയ്യാൻ ആഗ്രഹിക്കുന്നതെന്ന് നിങ്ങൾക്ക് ഉറപ്പില്ലെങ്കിൽ എല്ലാം ലിസ്റ്റ് ചെയ്യുന്നത് സഹായകമാകും
+						നിങ്ങളുടെ ഇൻഹാലന്റ് ഉപയോഗത്തെക്കുറിച്ചും നല്ല കാര്യങ്ങളും അത്ര നല്ലതല്ലാത്ത കാര്യങ്ങളും
+						വെട്ടിക്കുറയ്ക്കുകയോ നിർത്തുകയോ ചെയ്യുന്നതിന്റെ നേട്ടങ്ങളും ചെലവുകളും. നിങ്ങൾക്ക് ഒരു കണ്ടെത്താം
+						ധന ലാഭ വിശകലനം
+						<a href="http://smartrecoveryaustralia.com.au/resources/smart-worksheets/">
+							വർക്ക്ഷീറ്റും മറ്റ് ഉപയോഗപ്രദമായ ഉപകരണങ്ങളും ഇവിടെയുണ്ട്
+						</a>
+						<br />
+						ഉപയോഗിക്കാതിരിക്കുകയോ അല്ലെങ്കിൽ നിങ്ങളുടെ ഇൻഹെലന്റ് ഉപയോഗം വളരെ കുറവായി നിലനിർത്തുകയോ ചെയ്യുന്നതിലൂടെ, നിങ്ങൾ അത് കണ്ടെത്തും
+						മെമ്മറി, ഏകോപനം, പ്രതികരണ സമയം എന്നിവ മെച്ചപ്പെടും, നിങ്ങളുടെ ശാരീരികവും
+						മാനസികാരോഗ്യം മെച്ചപ്പെടുകയും നിങ്ങൾ അനുഭവിക്കാനുള്ള സാധ്യത കുറയുകയും ചെയ്യും
+						അപകടങ്ങളും പരിക്കുകളും.
+					</p>
+					<p>
+						ഇൻഹാലന്റുകളുടെ ഉപയോഗം കുറയ്ക്കാനോ നിർത്താനോ നിങ്ങൾ ആഗ്രഹിക്കുന്നുവെങ്കിൽ ചിലത് ഇതാ
+						നിങ്ങളെ സഹായിക്കുന്നതിനുള്ള തന്ത്രങ്ങൾ.
+						<br />
+						നിർത്തുക എന്നതാണ് നിങ്ങളുടെ ലക്ഷ്യമെങ്കിൽ:
+					</p>
+					<ul>
+						<li>ഒരു ലക്ഷ്യ തീയതി സജ്ജീകരിച്ച് ആ തീയതിയിൽ നിർത്തുക</li>
+						<li>
+							നിങ്ങൾ നിർത്താൻ പോകുകയാണെന്ന് ഒരു സുഹൃത്തിനോടോ കുടുംബാംഗത്തോടോ പറയുക
+							നിങ്ങളെ പിന്തുണയ്ക്കാൻ കഴിയും.
+						</li>
+						<li>
+							നിങ്ങൾ ഇല്ലാത്ത സമയങ്ങളിൽ അധിക സമയം നിറയ്ക്കാൻ ചില ബദൽ പ്രവർത്തനങ്ങൾ ആസൂത്രണം ചെയ്യുക
+							ഉപയോഗിക്കുന്നത്.
+						</li>
+						<li>
+							ഉപയോഗിക്കാനും ആസൂത്രണം ചെയ്യാനും നിങ്ങൾ പ്രലോഭിപ്പിച്ചേക്കാവുന്ന സാഹചര്യങ്ങളെക്കുറിച്ച് ചിന്തിക്കുക
+							അവ ഒഴിവാക്കുക അല്ലെങ്കിൽ ഇൻഹാലന്റുകൾ ഉപയോഗിക്കുന്നത് എങ്ങനെ ഒഴിവാക്കണമെന്ന് ആസൂത്രണം ചെയ്യുക
+						</li>
+						<li>
+							ഇൻഹാലന്റുകൾ ഉപയോഗിക്കാനുള്ള ശക്തമായ ആഗ്രഹം നിങ്ങൾക്ക് ഉണ്ടായിരുന്ന സമയങ്ങളുടെ റെക്കോർഡ് സൂക്ഷിക്കുക.
+							ഉയർന്ന അപകടസാധ്യതയുള്ള സാഹചര്യങ്ങൾ തിരിച്ചറിയാനും ഒഴിവാക്കാനും ആസൂത്രണം ചെയ്യാനും ഇത് നിങ്ങളെ സഹായിക്കും
+							അവരെ കൈകാര്യം ചെയ്യുക. നിങ്ങൾക്ക് ഒരു ഡൗൺലോഡ് ചെയ്യാം
+							<a href="https://smartrecoveryaustralia.com.au/resources/smart-worksheets/">
+								ഇവിടെ ലോഗിൻ ചെയ്യാൻ ആവശ്യപ്പെടുക.
+							</a>
+						</li>
+					</ul>
+					<p>ഇൻഹാലന്റുകളുടെ ഉപയോഗം കുറയ്ക്കുന്നതിനോ നിർത്തുന്നതിനോ സഹായം ആവശ്യമാണെന്ന് നിങ്ങൾ കരുതുന്നുണ്ടോ?</p>
+					<ul>
+						<li>
+							നിങ്ങൾക്ക് ഹാംഗ് ഓവർ പോലുള്ള ശാരീരിക പിൻവലിക്കൽ ലക്ഷണങ്ങൾ അനുഭവപ്പെടുന്നുണ്ടോ,
+							തലവേദന, ഓക്കാനം, വയറുവേദന, ക്ഷീണം, വിറയൽ, വിറയൽ, മലബന്ധം
+							നിങ്ങൾ കാണുമ്പോൾ പാടുകൾ കാണുന്നത് പോലെയുള്ള ഭ്രമാത്മകതയും കാഴ്ച വൈകല്യങ്ങളും
+							ഇൻഹേലന്റുകളൊന്നും കഴിച്ചിട്ടില്ലേ?
+						</li>
+						<li>
+							ഇൻഹാലന്റുകളുടെ ഉപയോഗം കുറയ്ക്കാനോ നിർത്താനോ നിങ്ങൾക്ക് കഴിഞ്ഞിട്ടില്ലെങ്കിലും
+							ആരോഗ്യം, കുടുംബം, ജോലി, സാമ്പത്തികമോ നിയമപരമോ ആയ പ്രശ്‌നങ്ങൾ തുടരുകയോ ലഭിക്കുകയോ ചെയ്തു
+							മോശമായത്?
+						</li>
+						<li>
+							നിങ്ങൾക്ക് ആരോഗ്യപരമോ മാനസികമോ ആയ പ്രശ്‌നങ്ങൾ ഉണ്ടോ, അത് മോശമാക്കിയേക്കാം
+							ഇൻഹാലന്റുകൾ ഉപയോഗിക്കുന്നുണ്ടോ?
+						</li>
+					</ul>
+					<p>
+						ഈ ചോദ്യങ്ങളിൽ ഏതെങ്കിലുമൊന്നിന് നിങ്ങൾ അതെ എന്ന് ഉത്തരം നൽകിയെങ്കിൽ, ഞങ്ങൾ നിങ്ങളോട് ശക്തമായി ശുപാർശ ചെയ്യുന്നു
+						കൂടുതൽ വിലയിരുത്തലിനും സഹായത്തിനുമായി ഒരു ഹെൽത്ത് കെയർ പ്രൊഫഷണലിനെ കാണുക.
+						<br />
+						നിങ്ങളെ സഹായിക്കുന്ന മറ്റ് സേവനങ്ങളും ഉറവിടങ്ങളും ഉണ്ട്.
+					</p>
+					<ul>
+						<li>
+							നിങ്ങൾക്ക് ADIS-നെ വിളിക്കാം - ആൽക്കഹോൾ ആൻഡ് ഡ്രഗ് ഇൻഫർമേഷൻ സർവീസ്
+							കൂടാതെ റഫറലുകൾ:
+							<a href="tel:1800250015">1800250015</a>
+						</li>
+						<li>
+							നിങ്ങൾക്ക് 12-നും 25-നും ഇടയിൽ പ്രായമുണ്ടെങ്കിൽ, നിങ്ങൾക്ക് ഹെഡ്‌സ്‌പേസിനെ വിളിക്കാം
+							റഫറലുകൾ
+						</li>
+						<li>
+							<a href="http://smartrecoveryaustralia.com.au/">സ്മാർട്ട് റിക്കവറി</a> ഏതെങ്കിലും പ്രശ്‌നകരമായ സ്വഭാവമുള്ള ആളുകളെ സഹായിക്കുന്ന സ്വതന്ത്ര ഗ്രൂപ്പ് പ്രോഗ്രാമാണ്
+						</li>
+					</ul>
+					<p>
+						ഭാവിയിൽ ഇൻഹാലന്റുമായി ബന്ധപ്പെട്ട പ്രശ്നങ്ങൾ ഉണ്ടാകാനുള്ള സാധ്യത വർദ്ധിപ്പിക്കുന്നത് ഒഴിവാക്കാൻ
+						നിങ്ങൾ എത്ര തവണ, എത്രത്തോളം ഉപയോഗിക്കുന്നു, എത്രത്തോളം എന്നിവ ട്രാക്ക് ചെയ്യാൻ എന്റെ ഡയറി ഉപയോഗിക്കാം
+						ചെലവഴിക്കുക.
+						<br />
+						എങ്കിൽ നിങ്ങൾക്ക് തിരികെ വന്ന് 3 മാസത്തിനുള്ളിൽ വീണ്ടും ചെക്ക് അപ്പ് പൂർത്തിയാക്കാം
+						നിങ്ങൾ എങ്ങനെ പോകുന്നു എന്ന് കാണാൻ ആഗ്രഹിക്കുന്നു.
+					</p>
+					<p>
+						ഒരു പ്രതിസന്ധി ഘട്ടത്തിൽ എന്തുചെയ്യണമെന്ന് നിങ്ങൾക്കറിയാമെന്ന് ഉറപ്പാക്കുക
+						<br />
+						ഇൻഹാലന്റുകൾ ഉപയോഗിക്കുമ്പോൾ ആരെങ്കിലും അമിതമായി കഴിക്കുകയോ പ്രതികൂല പ്രതികരണം ഉണ്ടാകുകയോ ചെയ്താൽ, ഇൻ
+						ഓസ്ട്രേലിയ
+					</p>
+					<p>
+						<a href="tel:000">ട്രിപ്പിൾ സീറോ എന്ന് വിളിക്കുക(000)</a>
+					</p>
+					<p>
+						അവർക്ക് ഉടൻ തന്നെ പ്രൊഫഷണൽ സഹായം ലഭിക്കേണ്ടത് വളരെ പ്രധാനമാണ്
+						സാധ്യമാണ്. പെട്ടെന്നുള്ള പ്രതികരണം അവരുടെ ജീവൻ രക്ഷിക്കും, അതിനാൽ വൈകരുത്.
+					</p>
+				</div>
+			),
+			"sedatives": (
+				<div>
+					<p>
+						നിങ്ങൾ ആരോഗ്യം, സാമൂഹികം, അനുഭവിക്കുന്നതിൽ <strong>ഉയർന്ന അപകടസാധ്യതയിലാണ്</strong>
+						നിങ്ങളുടെ നിലവിലെ പാറ്റേണിനെ അടിസ്ഥാനമാക്കിയുള്ള സാമ്പത്തികവും നിയമപരവും ബന്ധപരവുമായ പ്രശ്നങ്ങൾ
+						സെഡേറ്റീവ് ഉപയോഗം.
+						<br />
+						സെഡേറ്റീവ് മരുന്നുകളുടെ ഉപയോഗം ഒരു ശ്രേണിയുമായി ബന്ധപ്പെട്ടിരിക്കുമെന്ന് അറിഞ്ഞിരിക്കുക
+						ആരോഗ്യ, സാമൂഹിക, സാമ്പത്തിക, നിയമപരമായ പ്രശ്നങ്ങൾ.
+					</p>
+					<ul>
+						<li>മയക്കം</li>
+						<li>ശ്രദ്ധ കേന്ദ്രീകരിക്കാനും കാര്യങ്ങൾ ഓർമ്മിക്കാനും ബുദ്ധിമുട്ട്</li>
+						<li>ഓക്കാനം, വിശപ്പില്ലായ്മ</li>
+						<li>ഉറക്ക പ്രശ്നങ്ങൾ</li>
+						<li>തലവേദന</li>
+						<li>ഇരട്ട അല്ലെങ്കിൽ മങ്ങിയ കാഴ്ച</li>
+						<li>വിഷമവും ആവേശവും</li>
+						<li> ഏകോപന വൈകല്യം, തലകറക്കം, വിറയൽ</li>
+						<li>മൂഡ് ചാഞ്ചാട്ടവും ആക്രമണവും</li>
+						<li>ഓവർഡോസിന്റെ അപകടസാധ്യത</li>
+						<li>ബോധം നഷ്ടപ്പെടൽ, കോമ, മരണം</li>
+					</ul>
+					<p>
+						പ്രത്യേകമായി കൂടുതൽ വിവരങ്ങൾ അറിയാൻ നിങ്ങൾ ആഗ്രഹിക്കുന്നുവെങ്കിൽ
+						<a href="https://assistplus.com.au/drug-information/sedatives-sleeping-pills/">
+							സെഡേറ്റീവ് മരുന്ന് ഇവിടെ ക്ലിക്ക് ചെയ്യുക.
+						</a>
+					</p>
+					<p>
+						നിങ്ങളുടെ പ്രതികരണങ്ങളെ അടിസ്ഥാനമാക്കി, നിങ്ങൾ ഒന്നോ അതിലധികമോ അനുഭവിച്ചതായി തോന്നുന്നു
+						നിങ്ങളുടെ മയക്കമരുന്ന് ഉപയോഗവുമായി ബന്ധപ്പെട്ട പ്രശ്നങ്ങൾ.
+					</p>
+					<p>
+						ഈ പ്രശ്‌നങ്ങളെക്കുറിച്ച് നിങ്ങൾക്ക് എത്രമാത്രം ആശങ്കയുണ്ട്?
+						<br />
+						നിങ്ങളുടെ അപകടസാധ്യത കുറയ്ക്കുന്നതിനുള്ള ഏറ്റവും നല്ല മാർഗം മയക്കമരുന്ന് ഉപയോഗിക്കുന്നത് കുറയ്ക്കുകയോ അല്ലെങ്കിൽ ദുരുപയോഗം ചെയ്യുന്നത് നിർത്തുകയോ ചെയ്യുക എന്നതാണ്
+						മരുന്ന്.
+						<br />
+						മയക്കമരുന്ന് ഉപയോഗം കുറയ്ക്കുകയോ ഉപേക്ഷിക്കുകയോ ചെയ്താൽ മാസങ്ങൾക്കുള്ളിൽ സാധാരണ ഉറക്കം
+						പാറ്റേണുകൾ മടങ്ങിവരുന്നു.
+						<br />
+						കൂടാതെ:
+					</p>
+					<ul>
+						<li>നിങ്ങളുടെ വിശപ്പ് സാധാരണ നിലയിലേക്ക് മടങ്ങും</li>
+						<li>
+							അസ്ഥിരമായ നടത്തവും അവ്യക്തമായ സംസാരവും മോശം ഏകോപനവും ഇനി ഉണ്ടാകില്ല
+							കഴിവുകൾ
+						</li>
+						<li>
+							നിങ്ങൾക്ക് ഇനി ഇരട്ടിയോ മങ്ങിയതോ ആയ കാഴ്ചയോ അസ്വസ്ഥതയോ അനുഭവപ്പെടില്ല
+						</li>
+						<li>
+							നിങ്ങളുടെ മാനസികാവസ്ഥയും ഏകാഗ്രതയും നിങ്ങളുടെ കഴിവും നിങ്ങൾ മെച്ചപ്പെടുത്തും
+							കാര്യങ്ങൾ ഓർക്കുക
+						</li>
+						<li>ഓവർ ഡോസിലൂടെ നിങ്ങൾക്ക് ഇനി നേരത്തെയുള്ള മരണത്തിന് സാധ്യതയില്ല</li>
+					</ul>
+					<p>
+						നിങ്ങൾ എന്താണ് ചെയ്യാൻ ആഗ്രഹിക്കുന്നതെന്ന് നിങ്ങൾക്ക് ഉറപ്പില്ലെങ്കിൽ എല്ലാം ലിസ്റ്റ് ചെയ്യുന്നത് സഹായകമാകും
+						നല്ല കാര്യങ്ങളും നിങ്ങളുടെ ഒപിയോയിഡ് ഉപയോഗത്തെക്കുറിച്ചും അത്ര നല്ലതല്ല
+						വെട്ടിക്കുറയ്ക്കാനോ നിർത്താനോ ഉള്ള ആനുകൂല്യങ്ങളും ചെലവുകളും. നിങ്ങൾക്ക് ഒരു കോസ്റ്റ്-ബെനിഫിറ്റ് കണ്ടെത്താം
+						വിശകലനം
+						<a href="http://smartrecoveryaustralia.com.au/resources/smart-worksheets/">
+							വർക്ക്ഷീറ്റും മറ്റ് ഉപയോഗപ്രദമായ ഉപകരണങ്ങളും ഇവിടെയുണ്ട്
+						</a>
+						<br />
+						ഉപയോഗിക്കാതെ, അല്ലെങ്കിൽ നിങ്ങളുടെ കുറിപ്പടി മരുന്നുകളുടെ ഉപയോഗം വളരെ കുറച്ച് സൂക്ഷിക്കുന്നതിലൂടെ, നിങ്ങൾ
+						നിങ്ങളുടെ വിശപ്പ്, ഏകാഗ്രത, ഓർമ്മശക്തി, ഉണർവ് എന്നിവ കണ്ടെത്തും
+						മെച്ചപ്പെടുത്തുക, നിങ്ങൾ നന്നായി ഉറങ്ങുകയും വീഴാനുള്ള സാധ്യത കുറയുകയും ചെയ്യും,
+						ഉത്കണ്ഠ, അമിത അളവ്.
+					</p>
+					<p>
+						കുറിപ്പടി മരുന്നുകൾ ദുരുപയോഗം ചെയ്യുന്നത് കുറയ്ക്കാനോ നിർത്താനോ നിങ്ങൾ ആഗ്രഹിക്കുന്നുവെങ്കിൽ ഇവിടെ
+						നിങ്ങളെ സഹായിക്കാനുള്ള ചില തന്ത്രങ്ങളാണ്.
+						<br />
+						വെട്ടിക്കുറയ്ക്കുക എന്നതാണ് നിങ്ങളുടെ ലക്ഷ്യമെങ്കിൽ:
+					</p>
+					<ul>
+						<li>നിങ്ങൾ എത്ര തവണ, എത്ര തവണ ഉപയോഗിക്കുമെന്ന് പ്ലാൻ ചെയ്യുക</li>
+						<li>ഒരു സെഷനിൽ നിങ്ങൾ ഉപയോഗിക്കാൻ ഉദ്ദേശിക്കുന്നതിനേക്കാൾ കൂടുതൽ വാങ്ങരുത്</li>
+						<li>കൂടുതൽ ഉപയോഗിക്കാൻ നിങ്ങളെ പ്രേരിപ്പിക്കുന്ന ഒരു ശേഖരം ഒഴിവാക്കുക</li>
+					</ul>
+					<p>നിർത്തുക എന്നതാണ് നിങ്ങളുടെ ലക്ഷ്യമെങ്കിൽ:</p>
+					<ul>
+						<li>ഒരു ലക്ഷ്യ തീയതി സജ്ജീകരിച്ച് ആ തീയതിയിൽ നിർത്തുക</li>
+						<li>
+							നിങ്ങൾ നിർത്താൻ പോകുകയാണെന്ന് ഒരു സുഹൃത്തിനോടോ കുടുംബാംഗത്തോടോ പറയുക
+							നിങ്ങളെ പിന്തുണയ്ക്കാൻ കഴിയും.
+						</li>
+						<li>
+							നിങ്ങൾ ഇല്ലാത്ത സമയങ്ങളിൽ അധിക സമയം നിറയ്ക്കാൻ ചില ബദൽ പ്രവർത്തനങ്ങൾ ആസൂത്രണം ചെയ്യുക
+							ഉപയോഗിക്കുന്നത്.
+						</li>
+						<li>
+							ഉപയോഗിക്കാനും ആസൂത്രണം ചെയ്യാനും നിങ്ങൾ പ്രലോഭിപ്പിച്ചേക്കാവുന്ന സാഹചര്യങ്ങളെക്കുറിച്ച് ചിന്തിക്കുക
+							അവ ഒഴിവാക്കുക അല്ലെങ്കിൽ മയക്കമരുന്ന് ഉപയോഗിക്കുന്നത് എങ്ങനെ ഒഴിവാക്കണമെന്ന് ആസൂത്രണം ചെയ്യുക
+						</li>
+						<li>
+							നിങ്ങൾക്ക് സെഡേറ്റീവ് ഉപയോഗിക്കാനുള്ള ശക്തമായ ആഗ്രഹം ഉണ്ടായിരുന്ന സമയങ്ങളുടെ റെക്കോർഡ് സൂക്ഷിക്കുക
+							മരുന്ന്. ഉയർന്ന അപകടസാധ്യതയുള്ള സാഹചര്യങ്ങൾ തിരിച്ചറിയാനും ആസൂത്രണം ചെയ്യാനും ഇത് നിങ്ങളെ സഹായിക്കും
+							അവ ഒഴിവാക്കാനോ നിയന്ത്രിക്കാനോ. നിങ്ങൾക്ക് ഒരു ഡൗൺലോഡ് ചെയ്യാം
+							<a href="https://smartrecoveryaustralia.com.au/resources/smart-worksheets/">
+								ഇവിടെ ലോഗിൻ ചെയ്യാൻ ആവശ്യപ്പെടുക.
+							</a>
+						</li>
+					</ul>
+					<p>
+						സെഡേറ്റീവ് മരുന്നുകൾ ഉപയോഗിക്കുന്നത് കുറയ്ക്കുന്നതിനോ നിർത്തുന്നതിനോ നിങ്ങൾക്ക് സഹായം ആവശ്യമാണെന്ന് നിങ്ങൾ കരുതുന്നുണ്ടോ?
+						കണ്ടെത്താൻ ഈ ചോദ്യങ്ങൾക്ക് ഉത്തരം നൽകുക:
+					</p>
+					<ul>
+						<li>
+							അസ്വസ്ഥത പോലുള്ള ശാരീരിക പിൻവലിക്കൽ ലക്ഷണങ്ങൾ നിങ്ങൾക്ക് അനുഭവപ്പെടുന്നുണ്ടോ?
+							ക്ഷോഭം, വിഷാദവും കരച്ചിലും, തലവേദന, വേദന അല്ലെങ്കിൽ വിറയൽ
+							പേശികൾ, തലകറക്കവും വിറയലും, ഹൃദയാഘാതം, ഭ്രമാത്മകത, വയറിളക്കം,
+							വിശ്രമമില്ലാത്ത ഉറക്കം, നിങ്ങൾക്ക് മയക്കമരുന്ന് ഇല്ലാതിരിക്കുമ്പോൾ വിചിത്രമായ സ്വപ്നങ്ങൾ
+							മരുന്ന്?
+						</li>
+						<li>
+							സെഡേറ്റീവ് മരുന്നുകളുടെ ഉപയോഗം കുറയ്ക്കാനോ നിർത്താനോ നിങ്ങൾക്ക് കഴിഞ്ഞിട്ടില്ലേ?
+							നിങ്ങളുടെ ആരോഗ്യം, കുടുംബം, ജോലി, സാമ്പത്തിക അല്ലെങ്കിൽ നിയമപരമായ പ്രശ്നങ്ങൾ ഉണ്ടെങ്കിലും
+							തുടർന്നോ അതോ മോശമായോ?
+						</li>
+						<li>
+							നിങ്ങൾക്ക് ആരോഗ്യപരമോ മാനസികമോ ആയ പ്രശ്‌നങ്ങൾ ഉണ്ടോ, അത് മോശമാക്കിയേക്കാം
+							സെഡേറ്റീവ് മരുന്ന് ഉപയോഗിക്കുന്നുണ്ടോ?
+						</li>
+					</ul>
+					<p>
+						ഈ ചോദ്യങ്ങളിൽ ഏതെങ്കിലുമൊന്നിന് നിങ്ങൾ അതെ എന്ന് ഉത്തരം നൽകിയെങ്കിൽ, ഞങ്ങൾ നിങ്ങളോട് ശക്തമായി ശുപാർശ ചെയ്യുന്നു
+						കൂടുതൽ വിലയിരുത്തലിനും സഹായത്തിനുമായി ഒരു ഹെൽത്ത് കെയർ പ്രൊഫഷണലിനെ കാണുക.
+						<br />
+						നിങ്ങളെ സഹായിക്കുന്ന മറ്റ് സേവനങ്ങളും ഉറവിടങ്ങളും ഉണ്ട്.
+					</p>
+					<ul>
+						<li>
+							നിങ്ങൾക്ക് ADIS-നെ വിളിക്കാം - ആൽക്കഹോൾ ആൻഡ് ഡ്രഗ് ഇൻഫർമേഷൻ സർവീസ്
+							കൂടാതെ റഫറലുകൾ:
+							<a href="tel:1800250015">1800250015</a>
+						</li>
+						<li>
+							നിങ്ങൾക്ക് 12-നും 25-നും ഇടയിൽ പ്രായമുണ്ടെങ്കിൽ, നിങ്ങൾക്ക് ഹെഡ്‌സ്‌പേസിനെ വിളിക്കാം
+							റഫറലുകൾ
+						</li>
+						<li>
+							<a href="http://smartrecoveryaustralia.com.au/">സ്മാർട്ട് റിക്കവറി</a> ഏതെങ്കിലും പ്രശ്‌നകരമായ സ്വഭാവമുള്ള ആളുകളെ സഹായിക്കുന്ന സ്വതന്ത്ര ഗ്രൂപ്പ് പ്രോഗ്രാമാണ്
+						</li>
+					</ul>
+					<p>
+						കുറിപ്പടി മരുന്നുമായി ബന്ധപ്പെട്ട പ്രശ്നങ്ങൾ ഉണ്ടാകാനുള്ള സാധ്യത വർദ്ധിപ്പിക്കുന്നത് ഒഴിവാക്കാൻ
+						ഭാവിയിൽ, നിങ്ങൾ എത്ര തവണ, എത്രത്തോളം ഉപയോഗിക്കുന്നു എന്നതും ട്രാക്ക് ചെയ്യാൻ നിങ്ങൾക്ക് എന്റെ ഡയറി ഉപയോഗിക്കാം
+						നിങ്ങൾ എത്ര ചെലവഴിക്കുന്നു.
+						<br />
+						എങ്കിൽ നിങ്ങൾക്ക് തിരികെ വന്ന് 3 മാസത്തിനുള്ളിൽ വീണ്ടും ചെക്ക് അപ്പ് പൂർത്തിയാക്കാം
+						നിങ്ങൾ എങ്ങനെ പോകുന്നു എന്ന് കാണാൻ ആഗ്രഹിക്കുന്നു.
+					</p>
+					<p>
+						കുത്തിവയ്ക്കുന്നത്
+						<br />
+						നിങ്ങൾ സെഡേറ്റീവ് മരുന്ന് കുത്തിവയ്ക്കുകയാണെങ്കിൽ, നിങ്ങൾ ആകാനുള്ള സാധ്യത വർദ്ധിപ്പിക്കുന്നു
+						ആശ്രിത. നിങ്ങളുടെ ചർമ്മത്തിനും സിരകൾക്കും കേടുപാടുകൾ വരുത്തുകയും അണുബാധകൾ ഉണ്ടാകുകയും ചെയ്യാം.
+						കുരു, അൾസർ. നിങ്ങൾ കുത്തിവയ്ക്കുന്നത് ഉപകരണങ്ങൾ പങ്കിടുകയാണെങ്കിൽ നിങ്ങൾക്ക് അപകടസാധ്യതയുണ്ട്
+						ഹെപ്പറ്റൈറ്റിസ് ബി പോലുള്ള രക്തത്തിലൂടെ പകരുന്ന വൈറസ് അണുബാധകൾ
+						<br />
+						നിങ്ങൾ കുത്തിവയ്ക്കാൻ തിരഞ്ഞെടുക്കുകയാണെങ്കിൽ
+					</p>
+					<ul>
+						<li>എപ്പോഴും വൃത്തിയുള്ള ഉപകരണങ്ങളും പുതിയ സൂചിയും സിറിഞ്ചും ഉപയോഗിക്കുക.</li>
+						<li>ഒരു ഉപകരണവും പങ്കിടരുത്.</li>
+						<li>
+							തയ്യാറാക്കുന്ന സ്ഥലവും കൈകളും കുത്തിവയ്ക്കുന്ന സ്ഥലവും എപ്പോഴും വൃത്തിയാക്കുക.
+						</li>
+						<li>ഓരോ തവണയും സാവധാനം മറ്റൊരു സൈറ്റിൽ കുത്തിവയ്ക്കുക</li>
+						<li>ഉപയോഗിച്ച സൂചിയും സിറിഞ്ചും മൂർച്ചയുള്ള പാത്രത്തിൽ കളയുക.</li>
+					</ul>
+					<p>
+						നിങ്ങൾ എപ്പോഴെങ്കിലും കുത്തിവച്ചിട്ടുണ്ടെങ്കിൽ, ഒരു ഹെൽത്ത് കെയർ കാണാൻ ഞങ്ങൾ ശുപാർശ ചെയ്യുന്നു
+						രക്തത്തിലൂടെ പകരുന്ന വൈറസുകൾക്കായി ഒരു പ്രൊഫഷണൽ പരിശോധന നടത്തണം.
+					</p>
+					<p>
+						ഒരു പ്രതിസന്ധി ഘട്ടത്തിൽ എന്തുചെയ്യണമെന്ന് നിങ്ങൾക്കറിയാമെന്ന് ഉറപ്പാക്കുക
+						<br />
+						സെഡേറ്റീവ് ഉപയോഗിക്കുമ്പോൾ ആരെങ്കിലും അമിതമായി കഴിക്കുകയോ പ്രതികൂല പ്രതികരണം ഉണ്ടാകുകയോ ചെയ്താൽ
+						മരുന്ന്, ഓസ്ട്രേലിയയിൽ
+					</p>
+					<p>
+						<a href="tel:000">ട്രിപ്പിൾ സീറോ എന്ന് വിളിക്കുക(000)</a>
+					</p>
+					<p>
+						അവർക്ക് ഉടൻ തന്നെ പ്രൊഫഷണൽ സഹായം ലഭിക്കേണ്ടത് വളരെ പ്രധാനമാണ്
+						സാധ്യമാണ്. പെട്ടെന്നുള്ള പ്രതികരണം അവരുടെ ജീവൻ രക്ഷിക്കും, അതിനാൽ വൈകരുത്.
+					</p>
+				</div>
+			),
+			"hallucinogens": (
+				<div>
+					<p>
+						നിങ്ങൾ ആരോഗ്യം, സാമൂഹികം, അനുഭവിക്കുന്നതിൽ <strong>ഉയർന്ന അപകടസാധ്യതയിലാണ്</strong>
+						നിങ്ങളുടെ നിലവിലുള്ളതിനെ അടിസ്ഥാനമാക്കിയുള്ള സാമ്പത്തികവും നിയമപരവും ബന്ധപരവുമായ പ്രശ്നങ്ങൾ
+						ഹാലുസിനോജൻ ഉപയോഗം.
+					</p>
+					<p>
+						നിങ്ങൾക്ക് ഉറങ്ങാൻ ബുദ്ധിമുട്ട്, ഓക്കാനം, ഛർദ്ദി എന്നിവ അനുഭവപ്പെടാനുള്ള സാധ്യതയുണ്ട്
+						വർദ്ധിച്ച രക്തസമ്മർദ്ദം, മാനസികാവസ്ഥ, ഉത്കണ്ഠ, പരിഭ്രാന്തി, ഭ്രാന്ത്,
+						സ്കീസോഫ്രീനിയ പോലുള്ള മാനസിക രോഗങ്ങളുടെ ഫ്ലാഷ്ബാക്കുകളും വർധിച്ച പ്രത്യാഘാതങ്ങളും.
+					</p>
+					<p>
+						ഏതൊരു മരുന്നിന്റെയും ഫലങ്ങൾ ഓരോ വ്യക്തിക്കും വ്യത്യസ്തമാണ്. ഫലമാണ് ഫലം
+						മൂന്ന് സംവേദന ഘടകങ്ങൾ:
+					</p>
+					<ul>
+						<li>മരുന്ന് തന്നെ</li>
+						<li>വ്യക്തിഗത ഉപയോക്താവ്</li>
+						<li>മയക്കുമരുന്ന് ഉപയോഗം സംഭവിക്കുന്ന പരിസ്ഥിതി</li>
+					</ul>
+					<p>
+						ഒരു മയക്കുമരുന്നിന് ഒരു വ്യക്തിയിൽ ചെലുത്തുന്ന സ്വാധീനം പല ഘടകങ്ങളാൽ നിർണ്ണയിക്കപ്പെടുമ്പോൾ,
+						മരുന്നിന്റെ ഫലത്തെ സ്വാധീനിക്കുന്ന പ്രാഥമിക ഘടകങ്ങൾ മരുന്നിന്റെ തരവും
+						ഉപയോഗിച്ച അളവ്. ഏതെങ്കിലും നിയമവിരുദ്ധമായ മയക്കുമരുന്ന് ഉപയോഗത്തിന് കഴിയുമെന്ന് ഓർത്തിരിക്കേണ്ടത് പ്രധാനമാണ്
+						ആരോഗ്യം, സാമൂഹികം, സാമ്പത്തികം, നിയമപരമായ പ്രശ്നങ്ങൾ എന്നിവ നിങ്ങളെ അപകടത്തിലാക്കുന്നു. ഈ അപകടസാധ്യതകൾ
+						മറ്റ് കാരണങ്ങളാൽ എടുക്കുമ്പോൾ കുറിപ്പടി മരുന്നുകൾക്കും ബാധകമാണ്
+						നിർദേശിച്ചു.
+					</p>
+					<p>
+						നിയമവിരുദ്ധമായ മരുന്നുകൾ ഗുണനിലവാര നിയന്ത്രണങ്ങൾക്കും സജീവ ഘടകത്തിനും വിധേയമല്ല
+						സ്ഥിരതയുള്ളതല്ല. യഥാർത്ഥത്തിൽ എന്താണ് അതിൽ ഉള്ളതെന്നും അത് എങ്ങനെയാണെന്നും നിങ്ങൾക്ക് ഒരിക്കലും ഉറപ്പിക്കാൻ കഴിയില്ല
+						നിങ്ങളെ ബാധിക്കും. ‘വൺ ഓഫ്’ ഉപയോഗം പോലും ഗുരുതരമായ ദോഷങ്ങൾക്ക് ഇടയാക്കും. ഫെഡറൽ ഒപ്പം
+						സംസ്ഥാന നിയമങ്ങൾ കൈവശം വയ്ക്കുന്നതിനും ഉപയോഗിക്കുന്നതിനും ഉൽപ്പാദിപ്പിക്കുന്നതിനും വിൽക്കുന്നതിനും അല്ലെങ്കിൽ
+						നിരോധിത മയക്കുമരുന്ന് ഉപയോഗിച്ചുള്ള ഡ്രൈവിംഗ്.പിഴകളിൽ പിഴയും ഉൾപ്പെടാം,
+						വാഹനമോടിക്കുന്നതിൽ നിന്നുള്ള അയോഗ്യത, പുനരധിവാസ ഉത്തരവുകൾ, തടവ്. ചിന്തിക്കുക
+						ഈ പരിണതഫലങ്ങളിൽ ഏതെങ്കിലും നിങ്ങളുടെ ജീവിതത്തെ എങ്ങനെ ബാധിക്കുമെന്നതിനെക്കുറിച്ച്.
+					</p>
+					<p>
+						മയക്കുമരുന്നുമായി ബന്ധപ്പെട്ട അപകടസാധ്യതകളും ദോഷങ്ങളും ഒഴിവാക്കാൻ, ഏറ്റവും മികച്ച ഓപ്ഷൻ
+						അവ ഉപയോഗിക്കരുത്. മാറിയേക്കാവുന്ന ചില ആളുകൾക്ക് ഇത് ബുദ്ധിമുട്ടായിരിക്കും
+						അവരെ ആശ്രയിക്കുകയും അവ നിർത്തുകയോ കുറയ്ക്കുകയോ ചെയ്താൽ പിൻവലിക്കലിന്റെ ലക്ഷണങ്ങൾ അനുഭവപ്പെടുന്നു
+						അവരുടെ ഉപയോഗം.
+					</p>
+					<p>
+						സഹായം ലഭ്യമാണ്. ഇതിനെക്കുറിച്ച് കൂടുതൽ കണ്ടെത്തുന്നതിലൂടെ ആരംഭിക്കാൻ നിങ്ങൾ ആഗ്രഹിച്ചേക്കാം
+						ഹാലുസിനോജനുകളും അവയുടെ ഫലങ്ങളും{" "}
+						<a href="https://assistplus.com.au/drug-information/hallucinogens/">
+							ഇവിടെ ക്ലിക്ക് ചെയ്യുക.
+						</a>
+					</p>
+					<p>
+						ഒരു ആരോഗ്യ വിദഗ്ധനോടോ പ്രാദേശിക മരുന്നോടോ സംസാരിക്കാനും നിങ്ങളെ പ്രോത്സാഹിപ്പിക്കുന്നു
+						നിങ്ങൾക്ക് കൂടുതൽ വിവരങ്ങളോ ഉപേക്ഷിക്കാനുള്ള പിന്തുണയോ വേണമെങ്കിൽ മദ്യ സേവനം
+						നിങ്ങളുടെ ഉപയോഗം.
+					</p>
+					<p>
+						ഒരു പ്രതിസന്ധി ഘട്ടത്തിൽ എന്തുചെയ്യണമെന്ന് നിങ്ങൾക്കറിയാമെന്ന് ഉറപ്പാക്കുക
+						<br />
+						ഹാലുസിനോജൻ ഉപയോഗിക്കുമ്പോൾ ആരെങ്കിലും അമിതമായി കഴിക്കുകയോ പ്രതികൂല പ്രതികരണം ഉണ്ടാകുകയോ ചെയ്താൽ,
+						ഓസ്ട്രേലിയയിൽ
+					</p>
+					<p>
+						<a href="tel:000">ട്രിപ്പിൾ സീറോ എന്ന് വിളിക്കുക(000)</a>
+					</p>
+					<p>
+						അവർക്ക് ഉടൻ തന്നെ പ്രൊഫഷണൽ സഹായം ലഭിക്കേണ്ടത് വളരെ പ്രധാനമാണ്
+						സാധ്യമാണ്. പെട്ടെന്നുള്ള പ്രതികരണം അവരുടെ ജീവൻ രക്ഷിക്കും, അതിനാൽ വൈകരുത്.
+					</p>
+				</div>
+			),
+			"opioids": (
+				<div>
+					<p>
+						നിങ്ങൾ ആരോഗ്യം, സാമൂഹികം, അനുഭവിക്കുന്നതിൽ <strong>ഉയർന്ന അപകടസാധ്യതയിലാണ്</strong>
+						നിങ്ങളുടെ നിലവിലെ പാറ്റേണിനെ അടിസ്ഥാനമാക്കിയുള്ള സാമ്പത്തികവും നിയമപരവും ബന്ധപരവുമായ പ്രശ്നങ്ങൾ
+						ഒപിയോയിഡ് ഉപയോഗം.
+						<br />
+						വേദനയ്ക്ക് ഒപിയോയിഡുകൾ വളരെ ഉപയോഗപ്രദമായ മരുന്നുകളാണെങ്കിലും, നോൺ-മെഡിക്കൽ ഉപയോഗം ആകാം
+						വളരെ ദോഷകരമാണ്. ഒപിയോയിഡ് ഉപയോഗം ഒരു ശ്രേണിയുമായി ബന്ധപ്പെട്ടിരിക്കാമെന്ന കാര്യം ശ്രദ്ധിക്കുക
+						ആരോഗ്യം, സാമൂഹികം, സാമ്പത്തികം, നിയമപരമായ പ്രശ്നങ്ങൾ എന്നിവ ഉൾപ്പെടെ:
+					</p>
+					<ul>
+						<li>ശ്രദ്ധ കേന്ദ്രീകരിക്കാനും കാര്യങ്ങൾ ഓർമ്മിക്കാനും ബുദ്ധിമുട്ട്</li>
+						<li>മൂത്രമൊഴിക്കാനുള്ള ബുദ്ധിമുട്ട്; മലബന്ധം</li>
+						<li>വരണ്ട വായ, ദന്തക്ഷയം</li>
+						<li>ഓക്കാനം, വിശപ്പ് കുറവ്</li>
+						<li>മന്ദഗതിയിലുള്ള ശ്വസനവും ഹൃദയമിടിപ്പും, ക്രമരഹിതമായ ഹൃദയമിടിപ്പ്</li>
+						<li>ലൈംഗികാഭിലാഷവും ലൈംഗിക പ്രകടനവും കുറയുന്നു</li>
+						<li>ക്രമരഹിതമായ ആർത്തവവും കുട്ടികളുണ്ടാകാനുള്ള ബുദ്ധിമുട്ടും</li>
+						<li>ബന്ധത്തിലെ ബുദ്ധിമുട്ടുകൾ</li>
+						<li>സാമ്പത്തിക, തൊഴിൽ പ്രശ്നങ്ങൾ, നിയമപരമായ പ്രശ്നങ്ങൾ</li>
+						<li>അമിത അളവും ശ്വാസതടസ്സം മൂലമുള്ള മരണവും</li>
+						<li>ഒപിയോയിഡ് ആശ്രിതത്വം</li>
+					</ul>
+					<p>
+						ഒപിയോയിഡുകൾ/ഹെറോയിൻ മദ്യം, കുറിപ്പടി അല്ലെങ്കിൽ അധികമായി കലർത്തുന്നതിന്റെ ഫലങ്ങൾ
+						കൌണ്ടർ മരുന്നുകൾ, കൂടാതെ/അല്ലെങ്കിൽ മറ്റ് നിയമവിരുദ്ധ മരുന്നുകൾ എന്നിവ പലപ്പോഴും പ്രവചനാതീതമാണ്. ഇൻ
+						പ്രത്യേകിച്ച്, മദ്യം പോലെയുള്ള മറ്റ് വിഷാദ മരുന്നുകളുമായി ഒപിയോയിഡുകൾ കലർത്തുന്നത്
+						സെഡേറ്റീവ്സ് വിഷാദരോഗം വർദ്ധിപ്പിക്കുകയും ശ്വാസോച്ഛ്വാസം ഉണ്ടാക്കുകയും ചെയ്യും
+						വിഷാദം, കോമ, മരണം.
+						<br />
+						നിങ്ങൾക്ക് പ്രത്യേകമായി കൂടുതൽ വിവരങ്ങൾ വേണമെങ്കിൽ
+						<a href="https://assistplus.com.au/drug-information/opioids/">
+							ഒപിയോയിഡുകൾ ഇവിടെ ക്ലിക്ക് ചെയ്യുക.
+						</a>
+					</p>
+					<p>
+						നിങ്ങളുടെ പ്രതികരണങ്ങളെ അടിസ്ഥാനമാക്കി, നിങ്ങൾ ഒന്നോ അതിലധികമോ അനുഭവിച്ചതായി തോന്നുന്നു
+						ഇൻഹാലന്റുമായി ബന്ധപ്പെട്ട പ്രശ്നങ്ങൾ.
+					</p>
+					<p>
+						ഈ പ്രശ്‌നങ്ങളെക്കുറിച്ച് നിങ്ങൾക്ക് എത്രമാത്രം ആശങ്കയുണ്ട്?
+						<br />
+						നിങ്ങളുടെ അപകടസാധ്യത കുറയ്ക്കുന്നതിനുള്ള ഏറ്റവും നല്ല മാർഗം ഉപയോഗം കുറയ്ക്കുകയോ നിർത്തുകയോ ചെയ്യുക എന്നതാണ്
+						ഒപിയോയിഡുകൾ/ഹെറോയിൻ.
+						<br />
+						നിങ്ങൾ എന്താണ് ചെയ്യാൻ ആഗ്രഹിക്കുന്നതെന്ന് നിങ്ങൾക്ക് ഉറപ്പില്ലെങ്കിൽ എല്ലാം ലിസ്റ്റ് ചെയ്യുന്നത് സഹായകമാകും
+						നല്ല കാര്യങ്ങളും നിങ്ങളുടെ ഒപിയോയിഡ് ഉപയോഗത്തെക്കുറിച്ചും അത്ര നല്ലതല്ല
+						വെട്ടിക്കുറയ്ക്കാനോ നിർത്താനോ ഉള്ള ആനുകൂല്യങ്ങളും ചെലവുകളും. നിങ്ങൾക്ക് ഒരു കോസ്റ്റ്-ബെനിഫിറ്റ് കണ്ടെത്താം
+						വിശകലനം
+						<a href="http://smartrecoveryaustralia.com.au/resources/smart-worksheets/">
+							വർക്ക്ഷീറ്റും മറ്റ് ഉപയോഗപ്രദമായ ഉപകരണങ്ങളും ഇവിടെയുണ്ട്
+						</a>
+						<br />
+						ഉപയോഗിക്കാതിരിക്കുന്നതിലൂടെയോ നിങ്ങളുടെ ഒപിയോയിഡ്/ഹെറോയിൻ ഉപയോഗം വളരെ കുറവായി നിലനിർത്തുന്നതിലൂടെയോ നിങ്ങൾ കണ്ടെത്തും
+						നിങ്ങളുടെ വിശപ്പ്, ഏകാഗ്രത, ഓർമ്മശക്തി, ജാഗ്രത എന്നിവ മെച്ചപ്പെടും
+						ദന്ത, ശാരീരിക ആരോഗ്യം മെച്ചപ്പെടും, നിങ്ങളുടെ ലൈംഗിക പ്രവർത്തനം മെച്ചപ്പെടുത്തും
+						മെച്ചപ്പെടുത്തുക, നിങ്ങൾക്ക് അമിതമായി കഴിക്കാനുള്ള സാധ്യത കുറവാണ്.
+					</p>
+					<p>
+					   ഒപിയോയിഡുകൾ/ഹെറോയിൻ ഉപയോഗിക്കുന്നത് കുറയ്ക്കാനോ നിർത്താനോ നിങ്ങൾ ആഗ്രഹിക്കുന്നുവെങ്കിൽ ചിലത് ഇവിടെയുണ്ട്
+						നിങ്ങളെ സഹായിക്കുന്നതിനുള്ള തന്ത്രങ്ങൾ.
+						<br />
+						വെട്ടിക്കുറയ്ക്കുക എന്നതാണ് നിങ്ങളുടെ ലക്ഷ്യമെങ്കിൽ:
+					</p>
+					<ul>
+						<li>നിങ്ങൾ എത്ര തവണ, എത്ര തവണ ഉപയോഗിക്കുമെന്ന് പ്ലാൻ ചെയ്യുക</li>
+						<li>ഒരു സെഷനിൽ നിങ്ങൾ ഉപയോഗിക്കാൻ ഉദ്ദേശിക്കുന്നതിനേക്കാൾ കൂടുതൽ വാങ്ങരുത്</li>
+						<li>കൂടുതൽ ഉപയോഗിക്കാൻ നിങ്ങളെ പ്രേരിപ്പിക്കുന്ന ഒരു ശേഖരം ഒഴിവാക്കുക</li>
+					</ul>
+					<p>നിർത്തുക എന്നതാണ് നിങ്ങളുടെ ലക്ഷ്യമെങ്കിൽ:</p>
+					<ul>
+						<li>ഒരു ലക്ഷ്യ തീയതി സജ്ജീകരിച്ച് ആ തീയതിയിൽ നിർത്തുക</li>
+						<li>
+							നിങ്ങൾ നിർത്താൻ പോകുകയാണെന്ന് ഒരു സുഹൃത്തിനോടോ കുടുംബാംഗത്തോടോ പറയുക
+							നിങ്ങളെ പിന്തുണയ്ക്കാൻ കഴിയും.
+						</li>
+						<li>
+							നിങ്ങൾ ഇല്ലാത്ത സമയങ്ങളിൽ അധിക സമയം നിറയ്ക്കാൻ ചില ബദൽ പ്രവർത്തനങ്ങൾ ആസൂത്രണം ചെയ്യുക
+							ഉപയോഗിക്കുന്നത്.
+						</li>
+						<li>
+							ഉപയോഗിക്കാനും ആസൂത്രണം ചെയ്യാനും നിങ്ങൾ പ്രലോഭിപ്പിച്ചേക്കാവുന്ന സാഹചര്യങ്ങളെക്കുറിച്ച് ചിന്തിക്കുക
+							അവ ഒഴിവാക്കുക അല്ലെങ്കിൽ ഒപിയോയിഡുകൾ/ഹെറോയിൻ ഉപയോഗിക്കുന്നത് എങ്ങനെ ഒഴിവാക്കണമെന്ന് ആസൂത്രണം ചെയ്യുക
+						</li>
+						<li>
+							നിങ്ങൾക്ക് ഉപയോഗിക്കാൻ ശക്തമായ ആഗ്രഹം ഉണ്ടായിരുന്ന സമയങ്ങളുടെ റെക്കോർഡ് സൂക്ഷിക്കുക
+							ഒപിയോയിഡുകൾ/ഹെറോയിൻ. ഉയർന്ന അപകടസാധ്യതയുള്ള സാഹചര്യങ്ങൾ തിരിച്ചറിയാനും ഇത് നിങ്ങളെ സഹായിക്കും
+							അവ ഒഴിവാക്കാനോ നിയന്ത്രിക്കാനോ ആസൂത്രണം ചെയ്യുക. നിങ്ങൾക്ക് ഒരു ഡൗൺലോഡ് ചെയ്യാം
+							<a href="https://smartrecoveryaustralia.com.au/resources/smart-%20worksheets/">
+								ഇവിടെ ലോഗിൻ ചെയ്യാൻ ആവശ്യപ്പെടുക.
+							</a>
+						</li>
+					</ul>
+					<p>
+						ഒപിയോയിഡുകൾ/ഹെറോയിൻ ഉപയോഗിക്കുന്നത് കുറയ്ക്കുന്നതിനോ നിർത്തുന്നതിനോ സഹായം ആവശ്യമാണെന്ന് നിങ്ങൾ കരുതുന്നുണ്ടോ? ഉത്തരം
+						ഇനിപ്പറയുന്ന ചോദ്യങ്ങൾ:
+					</p>
+					<ul>
+						<li>
+							അസ്വസ്ഥത പോലുള്ള ശാരീരിക പിൻവലിക്കൽ ലക്ഷണങ്ങൾ നിങ്ങൾക്ക് അനുഭവപ്പെടുന്നുണ്ടോ?
+							ക്ഷോഭം, വിഷാദവും കരച്ചിലും, വയറിളക്കം, അസ്വസ്ഥമായ ഉറക്കം കൂടാതെ
+							അലർച്ച, വയറും കാലും മലബന്ധം, ഛർദ്ദി, വിശപ്പില്ലായ്മ, നെല്ലിക്ക,
+							നിങ്ങൾക്ക് ഒപിയോയിഡുകൾ/ഹെറോയിൻ ഇല്ലാതിരുന്നപ്പോൾ മൂക്കൊലിപ്പ് വേഗത്തിലാകുമോ?
+						</li>
+						<li>
+							ഒപിയോയിഡുകൾ/ഹെറോയിൻ ഉപയോഗിക്കുന്നത് കുറയ്ക്കാനോ നിർത്താനോ നിങ്ങൾക്ക് കഴിഞ്ഞിട്ടില്ലേ?
+							നിങ്ങളുടെ ആരോഗ്യം, കുടുംബം, ജോലി, സാമ്പത്തിക അല്ലെങ്കിൽ നിയമപരമായ പ്രശ്നങ്ങൾ തുടരുന്നു അല്ലെങ്കിൽ
+							മോശമായി?
+						</li>
+						<li>
+							നിങ്ങൾക്ക് ആരോഗ്യപരമോ മാനസികമോ ആയ പ്രശ്‌നങ്ങൾ ഉണ്ടോ, അത് മോശമാക്കിയേക്കാം
+							ഒപിയോയിഡുകൾ/ഹെറോയിൻ ഉപയോഗിക്കുന്നുണ്ടോ?
+						</li>
+					</ul>
+					<p>
+						ഈ ചോദ്യങ്ങളിൽ ഏതെങ്കിലുമൊന്നിന് നിങ്ങൾ അതെ എന്ന് ഉത്തരം നൽകിയെങ്കിൽ, ഞങ്ങൾ നിങ്ങളോട് ശക്തമായി ശുപാർശ ചെയ്യുന്നു
+						കൂടുതൽ വിലയിരുത്തലിനും സഹായത്തിനുമായി ഒരു ഹെൽത്ത് കെയർ പ്രൊഫഷണലിനെ കാണുക.
+						<br />
+						നിങ്ങളെ സഹായിക്കുന്ന മറ്റ് സേവനങ്ങളും ഉറവിടങ്ങളും ഉണ്ട്.
+					</p>
+					<ul>
+						<li>
+							നിങ്ങൾക്ക് ADIS-നെ വിളിക്കാം - ആൽക്കഹോൾ ആൻഡ് ഡ്രഗ് ഇൻഫർമേഷൻ സർവീസ്
+							കൂടാതെ റഫറലുകൾ:
+							<a href="tel:1800250015">1800250015</a>
+						</li>
+						<li>
+							നിങ്ങൾക്ക് 12-നും 25-നും ഇടയിൽ പ്രായമുണ്ടെങ്കിൽ, നിങ്ങൾക്ക് ഹെഡ്‌സ്‌പേസിനെ വിളിക്കാം
+							റഫറലുകൾ
+						</li>
+						<li>
+							<a href="http://smartrecoveryaustralia.com.au/">സ്മാർട്ട് റിക്കവറി</a> ഏതെങ്കിലും പ്രശ്‌നകരമായ സ്വഭാവമുള്ള ആളുകളെ സഹായിക്കുന്ന സ്വതന്ത്ര ഗ്രൂപ്പ് പ്രോഗ്രാമാണ്
+						</li>
+					</ul>
+					<p>
+						ഭാവിയിൽ നിങ്ങൾ ഒപിയോയിഡ് സംബന്ധമായ പ്രശ്നങ്ങൾ ഉണ്ടാകാനുള്ള സാധ്യത വർദ്ധിപ്പിക്കുന്നത് ഒഴിവാക്കാൻ
+						നിങ്ങൾ എത്ര തവണ, എത്രത്തോളം ഉപയോഗിക്കുന്നു, എത്രത്തോളം എന്നിവ ട്രാക്ക് ചെയ്യാൻ എന്റെ ഡയറി ഉപയോഗിക്കാം
+						ചെലവഴിക്കുക.
+						<br />
+						എങ്കിൽ നിങ്ങൾക്ക് തിരികെ വന്ന് 3 മാസത്തിനുള്ളിൽ വീണ്ടും ചെക്ക് അപ്പ് പൂർത്തിയാക്കാം
+						നിങ്ങൾ എങ്ങനെ പോകുന്നു എന്ന് കാണാൻ ആഗ്രഹിക്കുന്നു.
+					</p>
+					<p>
+						കുത്തിവയ്ക്കുന്നത്
+						<br />
+					   നിങ്ങൾ ഒപിയോയിഡുകൾ / ഹെറോയിൻ കുത്തിവയ്ക്കുകയാണെങ്കിൽ, നിങ്ങൾ ആശ്രിതനാകാനുള്ള സാധ്യത വർദ്ധിപ്പിക്കുന്നു.
+						നിങ്ങളുടെ ചർമ്മത്തിനും സിരകൾക്കും കേടുപാടുകൾ വരുത്തുകയും അണുബാധകൾ, കുരുക്കൾ എന്നിവയും ഉണ്ടാകുകയും ചെയ്യാം
+						അൾസർ. നിങ്ങൾ കുത്തിവയ്ക്കുന്ന ഉപകരണങ്ങൾ പങ്കുവെച്ചാൽ നിങ്ങൾക്ക് രക്തം പകരാനുള്ള സാധ്യതയുണ്ട്
+						ഹെപ്പറ്റൈറ്റിസ് ബി പോലുള്ള വൈറസ് അണുബാധകൾ
+						<br />
+						നിങ്ങൾ കുത്തിവയ്ക്കാൻ തിരഞ്ഞെടുക്കുകയാണെങ്കിൽ
+					</p>
+					<ul>
+						<li>എപ്പോഴും വൃത്തിയുള്ള ഉപകരണങ്ങളും പുതിയ സൂചിയും സിറിഞ്ചും ഉപയോഗിക്കുക.</li>
+						<li>ഒരു ഉപകരണവും പങ്കിടരുത്.</li>
+						<li>
+							തയ്യാറാക്കുന്ന സ്ഥലവും കൈകളും കുത്തിവയ്ക്കുന്ന സ്ഥലവും എപ്പോഴും വൃത്തിയാക്കുക.
+						</li>
+						<li>ഓരോ തവണയും സാവധാനം മറ്റൊരു സൈറ്റിൽ കുത്തിവയ്ക്കുക</li>
+						<li>ഉപയോഗിച്ച സൂചിയും സിറിഞ്ചും മൂർച്ചയുള്ള പാത്രത്തിൽ കളയുക.</li>
+					</ul>
+					<p>
+						നിങ്ങൾ എപ്പോഴെങ്കിലും ഒപിയോയിഡുകൾ/ഹെറോയിൻ കുത്തിവച്ചിട്ടുണ്ടെങ്കിൽ ആരോഗ്യസ്ഥിതി കാണണമെന്ന് ഞങ്ങൾ ശുപാർശ ചെയ്യുന്നു
+						രക്തത്തിൽ പകരുന്ന വൈറസുകൾക്കായി കെയർ പ്രൊഫഷണലുകൾ പരിശോധിക്കണം.
+					</p>
+					<p>
+						ഒരു പ്രതിസന്ധി ഘട്ടത്തിൽ എന്തുചെയ്യണമെന്ന് നിങ്ങൾക്കറിയാമെന്ന് ഉറപ്പാക്കുക
+						<br />
+						ഒപിയോയിഡുകൾ/ഹെറോയിൻ ഉപയോഗിക്കുമ്പോൾ ആരെങ്കിലും അമിതമായി കഴിക്കുകയോ പ്രതികൂല പ്രതികരണം ഉണ്ടാകുകയോ ചെയ്താൽ,
+						ഓസ്ട്രേലിയയിൽ
+					</p>
+					<p>
+						<a href="tel:000">ട്രിപ്പിൾ സീറോ എന്ന് വിളിക്കുക(000)</a>
+					</p>
+					<p>
+						അവർക്ക് ഉടൻ തന്നെ പ്രൊഫഷണൽ സഹായം ലഭിക്കേണ്ടത് വളരെ പ്രധാനമാണ്
+						സാധ്യമാണ്. പെട്ടെന്നുള്ള പ്രതികരണം അവരുടെ ജീവൻ രക്ഷിക്കും, അതിനാൽ വൈകരുത്.
+					</p>
+				</div>
+			),
+			"other": null,
+		},
+	}
 };
