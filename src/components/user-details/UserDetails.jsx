@@ -8,7 +8,7 @@ import { getIsValidAge } from "./helpers";
 
 // TODO: Save Input data
 function UserDetails() {
-	const { allPages, setPage } = useContext(AppContext);
+	const { translation, allPages, setPage } = useContext(AppContext);
 
 	const [error, setError] = useState(null);
 	const [userDetails, setUserDetails] = useState({
@@ -26,7 +26,7 @@ function UserDetails() {
 
 		if (!getIsValidAge(age)) return; // Restrict input.
 
-		age < 18 ? setError("Please enter an age greater than 18.") : setError(null);
+		age < 18 ? setError(translation.alert.ageGreaterThan18) : setError(null);
 
 		setUserDetails(prevUserDetails => {
 			const newUserDetails = { ...prevUserDetails };
@@ -57,12 +57,12 @@ function UserDetails() {
 		}
 
 		if (!isAllAnswered) {
-			setError("Please answer all questions to continue.");
+			setError(translation.alert.answerAllQuestions);
 			return;
 		}
 
 		if (userDetails.age < 18) {
-			setError("Please enter an age greater than 18.");
+			setError(translation.alert.ageGreaterThan18);
 			return;
 		}
 
@@ -77,7 +77,7 @@ function UserDetails() {
 					{/* Gender */}
 					<div>
 						<div className="sub-question-container">
-							<strong>What is your gender?</strong>
+							<strong>{translation.userDetails.gender}</strong>
 						</div>
 						<div className="form-check radio-spacing mt-2">
 							<input
@@ -94,7 +94,7 @@ function UserDetails() {
 								className="form-check-label"
 								htmlFor="radioGenderMale"
 							>
-								Male
+								{translation.userDetails.male}
 							</label>
 						</div>
 						<div className="form-check radio-spacing">
@@ -112,7 +112,7 @@ function UserDetails() {
 								className="form-check-label"
 								htmlFor="radioGenderFemale"
 							>
-								Female
+								{translation.userDetails.female}
 							</label>
 						</div>
 						<div className="form-check radio-spacing mb-3">
@@ -130,7 +130,7 @@ function UserDetails() {
 								className="form-check-label"
 								htmlFor="radioGenderTransgender"
 							>
-								Transgender
+								{translation.userDetails.transgender}
 							</label>
 						</div>
 					</div>
@@ -138,7 +138,7 @@ function UserDetails() {
 					{/* Age */}
 					<div className="mt-4">
 						<div className="sub-question-container">
-							<strong>What is your age?</strong>
+							<strong>{translation.userDetails.age}</strong>
 						</div>
 						<div className="form-group col-sm-4 input-group-sm mt-2">
 							<input
@@ -159,7 +159,7 @@ function UserDetails() {
 					{/* Place of residence */}
 					<div className="mt-1">
 						<div className="sub-question-container">
-							<strong>Where is your place of residence?</strong>
+							<strong>{translation.userDetails.placeOfResidence}</strong>
 						</div>
 						<div className="form-check radio-spacing mt-2">
 							<input
@@ -176,7 +176,7 @@ function UserDetails() {
 								className="form-check-label"
 								htmlFor="radioPlaceOfResidenceVillage"
 							>
-								Village
+								{translation.userDetails.village}
 							</label>
 						</div>
 						<div className="form-check radio-spacing">
@@ -194,7 +194,7 @@ function UserDetails() {
 								className="form-check-label"
 								htmlFor="radioPlaceOfResidenceUrban"
 							>
-								Urban
+								{translation.userDetails.urban}
 							</label>
 						</div>
 					</div>
@@ -202,7 +202,7 @@ function UserDetails() {
 					{/* Education */}
 					<div className="mt-4">
 						<div className="sub-question-container">
-							<strong>What is your Educational Qualification?</strong>
+							<strong>{translation.userDetails.education}</strong>
 						</div>
 						<div className="form-check radio-spacing mt-2">
 							<input
@@ -219,7 +219,7 @@ function UserDetails() {
 								className="form-check-label"
 								htmlFor="radioEducationHighSchool"
 							>
-								High School
+								{translation.userDetails.highSchool}
 							</label>
 						</div>
 						<div className="form-check radio-spacing">
@@ -237,7 +237,7 @@ function UserDetails() {
 								className="form-check-label"
 								htmlFor="radioEducationDegree"
 							>
-								Degree
+								{translation.userDetails.degree}
 							</label>
 						</div>
 						<div className="form-check radio-spacing">
@@ -255,7 +255,7 @@ function UserDetails() {
 								className="form-check-label"
 								htmlFor="radioEducationPostGraduation"
 							>
-								Post Graduation and above
+								{translation.userDetails.postGraduation}
 							</label>
 						</div>
 					</div>
@@ -263,7 +263,7 @@ function UserDetails() {
 					{/* Economic Status */}
 					<div className="mt-4">
 						<div className="sub-question-container">
-							<strong>What is your current economic status?</strong>
+							<strong>{translation.userDetails.economicStatus}</strong>
 						</div>
 						<div className="form-check radio-spacing mt-2">
 							<input
@@ -280,7 +280,7 @@ function UserDetails() {
 								className="form-check-label"
 								htmlFor="radioEconomicStatusBPL"
 							>
-								BPL
+								{translation.userDetails.bpl}
 							</label>
 						</div>
 						<div className="form-check radio-spacing">
@@ -298,7 +298,7 @@ function UserDetails() {
 								className="form-check-label"
 								htmlFor="radioEconomicStatusAPL"
 							>
-								APL
+								{translation.userDetails.apl}
 							</label>
 						</div>
 					</div>
@@ -306,7 +306,7 @@ function UserDetails() {
 					{/* Employment Status */}
 					<div className="mt-4">
 						<div className="sub-question-container">
-							<strong>How are you mainly employed at the moment?</strong>
+							<strong>{translation.userDetails.employmentStatus}</strong>
 						</div>
 						<div className="form-check radio-spacing mt-2">
 							<input
@@ -323,7 +323,7 @@ function UserDetails() {
 								className="form-check-label"
 								htmlFor="radioEmploymentStatusNotEmployed"
 							>
-								Not employed
+								{translation.userDetails.notEmployed}
 							</label>
 						</div>
 						<div className="form-check radio-spacing">
@@ -341,7 +341,7 @@ function UserDetails() {
 								className="form-check-label"
 								htmlFor="radioEmploymentStatusFullTime"
 							>
-								Full time
+								{translation.userDetails.fullTime}
 							</label>
 						</div>
 						<div className="form-check radio-spacing">
@@ -359,7 +359,7 @@ function UserDetails() {
 								className="form-check-label"
 								htmlFor="radioEmploymentStatusPartTime"
 							>
-								Part time/casual
+								{translation.userDetails.partTime}
 							</label>
 						</div>
 						<div className="form-check radio-spacing">
@@ -377,7 +377,7 @@ function UserDetails() {
 								className="form-check-label"
 								htmlFor="radioEmploymentStatusStudent"
 							>
-								Student
+								{translation.userDetails.student}
 							</label>
 						</div>
 						<div className="form-check radio-spacing">
@@ -395,7 +395,7 @@ function UserDetails() {
 								className="form-check-label"
 								htmlFor="radioEmploymentStatusHomeDuties"
 							>
-								Home duties
+								{translation.userDetails.homeDuties}
 							</label>
 						</div>
 					</div>
@@ -407,7 +407,7 @@ function UserDetails() {
 			<div className="text-center mt-4 mb-2 p-2 mx-5 d-grid gap-2 d-md-block row d-flex">
 				<PageButton
 					buttonClass="btn btn-success"
-					buttonText="Next >"
+					buttonText={translation.pageNavigation.next}
 					handlePageButtonClick={handleNextButtonClick}
 				/>
 			</div>

@@ -1,13 +1,15 @@
+import { useContext } from "react";
 import Accordion from "../ui/Accordion";
-
-function capitalize(str) {
-	return str.charAt(0).toUpperCase() + str.slice(1);
-}
+import { AppContext } from "../../contexts/AppContext";
 
 function Advice({ type, substances, getSubstanceAdviceHTML }) {
+	const { translation } = useContext(AppContext);
+	let adviceTitle =
+		type === "moderate" ? translation.advice.moderateAdvice : translation.advice.referralAdvice;
+
 	return (
 		<>
-			<h5>{capitalize(type)} Advice</h5>
+			<h5>{adviceTitle}</h5>
 
 			{substances.map(substance => {
 				let adviceContent = getSubstanceAdviceHTML(type, substance.id);

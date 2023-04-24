@@ -14,7 +14,7 @@ import useSubstancesUsedRef from "../../hooks/useSubstancesUsedRef";
 
 function QuestionContainer({ allQuestions, allSubstances, resultsRef }) {
 	// Contexts.
-	const { allPages, setPage } = useContext(AppContext);
+	const { translation, allPages, setPage } = useContext(AppContext);
 
 	// States.
 	const [currentQuestion, setCurrentQuestion] = useState(allQuestions[0]);
@@ -137,15 +137,15 @@ function QuestionContainer({ allQuestions, allSubstances, resultsRef }) {
 			/>
 
 			{showRequiredMessage && (
-				<AlertBox type="danger">
-					Please complete all questions on the page to continue.
-				</AlertBox>
+				<AlertBox type="danger">{translation.alert.answerAllQuestions}</AlertBox>
 			)}
 
 			<PageNavigation
 				showNextButton
 				nextButtonText={
-					currentQuestionIndex === totalQuestions - 1 ? "Submit Answers >" : "Next >"
+					currentQuestionIndex === totalQuestions - 1
+						? translation.pageNavigation.submit
+						: translation.pageNavigation.next
 				}
 				showPreviousButton={currentQuestionIndex !== 0}
 				handleNextButtonClick={handleNextButtonClick}

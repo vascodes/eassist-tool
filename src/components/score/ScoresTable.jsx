@@ -6,20 +6,24 @@ import CardLayout from "../layouts/CardLayout";
 import PageNavigation from "../ui/PageNavigation";
 
 function ScoresTable({ resultsRef, substanceRiskLevels, scoreMeaning, getSubstanceDetails }) {
-	const { allPages, setPage } = useContext(AppContext);
+	const { translation, allPages, setPage } = useContext(AppContext);
 
 	function handlePrevButtonClick() {
 		setPage(allPages.advice);
 	}
 
 	const scores = resultsRef.current.scores;
-	const moderateRiskSubstances =
-		resultsRef.current.categorizedSubstances.moderate;
-	const referralRiskSubstances =
-		resultsRef.current.categorizedSubstances.referral;
+	const moderateRiskSubstances = resultsRef.current.categorizedSubstances.moderate;
+	const referralRiskSubstances = resultsRef.current.categorizedSubstances.referral;
 
 	const substances = Object.keys(scores);
-	const scoreTableHeadings = ["Substance", "Score", "Risk", "Criteria"];
+	const {
+		substance: tSubstance,
+		score: tScore,
+		risk: tRisk,
+		criteria: tCriteria,
+	} = translation.scores;
+	const scoreTableHeadings = [tSubstance, tScore, tRisk, tCriteria];
 	return (
 		<CardLayout>
 			<h3>eAssist scores</h3>
@@ -43,8 +47,7 @@ function ScoresTable({ resultsRef, substanceRiskLevels, scoreMeaning, getSubstan
 					<tbody>
 						{substances.map((substanceId, index) => {
 							// Alternate table row style.
-							let rowClassName =
-								index % 2 === 0 ? null : "table-secondary";
+							let rowClassName = index % 2 === 0 ? null : "table-secondary";
 
 							const substance = getSubstanceDetails(substanceId);
 							const substanceRisk = substanceRiskLevels[substanceId];
@@ -52,14 +55,12 @@ function ScoresTable({ resultsRef, substanceRiskLevels, scoreMeaning, getSubstan
 							let substanceRiskText = "";
 							let substanceRiskTextClassName = "text-danger";
 
-							let isModerateRiskSubstance =
-								moderateRiskSubstances.find(
-									s => s.id === substanceId,
-								);
-							let isReferralRiskSubstance =
-								referralRiskSubstances.find(
-									s => s.id === substanceId,
-								);
+							let isModerateRiskSubstance = moderateRiskSubstances.find(
+								s => s.id === substanceId,
+							);
+							let isReferralRiskSubstance = referralRiskSubstances.find(
+								s => s.id === substanceId,
+							);
 
 							if (isModerateRiskSubstance) {
 								substanceRiskText = substanceRisk.moderate.text;
@@ -90,7 +91,7 @@ function ScoresTable({ resultsRef, substanceRiskLevels, scoreMeaning, getSubstan
 
 			{/* Score Meaning Table */}
 			<div className="table-responsive mt-5">
-				<h4>Score Meaning</h4>
+				<h4>{tScore} {translation.scores.meaning}</h4>
 				<table className="table table-bordered table-striped">
 					<thead className="bg-success text-white">
 						<tr>
@@ -112,7 +113,6 @@ function ScoresTable({ resultsRef, substanceRiskLevels, scoreMeaning, getSubstan
 							<td>{scoreMeaning.high}</td>
 						</tr>
 					</tbody>
-
 				</table>
 			</div>
 

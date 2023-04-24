@@ -18,7 +18,7 @@ import usePage from "./hooks/usePage";
 
 import { getInitialSubstanceScores, getInitialCategories } from "./utils/helper";
 
-function App() {
+function App() {		
 	const [language, setLanguage] = useState("en");
 	const { content, setContent, getSubstanceDetailsById, getSubstanceAdviceHTML } = useFetch(dataEN);
 	const { page, setPage, allPages } = usePage(useContext(AppContext));
@@ -27,6 +27,8 @@ function App() {
 		categorizedSubstances: getInitialCategories(),
 	});
 
+	const translation = require(`./translations/${language}/translation.json`);
+	
 	// Change from loading page once data is fetched.
 	useEffect(() => {
 		if (content && !page) {
@@ -113,7 +115,7 @@ function App() {
 	}
 
 	return (
-		<AppContext.Provider value={{ language, changeLanguage, allPages, setPage }}>
+		<AppContext.Provider value={{ translation, language, changeLanguage, allPages, setPage }}>
 			<Layout key={language}>{showPage(page)}</Layout>
 		</AppContext.Provider>
 	);

@@ -1,4 +1,5 @@
 import NavBar from "../ui/NavBar";
+import Footer from "../ui/Footer";
 
 function Layout({ children }) {
 	return (
@@ -9,12 +10,7 @@ function Layout({ children }) {
 				{children}
 			</div>
 
-			<footer>
-				<div className="container-fluid bg-success text-white p-3 text-center">
-					<p>Designed &amp; Developed by Nikhil &amp; Sweaba at RCSS.</p>
-				</div>
-			</footer>
-
+			<Footer />
 		</>
 	);
 }

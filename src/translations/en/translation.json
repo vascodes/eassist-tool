@@ -51,7 +51,8 @@
         "title": "What's next?",
         "text": "Thanks for completing the questions. Click each section below to view further information and advice.",
         "moderateAdvice": "Moderate Advice",
-        "referralAdvice": "Referral Advice"
+        "referralAdvice": "Referral Advice",
+        "noAdvice": "No Advice"
     },
     "scores": {
         "title": "Final Scores",

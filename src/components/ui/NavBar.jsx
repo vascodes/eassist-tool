@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import { AppContext } from "../../contexts/AppContext";
 
 function NavBar() {
-	const { changeLanguage, allPages, setPage } = useContext(AppContext);
+	const { translation, changeLanguage, allPages, setPage } = useContext(AppContext);
 	const [activeNavButton, setActiveNavButton] = useState("btn-nav-home");
 
 	function getNavButtonClass(buttonName) {
@@ -44,14 +44,14 @@ function NavBar() {
 				<div className="dropdown open">
 					<button className="btn dropdown-toggle p-0 text-white border-0" type="button" id="languageDropdown"
 						data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						Change Language
+						{translation.navbar.changeLanguage}
 					</button>
 					<div className="dropdown-menu" aria-labelledby="languageDropdown">
 						<button className="dropdown-item" onClick={() => changeLanguage("en")}>
 							English
 						</button>
 						<button className="dropdown-item" onClick={() => changeLanguage("ml")}>
-							Malayalam
+							Malayalam (മലയാളം)
 						</button>
 					</div>
 				</div>
@@ -75,17 +75,17 @@ function NavBar() {
 							<li className="nav-item">
 								<button name="btn-nav-home" className={getNavButtonClass("btn-nav-home")} aria-current="page"
 									onClick={handleClick}>
-									Home
+									{translation.navbar.home}
 								</button>
 							</li>
 							<li className="nav-item">
 								<button name="btn-nav-assessment" className={getNavButtonClass("btn-nav-assessment")} onClick={handleClick}>
-									Start Assessment
+									{translation.navbar.startAssessment}
 								</button>
 							</li>
 							<li className="nav-item">
 								<button name="btn-nav-contact" className={getNavButtonClass("btn-nav-contact")} onClick={handleClick}>
-									Contact
+									{translation.navbar.contact}
 								</button>
 							</li>
 						</ul>

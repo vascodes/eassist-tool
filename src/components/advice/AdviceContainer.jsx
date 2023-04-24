@@ -8,18 +8,22 @@ import { useContext, useMemo } from "react";
 import { AppContext } from "../../contexts/AppContext";
 
 function AdviceContainer({
-	resultsRef,	
+	resultsRef,
 	substanceRiskLevels,
 	getSubstanceDetailsById,
 	getSubstanceAdviceHTML,
 }) {
-	const { allPages, setPage } = useContext(AppContext);
+	const { translation, allPages, setPage } = useContext(AppContext);
 
-	const categorizedSubstances = useMemo(() => getCategorizedSubstances(
-		resultsRef.current.scores,
-		substanceRiskLevels,
-		getSubstanceDetailsById,
-	), [getSubstanceDetailsById, resultsRef, substanceRiskLevels]);
+	const categorizedSubstances = useMemo(
+		() =>
+			getCategorizedSubstances(
+				resultsRef.current.scores,
+				substanceRiskLevels,
+				getSubstanceDetailsById,
+			),
+		[getSubstanceDetailsById, resultsRef, substanceRiskLevels],
+	);
 
 	resultsRef.current.categorizedSubstances = categorizedSubstances;
 
@@ -37,16 +41,13 @@ function AdviceContainer({
 	return (
 		<CardLayout>
 			<div>
-				<h4 className="text-center">What's next?</h4>
-				<p className="result-container">
-					Thanks for completing the questions. Click each section
-					below to view further information and advice.
-				</p>
+				<h4 className="text-center">{translation.advice.title}</h4>
+				<p className="result-container">{translation.advice.text}</p>
 			</div>
 
 			{moderateRiskSubstances.length > 0 && (
 				<Advice
-					type="moderate"
+					type={"moderate"}
 					substances={moderateRiskSubstances}
 					getSubstanceAdviceHTML={getSubstanceAdviceHTML}
 				/>
@@ -62,8 +63,8 @@ function AdviceContainer({
 
 			<PageNavigation
 				showNextButton
-				nextButtonText="View my scores >"
-				previousButtonText="Restart Questionnaire"
+				nextButtonText={translation.pageNavigation.viewScores}
+				previousButtonText={translation.pageNavigation.restartQuestionnaire}
 				showPreviousButton
 				handleNextButtonClick={handleNextButtonClick}
 				handlePreviousButtonClick={handlePrevButtonClick}
