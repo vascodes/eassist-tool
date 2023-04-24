@@ -1,0 +1,93 @@
+{
+    "navbar": {
+        "changeLanguage": "Change Language",
+        "home": "Home",
+        "startAssessment": "Assessment",
+        "contact": "Contact"
+    },
+    "home": {
+        "hero": {
+            "title": "SELF ASSESSMENT",
+            "text": "Spend a few minutes to learn more about your potential alcohol or substance addiction through our assessment.",
+            "button": "Start Assessment"
+        },
+        "aboutAssessment": {
+            "title": "What is this Assessment about?",
+            "text": "This assessment is a modified version of the Alcohol, Smoking and Substance Involvement Screening Test (ASSIST) which was developed by the World Health Organization. It takes approximately 5-10 minutes to complete and helps identify the risks associated with substance use. The personalised feedback helps you explore options for change."
+        },
+        "aboutUs": {
+            "title": "About Us",
+            "text1": "The development of this website is supported and undertaken by Rajagiri College of Social Sciences (Autonomous) Centre for Excellence in Substance Use Prevention (CESUP)",
+            "text2": "Rajagiri - COMmunity Based Action for Drug PrevenTion (R-COMBAT)"
+        },
+        "projectSupportedBy": {
+            "title": "Project Supported By"
+        }
+    },
+    "userDetails": {
+        "gender": "What is your gender?",
+        "male": "Male",
+        "female": "Female",
+        "transgender": "Transgender",
+        "age": "What is your age?",
+        "placeOfResidence": "Where is your place of residence?",
+        "village": "Village",
+        "urban": "Urban",
+        "education": "What is your Educational Qualification?",
+        "highSchool": "High School",
+        "degree": "Degree",
+        "postGraduation": "Post Graduation and above",
+        "economicStatus": "What is your current economic status?",
+        "bpl": "BPL",
+        "apl": "APL",
+        "employmentStatus": "How are you mainly employed at the moment?",
+        "notEmployed": "Not employed",
+        "fullTime": "Full Time",
+        "partTime": "Part time / Casual",
+        "student": "Student",
+        "homeDuties": "Home duties"
+    },
+    "advice": {
+        "title": "What's next?",
+        "text": "Thanks for completing the questions. Click each section below to view further information and advice.",
+        "moderateAdvice": "Moderate Advice",
+        "referralAdvice": "Referral Advice"
+    },
+    "scores": {
+        "title": "Final Scores",
+        "substance": "Substance",
+        "score": "Score",
+        "risk": "Risk",
+        "criteria": "Criteria",
+        "category": "Category",
+        "meaning": "Meaning",
+        "lower": "Lower",
+        "moderate": "Moderate",
+        "referral": "Referral / High"
+    },
+    "thankYou": {
+        "title": "Assessment Final Scores",
+        "text": "Thank you for completing the questions. Based on your answers, you are not at any risk of harms from Tobacco, Alcohol, Cannabis, Cocaine, Inhalants, Hallucinogens, Sedatives, Opioids, Other use at this time."
+    },
+    "footer": {
+        "text": "Designed & Developed by Nikhil & Sweaba at RCSS."
+    },
+    "infoCard": {
+        "title1": "What is the eASSIST?",
+        "text1": "The eASSIST is an electronic version of the Alcohol, Smoking and Substance Involvement Screening Test (ASSIST) which was developed by the World Health Organization. The ASSIST has eight questions and takes approximately 5-10 minutes to complete. The ASSIST helps identify the risks associated with substance use and the personalised feedback helps explore options for change.",
+        "title2": "Need Help?",
+        "text2": "Contact Nasha mukth helpline number: 1800110031"
+    },
+    "alert": {
+        "answerAllQuestions": "Please answer all questions to continue.",
+        "ageGreaterThan18": "Please enter an age greater than 18."
+    },
+    "pageNavigation": {
+        "next": "Next >",
+        "submit": "Submit Answers >",
+        "viewScores": "Show My Scores >",
+        "previous": "< Changed My Mind",
+        "viewAdvice": "< Show Advice",
+        "restartQuestionnaire": "Restart Questionnaire"
+    }
+}
