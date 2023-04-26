@@ -95,21 +95,21 @@ function ScoresTable({ resultsRef, substanceRiskLevels, scoreMeaning, getSubstan
 				<table className="table table-bordered table-striped">
 					<thead className="bg-success text-white">
 						<tr>
-							<th scope="col">Category</th>
-							<th scope="col">Meaning</th>
+							<th scope="col">{translation.scores.category}</th>
+							<th scope="col">{translation.scores.meaning}</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
-							<th scope="row">Lower</th>
+							<th scope="row">{translation.scores.lower}</th>
 							<td>{scoreMeaning.lower}</td>
 						</tr>
 						<tr>
-							<th scope="row">Moderate</th>
+							<th scope="row">{translation.scores.moderate}</th>
 							<td>{scoreMeaning.moderate}</td>
 						</tr>
 						<tr>
-							<th scope="row">Referral / High</th>
+							<th scope="row">{translation.scores.referral}</th>
 							<td>{scoreMeaning.high}</td>
 						</tr>
 					</tbody>
@@ -118,7 +118,7 @@ function ScoresTable({ resultsRef, substanceRiskLevels, scoreMeaning, getSubstan
 
 			<PageNavigation
 				showPreviousButton
-				previousButtonText="< Show Advice"
+				previousButtonText={translation.pageNavigation.viewAdvice}
 				handlePreviousButtonClick={handlePrevButtonClick}
 			/>
 		</CardLayout>

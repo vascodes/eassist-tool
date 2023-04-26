@@ -1,6 +1,8 @@
+import { useContext } from "react";
 import CardLayout from "../layouts/CardLayout";
+import { AppContext } from "../../contexts/AppContext";
 
-function ContactRow({ rowSpanCount, index, contact }) {
+function ContactRow({ rowSpanCount, index, contact }) {		
 	return (
 		<>
 			<tr>
@@ -25,17 +27,19 @@ function ContactRow({ rowSpanCount, index, contact }) {
 }
 
 function Contact({ children }) {
+	const {translation} = useContext(AppContext);
+	
 	return (
 		<CardLayout>
-			<h1 className="text-center">Contact Us</h1>
+			<h1 className="text-center">{translation.contact.title}</h1>
 			<div className="table-responsive">
 				<table className="table table-bordered table-responsive mt-4">
 					<thead className="bg-success text-white">
 						<tr>
 							<th scope="col">#</th>
-							<th scope="col">Name</th>
-							<th scope="col">Location</th>
-							<th scope="col">Contact</th>
+							<th scope="col">{translation.contact.name}</th>
+							<th scope="col">{translation.contact.location}</th>
+							<th scope="col">{translation.contact.contact}</th>
 						</tr>
 					</thead>
 					<tbody>

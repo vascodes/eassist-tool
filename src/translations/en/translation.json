@@ -70,6 +70,12 @@
         "title": "Assessment Final Scores",
         "text": "Thank you for completing the questions. Based on your answers, you are not at any risk of harms from Tobacco, Alcohol, Cannabis, Cocaine, Inhalants, Hallucinogens, Sedatives, Opioids, Other use at this time."
     },
+    "contact": {
+        "title": "Contact Us",
+        "name": "Name",
+        "location": "Location",
+        "contact": "contact"
+    },
     "footer": {
         "text": "Designed & Developed by Nikhil & Sweaba at RCSS."
     },
