@@ -205,149 +205,15 @@ export const data = {
 						}
 					]
 				}
-			]
+			],
+			"isGeneric": true
 		},
 		{
 			"id": 9,
 			"text": "നിങ്ങളുടെ മദ്യപാനമോ മയക്കുമരുന്ന് ഉപയോഗമോ കുറയ്ക്കണമെന്ന് നിങ്ങൾക്ക് എപ്പോഴെങ്കിലും തോന്നിയിട്ടുണ്ടോ?",
 			"substances": [
 				{
-					"id": "tobacco",
-					"options": [
-						{
-							"id": 1,
-							"text": "ഇല്ല",
-							"score": 0
-						},
-						{
-							"id": 2,
-							"text": "ഉവ്വ്",
-							"score": 0
-						}
-					]
-				},
-				{
-					"id": "alcohol",
-					"options": [
-						{
-							"id": 1,
-							"text": "ഇല്ല",
-							"score": 0
-						},
-						{
-							"id": 2,
-							"text": "ഉവ്വ്",
-							"score": 0
-						}
-					]
-				},
-				{
-					"id": "cannabis",
-					"options": [
-						{
-							"id": 1,
-							"text": "ഇല്ല",
-							"score": 0
-						},
-						{
-							"id": 2,
-							"text": "ഉവ്വ്",
-							"score": 0
-						}
-					]
-				},
-				{
-					"id": "cocaine",
-					"options": [
-						{
-							"id": 1,
-							"text": "ഇല്ല",
-							"score": 0
-						},
-						{
-							"id": 2,
-							"text": "ഉവ്വ്",
-							"score": 0
-						}
-					]
-				},
-				{
-					"id": "amphetamine",
-					"options": [
-						{
-							"id": 1,
-							"text": "ഇല്ല",
-							"score": 0
-						},
-						{
-							"id": 2,
-							"text": "ഉവ്വ്",
-							"score": 0
-						}
-					]
-				},
-				{
-					"id": "inhalants",
-					"options": [
-						{
-							"id": 1,
-							"text": "ഇല്ല",
-							"score": 0
-						},
-						{
-							"id": 2,
-							"text": "ഉവ്വ്",
-							"score": 0
-						}
-					]
-				},
-				{
-					"id": "sedatives",
-					"options": [
-						{
-							"id": 1,
-							"text": "ഇല്ല",
-							"score": 0
-						},
-						{
-							"id": 2,
-							"text": "ഉവ്വ്",
-							"score": 0
-						}
-					]
-				},
-				{
-					"id": "hallucinogens",
-					"options": [
-						{
-							"id": 1,
-							"text": "ഇല്ല",
-							"score": 0
-						},
-						{
-							"id": 2,
-							"text": "ഉവ്വ്",
-							"score": 0
-						}
-					]
-				},
-				{
-					"id": "opioids",
-					"options": [
-						{
-							"id": 1,
-							"text": "ഇല്ല",
-							"score": 0
-						},
-						{
-							"id": 2,
-							"text": "ഉവ്വ്",
-							"score": 0
-						}
-					]
-				},
-				{
-					"id": "other",
+					"id": "any",
 					"options": [
 						{
 							"id": 1,
@@ -361,149 +227,15 @@ export const data = {
 						}
 					]
 				}
-			]
+			],
+			"isGeneric": true
 		},
 		{
 			"id": 10,
 			"text": "നിങ്ങളുടെ മദ്യപാനത്തെയോ മയക്കുമരുന്ന് ഉപയോഗത്തെയോ വിമർശിച്ച് ആളുകൾ നിങ്ങളെ ശല്യപ്പെടുത്തിയിട്ടുണ്ടോ?",
 			"substances": [
 				{
-					"id": "tobacco",
-					"options": [
-						{
-							"id": 1,
-							"text": "ഇല്ല",
-							"score": 0
-						},
-						{
-							"id": 2,
-							"text": "ഉവ്വ്",
-							"score": 0
-						}
-					]
-				},
-				{
-					"id": "alcohol",
-					"options": [
-						{
-							"id": 1,
-							"text": "ഇല്ല",
-							"score": 0
-						},
-						{
-							"id": 2,
-							"text": "ഉവ്വ്",
-							"score": 0
-						}
-					]
-				},
-				{
-					"id": "cannabis",
-					"options": [
-						{
-							"id": 1,
-							"text": "ഇല്ല",
-							"score": 0
-						},
-						{
-							"id": 2,
-							"text": "ഉവ്വ്",
-							"score": 0
-						}
-					]
-				},
-				{
-					"id": "cocaine",
-					"options": [
-						{
-							"id": 1,
-							"text": "ഇല്ല",
-							"score": 0
-						},
-						{
-							"id": 2,
-							"text": "ഉവ്വ്",
-							"score": 0
-						}
-					]
-				},
-				{
-					"id": "amphetamine",
-					"options": [
-						{
-							"id": 1,
-							"text": "ഇല്ല",
-							"score": 0
-						},
-						{
-							"id": 2,
-							"text": "ഉവ്വ്",
-							"score": 0
-						}
-					]
-				},
-				{
-					"id": "inhalants",
-					"options": [
-						{
-							"id": 1,
-							"text": "ഇല്ല",
-							"score": 0
-						},
-						{
-							"id": 2,
-							"text": "ഉവ്വ്",
-							"score": 0
-						}
-					]
-				},
-				{
-					"id": "sedatives",
-					"options": [
-						{
-							"id": 1,
-							"text": "ഇല്ല",
-							"score": 0
-						},
-						{
-							"id": 2,
-							"text": "ഉവ്വ്",
-							"score": 0
-						}
-					]
-				},
-				{
-					"id": "hallucinogens",
-					"options": [
-						{
-							"id": 1,
-							"text": "ഇല്ല",
-							"score": 0
-						},
-						{
-							"id": 2,
-							"text": "ഉവ്വ്",
-							"score": 0
-						}
-					]
-				},
-				{
-					"id": "opioids",
-					"options": [
-						{
-							"id": 1,
-							"text": "ഇല്ല",
-							"score": 0
-						},
-						{
-							"id": 2,
-							"text": "ഉവ്വ്",
-							"score": 0
-						}
-					]
-				},
-				{
-					"id": "other",
+					"id": "any",
 					"options": [
 						{
 							"id": 1,
@@ -517,149 +249,15 @@ export const data = {
 						}
 					]
 				}
-			]
+			],
+			"isGeneric": true
 		},
 		{
 			"id": 11,
 			"text": "നിങ്ങളുടെ മദ്യപാനത്തെക്കുറിച്ചോ മയക്കുമരുന്ന് ഉപയോഗത്തെക്കുറിച്ചോ നിങ്ങൾക്ക് മോശമോ കുറ്റബോധമോ തോന്നിയിട്ടുണ്ടോ?",
 			"substances": [
 				{
-					"id": "tobacco",
-					"options": [
-						{
-							"id": 1,
-							"text": "ഇല്ല",
-							"score": 0
-						},
-						{
-							"id": 2,
-							"text": "ഉവ്വ്",
-							"score": 0
-						}
-					]
-				},
-				{
-					"id": "alcohol",
-					"options": [
-						{
-							"id": 1,
-							"text": "ഇല്ല",
-							"score": 0
-						},
-						{
-							"id": 2,
-							"text": "ഉവ്വ്",
-							"score": 0
-						}
-					]
-				},
-				{
-					"id": "cannabis",
-					"options": [
-						{
-							"id": 1,
-							"text": "ഇല്ല",
-							"score": 0
-						},
-						{
-							"id": 2,
-							"text": "ഉവ്വ്",
-							"score": 0
-						}
-					]
-				},
-				{
-					"id": "cocaine",
-					"options": [
-						{
-							"id": 1,
-							"text": "ഇല്ല",
-							"score": 0
-						},
-						{
-							"id": 2,
-							"text": "ഉവ്വ്",
-							"score": 0
-						}
-					]
-				},
-				{
-					"id": "amphetamine",
-					"options": [
-						{
-							"id": 1,
-							"text": "ഇല്ല",
-							"score": 0
-						},
-						{
-							"id": 2,
-							"text": "ഉവ്വ്",
-							"score": 0
-						}
-					]
-				},
-				{
-					"id": "inhalants",
-					"options": [
-						{
-							"id": 1,
-							"text": "ഇല്ല",
-							"score": 0
-						},
-						{
-							"id": 2,
-							"text": "ഉവ്വ്",
-							"score": 0
-						}
-					]
-				},
-				{
-					"id": "sedatives",
-					"options": [
-						{
-							"id": 1,
-							"text": "ഇല്ല",
-							"score": 0
-						},
-						{
-							"id": 2,
-							"text": "ഉവ്വ്",
-							"score": 0
-						}
-					]
-				},
-				{
-					"id": "hallucinogens",
-					"options": [
-						{
-							"id": 1,
-							"text": "ഇല്ല",
-							"score": 0
-						},
-						{
-							"id": 2,
-							"text": "ഉവ്വ്",
-							"score": 0
-						}
-					]
-				},
-				{
-					"id": "opioids",
-					"options": [
-						{
-							"id": 1,
-							"text": "ഇല്ല",
-							"score": 0
-						},
-						{
-							"id": 2,
-							"text": "ഉവ്വ്",
-							"score": 0
-						}
-					]
-				},
-				{
-					"id": "other",
+					"id": "any",
 					"options": [
 						{
 							"id": 1,
@@ -673,149 +271,15 @@ export const data = {
 						}
 					]
 				}
-			]
+			],
+			"isGeneric": true
 		},
 		{
 			"id": 12,
 			"text": "നിങ്ങളുടെ ഞരമ്പുകളെ സുസ്ഥിരമാക്കുന്നതിനോ അല്ലെങ്കിൽ ഒരു ഹാംഗ് ഓവറിൽ നിന്ന് മുക്തി നേടുന്നതിനോ നിങ്ങൾ എപ്പോഴെങ്കിലും രാവിലെ മദ്യപിക്കുകയോ മയക്കുമരുന്ന് ഉപയോഗിക്കുകയോ ചെയ്തിട്ടുണ്ടോ?",
 			"substances": [
 				{
-					"id": "tobacco",
-					"options": [
-						{
-							"id": 1,
-							"text": "ഇല്ല",
-							"score": 0
-						},
-						{
-							"id": 2,
-							"text": "ഉവ്വ്",
-							"score": 0
-						}
-					]
-				},
-				{
-					"id": "alcohol",
-					"options": [
-						{
-							"id": 1,
-							"text": "ഇല്ല",
-							"score": 0
-						},
-						{
-							"id": 2,
-							"text": "ഉവ്വ്",
-							"score": 0
-						}
-					]
-				},
-				{
-					"id": "cannabis",
-					"options": [
-						{
-							"id": 1,
-							"text": "ഇല്ല",
-							"score": 0
-						},
-						{
-							"id": 2,
-							"text": "ഉവ്വ്",
-							"score": 0
-						}
-					]
-				},
-				{
-					"id": "cocaine",
-					"options": [
-						{
-							"id": 1,
-							"text": "ഇല്ല",
-							"score": 0
-						},
-						{
-							"id": 2,
-							"text": "ഉവ്വ്",
-							"score": 0
-						}
-					]
-				},
-				{
-					"id": "amphetamine",
-					"options": [
-						{
-							"id": 1,
-							"text": "ഇല്ല",
-							"score": 0
-						},
-						{
-							"id": 2,
-							"text": "ഉവ്വ്",
-							"score": 0
-						}
-					]
-				},
-				{
-					"id": "inhalants",
-					"options": [
-						{
-							"id": 1,
-							"text": "ഇല്ല",
-							"score": 0
-						},
-						{
-							"id": 2,
-							"text": "ഉവ്വ്",
-							"score": 0
-						}
-					]
-				},
-				{
-					"id": "sedatives",
-					"options": [
-						{
-							"id": 1,
-							"text": "ഇല്ല",
-							"score": 0
-						},
-						{
-							"id": 2,
-							"text": "ഉവ്വ്",
-							"score": 0
-						}
-					]
-				},
-				{
-					"id": "hallucinogens",
-					"options": [
-						{
-							"id": 1,
-							"text": "ഇല്ല",
-							"score": 0
-						},
-						{
-							"id": 2,
-							"text": "ഉവ്വ്",
-							"score": 0
-						}
-					]
-				},
-				{
-					"id": "opioids",
-					"options": [
-						{
-							"id": 1,
-							"text": "ഇല്ല",
-							"score": 0
-						},
-						{
-							"id": 2,
-							"text": "ഉവ്വ്",
-							"score": 0
-						}
-					]
-				},
-				{
-					"id": "other",
+					"id": "any",
 					"options": [
 						{
 							"id": 1,
@@ -829,7 +293,8 @@ export const data = {
 						}
 					]
 				}
-			]
+			],
+			"isGeneric": true
 		},
 		{
 			"id": 2,
@@ -2442,26 +1907,22 @@ export const data = {
 			"text": "കുത്തിവയ്പ്പിലൂടെ നിങ്ങൾ എപ്പോഴെങ്കിലും ഏതെങ്കിലും മരുന്ന് ഉപയോഗിച്ചിട്ടുണ്ടോ (നോൺ-മെഡിക്കൽ ഉപയോഗം മാത്രം)?",
 			"substances": [
 				{
-					"id": "injection",
+					"id": "any",
 					"options": [
 						{
 							"id": 1,
-							"text": "ഇല്ല, ഒരിക്കലുമില്ല",
+							"text": "ഇല്ല",
 							"score": 0
 						},
 						{
 							"id": 2,
-							"text": "അതെ, കഴിഞ്ഞ 3 മാസത്തിൽ",
-							"score": 0
-						},
-						{
-							"id": 3,
-							"text": "അതെ, പക്ഷേ കഴിഞ്ഞ 3 മാസത്തിൽ അല്ല",
+							"text": "ഉവ്വ്",
 							"score": 0
 						}
 					]
 				}
-			]
+			],
+			"isGeneric": true
 		}
 	],
 	"substanceRiskLevels": {

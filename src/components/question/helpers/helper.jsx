@@ -1,11 +1,9 @@
-export function getSubstancesToDisplay(questionId, getSubstancesUsed, currentQuestionSubstances) {
+export function getSubstancesToDisplay(currentQuestion, getSubstancesUsed) {
+	const { id: questionId, substances: currentQuestionSubstances, isGeneric } = currentQuestion;
 	const { lifetime: substancesUsedInLifetime, past3Months: substancesUsedInPast3Months } =
 		getSubstancesUsed();
 
-	// Return all substances of question 1 and question 8, if exists.
-	if (questionId === 1 || questionId === 8) {
-		return currentQuestionSubstances;
-	}
+	if (isGeneric) return currentQuestionSubstances;
 
 	// For other questions, only return substances selected in Question 1.
 	let filteredSubstances = currentQuestionSubstances.filter(substance =>
@@ -131,15 +129,25 @@ export function filterAnswersNotInQuestionHistory(allSelectedAnswers, questionHi
 	return filteredAnswers;
 }
 
-export function calculateSubstanceScores(allSelectedAnswers) {
+function getGenericQuestionIds(allQuestions) {
+	const genericQuestionIds = new Set();
+	for (let question of allQuestions) {		
+		if (question.isGeneric) genericQuestionIds.add(Number(question.id));
+	}
+
+	return genericQuestionIds;
+}
+
+function calculateSubstanceScores(allSelectedAnswers, allQuestions) {
 	const substanceScores = {};
+
+	const genericQuestionIds = getGenericQuestionIds(allQuestions);
 
 	// Compute total score of each substance.
 	for (let questionId in allSelectedAnswers) {
 		questionId = Number(questionId);
 
-		// Answers of Question 1, Question 8 should not be considered.
-		if (questionId === 1 || questionId === 8) {
+		if (genericQuestionIds.has(questionId)) {
 			continue;
 		}
 
@@ -154,10 +162,10 @@ export function calculateSubstanceScores(allSelectedAnswers) {
 	return substanceScores;
 }
 
-export function updateScores(allSelectedAnswers, questionHistory, resultsRef) {
+export function updateScores(allQuestions, allSelectedAnswers, questionHistory, resultsRef) {
 	const filteredAnswers = filterAnswersNotInQuestionHistory(allSelectedAnswers, questionHistory);
 
-	const selectedSubstanceScores = calculateSubstanceScores(filteredAnswers);
+	const selectedSubstanceScores = calculateSubstanceScores(filteredAnswers, allQuestions);
 
 	// Update scores in result.
 	for (let substanceId in selectedSubstanceScores) {

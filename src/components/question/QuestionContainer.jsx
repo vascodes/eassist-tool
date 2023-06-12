@@ -38,10 +38,9 @@ function QuestionContainer({ allQuestions, allSubstances, resultsRef }) {
 	const currentQuestionIndex = helper.getQuestionIndexFromId(allQuestions, currentQuestion.id);
 
 	function getSubstancesToDisplay() {
-		const substancesToDisplay = helper.getSubstancesToDisplay(
-			currentQuestion.id,
+		const substancesToDisplay = helper.getSubstancesToDisplay(					
+			currentQuestion,
 			getSubstancesUsed,
-			currentQuestion?.substances,
 		);
 
 		return substancesToDisplay;
@@ -113,7 +112,8 @@ function QuestionContainer({ allQuestions, allSubstances, resultsRef }) {
 		if (nextQuestionId) {
 			changeQuestionById(nextQuestionId);
 		} else {
-			helper.updateScores(allSelectedAnswers, questionHistory, resultsRef);
+			console.log(allSelectedAnswers, questionHistory, resultsRef);
+			helper.updateScores(allQuestions, allSelectedAnswers, questionHistory, resultsRef);
 			setPage(allPages.advice);
 		}
 	}

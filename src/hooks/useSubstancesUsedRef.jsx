@@ -19,9 +19,7 @@ export default function useSubstancesUsedRef(intialSubstances){
 			substancesUsedRef.current.past3Months = new Set(
 				substancesUsedInPast3Months,
 			);
-		}
-
-		console.log(substancesUsedRef);
+		}		
 	}
 
     return {substancesUsedRef, getSubstancesUsed, setSubstancesUsed};
