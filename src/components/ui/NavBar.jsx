@@ -28,8 +28,8 @@ function NavBar() {
 				setPage(allPages.userDetails);
 				break;
 
-			case "contact":
-				setPage(allPages.contact);
+			case "services":
+				setPage(allPages.services);
 				break;
 
 			default:
@@ -84,8 +84,8 @@ function NavBar() {
 								</button>
 							</li>
 							<li className="nav-item">
-								<button name="btn-nav-contact" className={getNavButtonClass("btn-nav-contact")} onClick={handleClick}>
-									{translation.navbar.contact}
+								<button name="btn-nav-services" className={getNavButtonClass("btn-nav-services")} onClick={handleClick}>
+									{translation.navbar.services}
 								</button>
 							</li>
 						</ul>

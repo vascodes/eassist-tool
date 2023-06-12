@@ -9,7 +9,7 @@ export default function usePage(intialPage) {
 		thankYou: 4,
 		advice: 5,
 		scores: 6,
-		contact: 7,
+		services: 7,
 	});
 
 	return { page, setPage, allPages };

@@ -3,7 +3,7 @@
         "changeLanguage": "Change Language",
         "home": "Home",
         "startAssessment": "Assessment",
-        "contact": "Contact"
+        "services": "Services"
     },
     "home": {
         "hero": {
@@ -70,11 +70,11 @@
         "title": "Assessment Final Scores",
         "text": "Thank you for completing the questions. Based on your answers, you are not at any risk of harms from Tobacco, Alcohol, Cannabis, Cocaine, Inhalants, Hallucinogens, Sedatives, Opioids, Other use at this time."
     },
-    "contact": {
-        "title": "Contact Us",
+    "service": {
+        "title": "Services",
         "name": "Name",
         "location": "Location",
-        "contact": "contact"
+        "service": "service"
     },
     "footer": {
         "text": "Designed & Developed by Nikhil & Sweaba at RCSS."

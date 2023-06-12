@@ -10,7 +10,7 @@ import QuestionContainer from "./components/question/QuestionContainer";
 import AdviceContainer from "./components/advice/AdviceContainer";
 import ScoresTable from "./components/score/ScoresTable";
 import ThankYou from "./components/thank-you/ThankYou";
-import Contact from "./components/contact/Contact";
+import Service from "./components/service/Service";
 
 import { AppContext } from "./contexts/AppContext";
 import useFetch from "./hooks/useFetch";
@@ -102,8 +102,8 @@ function App() {
 				componentToDisplay = <ThankYou />;
 				break;
 
-			case allPages.contact:
-				componentToDisplay = <Contact>{content?.contactDetails}</Contact>;
+			case allPages.services:
+				componentToDisplay = <Service>{content?.serviceDetails}</Service>;
 				break;
 
 			default:
