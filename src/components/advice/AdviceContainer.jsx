@@ -35,7 +35,8 @@ function AdviceContainer({
 	}
 
 	function handlePrevButtonClick() {
-		setPage(allPages.questions);
+		// setPage(allPages.questions);
+		setPage(allPages.userDetails);
 	}
 
 	return (

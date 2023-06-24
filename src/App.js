@@ -1,7 +1,7 @@
 import { useContext, useEffect, useRef, useState } from "react";
 
-import { data as dataEN } from "./data-en";
-import { data as dataML } from "./data-ml";
+import { data as dataEN } from "./data/e-assist/data-en";
+import { data as dataML } from "./data/e-assist/data-ml";
 
 import Layout from "./components/layouts/Layout";
 import Home from "./components/home/Home";
