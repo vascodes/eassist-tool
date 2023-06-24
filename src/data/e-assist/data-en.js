@@ -1846,7 +1846,7 @@ export const data = {
 		"tobacco": {
 			"id": "tobacco",
 			"criterias": [
-				"1-3 Lower",
+				"0-3 Lower",
 				"4-26 Moderate",
 				"27+ High"
 			],
